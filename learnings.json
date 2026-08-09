@@ -1,0 +1,19 @@
+{
+ "gather_success": {
+  "twigs": 53,
+  "cutgrass": 39,
+  "flint": 8,
+  "axe": 25,
+  "torch": 22,
+  "pinecone": 2,
+  "log": 3
+ },
+ "gather_fail": {},
+ "lessons": [
+  "NEVER roam into merm/pigman clusters - flee reflex now uses threats[]",
+  "Keep hunger > 30 - starvation at 0 with no food nearby is a death sentence",
+  "Crows/birds are NOT food - seeds/berries/carrots are",
+  "Agent must EAT available food before entering health-critical wait",
+  "Answer the agent's question when it asks - it stops otherwise"
+ ]
+}

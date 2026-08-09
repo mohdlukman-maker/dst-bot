@@ -1,0 +1,10529 @@
+{
+ "_meta": {
+  "source": "DST scripts.zip (game source) + runtime AllRecipes dump",
+  "generated": "2026-08-08",
+  "crafting_recipes": 1122,
+  "crockpot_dishes": 50,
+  "mobs": 20,
+  "wilson_stats": {
+   "health": 150,
+   "hunger": 150,
+   "sanity": 200
+  },
+  "day_length_s": 480
+ },
+ "crafting": {
+  "mutator_hider": {
+   "ingredients": {
+    "monstermeat": 1,
+    "silk": 2,
+    "cutstone": 2
+   },
+   "tech": {
+    "SPIDERCRAFT": 1
+   }
+  },
+  "voidcloth_boomerang": {
+   "ingredients": {
+    "horrorfuel": 4,
+    "voidcloth": 2
+   },
+   "tech": {
+    "SHADOWFORGING": 2
+   }
+  },
+  "battlesong_instant_revive": {
+   "ingredients": {
+    "papyrus": 1,
+    "featherpencil": 1,
+    "goose_feather": 3
+   }
+  },
+  "spider_repellent": {
+   "ingredients": {
+    "boards": 2,
+    "goldnugget": 2,
+    "rope": 1
+   }
+  },
+  "winona_telebrella": {
+   "ingredients": {
+    "sewing_tape": 4,
+    "transistor": 4,
+    "twigs": 4,
+    "winona_machineparts_2": 1
+   },
+   "tech": {
+    "ANCIENT": 10,
+    "SCIENCE": 10,
+    "MAGIC": 10
+   }
+  },
+  "turf_road": {
+   "ingredients": {
+    "cutstone": 1,
+    "flint": 2
+   },
+   "tech": {
+    "SCIENCE": 2
+   }
+  },
+  "oceanfishingbobber_crow": {
+   "ingredients": {
+    "feather_crow": 1
+   },
+   "tech": {
+    "FISHING": 1
+   }
+  },
+  "chesspiece_bearger_builder": {
+   "ingredients": {
+    "rocks": 2
+   },
+   "tech": {
+    "ANCIENT": 10,
+    "SCIENCE": 10,
+    "MAGIC": 10
+   }
+  },
+  "turf_savanna": {
+   "ingredients": {
+    "cutgrass": 1,
+    "poop": 1
+   },
+   "tech": {
+    "TURFCRAFTING": 2
+   }
+  },
+  "minifan": {
+   "ingredients": {
+    "twigs": 3,
+    "petals": 1
+   }
+  },
+  "boatpatch": {
+   "ingredients": {
+    "log": 2,
+    "stinger": 1
+   }
+  },
+  "hambat": {
+   "ingredients": {
+    "pigskin": 1,
+    "twigs": 2,
+    "meat": 2
+   },
+   "tech": {
+    "SCIENCE": 2
+   }
+  },
+  "wendy_resurrectiongrave": {
+   "ingredients": {
+    "ghostflower": 10,
+    "cutstone": 1
+   },
+   "placer": "wendy_resurrectiongraveplacer"
+  },
+  "chesspiece_deerclops_mutated_builder": {
+   "ingredients": {
+    "rocks": 2
+   },
+   "tech": {
+    "ANCIENT": 10,
+    "SCIENCE": 10,
+    "MAGIC": 10
+   }
+  },
+  "wanderingtradershop_cutgrass": {
+   "ingredients": {
+    "ash": 2
+   },
+   "tech": {
+    "ANCIENT": 10,
+    "SCIENCE": 10,
+    "MAGIC": 10
+   }
+  },
+  "transmute_log": {
+   "ingredients": {
+    "twigs": 3
+   }
+  },
+  "carnivaldecor_figure": {
+   "ingredients": {
+    "carnivaldecor_figure_kit": 1
+   }
+  },
+  "wagpunkhat": {
+   "ingredients": {
+    "wagpunk_bits": 8,
+    "transistor": 3,
+    "alterguardianhatshard": 1
+   },
+   "tech": {
+    "ANCIENT": 10,
+    "SCIENCE": 10,
+    "MAGIC": 10
+   }
+  },
+  "oceanfishinglure_hermit_heavy": {
+   "ingredients": {
+    "cookiecuttershell": 1,
+    "beefalowool": 1
+   },
+   "tech": {
+    "ANCIENT": 10,
+    "SCIENCE": 10,
+    "MAGIC": 10
+   }
+  },
+  "yotc_seedpacket": {
+   "ingredients": {
+    "lucky_goldnugget": 2
+   },
+   "tech": {
+    "CARRATOFFERING": 3
+   }
+  },
+  "wereitem_goose": {
+   "ingredients": {
+    "monstermeat": 3,
+    "seeds": 3
+   }
+  },
+  "portablespicer_item": {
+   "ingredients": {
+    "goldnugget": 2,
+    "cutstone": 3,
+    "twigs": 6
+   }
+  },
+  "gunpowder": {
+   "ingredients": {
+    "rottenegg": 1,
+    "charcoal": 1,
+    "nitre": 1
+   },
+   "tech": {
+    "SCIENCE": 2
+   }
+  },
+  "carnivalgame_golf_hole": {
+   "ingredients": {
+    "carnivalgame_golf_hole_kit": 1
+   }
+  },
+  "dragontailhat": {
+   "ingredients": {
+    "lucky_goldnugget": 8
+   },
+   "tech": {
+    "PERDOFFERING": 1
+   }
+  },
+  "anchor": {
+   "ingredients": {
+    "boards": 2,
+    "rope": 3,
+    "cutstone": 3
+   }
+  },
+  "wormwood_carrat": {
+   "ingredients": {
+    "carrot": 1
+   }
+  },
+  "ruinsrelic_plate": {
+   "ingredients": {
+    "cutstone": 1
+   },
+   "tech": {
+    "ANCIENT": 10,
+    "SCIENCE": 10,
+    "MAGIC": 10
+   }
+  },
+  "balloonhat": {
+   "ingredients": {
+    "balloons_empty": 1
+   }
+  },
+  "wx78module_shielding": {
+   "ingredients": {
+    "scandata": 4,
+    "slurtlehat": 1
+   },
+   "tech": {
+    "ROBOTMODULECRAFT": 1
+   }
+  },
+  "leif_idol": {
+   "ingredients": {
+    "cutgrass": 3,
+    "livinglog": 2,
+    "nightmarefuel": 5
+   }
+  },
+  "fumarolehammer": {
+   "ingredients": {
+    "twigs": 4,
+    "mitegland": 2,
+    "nitre": 3
+   },
+   "tech": {
+    "SCIENCE": 2
+   }
+  },
+  "trophyscale_oversizedveggies": {
+   "ingredients": {
+    "boards": 4,
+    "cutgrass": 4
+   },
+   "tech": {
+    "SCIENCE": 2
+   },
+   "placer": "trophyscale_oversizedveggies_placer"
+  },
+  "transmute_moonglass_charged": {
+   "ingredients": {
+    "purebrilliance": 1
+   }
+  },
+  "boatrace_checkpoint_throwable_deploykit": {
+   "ingredients": {
+    "lucky_goldnugget": 2
+   },
+   "tech": {
+    "DRAGONOFFERING": 3
+   }
+  },
+  "lifeinjector": {
+   "ingredients": {
+    "spoiled_food": 8,
+    "nitre": 2,
+    "stinger": 1
+   },
+   "tech": {
+    "SCIENCE": 2
+   }
+  },
+  "brush": {
+   "ingredients": {
+    "steelwool": 1,
+    "walrus_tusk": 1,
+    "goldnugget": 2
+   },
+   "tech": {
+    "SCIENCE": 2
+   }
+  },
+  "wx78module_maxhealth2": {
+   "ingredients": {
+    "scandata": 4,
+    "spidergland": 2,
+    "wx78module_maxhealth": 1
+   },
+   "tech": {
+    "ROBOTMODULECRAFT": 1
+   }
+  },
+  "wintercooking_lutefisk": {
+   "ingredients": {
+    "wintersfeastfuel": 1,
+    "spoiled_fish": 1,
+    "driftwood_log": 1
+   },
+   "tech": {
+    "WINTERSFEASTCOOKING": 1
+   }
+  },
+  "amulet": {
+   "ingredients": {
+    "goldnugget": 3,
+    "nightmarefuel": 2,
+    "redgem": 1
+   },
+   "tech": {
+    "MAGIC": 2
+   }
+  },
+  "hermitshop_oceanfishingbobber_goose": {
+   "ingredients": {
+    "messagebottleempty": 1
+   },
+   "tech": {
+    "HERMITCRABSHOP": 7
+   }
+  },
+  "carnivalgame_feedchicks_station": {
+   "ingredients": {
+    "carnivalgame_feedchicks_kit": 1
+   }
+  },
+  "support_pillar_dreadstone_scaffold": {
+   "ingredients": {
+    "dreadstone": 4,
+    "boards": 2
+   },
+   "tech": {
+    "ANCIENT": 10,
+    "SCIENCE": 10,
+    "MAGIC": 10
+   },
+   "placer": "support_pillar_dreadstone_scaffold_placer"
+  },
+  "boat_grass_item": {
+   "ingredients": {
+    "cutgrass": 8,
+    "twigs": 2
+   }
+  },
+  "carnivalgame_herding_kit": {
+   "ingredients": {
+    "goldnugget": 1,
+    "seeds": 3
+   },
+   "tech": {
+    "CARNIVAL_HOSTSHOP": 3
+   }
+  },
+  "hermitcrabtea_firenettles_1": {
+   "ingredients": {
+    "messagebottleempty": 1,
+    "firenettles_dried": 6
+   },
+   "tech": {
+    "ANCIENT": 10,
+    "SCIENCE": 10,
+    "MAGIC": 10
+   }
+  },
+  "mighty_gym": {
+   "ingredients": {
+    "boards": 4,
+    "cutstone": 2,
+    "rope": 3
+   },
+   "tech": {
+    "SCIENCE": 1
+   },
+   "placer": "mighty_gym_placer"
+  },
+  "kitcoondecor1": {
+   "ingredients": {
+    "lucky_goldnugget": 12
+   }
+  },
+  "ghostlyelixir_speed": {
+   "ingredients": {
+    "honey": 1,
+    "ghostflower": 1
+   }
+  },
+  "mermhouse_crafted": {
+   "ingredients": {
+    "boards": 4,
+    "cutreeds": 3,
+    "pondfish": 2
+   },
+   "tech": {
+    "SCIENCE": 1
+   },
+   "placer": "mermhouse_crafted_placer"
+  },
+  "beargervest": {
+   "ingredients": {
+    "bearger_fur": 1,
+    "sweatervest": 1,
+    "rope": 2
+   },
+   "tech": {
+    "SCIENCE": 2
+   }
+  },
+  "mastupgrade_lamp_item": {
+   "ingredients": {
+    "boards": 1,
+    "rope": 2,
+    "flint": 4
+   },
+   "tech": {
+    "SEAFARING": 1
+   }
+  },
+  "ocean_trawler": {
+   "ingredients": {
+    "boards": 2,
+    "rope": 2,
+    "silk": 6
+   }
+  },
+  "waterballoon": {
+   "ingredients": {
+    "mosquitosack": 2,
+    "ice": 1
+   },
+   "tech": {
+    "SCIENCE": 1
+   }
+  },
+  "portablecookpot": {
+   "ingredients": {
+    "goldnugget": 2,
+    "charcoal": 6,
+    "twigs": 6
+   }
+  },
+  "whip": {
+   "ingredients": {
+    "coontail": 3,
+    "tentaclespots": 1
+   },
+   "tech": {
+    "SCIENCE": 2
+   }
+  },
+  "carnivaldecor_eggride4_kit": {
+   "ingredients": {
+    "carnival_prizeticket": 36
+   },
+   "tech": {
+    "CARNIVAL_PRIZESHOP": 1
+   }
+  },
+  "sewing_mannequin": {
+   "ingredients": {
+    "silk": 2,
+    "boards": 2,
+    "cutgrass": 3
+   },
+   "tech": {
+    "SCIENCE": 1
+   },
+   "placer": "sewing_mannequin_placer"
+  },
+  "slingshot_band_pigskin": {
+   "ingredients": {
+    "pigskin": 1
+   }
+  },
+  "yotb_stage_item": {
+   "ingredients": {
+    "boards": 4,
+    "beefalowool": 2,
+    "goldnugget": 2
+   },
+   "tech": {
+    "BEEFOFFERING": 3
+   }
+  },
+  "pickaxe_lunarplant": {
+   "ingredients": {
+    "purebrilliance": 1,
+    "lunarplant_husk": 2
+   },
+   "tech": {
+    "LUNARFORGING": 2
+   }
+  },
+  "transmute_beardhair": {
+   "ingredients": {
+    "beefalowool": 2
+   }
+  },
+  "molehat": {
+   "ingredients": {
+    "mole": 2,
+    "transistor": 2,
+    "wormlight": 1
+   },
+   "tech": {
+    "SCIENCE": 2
+   }
+  },
+  "mosquitobomb": {
+   "ingredients": {
+    "mosquitosack": 1,
+    "mosquito": 4
+   }
+  },
+  "abigail_flower": {
+   "ingredients": {
+    "ghostflower": 1,
+    "nightmarefuel": 1
+   }
+  },
+  "book_rain": {
+   "ingredients": {
+    "papyrus": 2,
+    "goose_feather": 2
+   }
+  },
+  "chesspiece_beefalo_builder": {
+   "ingredients": {
+    "rocks": 2
+   },
+   "tech": {
+    "ANCIENT": 10,
+    "SCIENCE": 10,
+    "MAGIC": 10
+   }
+  },
+  "yotc_carrat_race_checkpoint": {
+   "ingredients": {
+    "lucky_goldnugget": 1
+   }
+  },
+  "chesspiece_deerclops_builder": {
+   "ingredients": {
+    "rocks": 2
+   },
+   "tech": {
+    "ANCIENT": 10,
+    "SCIENCE": 10,
+    "MAGIC": 10
+   }
+  },
+  "wagpunk_workstation_blueprint_moon_device_construction1": {
+   "ingredients": {
+    "papyrus": 1
+   },
+   "tech": {
+    "WAGPUNK_WORKSTATION": 2
+   }
+  },
+  "carnivalgame_golfprop_smallspinner_ccw": {
+   "ingredients": {},
+   "tech": {
+    "CARNIVAL_GOLFPROPS": 1
+   },
+   "placer": "carnivalgame_golfprop_smallspinner_ccw_placer"
+  },
+  "shellweaver_nonslipgrit": {
+   "ingredients": {
+    "saltrock": 1,
+    "rocks": 1
+   },
+   "tech": {
+    "SHELLWEAVER": 1
+   }
+  },
+  "slingshotammo_thulecite": {
+   "ingredients": {
+    "thulecite_pieces": 1,
+    "nightmarefuel": 1
+   },
+   "tech": {
+    "ANCIENT": 2
+   }
+  },
+  "wurt_turf_marsh": {
+   "ingredients": {
+    "cutreeds": 1,
+    "spoiled_food": 2
+   }
+  },
+  "book_moon": {
+   "ingredients": {
+    "papyrus": 2,
+    "opalpreciousgem": 1,
+    "moonbutterflywings": 2
+   },
+   "tech": {
+    "BOOKCRAFT": 1
+   }
+  },
+  "ruinsrelic_vase": {
+   "ingredients": {
+    "cutstone": 2
+   },
+   "tech": {
+    "ANCIENT": 10,
+    "SCIENCE": 10,
+    "MAGIC": 10
+   }
+  },
+  "bathbomb": {
+   "ingredients": {
+    "moon_tree_blossom": 1,
+    "nitre": 1
+   },
+   "tech": {
+    "CELESTIAL": 1
+   }
+  },
+  "vaultrelic_bowl": {
+   "ingredients": {
+    "thulecite_pieces": 1,
+    "cutstone": 1
+   },
+   "tech": {
+    "ANCIENT": 10,
+    "SCIENCE": 10,
+    "MAGIC": 10
+   }
+  },
+  "mermhead": {
+   "ingredients": {
+    "pondfish": 1,
+    "spoiled_food": 4,
+    "twigs": 4
+   }
+  },
+  "wagboss_robot_constructionsite_kit": {
+   "ingredients": {
+    "cutstone": 2,
+    "boards": 2,
+    "wagpunk_bits": 1
+   },
+   "tech": {
+    "WAGPUNK_WORKSTATION": 2
+   }
+  },
+  "yotc_carrat_race_start_item": {
+   "ingredients": {
+    "goldnugget": 1
+   },
+   "tech": {
+    "CARRATOFFERING": 3
+   }
+  },
+  "slingshotammo_dreadstone": {
+   "ingredients": {
+    "dreadstone": 1
+   }
+  },
+  "winona_teleport_pad_item": {
+   "ingredients": {
+    "sewing_tape": 6,
+    "transistor": 6,
+    "boards": 3,
+    "winona_machineparts_2": 1
+   },
+   "tech": {
+    "ANCIENT": 10,
+    "SCIENCE": 10,
+    "MAGIC": 10
+   }
+  },
+  "portableblender": {
+   "ingredients": {
+    "goldnugget": 2,
+    "transistor": 2,
+    "twigs": 4
+   }
+  },
+  "mastupgrade_lamp_yotd": {
+   "ingredients": {
+    "lucky_goldnugget": 3
+   }
+  },
+  "chesspiece_manrabbit_sketch": {
+   "ingredients": {
+    "lucky_goldnugget": 8
+   },
+   "tech": {
+    "RABBITOFFERING": 3
+   }
+  },
+  "scrap_monoclehat": {
+   "ingredients": {
+    "wagpunk_bits": 2,
+    "transistor": 1,
+    "trinket_6": 1
+   }
+  },
+  "dragonboat_pack": {
+   "ingredients": {
+    "lucky_goldnugget": 16
+   },
+   "tech": {
+    "DRAGONOFFERING": 3
+   }
+  },
+  "slingshotammo_purebrilliance": {
+   "ingredients": {
+    "purebrilliance": 1
+   },
+   "tech": {
+    "LUNARFORGING": 2
+   }
+  },
+  "slingshotammo_container": {
+   "ingredients": {
+    "pigskin": 4,
+    "silk": 6,
+    "goldnugget": 2
+   }
+  },
+  "wortox_nabbag": {
+   "ingredients": {
+    "wortox_soul": 4,
+    "silk": 2
+   }
+  },
+  "winter_treestand": {
+   "ingredients": {
+    "poop": 2,
+    "boards": 1
+   },
+   "tech": {
+    "SCIENCE": 10
+   },
+   "placer": "winter_treestand_placer"
+  },
+  "moonstorm_goggleshat": {
+   "ingredients": {
+    "moonglass": 2,
+    "potato": 1
+   },
+   "tech": {
+    "ANCIENT": 10,
+    "SCIENCE": 10,
+    "MAGIC": 10
+   }
+  },
+  "slow_farmplot": {
+   "ingredients": {
+    "cutgrass": 8,
+    "poop": 4,
+    "log": 4
+   }
+  },
+  "boat_magnet": {
+   "ingredients": {
+    "boards": 2,
+    "cutstone": 2,
+    "transistor": 1,
+    "trinket_6": 1
+   }
+  },
+  "heatrock": {
+   "ingredients": {
+    "rocks": 10,
+    "pickaxe": 1,
+    "flint": 3
+   },
+   "tech": {
+    "SCIENCE": 2
+   }
+  },
+  "portableblender_item": {
+   "ingredients": {
+    "goldnugget": 2,
+    "transistor": 2,
+    "twigs": 4
+   }
+  },
+  "carnival_vest_c": {
+   "ingredients": {
+    "carnival_prizeticket": 48
+   },
+   "tech": {
+    "CARNIVAL_PRIZESHOP": 1
+   }
+  },
+  "mutator_water": {
+   "ingredients": {
+    "monstermeat": 2,
+    "silk": 2,
+    "fig": 2
+   },
+   "tech": {
+    "SPIDERCRAFT": 1
+   }
+  },
+  "coldfirepit": {
+   "ingredients": {
+    "nitre": 2,
+    "cutstone": 4,
+    "transistor": 2
+   },
+   "tech": {
+    "SCIENCE": 2
+   },
+   "placer": "coldfirepit_placer"
+  },
+  "bookstation": {
+   "ingredients": {
+    "livinglog": 2,
+    "papyrus": 4,
+    "featherpencil": 1
+   },
+   "placer": "bookstation_placer"
+  },
+  "chesspiece_moosegoose_builder": {
+   "ingredients": {
+    "rocks": 2
+   },
+   "tech": {
+    "ANCIENT": 10,
+    "SCIENCE": 10,
+    "MAGIC": 10
+   }
+  },
+  "mutator_warrior": {
+   "ingredients": {
+    "monstermeat": 2,
+    "silk": 1,
+    "pigskin": 1
+   },
+   "tech": {
+    "SPIDERCRAFT": 1
+   }
+  },
+  "cutstone": {
+   "ingredients": {
+    "rocks": 3
+   },
+   "tech": {
+    "SCIENCE": 1
+   }
+  },
+  "carnivalgame_golfprop_mediumspinner_cw": {
+   "ingredients": {},
+   "tech": {
+    "CARNIVAL_GOLFPROPS": 1
+   },
+   "placer": "carnivalgame_golfprop_mediumspinner_cw_placer"
+  },
+  "turf_beard_rug": {
+   "ingredients": {
+    "beardhair": 2,
+    "cutgrass": 2
+   },
+   "tech": {
+    "SCIENCE": 2
+   }
+  },
+  "slingshotmodkit": {
+   "ingredients": {
+    "papyrus": 2,
+    "twigs": 1
+   }
+  },
+  "eyeturret": {
+   "ingredients": {
+    "deerclops_eyeball": 1,
+    "minotaurhorn": 1,
+    "thulecite": 5
+   }
+  },
+  "mosquitomermsalve": {
+   "ingredients": {
+    "mosquitosack": 2
+   }
+  },
+  "lightning_rod": {
+   "ingredients": {
+    "goldnugget": 4,
+    "cutstone": 1
+   },
+   "tech": {
+    "SCIENCE": 1
+   },
+   "placer": "lightning_rod_placer"
+  },
+  "cookiecutterhat": {
+   "ingredients": {
+    "cookiecuttershell": 4,
+    "rope": 1
+   },
+   "tech": {
+    "SCIENCE": 2
+   }
+  },
+  "pickaxe": {
+   "ingredients": {
+    "twigs": 2,
+    "flint": 2
+   }
+  },
+  "chesspiece_rook_builder": {
+   "ingredients": {
+    "rocks": 2
+   },
+   "tech": {
+    "ANCIENT": 10,
+    "SCIENCE": 10,
+    "MAGIC": 10
+   }
+  },
+  "wurt_swampitem_shadow": {
+   "ingredients": {
+    "driftwood_log": 1,
+    "turf_marsh": 1,
+    "horrorfuel": 1
+   }
+  },
+  "wx78_shadowdrone_harvester": {
+   "ingredients": {
+    "transistor": 1,
+    "nightmarefuel": 1
+   },
+   "tech": {
+    "ANCIENT": 10,
+    "SCIENCE": 10,
+    "MAGIC": 10
+   }
+  },
+  "wall_ruins_2_item": {
+   "ingredients": {
+    "thulecite": 1
+   }
+  },
+  "yotp_food3": {
+   "ingredients": {
+    "lucky_goldnugget": 4
+   },
+   "tech": {
+    "PIGOFFERING": 3
+   }
+  },
+  "boat_cannon_kit": {
+   "ingredients": {
+    "palmcone_scale": 4,
+    "rope": 1,
+    "charcoal": 4
+   },
+   "tech": {
+    "ANCIENT": 10,
+    "SCIENCE": 10,
+    "MAGIC": 10
+   }
+  },
+  "wanderingtradershop_cutreeds": {
+   "ingredients": {
+    "ash": 4
+   },
+   "tech": {
+    "ANCIENT": 10,
+    "SCIENCE": 10,
+    "MAGIC": 10
+   }
+  },
+  "wx78_shadowdrone_debuffer": {
+   "ingredients": {
+    "transistor": 1,
+    "nightmarefuel": 1
+   },
+   "tech": {
+    "ANCIENT": 10,
+    "SCIENCE": 10,
+    "MAGIC": 10
+   }
+  },
+  "telebase": {
+   "ingredients": {
+    "nightmarefuel": 4,
+    "livinglog": 4,
+    "goldnugget": 8
+   },
+   "tech": {
+    "MAGIC": 3
+   },
+   "placer": "telebase_placer"
+  },
+  "costume_king_body": {
+   "ingredients": {
+    "silk": 6,
+    "beefalowool": 3
+   }
+  },
+  "spear_wathgrithr_lightning": {
+   "ingredients": {
+    "twigs": 2,
+    "lightninggoathorn": 2,
+    "beefalowool": 1
+   }
+  },
+  "turf_vault": {
+   "ingredients": {
+    "moonrocknugget": 1,
+    "thulecite_pieces": 1
+   },
+   "tech": {
+    "ANCIENT": 10,
+    "SCIENCE": 10,
+    "MAGIC": 10
+   }
+  },
+  "dumbbell_bluegem": {
+   "ingredients": {
+    "thulecite": 2,
+    "bluegem": 1,
+    "twigs": 1
+   }
+  },
+  "malbatross_feathered_weave": {
+   "ingredients": {
+    "malbatross_feather": 6,
+    "silk": 1
+   },
+   "tech": {
+    "SCIENCE": 2
+   }
+  },
+  "slingshot": {
+   "ingredients": {
+    "twigs": 1,
+    "mosquitosack": 2
+   }
+  },
+  "steeringwheel": {
+   "ingredients": {
+    "boards": 2,
+    "rope": 1
+   }
+  },
+  "dumbbell_heat": {
+   "ingredients": {
+    "rocks": 12,
+    "pickaxe": 1,
+    "flint": 4
+   }
+  },
+  "carnivaldecor_figure_kit": {
+   "ingredients": {
+    "carnival_prizeticket": 12
+   },
+   "tech": {
+    "CARNIVAL_PRIZESHOP": 1
+   }
+  },
+  "waxpaper": {
+   "ingredients": {
+    "papyrus": 1,
+    "beeswax": 1
+   },
+   "tech": {
+    "SCIENCE": 2
+   }
+  },
+  "chesspiece_catcoon_sketch": {
+   "ingredients": {
+    "lucky_goldnugget": 8
+   },
+   "tech": {
+    "CATCOONOFFERING": 3
+   }
+  },
+  "armorslurper": {
+   "ingredients": {
+    "slurper_pelt": 6,
+    "rope": 2,
+    "nightmarefuel": 2
+   },
+   "tech": {
+    "MAGIC": 3
+   }
+  },
+  "wormwood_juicyberrybush": {
+   "ingredients": {
+    "spoiled_food": 3,
+    "berries": 8
+   }
+  },
+  "book_light_upgraded": {
+   "ingredients": {
+    "book_light": 1,
+    "featherpencil": 1,
+    "papyrus": 2
+   },
+   "tech": {
+    "BOOKCRAFT": 1
+   }
+  },
+  "chesspiece_beequeen_builder": {
+   "ingredients": {
+    "rocks": 2
+   },
+   "tech": {
+    "ANCIENT": 10,
+    "SCIENCE": 10,
+    "MAGIC": 10
+   }
+  },
+  "hermitcrabtea_firenettles_3": {
+   "ingredients": {
+    "messagebottleempty": 1,
+    "firenettles_dried": 2
+   },
+   "tech": {
+    "ANCIENT": 10,
+    "SCIENCE": 10,
+    "MAGIC": 10
+   }
+  },
+  "chesspiece_daywalker2_builder": {
+   "ingredients": {
+    "rocks": 2
+   },
+   "tech": {
+    "ANCIENT": 10,
+    "SCIENCE": 10,
+    "MAGIC": 10
+   }
+  },
+  "book_temperature": {
+   "ingredients": {
+    "papyrus": 2,
+    "heatrock": 1
+   },
+   "tech": {
+    "BOOKCRAFT": 1
+   }
+  },
+  "winona_battery_low": {
+   "ingredients": {
+    "sewing_tape": 1,
+    "log": 2,
+    "nitre": 2
+   },
+   "placer": "winona_battery_low_item_placer"
+  },
+  "wagpunk_workstation_security_pulse_cage": {
+   "ingredients": {
+    "thulecite": 2,
+    "moonstorm_static_item": 1,
+    "coolant": 1
+   },
+   "tech": {
+    "WAGPUNK_WORKSTATION": 2
+   }
+  },
+  "kelphat": {
+   "ingredients": {
+    "kelp": 6
+   }
+  },
+  "carnivaldecor_figure_kit_season2": {
+   "ingredients": {
+    "carnival_prizeticket": 12
+   },
+   "tech": {
+    "CARNIVAL_PRIZESHOP": 1
+   }
+  },
+  "yoth_chair_rocking": {
+   "ingredients": {
+    "lucky_goldnugget": 2
+   }
+  },
+  "transmute_orangegem": {
+   "ingredients": {
+    "purplegem": 3
+   }
+  },
+  "miniflare": {
+   "ingredients": {
+    "twigs": 1,
+    "cutgrass": 1,
+    "nitre": 1
+   }
+  },
+  "elixir_container": {
+   "ingredients": {
+    "twigs": 6,
+    "boards": 1,
+    "silk": 4
+   }
+  },
+  "dragonbodyhat": {
+   "ingredients": {
+    "lucky_goldnugget": 8
+   },
+   "tech": {
+    "PERDOFFERING": 1
+   }
+  },
+  "turf_cotl_gold": {
+   "ingredients": {
+    "rocks": 1,
+    "goldnugget": 1
+   },
+   "tech": {
+    "ANCIENT": 10,
+    "SCIENCE": 10,
+    "MAGIC": 10
+   }
+  },
+  "hermitshop_winter_ornament_boss_pearl": {
+   "ingredients": {
+    "messagebottleempty": 8
+   },
+   "tech": {
+    "ANCIENT": 10,
+    "SCIENCE": 10,
+    "MAGIC": 10
+   }
+  },
+  "turf_woodfloor": {
+   "ingredients": {
+    "boards": 1
+   },
+   "tech": {
+    "SCIENCE": 2
+   }
+  },
+  "carnivalgame_shooting_station": {
+   "ingredients": {
+    "carnivalgame_shooting_kit": 1
+   }
+  },
+  "yellowamulet": {
+   "ingredients": {
+    "thulecite": 2,
+    "nightmarefuel": 3,
+    "yellowgem": 1
+   },
+   "tech": {
+    "ANCIENT": 2
+   }
+  },
+  "hawaiianshirt": {
+   "ingredients": {
+    "papyrus": 3,
+    "silk": 3,
+    "cactus_flower": 5
+   },
+   "tech": {
+    "SCIENCE": 2
+   }
+  },
+  "ghostlyelixir_shield": {
+   "ingredients": {
+    "log": 1,
+    "ghostflower": 1
+   }
+  },
+  "firesuppressor": {
+   "ingredients": {
+    "gears": 2,
+    "ice": 15,
+    "transistor": 2
+   },
+   "tech": {
+    "SCIENCE": 2
+   },
+   "placer": "firesuppressor_placer"
+  },
+  "wx78module_cold": {
+   "ingredients": {
+    "scandata": 4,
+    "bluegem": 1
+   },
+   "tech": {
+    "ROBOTMODULECRAFT": 1
+   }
+  },
+  "turf_rocky": {
+   "ingredients": {
+    "rocks": 1,
+    "flint": 1
+   },
+   "tech": {
+    "TURFCRAFTING": 2
+   }
+  },
+  "wintercooking_mulleddrink": {
+   "ingredients": {
+    "wintersfeastfuel": 1,
+    "petals_evil": 1,
+    "ice": 1
+   },
+   "tech": {
+    "WINTERSFEASTCOOKING": 1
+   }
+  },
+  "shadowdigger_builder": {
+   "ingredients": {
+    "nightmarefuel": 2,
+    "shovel": 1
+   },
+   "tech": {
+    "ANCIENT": 10,
+    "SCIENCE": 10,
+    "MAGIC": 10
+   }
+  },
+  "battlesong_sanityaura": {
+   "ingredients": {
+    "papyrus": 1,
+    "featherpencil": 1,
+    "nightmare_timepiece": 1
+   }
+  },
+  "oceanfishingbobber_oval": {
+   "ingredients": {
+    "driftwood_log": 1
+   },
+   "tech": {
+    "FISHING": 1
+   }
+  },
+  "mask_blacksmithhat": {
+   "ingredients": {
+    "marble": 2,
+    "silk": 4
+   }
+  },
+  "cartographydesk": {
+   "ingredients": {
+    "compass": 1,
+    "boards": 4
+   },
+   "tech": {
+    "SCIENCE": 1
+   },
+   "placer": "cartographydesk_placer"
+  },
+  "carnivaldecor_banner": {
+   "ingredients": {
+    "carnivaldecor_banner_kit": 1
+   }
+  },
+  "yotr_food1": {
+   "ingredients": {
+    "lucky_goldnugget": 5
+   },
+   "tech": {
+    "RABBITOFFERING": 3
+   }
+  },
+  "carnivalgame_golfprop_cutout10": {
+   "ingredients": {},
+   "tech": {
+    "CARNIVAL_GOLFPROPS": 1
+   },
+   "placer": "carnivalgame_golfprop_cutout10_placer"
+  },
+  "catcoonhat": {
+   "ingredients": {
+    "coontail": 1,
+    "silk": 4
+   },
+   "tech": {
+    "SCIENCE": 2
+   }
+  },
+  "bernie_inactive": {
+   "ingredients": {
+    "beardhair": 2,
+    "beefalowool": 2,
+    "silk": 2
+   }
+  },
+  "slingshotammo_horrorfuel": {
+   "ingredients": {
+    "horrorfuel": 1,
+    "rocks": 1
+   },
+   "tech": {
+    "SHADOWFORGING": 2
+   }
+  },
+  "compass": {
+   "ingredients": {
+    "goldnugget": 1,
+    "flint": 1
+   }
+  },
+  "battlesong_lunaraligned": {
+   "ingredients": {
+    "papyrus": 1,
+    "featherpencil": 1,
+    "purebrilliance": 3
+   }
+  },
+  "support_pillar_scaffold": {
+   "ingredients": {
+    "cutstone": 1,
+    "boards": 2
+   },
+   "tech": {
+    "ANCIENT": 10,
+    "SCIENCE": 10,
+    "MAGIC": 10
+   },
+   "placer": "support_pillar_scaffold_placer"
+  },
+  "kitcoonden": {
+   "ingredients": {
+    "lucky_goldnugget": 1
+   }
+  },
+  "cutstone_bunch": {
+   "ingredients": {
+    "rocks": 15
+   },
+   "tech": {
+    "CARPENTRY": 3
+   }
+  },
+  "transmute_horrorfuel": {
+   "ingredients": {
+    "dreadstone": 1
+   }
+  },
+  "wx78module_maxhunger": {
+   "ingredients": {
+    "scandata": 3,
+    "slurper_pelt": 1,
+    "wx78module_maxhunger1": 1
+   },
+   "tech": {
+    "ROBOTMODULECRAFT": 1
+   }
+  },
+  "transmute_rocks": {
+   "ingredients": {
+    "flint": 2
+   }
+  },
+  "hermitcrabtea_forgetmelots_1": {
+   "ingredients": {
+    "messagebottleempty": 1,
+    "forgetmelots_dried": 6
+   },
+   "tech": {
+    "ANCIENT": 10,
+    "SCIENCE": 10,
+    "MAGIC": 10
+   }
+  },
+  "rope": {
+   "ingredients": {
+    "cutgrass": 3
+   },
+   "tech": {
+    "SCIENCE": 1
+   }
+  },
+  "oceanfishingbobber_robin_winter": {
+   "ingredients": {
+    "feather_robin_winter": 1
+   },
+   "tech": {
+    "FISHING": 1
+   }
+  },
+  "turf_mosaic_grey": {
+   "ingredients": {
+    "marble": 1
+   },
+   "tech": {
+    "SCIENCE": 2
+   }
+  },
+  "pighead": {
+   "ingredients": {
+    "pigskin": 4,
+    "twigs": 4
+   }
+  },
+  "carnivaldecor_figure_kit_season3": {
+   "ingredients": {
+    "carnival_prizeticket": 12
+   },
+   "tech": {
+    "CARNIVAL_PRIZESHOP": 1
+   }
+  },
+  "portablecookpot_item": {
+   "ingredients": {
+    "goldnugget": 2,
+    "charcoal": 6,
+    "twigs": 6
+   }
+  },
+  "chesspiece_claywarg_sketch": {
+   "ingredients": {
+    "lucky_goldnugget": 16
+   },
+   "tech": {
+    "WARGOFFERING": 3
+   }
+  },
+  "turf_fungus_red": {
+   "ingredients": {
+    "cutlichen": 1,
+    "spore_medium": 1
+   },
+   "tech": {
+    "TURFCRAFTING": 2
+   }
+  },
+  "transmute_greengem": {
+   "ingredients": {
+    "yellowgem": 3
+   }
+  },
+  "yotc_carrat_race_finish_item": {
+   "ingredients": {
+    "goldnugget": 1
+   },
+   "tech": {
+    "CARRATOFFERING": 3
+   }
+  },
+  "shellweaver_icestaff3": {
+   "ingredients": {
+    "saltrock": 1,
+    "icestaff2": 1
+   },
+   "tech": {
+    "SHELLWEAVER": 3
+   }
+  },
+  "transmute_boneshard": {
+   "ingredients": {
+    "houndstooth": 2
+   }
+  },
+  "chesspiece_dragonfly_builder": {
+   "ingredients": {
+    "rocks": 2
+   },
+   "tech": {
+    "ANCIENT": 10,
+    "SCIENCE": 10,
+    "MAGIC": 10
+   }
+  },
+  "winterometer": {
+   "ingredients": {
+    "boards": 2,
+    "goldnugget": 2
+   },
+   "tech": {
+    "SCIENCE": 1
+   },
+   "placer": "winterometer_placer"
+  },
+  "wanderingtradershop_redgem": {
+   "ingredients": {
+    "pigskin": 3
+   },
+   "tech": {
+    "ANCIENT": 10,
+    "SCIENCE": 10,
+    "MAGIC": 10
+   }
+  },
+  "watermelonhat": {
+   "ingredients": {
+    "watermelon": 1,
+    "twigs": 3
+   },
+   "tech": {
+    "SCIENCE": 1
+   }
+  },
+  "mask_sagehat": {
+   "ingredients": {
+    "marble": 4
+   }
+  },
+  "mask_treehat": {
+   "ingredients": {
+    "marble": 2,
+    "silk": 4
+   }
+  },
+  "grass_umbrella": {
+   "ingredients": {
+    "twigs": 4,
+    "cutgrass": 3,
+    "petals": 6
+   }
+  },
+  "carnival_gametoken": {
+   "ingredients": {
+    "seeds": 1
+   },
+   "tech": {
+    "CARNIVAL_HOSTSHOP": 3
+   }
+  },
+  "oar": {
+   "ingredients": {
+    "log": 1
+   }
+  },
+  "pumpkincarver1": {
+   "ingredients": {
+    "pumpkin_seeds": 1,
+    "flint": 1
+   }
+  },
+  "hermitshop_oceanfishinglure_hermit_snow": {
+   "ingredients": {
+    "messagebottleempty": 1
+   },
+   "tech": {
+    "HERMITCRABSHOP": 5
+   }
+  },
+  "wall_stone_item": {
+   "ingredients": {
+    "cutstone": 2
+   },
+   "tech": {
+    "SCIENCE": 2
+   }
+  },
+  "wx78_drone_delivery_item": {
+   "ingredients": {
+    "transistor": 1,
+    "boards": 3
+   }
+  },
+  "ghostlyelixir_attack": {
+   "ingredients": {
+    "stinger": 1,
+    "ghostflower": 3
+   }
+  },
+  "slingshotammo_gelblob": {
+   "ingredients": {
+    "gelblob_bottle": 1
+   },
+   "tech": {
+    "SHADOWFORGING": 2
+   }
+  },
+  "vault_pillar_guard_constr_plans": {
+   "ingredients": {
+    "vault_pillar_guard_piece_1": 1,
+    "vault_pillar_guard_piece_2": 1,
+    "vault_pillar_guard_piece_3": 2
+   },
+   "tech": {
+    "VAULT_REFINE": 1
+   }
+  },
+  "wanderingtradershop_moonglass": {
+   "ingredients": {
+    "ash": 4
+   },
+   "tech": {
+    "ANCIENT": 10,
+    "SCIENCE": 10,
+    "MAGIC": 10
+   }
+  },
+  "turf_monkey_ground": {
+   "ingredients": {
+    "rocks": 1,
+    "marble": 1
+   },
+   "tech": {
+    "ANCIENT": 10,
+    "SCIENCE": 10,
+    "MAGIC": 10
+   }
+  },
+  "carnivalgame_golfgame_kit_medium": {
+   "ingredients": {
+    "goldnugget": 1,
+    "seeds": 3
+   },
+   "tech": {
+    "CARNIVAL_HOSTSHOP": 3
+   }
+  },
+  "mask_princesshat": {
+   "ingredients": {
+    "goldnugget": 4,
+    "silk": 2
+   }
+  },
+  "book_light": {
+   "ingredients": {
+    "papyrus": 2,
+    "lightbulb": 2
+   }
+  },
+  "wintercooking_polishcookie": {
+   "ingredients": {
+    "wintersfeastfuel": 1,
+    "butterflywings": 2
+   },
+   "tech": {
+    "WINTERSFEASTCOOKING": 1
+   }
+  },
+  "greenmooneye": {
+   "ingredients": {
+    "moonrockcrater": 1,
+    "greengem": 1
+   }
+  },
+  "chesspiece_yoth_sketch": {
+   "ingredients": {
+    "lucky_goldnugget": 8
+   },
+   "tech": {
+    "KNIGHTOFFERING": 3
+   }
+  },
+  "slingshotammo_gold": {
+   "ingredients": {
+    "goldnugget": 1
+   },
+   "tech": {
+    "SCIENCE": 1
+   }
+  },
+  "book_tentacles": {
+   "ingredients": {
+    "papyrus": 2,
+    "tentaclespots": 1
+   },
+   "tech": {
+    "SCIENCE": 3
+   }
+  },
+  "mask_dollrepairedhat": {
+   "ingredients": {
+    "marble": 1,
+    "silk": 4
+   }
+  },
+  "balloonspeed": {
+   "ingredients": {
+    "balloons_empty": 1
+   }
+  },
+  "compostwrap": {
+   "ingredients": {
+    "poop": 5,
+    "spoiled_food": 2,
+    "nitre": 1
+   }
+  },
+  "carnivaldecor_figure_season2": {
+   "ingredients": {
+    "carnivaldecor_figure_kit_season2": 1
+   }
+  },
+  "punchingbag_shadow": {
+   "ingredients": {
+    "cutgrass": 3,
+    "boards": 1,
+    "horrorfuel": 1
+   },
+   "tech": {
+    "MAGIC": 2
+   },
+   "placer": "punchingbag_shadow_placer"
+  },
+  "yotb_beefaloshrine": {
+   "ingredients": {
+    "goldnugget": 4,
+    "boards": 2
+   },
+   "tech": {
+    "SCIENCE": 10
+   },
+   "placer": "yotb_beefaloshrine_placer"
+  },
+  "farm_plow_item": {
+   "ingredients": {
+    "boards": 3,
+    "rope": 2,
+    "flint": 2
+   },
+   "tech": {
+    "SCIENCE": 1
+   }
+  },
+  "turf_dragonfly": {
+   "ingredients": {
+    "dragon_scales": 1,
+    "cutstone": 1
+   },
+   "tech": {
+    "SCIENCE": 2
+   }
+  },
+  "winona_storage_robot": {
+   "ingredients": {
+    "wagpunk_bits": 8,
+    "transistor": 4,
+    "winona_machineparts_1": 3
+   },
+   "tech": {
+    "ANCIENT": 10,
+    "SCIENCE": 10,
+    "MAGIC": 10
+   }
+  },
+  "ghostflowerhat": {
+   "ingredients": {
+    "ghostflower": 6
+   }
+  },
+  "winch": {
+   "ingredients": {
+    "boards": 2,
+    "cutstone": 1,
+    "rope": 2
+   },
+   "tech": {
+    "ANCIENT": 10,
+    "SCIENCE": 10,
+    "MAGIC": 10
+   },
+   "placer": "winch_placer"
+  },
+  "wx78module_maxhunger1": {
+   "ingredients": {
+    "scandata": 2,
+    "houndstooth": 1
+   },
+   "tech": {
+    "ROBOTMODULECRAFT": 1
+   }
+  },
+  "wx78module_nightvision": {
+   "ingredients": {
+    "scandata": 4,
+    "mole": 1,
+    "wx78module_light": 1
+   },
+   "tech": {
+    "ROBOTMODULECRAFT": 1
+   }
+  },
+  "wathgrithr_shield": {
+   "ingredients": {
+    "goldnugget": 4,
+    "beefalowool": 3
+   }
+  },
+  "turf_mud": {
+   "ingredients": {
+    "rocks": 1,
+    "ice": 1
+   },
+   "tech": {
+    "TURFCRAFTING": 2
+   }
+  },
+  "dragonboat_kit": {
+   "ingredients": {
+    "goldnugget": 3
+   },
+   "tech": {
+    "DRAGONOFFERING": 3
+   }
+  },
+  "chestupgrade_stacksize": {
+   "ingredients": {
+    "wagpunk_bits": 4,
+    "purebrilliance": 2,
+    "alterguardianhatshard": 1
+   },
+   "tech": {
+    "ANCIENT": 10,
+    "SCIENCE": 10,
+    "MAGIC": 10
+   }
+  },
+  "wx78module_digestion": {
+   "ingredients": {
+    "scandata": 2,
+    "coontail": 1
+   },
+   "tech": {
+    "ROBOTMODULECRAFT": 1
+   }
+  },
+  "yot_catcoonshrine": {
+   "ingredients": {
+    "goldnugget": 4,
+    "boards": 2
+   },
+   "tech": {
+    "SCIENCE": 10
+   },
+   "placer": "yot_catcoonshrine_placer"
+  },
+  "transmute_poop": {
+   "ingredients": {
+    "spoiled_food": 6
+   }
+  },
+  "boat_cannon": {
+   "ingredients": {
+    "palmcone_scale": 4,
+    "rope": 1,
+    "charcoal": 4
+   }
+  },
+  "critter_kitten_builder": {
+   "ingredients": {
+    "coontail": 1,
+    "fishsticks": 1
+   },
+   "tech": {
+    "ORPHANAGE": 1
+   }
+  },
+  "transmute_meat": {
+   "ingredients": {
+    "smallmeat": 3
+   }
+  },
+  "beef_bell": {
+   "ingredients": {
+    "goldnugget": 3,
+    "flint": 1
+   },
+   "tech": {
+    "SCIENCE": 1
+   }
+  },
+  "nightmarefuel": {
+   "ingredients": {
+    "petals_evil": 4
+   },
+   "tech": {
+    "MAGIC": 2
+   }
+  },
+  "houndwhistle": {
+   "ingredients": {
+    "lucky_goldnugget": 3
+   },
+   "tech": {
+    "WARGOFFERING": 3
+   }
+  },
+  "halloween_experiment_root": {
+   "ingredients": {
+    "batwing": 1,
+    "livinglog": 1
+   },
+   "tech": {
+    "MADSCIENCE": 1
+   }
+  },
+  "balloons_empty": {
+   "ingredients": {
+    "waterballoon": 4
+   }
+  },
+  "antlionhat": {
+   "ingredients": {
+    "beefalowool": 5,
+    "pigskin": 3,
+    "townportaltalisman": 1
+   },
+   "tech": {
+    "ANCIENT": 10,
+    "SCIENCE": 10,
+    "MAGIC": 10
+   }
+  },
+  "cotl_tabernacle_level2": {
+   "ingredients": {
+    "rocks": 10,
+    "cutstone": 5,
+    "log": 3
+   }
+  },
+  "mask_queenhat": {
+   "ingredients": {
+    "marble": 2,
+    "silk": 4,
+    "papyrus": 1
+   }
+  },
+  "featherfan": {
+   "ingredients": {
+    "goose_feather": 5,
+    "cutreeds": 2,
+    "rope": 2
+   },
+   "tech": {
+    "SCIENCE": 2
+   }
+  },
+  "yotc_carrat_gym_direction_item": {
+   "ingredients": {
+    "lucky_goldnugget": 4
+   },
+   "tech": {
+    "CARRATOFFERING": 3
+   }
+  },
+  "boat_magnet_kit": {
+   "ingredients": {
+    "boards": 2,
+    "cutstone": 2,
+    "transistor": 1,
+    "trinket_6": 1
+   },
+   "tech": {
+    "SEAFARING": 1
+   }
+  },
+  "oceanfishinglure_spoon_blue": {
+   "ingredients": {
+    "flint": 2,
+    "blue_cap": 1
+   },
+   "tech": {
+    "FISHING": 1
+   }
+  },
+  "beemine": {
+   "ingredients": {
+    "boards": 1,
+    "bee": 4,
+    "flint": 1
+   },
+   "tech": {
+    "SCIENCE": 2
+   }
+  },
+  "polly_rogershat": {
+   "ingredients": {
+    "monkey_mediumhat": 1,
+    "feather_canary": 1,
+    "blackflag": 1
+   },
+   "tech": {
+    "ANCIENT": 10,
+    "SCIENCE": 10,
+    "MAGIC": 10
+   }
+  },
+  "dock_woodposts": {
+   "ingredients": {
+    "log": 2
+   }
+  },
+  "chum": {
+   "ingredients": {
+    "spoiled_food": 2,
+    "barnacle": 3,
+    "silk": 1
+   },
+   "tech": {
+    "ANCIENT": 10,
+    "SCIENCE": 10,
+    "MAGIC": 10
+   }
+  },
+  "saddle_war": {
+   "ingredients": {
+    "rabbit": 4,
+    "steelwool": 4,
+    "log": 10
+   },
+   "tech": {
+    "SCIENCE": 2
+   }
+  },
+  "lunarplanthat": {
+   "ingredients": {
+    "purebrilliance": 4,
+    "lunarplant_husk": 2
+   },
+   "tech": {
+    "LUNARFORGING": 2
+   }
+  },
+  "wagpunk_floor_kit": {
+   "ingredients": {
+    "cutstone": 1,
+    "wagpunk_bits": 1
+   },
+   "tech": {
+    "WAGPUNK_WORKSTATION": 2
+   }
+  },
+  "oceanfishingbobber_goose": {
+   "ingredients": {
+    "goose_feather": 1
+   },
+   "tech": {
+    "FISHING": 1
+   }
+  },
+  "turf_forest": {
+   "ingredients": {
+    "twigs": 1,
+    "pinecone": 1
+   },
+   "tech": {
+    "TURFCRAFTING": 2
+   }
+  },
+  "blueprint_craftingset_ruinsglow_builder": {
+   "ingredients": {
+    "papyrus": 3
+   },
+   "tech": {
+    "ANCIENT": 2
+   }
+  },
+  "carnivalgame_golfgame_kit_hard": {
+   "ingredients": {
+    "goldnugget": 1,
+    "seeds": 3
+   },
+   "tech": {
+    "CARNIVAL_HOSTSHOP": 3
+   }
+  },
+  "gravestone": {
+   "ingredients": {
+    "rocks": 3,
+    "petals_evil": 4,
+    "boneshard": 2
+   }
+  },
+  "yotb_post": {
+   "ingredients": {
+    "boards": 2,
+    "goldnugget": 1
+   }
+  },
+  "offering_pot": {
+   "ingredients": {
+    "boards": 2,
+    "cutreeds": 2
+   },
+   "placer": "offering_pot_placer"
+  },
+  "townportal": {
+   "ingredients": {
+    "orangemooneye": 1,
+    "townportaltalisman": 1,
+    "cutstone": 3
+   },
+   "tech": {
+    "ANCIENT": 10,
+    "SCIENCE": 10,
+    "MAGIC": 10
+   },
+   "placer": "townportal_placer"
+  },
+  "dumbbell_marble": {
+   "ingredients": {
+    "marble": 4,
+    "twigs": 1
+   }
+  },
+  "yots_lantern_post_item": {
+   "ingredients": {
+    "lucky_goldnugget": 6
+   },
+   "tech": {
+    "PERDOFFERING": 1
+   }
+  },
+  "slingshot2ex": {
+   "ingredients": {
+    "twigs": 1,
+    "mosquitosack": 2
+   }
+  },
+  "carnivalgame_golfprop_spring_onetime": {
+   "ingredients": {},
+   "tech": {
+    "CARNIVAL_GOLFPROPS": 1
+   },
+   "placer": "carnivalgame_golfprop_spring_onetime_placer"
+  },
+  "bedroll_straw": {
+   "ingredients": {
+    "cutgrass": 6,
+    "rope": 1
+   },
+   "tech": {
+    "SCIENCE": 1
+   }
+  },
+  "mosquitofertilizer": {
+   "ingredients": {
+    "mosquitosack": 1,
+    "nitre": 2,
+    "poop": 1
+   }
+  },
+  "book_fish": {
+   "ingredients": {
+    "papyrus": 2,
+    "oceanfishingbobber_ball": 2
+   }
+  },
+  "mask_foolhat": {
+   "ingredients": {
+    "marble": 2,
+    "silk": 4
+   }
+  },
+  "boards_bunch": {
+   "ingredients": {
+    "log": 20
+   },
+   "tech": {
+    "CARPENTRY": 2
+   }
+  },
+  "costume_queen_body": {
+   "ingredients": {
+    "silk": 6
+   }
+  },
+  "battlesong_shadowaligned": {
+   "ingredients": {
+    "papyrus": 1,
+    "featherpencil": 1,
+    "horrorfuel": 3
+   }
+  },
+  "armor_lunarplant_husk": {
+   "ingredients": {
+    "armor_lunarplant": 1,
+    "armor_bramble": 1
+   }
+  },
+  "wendy_gravestone": {
+   "ingredients": {
+    "cutstone": 1,
+    "petals_evil": 4
+   },
+   "placer": "wendy_recipe_gravestone_placer"
+  },
+  "sisturn": {
+   "ingredients": {
+    "cutstone": 3,
+    "boards": 3,
+    "ash": 1
+   },
+   "placer": "sisturn_placer"
+  },
+  "transmute_bluegem": {
+   "ingredients": {
+    "redgem": 2
+   }
+  },
+  "perdfan": {
+   "ingredients": {
+    "lucky_goldnugget": 3
+   },
+   "tech": {
+    "PERDOFFERING": 3
+   }
+  },
+  "mast_malbatross": {
+   "ingredients": {
+    "driftwood_log": 3,
+    "rope": 3,
+    "malbatross_feathered_weave": 4
+   }
+  },
+  "dock_kit": {
+   "ingredients": {
+    "boards": 4,
+    "cutstone": 1,
+    "stinger": 2,
+    "palmcone_scale": 1
+   },
+   "tech": {
+    "ANCIENT": 10,
+    "SCIENCE": 10,
+    "MAGIC": 10
+   }
+  },
+  "pocketwatch_recall": {
+   "ingredients": {
+    "pocketwatch_parts": 2,
+    "goldnugget": 2,
+    "walrus_tusk": 1
+   },
+   "tech": {
+    "MAGIC": 2
+   }
+  },
+  "kitcoonden_kit": {
+   "ingredients": {
+    "lucky_goldnugget": 1
+   },
+   "tech": {
+    "CATCOONOFFERING": 3
+   }
+  },
+  "nightstick": {
+   "ingredients": {
+    "lightninggoathorn": 1,
+    "transistor": 2,
+    "nitre": 2
+   },
+   "tech": {
+    "SCIENCE": 2
+   }
+  },
+  "chesspiece_yoth_builder": {
+   "ingredients": {
+    "rocks": 2
+   },
+   "tech": {
+    "ANCIENT": 10,
+    "SCIENCE": 10,
+    "MAGIC": 10
+   }
+  },
+  "sword_lunarplant": {
+   "ingredients": {
+    "purebrilliance": 4,
+    "lunarplant_husk": 3
+   },
+   "tech": {
+    "LUNARFORGING": 2
+   }
+  },
+  "chesspiece_hornucopia_builder": {
+   "ingredients": {
+    "rocks": 2
+   },
+   "tech": {
+    "SCULPTING": 1
+   }
+  },
+  "slingshotammo_freeze": {
+   "ingredients": {
+    "moonrocknugget": 1,
+    "bluegem": 1
+   },
+   "tech": {
+    "MAGIC": 2
+   }
+  },
+  "yotd_boatpatch_proxy": {
+   "ingredients": {
+    "lucky_goldnugget": 1
+   },
+   "tech": {
+    "DRAGONOFFERING": 3
+   }
+  },
+  "fertilizer": {
+   "ingredients": {
+    "poop": 3,
+    "boneshard": 2,
+    "log": 4
+   },
+   "tech": {
+    "SCIENCE": 2
+   }
+  },
+  "meatrack": {
+   "ingredients": {
+    "twigs": 3,
+    "charcoal": 2,
+    "rope": 3
+   },
+   "tech": {
+    "SCIENCE": 1
+   },
+   "placer": "meatrack_placer"
+  },
+  "carnivalcannon_streamer": {
+   "ingredients": {
+    "carnivalcannon_streamer_kit": 1
+   }
+  },
+  "yotc_carrat_race_checkpoint_item": {
+   "ingredients": {
+    "lucky_goldnugget": 2
+   },
+   "tech": {
+    "CARRATOFFERING": 3
+   }
+  },
+  "winona_battery_low_item": {
+   "ingredients": {
+    "sewing_tape": 1,
+    "log": 2,
+    "nitre": 2
+   }
+  },
+  "fumarole_farm_hoe": {
+   "ingredients": {
+    "twigs": 4,
+    "mitegland": 2,
+    "nitre": 3
+   },
+   "tech": {
+    "SCIENCE": 2
+   }
+  },
+  "yotb_pattern_fragment_3": {
+   "ingredients": {
+    "lucky_goldnugget": 5
+   },
+   "tech": {
+    "BEEFOFFERING": 3
+   }
+  },
+  "chesspiece_claywarg_builder": {
+   "ingredients": {
+    "rocks": 2
+   },
+   "tech": {
+    "ANCIENT": 10,
+    "SCIENCE": 10,
+    "MAGIC": 10
+   }
+  },
+  "reviver": {
+   "ingredients": {
+    "cutgrass": 3,
+    "spidergland": 1
+   }
+  },
+  "carnivaldecor_eggride1": {
+   "ingredients": {
+    "carnivaldecor_eggride1_kit": 1
+   }
+  },
+  "miniboatlantern": {
+   "ingredients": {
+    "lucky_goldnugget": 3
+   },
+   "tech": {
+    "PERDOFFERING": 1
+   }
+  },
+  "slingshot_frame_wagpunk": {
+   "ingredients": {
+    "wagpunk_bits": 2,
+    "transistor": 1,
+    "trinket_6": 1,
+    "alterguardianhatshard": 1
+   }
+  },
+  "soil_amender": {
+   "ingredients": {
+    "messagebottleempty": 1,
+    "kelp": 1,
+    "ash": 1
+   },
+   "tech": {
+    "SCIENCE": 2
+   }
+  },
+  "wx78module_light": {
+   "ingredients": {
+    "scandata": 2,
+    "lightbulb": 1
+   },
+   "tech": {
+    "ROBOTMODULECRAFT": 1
+   }
+  },
+  "halloween_experiment_sanity": {
+   "ingredients": {
+    "crow": 1,
+    "petals_evil": 1
+   },
+   "tech": {
+    "MADSCIENCE": 1
+   }
+  },
+  "wx78_moduleremover": {
+   "ingredients": {
+    "twigs": 2,
+    "flint": 2
+   }
+  },
+  "wagboss_robot_creation_parts": {
+   "ingredients": {
+    "cutstone": 1,
+    "wagpunk_bits": 2
+   },
+   "tech": {
+    "WAGPUNK_WORKSTATION": 2
+   }
+  },
+  "orangestaff": {
+   "ingredients": {
+    "nightmarefuel": 2,
+    "cane": 1,
+    "orangegem": 2
+   },
+   "tech": {
+    "ANCIENT": 4
+   }
+  },
+  "slingshotammo_stinger": {
+   "ingredients": {
+    "stinger": 2
+   }
+  },
+  "chesspiece_knight_builder": {
+   "ingredients": {
+    "rocks": 2
+   },
+   "tech": {
+    "ANCIENT": 10,
+    "SCIENCE": 10,
+    "MAGIC": 10
+   }
+  },
+  "wanderingtradershop_gears": {
+   "ingredients": {
+    "pigskin": 3
+   },
+   "tech": {
+    "ANCIENT": 10,
+    "SCIENCE": 10,
+    "MAGIC": 10
+   }
+  },
+  "hermitshop_hermit_bundle_shells": {
+   "ingredients": {
+    "messagebottleempty": 1
+   },
+   "tech": {
+    "HERMITCRABSHOP": 1
+   }
+  },
+  "wx78module_movespeed": {
+   "ingredients": {
+    "scandata": 2,
+    "rabbit": 1
+   },
+   "tech": {
+    "ROBOTMODULECRAFT": 1
+   }
+  },
+  "featherpencil": {
+   "ingredients": {
+    "twigs": 1,
+    "charcoal": 1,
+    "feather_crow": 1
+   },
+   "tech": {
+    "SCIENCE": 1
+   }
+  },
+  "wall_ruins_item": {
+   "ingredients": {
+    "thulecite": 1
+   },
+   "tech": {
+    "ANCIENT": 2
+   }
+  },
+  "bandage": {
+   "ingredients": {
+    "papyrus": 1,
+    "honey": 2
+   },
+   "tech": {
+    "SCIENCE": 2
+   }
+  },
+  "wagpunk_workstation_moonstorm_static_catcher": {
+   "ingredients": {
+    "moonglass": 2,
+    "wagpunk_bits": 1
+   },
+   "tech": {
+    "WAGPUNK_WORKSTATION": 2
+   }
+  },
+  "boat_magnet_beacon": {
+   "ingredients": {
+    "cutstone": 2,
+    "transistor": 1,
+    "trinket_6": 1
+   },
+   "tech": {
+    "SEAFARING": 1
+   }
+  },
+  "yotp_food1": {
+   "ingredients": {
+    "lucky_goldnugget": 6
+   },
+   "tech": {
+    "PIGOFFERING": 3
+   }
+  },
+  "wx78module_maxsanity1": {
+   "ingredients": {
+    "scandata": 1,
+    "petals": 1
+   },
+   "tech": {
+    "ROBOTMODULECRAFT": 1
+   }
+  },
+  "wintercooking_panettone": {
+   "ingredients": {
+    "wintersfeastfuel": 1,
+    "rock_avocado_fruit": 2
+   },
+   "tech": {
+    "WINTERSFEASTCOOKING": 1
+   }
+  },
+  "carpentry_station": {
+   "ingredients": {
+    "boards": 4,
+    "flint": 4
+   },
+   "tech": {
+    "ANCIENT": 10,
+    "SCIENCE": 10,
+    "MAGIC": 10
+   },
+   "placer": "carpentry_station_placer"
+  },
+  "sculptingtable": {
+   "ingredients": {
+    "cutstone": 2,
+    "boards": 2,
+    "twigs": 4
+   },
+   "tech": {
+    "SCIENCE": 1
+   },
+   "placer": "sculptingtable_placer"
+  },
+  "oar_driftwood": {
+   "ingredients": {
+    "driftwood_log": 1
+   }
+  },
+  "slingshot_handle_voidcloth": {
+   "ingredients": {
+    "voidcloth": 1
+   },
+   "tech": {
+    "SHADOWFORGING": 2
+   }
+  },
+  "deserthat": {
+   "ingredients": {
+    "goggleshat": 1,
+    "pigskin": 1
+   },
+   "tech": {
+    "ANCIENT": 10,
+    "SCIENCE": 10,
+    "MAGIC": 10
+   }
+  },
+  "armordreadstone": {
+   "ingredients": {
+    "dreadstone": 6,
+    "horrorfuel": 4
+   },
+   "tech": {
+    "ANCIENT": 10,
+    "SCIENCE": 10,
+    "MAGIC": 10
+   }
+  },
+  "turf_fungus_green": {
+   "ingredients": {
+    "cutlichen": 1,
+    "spore_small": 1
+   },
+   "tech": {
+    "TURFCRAFTING": 2
+   }
+  },
+  "chesspiece_anchor_builder": {
+   "ingredients": {
+    "rocks": 2
+   },
+   "tech": {
+    "ANCIENT": 10,
+    "SCIENCE": 10,
+    "MAGIC": 10
+   }
+  },
+  "hermithotspring_constr": {
+   "ingredients": {},
+   "tech": {
+    "ANCIENT": 10,
+    "SCIENCE": 10,
+    "MAGIC": 10
+   },
+   "placer": "hermithotspring_constr_placer"
+  },
+  "book_bees": {
+   "ingredients": {
+    "papyrus": 2,
+    "stinger": 8,
+    "honey": 4
+   },
+   "tech": {
+    "BOOKCRAFT": 1
+   }
+  },
+  "wortox_reviver": {
+   "ingredients": {
+    "wortox_soul": 10
+   }
+  },
+  "researchlab3": {
+   "ingredients": {
+    "livinglog": 3,
+    "purplegem": 1,
+    "nightmarefuel": 7
+   },
+   "tech": {
+    "MAGIC": 2
+   },
+   "placer": "researchlab3_placer"
+  },
+  "mermwatchtower": {
+   "ingredients": {
+    "boards": 5,
+    "tentaclespots": 1,
+    "spear": 2
+   },
+   "tech": {
+    "SCIENCE": 1
+   },
+   "placer": "mermwatchtower_placer"
+  },
+  "carnivalgame_golf_shape_curve1x1": {
+   "ingredients": {},
+   "tech": {
+    "CARNIVAL_GOLFPROPS": 1
+   },
+   "placer": "carnivalgame_golf_shape_curve1x1_placer"
+  },
+  "halloween_experiment_volatile": {
+   "ingredients": {
+    "rottenegg": 1,
+    "charcoal": 1
+   },
+   "tech": {
+    "MADSCIENCE": 1
+   }
+  },
+  "carnivalgame_puckdrop_kit": {
+   "ingredients": {
+    "goldnugget": 1,
+    "seeds": 3
+   },
+   "tech": {
+    "CARNIVAL_HOSTSHOP": 3
+   }
+  },
+  "trunkvest_summer": {
+   "ingredients": {
+    "trunk_summer": 1,
+    "silk": 8
+   },
+   "tech": {
+    "SCIENCE": 2
+   }
+  },
+  "book_web": {
+   "ingredients": {
+    "papyrus": 2,
+    "silk": 8
+   },
+   "tech": {
+    "BOOKCRAFT": 1
+   }
+  },
+  "turf_ruinstiles": {
+   "ingredients": {
+    "rocks": 2,
+    "nightmarefuel": 1
+   },
+   "tech": {
+    "ANCIENT": 10,
+    "SCIENCE": 10,
+    "MAGIC": 10
+   }
+  },
+  "handpillow_petals": {
+   "ingredients": {
+    "silk": 2,
+    "petals": 3
+   },
+   "tech": {
+    "RABBITOFFERING": 3
+   }
+  },
+  "blowdart_yellow": {
+   "ingredients": {
+    "cutreeds": 2,
+    "goldnugget": 1,
+    "feather_canary": 1
+   },
+   "tech": {
+    "SCIENCE": 2
+   }
+  },
+  "vault_pillar_guard_piece_1": {
+   "ingredients": {
+    "thulecite_pieces": 1,
+    "moonrocknugget": 2
+   }
+  },
+  "turf_checkerfloor": {
+   "ingredients": {
+    "marble": 1
+   },
+   "tech": {
+    "SCIENCE": 2
+   }
+  },
+  "reflectivevest": {
+   "ingredients": {
+    "rope": 1,
+    "feather_robin": 3,
+    "pigskin": 2
+   },
+   "tech": {
+    "SCIENCE": 1
+   }
+  },
+  "orangeamulet": {
+   "ingredients": {
+    "thulecite": 2,
+    "nightmarefuel": 3,
+    "orangegem": 1
+   },
+   "tech": {
+    "ANCIENT": 4
+   }
+  },
+  "turf_mosaic_blue": {
+   "ingredients": {
+    "marble": 1
+   },
+   "tech": {
+    "SCIENCE": 2
+   }
+  },
+  "marblebean": {
+   "ingredients": {
+    "marble": 1
+   },
+   "tech": {
+    "SCIENCE": 2
+   }
+  },
+  "slingshot_frame_gems": {
+   "ingredients": {
+    "thulecite": 2,
+    "nightmarefuel": 2,
+    "redgem": 1,
+    "bluegem": 1
+   },
+   "tech": {
+    "ANCIENT": 2
+   }
+  },
+  "hermitcrab_lightpost": {
+   "ingredients": {
+    "rocks": 3,
+    "barnacle": 2,
+    "slurtle_shellpieces": 2
+   },
+   "tech": {
+    "ANCIENT": 10,
+    "SCIENCE": 10,
+    "MAGIC": 10
+   },
+   "placer": "hermitcrab_lightpost_item_placer"
+  },
+  "chesspiece_moon_builder": {
+   "ingredients": {
+    "rocks": 2
+   },
+   "tech": {
+    "ANCIENT": 10,
+    "SCIENCE": 10,
+    "MAGIC": 10
+   }
+  },
+  "roseglasseshat": {
+   "ingredients": {
+    "petals": 12,
+    "twigs": 3
+   }
+  },
+  "costume_princess_body": {
+   "ingredients": {
+    "goldnugget": 6,
+    "silk": 4
+   }
+  },
+  "turf_ruinstiles_glow": {
+   "ingredients": {
+    "rocks": 2
+   },
+   "tech": {
+    "ANCIENT": 10,
+    "SCIENCE": 10,
+    "MAGIC": 10
+   }
+  },
+  "carnivaldecor_plant": {
+   "ingredients": {
+    "carnivaldecor_plant_kit": 1
+   }
+  },
+  "oceanfishinglure_spinner_red": {
+   "ingredients": {
+    "flint": 1,
+    "red_cap": 1,
+    "beefalowool": 1
+   },
+   "tech": {
+    "FISHING": 1
+   }
+  },
+  "goggleshat": {
+   "ingredients": {
+    "goldnugget": 1,
+    "pigskin": 1
+   },
+   "tech": {
+    "SCIENCE": 1
+   }
+  },
+  "carnivalgame_golfprop_wormhole": {
+   "ingredients": {},
+   "tech": {
+    "CARNIVAL_GOLFPROPS": 1
+   },
+   "placer": "carnivalgame_golfprop_wormhole_placer"
+  },
+  "fish_box": {
+   "ingredients": {
+    "cutstone": 1,
+    "rope": 3
+   },
+   "tech": {
+    "SEAFARING": 1
+   },
+   "placer": "fish_box_placer"
+  },
+  "turf_sinkhole": {
+   "ingredients": {
+    "cutgrass": 1,
+    "foliage": 1
+   },
+   "tech": {
+    "TURFCRAFTING": 2
+   }
+  },
+  "vault_compass": {
+   "ingredients": {
+    "thulecite_pieces": 1,
+    "moonrocknugget": 1
+   }
+  },
+  "fence_electric_item": {
+   "ingredients": {
+    "wagpunk_bits": 6,
+    "moonglass": 6
+   },
+   "tech": {
+    "ANCIENT": 10,
+    "SCIENCE": 10,
+    "MAGIC": 10
+   }
+  },
+  "bandage_butterflywings": {
+   "ingredients": {
+    "butterflywings": 3
+   }
+  },
+  "yotr_decor_2_item": {
+   "ingredients": {
+    "lucky_goldnugget": 5
+   },
+   "tech": {
+    "RABBITOFFERING": 3
+   }
+  },
+  "slingshot_handle_silk": {
+   "ingredients": {
+    "silk": 2
+   }
+  },
+  "lunar_forge_kit": {
+   "ingredients": {
+    "moonrocknugget": 5,
+    "moonglass": 5,
+    "purebrilliance": 1
+   },
+   "tech": {
+    "CELESTIAL": 3
+   }
+  },
+  "mast_item": {
+   "ingredients": {
+    "boards": 3,
+    "rope": 3,
+    "silk": 8
+   },
+   "tech": {
+    "SEAFARING": 1
+   }
+  },
+  "woodie_boards": {
+   "ingredients": {
+    "lucy": 1,
+    "log": 3
+   }
+  },
+  "critter_lamb_builder": {
+   "ingredients": {
+    "steelwool": 1,
+    "guacamole": 1
+   },
+   "tech": {
+    "ORPHANAGE": 1
+   }
+  },
+  "slingshotammo_honey": {
+   "ingredients": {
+    "honey": 1
+   }
+  },
+  "chesspiece_butterfly_sketch": {
+   "ingredients": {
+    "papyrus": 1
+   },
+   "tech": {
+    "CELESTIAL": 3
+   }
+  },
+  "slingshotammo_scrapfeather": {
+   "ingredients": {
+    "wagpunk_bits": 1,
+    "feather_canary": 1
+   }
+  },
+  "pocketwatch_warp": {
+   "ingredients": {
+    "pocketwatch_parts": 1,
+    "goldnugget": 2
+   }
+  },
+  "chesspiece_yotd_sketch": {
+   "ingredients": {
+    "lucky_goldnugget": 8
+   },
+   "tech": {
+    "DRAGONOFFERING": 3
+   }
+  },
+  "carpentry_blade_moonglass": {
+   "ingredients": {
+    "moonglass": 6,
+    "moonbutterfly": 1
+   },
+   "tech": {
+    "CELESTIAL": 3
+   }
+  },
+  "hermitcrabtea_moon_tree_blossom_2": {
+   "ingredients": {
+    "messagebottleempty": 1,
+    "moon_tree_blossom_dried": 6
+   },
+   "tech": {
+    "ANCIENT": 10,
+    "SCIENCE": 10,
+    "MAGIC": 10
+   }
+  },
+  "voidcloth_scythe": {
+   "ingredients": {
+    "horrorfuel": 3,
+    "voidcloth": 1
+   },
+   "tech": {
+    "SHADOWFORGING": 2
+   }
+  },
+  "hermitcrab_teashop": {
+   "ingredients": {
+    "boards": 5,
+    "barnacle": 6,
+    "silk": 8
+   },
+   "tech": {
+    "ANCIENT": 10,
+    "SCIENCE": 10,
+    "MAGIC": 10
+   },
+   "placer": "hermitcrab_teashop_placer"
+  },
+  "saltlick": {
+   "ingredients": {
+    "boards": 2,
+    "nitre": 4
+   },
+   "tech": {
+    "SCIENCE": 2
+   },
+   "placer": "saltlick_placer"
+  },
+  "transmute_beefalowool": {
+   "ingredients": {
+    "beardhair": 2
+   }
+  },
+  "merm_tool_upgraded": {
+   "ingredients": {
+    "twigs": 1,
+    "rocks": 1
+   }
+  },
+  "halloween_experiment_health": {
+   "ingredients": {
+    "mosquito": 1,
+    "red_cap": 1
+   },
+   "tech": {
+    "MADSCIENCE": 1
+   }
+  },
+  "floatinglantern": {
+   "ingredients": {
+    "lucky_goldnugget": 4
+   },
+   "tech": {
+    "PERDOFFERING": 1
+   }
+  },
+  "carnivalgame_golf_shape_curve2x1": {
+   "ingredients": {},
+   "tech": {
+    "CARNIVAL_GOLFPROPS": 1
+   },
+   "placer": "carnivalgame_golf_shape_curve2x1_placer"
+  },
+  "wood_table_square": {
+   "ingredients": {
+    "boards": 2,
+    "rope": 1
+   },
+   "tech": {
+    "CARPENTRY": 2
+   },
+   "placer": "wood_table_square_placer"
+  },
+  "razor": {
+   "ingredients": {
+    "twigs": 2,
+    "flint": 2
+   },
+   "tech": {
+    "SCIENCE": 1
+   }
+  },
+  "moonrockcrater": {
+   "ingredients": {
+    "moonrocknugget": 3
+   },
+   "tech": {
+    "SCIENCE": 2
+   }
+  },
+  "saltbox": {
+   "ingredients": {
+    "saltrock": 10,
+    "bluegem": 1,
+    "cutstone": 1
+   },
+   "tech": {
+    "SCIENCE": 2
+   },
+   "placer": "saltbox_placer"
+  },
+  "wormwood_lureplant": {
+   "ingredients": {
+    "compostwrap": 2,
+    "plantmeat": 5
+   }
+  },
+  "wall_scrap_item": {
+   "ingredients": {
+    "wagpunk_bits": 4
+   },
+   "tech": {
+    "SCIENCE": 2
+   }
+  },
+  "wall_moonrock_item": {
+   "ingredients": {
+    "moonrocknugget": 4
+   },
+   "tech": {
+    "SCIENCE": 2
+   }
+  },
+  "fishingrod": {
+   "ingredients": {
+    "twigs": 2,
+    "silk": 2
+   },
+   "tech": {
+    "SCIENCE": 1
+   }
+  },
+  "carnivaldecor_eggride3": {
+   "ingredients": {
+    "carnivaldecor_eggride3_kit": 1
+   }
+  },
+  "piggyback": {
+   "ingredients": {
+    "pigskin": 4,
+    "silk": 6,
+    "rope": 2
+   },
+   "tech": {
+    "SCIENCE": 2
+   }
+  },
+  "rabbitkingshop_armor_carrotlure": {
+   "ingredients": {
+    "carrot": 8,
+    "rope": 3
+   },
+   "tech": {
+    "RABBITKINGSHOP": 2
+   }
+  },
+  "bushhat": {
+   "ingredients": {
+    "strawhat": 1,
+    "rope": 1,
+    "dug_berrybush": 1
+   },
+   "tech": {
+    "SCIENCE": 2
+   }
+  },
+  "mask_mirrorhat": {
+   "ingredients": {
+    "marble": 2,
+    "silk": 4,
+    "goldnugget": 4
+   }
+  },
+  "boat_bumper_kelp_kit": {
+   "ingredients": {
+    "kelp": 3,
+    "cutgrass": 3
+   }
+  },
+  "wormwood_berrybush": {
+   "ingredients": {
+    "spoiled_food": 3,
+    "berries_juicy": 8
+   }
+  },
+  "armorwagpunk": {
+   "ingredients": {
+    "wagpunk_bits": 8,
+    "transistor": 3,
+    "alterguardianhatshard": 1
+   },
+   "tech": {
+    "ANCIENT": 10,
+    "SCIENCE": 10,
+    "MAGIC": 10
+   }
+  },
+  "dumbbell_golden": {
+   "ingredients": {
+    "goldnugget": 4,
+    "twigs": 1
+   }
+  },
+  "stone_table_round": {
+   "ingredients": {
+    "cutstone": 3,
+    "rope": 2
+   },
+   "tech": {
+    "CARPENTRY": 3
+   },
+   "placer": "stone_table_round_placer"
+  },
+  "spice_sugar": {
+   "ingredients": {
+    "honey": 3
+   },
+   "tech": {
+    "FOODPROCESSING": 1
+   }
+  },
+  "nightmare_timepiece": {
+   "ingredients": {
+    "thulecite": 2,
+    "nightmarefuel": 2
+   },
+   "tech": {
+    "ANCIENT": 2
+   }
+  },
+  "redmooneye": {
+   "ingredients": {
+    "moonrockcrater": 1,
+    "redgem": 1
+   }
+  },
+  "oceanfishinglure_spinner_blue": {
+   "ingredients": {
+    "flint": 1,
+    "blue_cap": 1,
+    "beefalowool": 1
+   },
+   "tech": {
+    "FISHING": 1
+   }
+  },
+  "yellowstaff": {
+   "ingredients": {
+    "nightmarefuel": 4,
+    "livinglog": 2,
+    "yellowgem": 2
+   },
+   "tech": {
+    "ANCIENT": 2
+   }
+  },
+  "armorruins": {
+   "ingredients": {
+    "thulecite": 6,
+    "nightmarefuel": 4
+   },
+   "tech": {
+    "ANCIENT": 4
+   }
+  },
+  "wall_wood_item": {
+   "ingredients": {
+    "boards": 2,
+    "rope": 1
+   },
+   "tech": {
+    "SCIENCE": 1
+   }
+  },
+  "tophat": {
+   "ingredients": {
+    "silk": 6
+   },
+   "tech": {
+    "SCIENCE": 1
+   }
+  },
+  "batbat": {
+   "ingredients": {
+    "batwing": 3,
+    "livinglog": 2,
+    "purplegem": 1
+   },
+   "tech": {
+    "MAGIC": 3
+   }
+  },
+  "redlantern": {
+   "ingredients": {
+    "lucky_goldnugget": 3
+   },
+   "tech": {
+    "PERDOFFERING": 1
+   }
+  },
+  "ruinsrelic_chipbowl": {
+   "ingredients": {
+    "cutstone": 1
+   },
+   "tech": {
+    "ANCIENT": 10,
+    "SCIENCE": 10,
+    "MAGIC": 10
+   }
+  },
+  "chesspiece_carrat_builder": {
+   "ingredients": {
+    "rocks": 2
+   },
+   "tech": {
+    "ANCIENT": 10,
+    "SCIENCE": 10,
+    "MAGIC": 10
+   }
+  },
+  "turf_carpetfloor": {
+   "ingredients": {
+    "boards": 1,
+    "beefalowool": 1
+   },
+   "tech": {
+    "SCIENCE": 2
+   }
+  },
+  "yotr_token": {
+   "ingredients": {
+    "goldnugget": 1
+   },
+   "tech": {
+    "RABBITOFFERING": 3
+   }
+  },
+  "boomerang": {
+   "ingredients": {
+    "boards": 1,
+    "silk": 1,
+    "charcoal": 1
+   },
+   "tech": {
+    "SCIENCE": 2
+   }
+  },
+  "oceanfishingbobber_ball": {
+   "ingredients": {
+    "log": 1
+   },
+   "tech": {
+    "FISHING": 1
+   }
+  },
+  "ruinsrelic_bowl": {
+   "ingredients": {
+    "cutstone": 2
+   },
+   "tech": {
+    "ANCIENT": 10,
+    "SCIENCE": 10,
+    "MAGIC": 10
+   }
+  },
+  "wendy_moonbutterfly": {
+   "ingredients": {
+    "ghostflower": 4,
+    "moonbutterflywings": 1
+   }
+  },
+  "turf_archive": {
+   "ingredients": {
+    "moonrocknugget": 1,
+    "thulecite_pieces": 1
+   },
+   "tech": {
+    "ANCIENT": 10,
+    "SCIENCE": 10,
+    "MAGIC": 10
+   }
+  },
+  "transmute_opalpreciousgem": {
+   "ingredients": {
+    "yellowgem": 1,
+    "orangegem": 1,
+    "greengem": 1,
+    "purplegem": 1,
+    "redgem": 1,
+    "bluegem": 1
+   }
+  },
+  "wx78module_stacksize": {
+   "ingredients": {
+    "scandata": 8,
+    "moonglass_charged": 1
+   },
+   "tech": {
+    "ROBOTMODULECRAFT": 1
+   }
+  },
+  "chesspiece_bearger_mutated_builder": {
+   "ingredients": {
+    "rocks": 2
+   },
+   "tech": {
+    "ANCIENT": 10,
+    "SCIENCE": 10,
+    "MAGIC": 10
+   }
+  },
+  "mermthrone_construction": {
+   "ingredients": {
+    "boards": 5,
+    "rope": 5
+   },
+   "tech": {
+    "SCIENCE": 1
+   },
+   "placer": "mermthrone_construction_placer"
+  },
+  "hermitcrabtea_foliage_1": {
+   "ingredients": {
+    "messagebottleempty": 1,
+    "foliage_dried": 8
+   },
+   "tech": {
+    "ANCIENT": 10,
+    "SCIENCE": 10,
+    "MAGIC": 10
+   }
+  },
+  "cookpot": {
+   "ingredients": {
+    "cutstone": 3,
+    "charcoal": 6,
+    "twigs": 6
+   },
+   "tech": {
+    "SCIENCE": 1
+   },
+   "placer": "cookpot_placer"
+  },
+  "stone_stool": {
+   "ingredients": {
+    "cutstone": 1,
+    "rope": 2
+   },
+   "tech": {
+    "CARPENTRY": 3
+   },
+   "placer": "stone_stool_placer"
+  },
+  "graveurn": {
+   "ingredients": {
+    "ash": 1,
+    "slurtle_shellpieces": 1
+   }
+  },
+  "yotc_carrat_gym_reaction_item": {
+   "ingredients": {
+    "lucky_goldnugget": 4
+   },
+   "tech": {
+    "CARRATOFFERING": 3
+   }
+  },
+  "waxwelljournal": {
+   "ingredients": {
+    "papyrus": 2,
+    "nightmarefuel": 2
+   }
+  },
+  "turf_ruinsbrick": {
+   "ingredients": {
+    "rocks": 2,
+    "nightmarefuel": 1
+   },
+   "tech": {
+    "ANCIENT": 10,
+    "SCIENCE": 10,
+    "MAGIC": 10
+   }
+  },
+  "red_mushroomhat": {
+   "ingredients": {
+    "red_cap": 6
+   },
+   "tech": {
+    "ANCIENT": 10,
+    "SCIENCE": 10,
+    "MAGIC": 10
+   }
+  },
+  "mask_halfwithat": {
+   "ingredients": {
+    "marble": 2
+   }
+  },
+  "pocket_scale": {
+   "ingredients": {
+    "log": 1,
+    "cutstone": 1,
+    "goldnugget": 1
+   },
+   "tech": {
+    "SCIENCE": 1
+   }
+  },
+  "yotb_post_item": {
+   "ingredients": {
+    "boards": 2,
+    "goldnugget": 1
+   },
+   "tech": {
+    "BEEFOFFERING": 3
+   }
+  },
+  "sewing_kit": {
+   "ingredients": {
+    "log": 1,
+    "silk": 8,
+    "houndstooth": 2
+   },
+   "tech": {
+    "SCIENCE": 2
+   }
+  },
+  "sunkenchest": {
+   "ingredients": {
+    "slurtle_shellpieces": 5
+   }
+  },
+  "carnivalgame_golfprop_cutout6": {
+   "ingredients": {},
+   "tech": {
+    "CARNIVAL_GOLFPROPS": 1
+   },
+   "placer": "carnivalgame_golfprop_cutout6_placer"
+  },
+  "scarecrow": {
+   "ingredients": {
+    "pumpkin": 1,
+    "boards": 3,
+    "cutgrass": 3
+   },
+   "tech": {
+    "SCIENCE": 1
+   },
+   "placer": "scarecrow_placer"
+  },
+  "armorgrass": {
+   "ingredients": {
+    "cutgrass": 10,
+    "twigs": 2
+   }
+  },
+  "waterpump": {
+   "ingredients": {
+    "boards": 2,
+    "oceanfish_small_9_inv": 1
+   },
+   "tech": {
+    "SEAFARING": 1
+   },
+   "placer": "waterpump_placer"
+  },
+  "book_silviculture": {
+   "ingredients": {
+    "papyrus": 2,
+    "livinglog": 1
+   },
+   "tech": {
+    "SCIENCE": 3
+   }
+  },
+  "minerhat": {
+   "ingredients": {
+    "strawhat": 1,
+    "goldnugget": 1,
+    "fireflies": 1
+   },
+   "tech": {
+    "SCIENCE": 2
+   }
+  },
+  "wereitem_moose": {
+   "ingredients": {
+    "monstermeat": 3,
+    "cutgrass": 2
+   }
+  },
+  "critter_bulbin_builder": {
+   "ingredients": {
+    "onion": 1,
+    "stuffedeggplant": 1
+   },
+   "tech": {
+    "ORPHANAGE": 1
+   }
+  },
+  "carnival_plaza_kit": {
+   "ingredients": {
+    "goldnugget": 1,
+    "seeds": 3
+   },
+   "tech": {
+    "CARNIVAL_HOSTSHOP": 1
+   }
+  },
+  "blowdart_pipe": {
+   "ingredients": {
+    "cutreeds": 2,
+    "houndstooth": 1,
+    "feather_robin_winter": 1
+   },
+   "tech": {
+    "SCIENCE": 2
+   }
+  },
+  "hermithouse_ornament": {
+   "ingredients": {
+    "twigs": 1,
+    "slurtle_shellpieces": 1
+   },
+   "tech": {
+    "ANCIENT": 10,
+    "SCIENCE": 10,
+    "MAGIC": 10
+   }
+  },
+  "wateringcan": {
+   "ingredients": {
+    "boards": 2,
+    "rope": 1
+   },
+   "tech": {
+    "SCIENCE": 1
+   }
+  },
+  "carnivaldecor_eggride1_kit": {
+   "ingredients": {
+    "carnival_prizeticket": 36
+   },
+   "tech": {
+    "CARNIVAL_PRIZESHOP": 1
+   }
+  },
+  "purplemooneye": {
+   "ingredients": {
+    "moonrockcrater": 1,
+    "purplegem": 1
+   }
+  },
+  "rainometer": {
+   "ingredients": {
+    "boards": 2,
+    "goldnugget": 2,
+    "rope": 2
+   },
+   "tech": {
+    "SCIENCE": 1
+   },
+   "placer": "rainometer_placer"
+  },
+  "wall_stone_2_item": {
+   "ingredients": {
+    "cutstone": 2
+   }
+  },
+  "oceanfishinglure_hermit_rain": {
+   "ingredients": {
+    "cookiecuttershell": 1,
+    "mosquitosack": 1
+   },
+   "tech": {
+    "ANCIENT": 10,
+    "SCIENCE": 10,
+    "MAGIC": 10
+   }
+  },
+  "yotd_steeringwheel_item": {
+   "ingredients": {
+    "lucky_goldnugget": 1
+   },
+   "tech": {
+    "DRAGONOFFERING": 3
+   }
+  },
+  "carnivalcannon_confetti_kit": {
+   "ingredients": {
+    "carnival_prizeticket": 18
+   },
+   "tech": {
+    "CARNIVAL_PRIZESHOP": 1
+   }
+  },
+  "beefalo_groomer": {
+   "ingredients": {
+    "boards": 4,
+    "beefalowool": 2
+   },
+   "tech": {
+    "SCIENCE": 2
+   },
+   "placer": "beefalo_groomer_item_placer"
+  },
+  "winona_battery_high": {
+   "ingredients": {
+    "sewing_tape": 1,
+    "boards": 2,
+    "transistor": 2
+   },
+   "placer": "winona_battery_high_item_placer"
+  },
+  "chesspiece_eyeofterror_builder": {
+   "ingredients": {
+    "rocks": 2
+   },
+   "tech": {
+    "ANCIENT": 10,
+    "SCIENCE": 10,
+    "MAGIC": 10
+   }
+  },
+  "hermithotspring": {
+   "ingredients": {
+    "rocks": 20,
+    "cookiecuttershell": 10,
+    "barnacle": 10
+   }
+  },
+  "seedpouch": {
+   "ingredients": {
+    "slurtle_shellpieces": 2,
+    "cutgrass": 4,
+    "seeds": 2
+   },
+   "tech": {
+    "SCIENCE": 2
+   }
+  },
+  "ruinshat": {
+   "ingredients": {
+    "thulecite": 4,
+    "nightmarefuel": 4
+   },
+   "tech": {
+    "ANCIENT": 4
+   }
+  },
+  "dragonflychest": {
+   "ingredients": {
+    "dragon_scales": 1,
+    "boards": 4,
+    "goldnugget": 10
+   },
+   "tech": {
+    "SCIENCE": 2
+   },
+   "placer": "dragonflychest_placer"
+  },
+  "bodypillow_steelwool": {
+   "ingredients": {
+    "lucky_goldnugget": 6,
+    "silk": 2,
+    "steelwool": 2
+   },
+   "tech": {
+    "RABBITOFFERING": 3
+   }
+  },
+  "critter_puppy_builder": {
+   "ingredients": {
+    "houndstooth": 1,
+    "monsterlasagna": 1
+   },
+   "tech": {
+    "ORPHANAGE": 1
+   }
+  },
+  "compostingbin": {
+   "ingredients": {
+    "boards": 3,
+    "spoiled_food": 1,
+    "cutgrass": 1
+   },
+   "tech": {
+    "SCIENCE": 2
+   },
+   "placer": "compostingbin_placer"
+  },
+  "oceanfishinglure_hermit_snow": {
+   "ingredients": {
+    "cookiecuttershell": 1,
+    "ice": 1
+   },
+   "tech": {
+    "ANCIENT": 10,
+    "SCIENCE": 10,
+    "MAGIC": 10
+   }
+  },
+  "torch": {
+   "ingredients": {
+    "cutgrass": 2,
+    "twigs": 2
+   }
+  },
+  "yotr_food3": {
+   "ingredients": {
+    "lucky_goldnugget": 5
+   },
+   "tech": {
+    "RABBITOFFERING": 3
+   }
+  },
+  "mushroom_light2": {
+   "ingredients": {
+    "shroom_skin": 1,
+    "fertilizer": 1,
+    "boards": 1
+   },
+   "tech": {
+    "ANCIENT": 10,
+    "SCIENCE": 10,
+    "MAGIC": 10
+   },
+   "placer": "mushroom_light2_placer"
+  },
+  "gelblob_storage": {
+   "ingredients": {
+    "dreadstone": 5,
+    "nightmarefuel": 4
+   }
+  },
+  "siestahut": {
+   "ingredients": {
+    "silk": 2,
+    "boards": 4,
+    "rope": 3
+   },
+   "tech": {
+    "SCIENCE": 2
+   },
+   "placer": "siestahut_placer"
+  },
+  "transmute_nightmarefuel": {
+   "ingredients": {
+    "horrorfuel": 1
+   }
+  },
+  "boat_bumper_yotd_kit": {
+   "ingredients": {
+    "lucky_goldnugget": 3
+   },
+   "tech": {
+    "DRAGONOFFERING": 3
+   }
+  },
+  "chesspiece_bishop_builder": {
+   "ingredients": {
+    "rocks": 2
+   },
+   "tech": {
+    "ANCIENT": 10,
+    "SCIENCE": 10,
+    "MAGIC": 10
+   }
+  },
+  "hermitshop_winter_ornament_boss_hermithouse": {
+   "ingredients": {
+    "messagebottleempty": 4
+   },
+   "tech": {
+    "ANCIENT": 10,
+    "SCIENCE": 10,
+    "MAGIC": 10
+   }
+  },
+  "farm_hoe": {
+   "ingredients": {
+    "twigs": 2,
+    "flint": 2
+   },
+   "tech": {
+    "SCIENCE": 1
+   }
+  },
+  "armor_carrotlure": {
+   "ingredients": {
+    "carrot": 8,
+    "rope": 3
+   }
+  },
+  "firestaff": {
+   "ingredients": {
+    "nightmarefuel": 2,
+    "spear": 1,
+    "redgem": 1
+   },
+   "tech": {
+    "MAGIC": 3
+   }
+  },
+  "pitchfork": {
+   "ingredients": {
+    "twigs": 2,
+    "flint": 2
+   },
+   "tech": {
+    "SCIENCE": 1
+   }
+  },
+  "vault_pillar_guard_piece_3": {
+   "ingredients": {
+    "thulecite_pieces": 1,
+    "moonrocknugget": 1
+   }
+  },
+  "carnivalgame_golf_tee": {
+   "ingredients": {
+    "carnivalgame_golf_tee_kit": 1
+   }
+  },
+  "costume_mirror_body": {
+   "ingredients": {
+    "goldnugget": 6
+   }
+  },
+  "battlesong_instant_taunt": {
+   "ingredients": {
+    "papyrus": 1,
+    "featherpencil": 1,
+    "tomato": 1
+   }
+  },
+  "costume_fool_body": {
+   "ingredients": {
+    "silk": 6
+   }
+  },
+  "hermitcrabtea_foliage_2": {
+   "ingredients": {
+    "messagebottleempty": 1,
+    "foliage_dried": 6
+   },
+   "tech": {
+    "ANCIENT": 10,
+    "SCIENCE": 10,
+    "MAGIC": 10
+   }
+  },
+  "bodypillow_kelp": {
+   "ingredients": {
+    "lucky_goldnugget": 3,
+    "silk": 2,
+    "kelp": 3
+   },
+   "tech": {
+    "RABBITOFFERING": 3
+   }
+  },
+  "hermitshop_oceanfishinglure_hermit_heavy": {
+   "ingredients": {
+    "messagebottleempty": 1
+   },
+   "tech": {
+    "HERMITCRABSHOP": 5
+   }
+  },
+  "golden_farm_hoe": {
+   "ingredients": {
+    "twigs": 4,
+    "goldnugget": 2
+   },
+   "tech": {
+    "SCIENCE": 2
+   }
+  },
+  "wx78module_maxsanity": {
+   "ingredients": {
+    "scandata": 3,
+    "nightmarefuel": 1,
+    "wx78module_maxsanity1": 1
+   },
+   "tech": {
+    "ROBOTMODULECRAFT": 1
+   }
+  },
+  "goldenaxe": {
+   "ingredients": {
+    "twigs": 4,
+    "goldnugget": 2
+   },
+   "tech": {
+    "SCIENCE": 2
+   }
+  },
+  "cotl_tabernacle_level1": {
+   "ingredients": {
+    "rocks": 10,
+    "log": 2
+   },
+   "tech": {
+    "ANCIENT": 10,
+    "SCIENCE": 10,
+    "MAGIC": 10
+   },
+   "placer": "cotl_tabernacle_level1_placer"
+  },
+  "boards": {
+   "ingredients": {
+    "log": 4
+   },
+   "tech": {
+    "SCIENCE": 1
+   }
+  },
+  "treasurechest": {
+   "ingredients": {
+    "boards": 3
+   },
+   "tech": {
+    "SCIENCE": 1
+   },
+   "placer": "treasurechest_placer"
+  },
+  "bearger_fur": {
+   "ingredients": {
+    "furtuft": 90
+   },
+   "tech": {
+    "SCIENCE": 2
+   }
+  },
+  "carnivaldecor_eggride5_kit": {
+   "ingredients": {
+    "carnival_prizeticket": 36
+   },
+   "tech": {
+    "CARNIVAL_PRIZESHOP": 1
+   }
+  },
+  "wx78_backupbody": {
+   "ingredients": {
+    "gears": 1,
+    "redgem": 1
+   },
+   "placer": "wx78_backupbody_placer"
+  },
+  "trap_bramble": {
+   "ingredients": {
+    "livinglog": 1,
+    "stinger": 1
+   }
+  },
+  "wormwood_lightflier": {
+   "ingredients": {
+    "lightbulb": 1
+   }
+  },
+  "bundlewrap": {
+   "ingredients": {
+    "waxpaper": 1,
+    "rope": 1
+   },
+   "tech": {
+    "ANCIENT": 10,
+    "SCIENCE": 10,
+    "MAGIC": 10
+   }
+  },
+  "transmute_smallmeat": {
+   "ingredients": {
+    "meat": 1
+   }
+  },
+  "staff_tornado": {
+   "ingredients": {
+    "goose_feather": 10,
+    "lightninggoathorn": 1,
+    "gears": 1
+   },
+   "tech": {
+    "SCIENCE": 2
+   }
+  },
+  "shellweaver_salty_doghat": {
+   "ingredients": {
+    "saltrock": 5,
+    "polly_rogershat": 1
+   },
+   "tech": {
+    "SHELLWEAVER": 1
+   }
+  },
+  "icepack": {
+   "ingredients": {
+    "bearger_fur": 1,
+    "gears": 1,
+    "transistor": 1
+   },
+   "tech": {
+    "SCIENCE": 2
+   }
+  },
+  "beargerfur_sack": {
+   "ingredients": {
+    "security_pulse_cage_full": 1,
+    "bearger_fur": 1,
+    "purebrilliance": 3,
+    "moonrocknugget": 5
+   },
+   "tech": {
+    "LUNARFORGING": 2
+   }
+  },
+  "wormwood_reeds": {
+   "ingredients": {
+    "cave_banana": 1,
+    "cutreeds": 4
+   }
+  },
+  "turf_ruinstrim_glow": {
+   "ingredients": {
+    "rocks": 2
+   },
+   "tech": {
+    "ANCIENT": 10,
+    "SCIENCE": 10,
+    "MAGIC": 10
+   }
+  },
+  "chesspiece_catcoon_builder": {
+   "ingredients": {
+    "rocks": 2
+   },
+   "tech": {
+    "ANCIENT": 10,
+    "SCIENCE": 10,
+    "MAGIC": 10
+   }
+  },
+  "homesign": {
+   "ingredients": {
+    "boards": 1
+   },
+   "tech": {
+    "SCIENCE": 1
+   },
+   "placer": "homesign_placer"
+  },
+  "mask_dollhat": {
+   "ingredients": {
+    "marble": 2,
+    "silk": 4
+   }
+  },
+  "stone_chair": {
+   "ingredients": {
+    "cutstone": 2,
+    "rope": 2
+   },
+   "tech": {
+    "CARPENTRY": 3
+   },
+   "placer": "stone_chair_placer"
+  },
+  "battlesong_durability": {
+   "ingredients": {
+    "papyrus": 1,
+    "featherpencil": 1,
+    "sewing_kit": 1
+   }
+  },
+  "nutrientsgoggleshat": {
+   "ingredients": {
+    "plantregistryhat": 1,
+    "thulecite_pieces": 4,
+    "purplegem": 1
+   },
+   "tech": {
+    "ANCIENT": 2
+   }
+  },
+  "winona_catapult_item": {
+   "ingredients": {
+    "sewing_tape": 1,
+    "twigs": 3,
+    "rocks": 15
+   }
+  },
+  "wintercooking_pickledherring": {
+   "ingredients": {
+    "wintersfeastfuel": 1,
+    "flint": 1,
+    "saltrock": 1
+   },
+   "tech": {
+    "WINTERSFEASTCOOKING": 1
+   }
+  },
+  "wx78module_screech": {
+   "ingredients": {
+    "scandata": 4,
+    "batnose": 1
+   },
+   "tech": {
+    "ROBOTMODULECRAFT": 1
+   }
+  },
+  "carnivaldecor_banner_kit": {
+   "ingredients": {
+    "carnival_prizeticket": 24
+   },
+   "tech": {
+    "CARNIVAL_PRIZESHOP": 1
+   }
+  },
+  "yotr_fightring_kit": {
+   "ingredients": {
+    "boards": 2
+   },
+   "tech": {
+    "RABBITOFFERING": 3
+   }
+  },
+  "battlesong_container": {
+   "ingredients": {
+    "boards": 2,
+    "goldnugget": 3,
+    "feather_robin_winter": 2,
+    "beeswax": 2
+   }
+  },
+  "transmute_moonrocknugget": {
+   "ingredients": {
+    "marble": 2
+   }
+  },
+  "ruins_bat": {
+   "ingredients": {
+    "livinglog": 3,
+    "thulecite": 4,
+    "nightmarefuel": 4
+   },
+   "tech": {
+    "ANCIENT": 4
+   }
+  },
+  "pottedfern": {
+   "ingredients": {
+    "foliage": 2,
+    "slurtle_shellpieces": 1
+   },
+   "tech": {
+    "SCIENCE": 2
+   },
+   "placer": "pottedfern_placer"
+  },
+  "blueamulet": {
+   "ingredients": {
+    "goldnugget": 3,
+    "bluegem": 1
+   },
+   "tech": {
+    "MAGIC": 2
+   }
+  },
+  "chesspiece_sharkboi_builder": {
+   "ingredients": {
+    "rocks": 2
+   },
+   "tech": {
+    "ANCIENT": 10,
+    "SCIENCE": 10,
+    "MAGIC": 10
+   }
+  },
+  "turf_deciduous": {
+   "ingredients": {
+    "twigs": 1,
+    "acorn": 1
+   },
+   "tech": {
+    "TURFCRAFTING": 2
+   }
+  },
+  "saddle_basic": {
+   "ingredients": {
+    "beefalowool": 4,
+    "pigskin": 4,
+    "goldnugget": 4
+   },
+   "tech": {
+    "SCIENCE": 2
+   }
+  },
+  "axe": {
+   "ingredients": {
+    "twigs": 1,
+    "flint": 1
+   }
+  },
+  "goldenpickaxe": {
+   "ingredients": {
+    "twigs": 4,
+    "goldnugget": 2
+   },
+   "tech": {
+    "SCIENCE": 2
+   }
+  },
+  "rabbitkingshop_hat_rabbit": {
+   "ingredients": {
+    "rabbit": 1,
+    "cutgrass": 6
+   },
+   "tech": {
+    "RABBITKINGSHOP": 2
+   }
+  },
+  "hermitshop_turf_shellbeach_blueprint": {
+   "ingredients": {
+    "messagebottleempty": 3
+   },
+   "tech": {
+    "HERMITCRABSHOP": 1
+   }
+  },
+  "shadow_forge": {
+   "ingredients": {
+    "nightmarefuel": 5,
+    "dreadstone": 2,
+    "horrorfuel": 1
+   }
+  },
+  "winona_catapult": {
+   "ingredients": {
+    "sewing_tape": 1,
+    "twigs": 3,
+    "rocks": 15
+   },
+   "placer": "winona_catapult_item_placer"
+  },
+  "mastupgrade_lightningrod_item": {
+   "ingredients": {
+    "goldnugget": 5
+   },
+   "tech": {
+    "SEAFARING": 1
+   }
+  },
+  "supertacklecontainer": {
+   "ingredients": {
+    "cookiecuttershell": 3,
+    "rope": 2
+   }
+  },
+  "armordragonfly": {
+   "ingredients": {
+    "dragon_scales": 1,
+    "armorwood": 1,
+    "pigskin": 3
+   },
+   "tech": {
+    "SCIENCE": 2
+   }
+  },
+  "chesspiece_beefalo_sketch": {
+   "ingredients": {
+    "lucky_goldnugget": 8
+   },
+   "tech": {
+    "BEEFOFFERING": 3
+   }
+  },
+  "yotd_anchor_item": {
+   "ingredients": {
+    "lucky_goldnugget": 1
+   },
+   "tech": {
+    "DRAGONOFFERING": 3
+   }
+  },
+  "wanderingtradershop_livinglog": {
+   "ingredients": {
+    "beefalowool": 3
+   },
+   "tech": {
+    "ANCIENT": 10,
+    "SCIENCE": 10,
+    "MAGIC": 10
+   }
+  },
+  "pumpkincarver2": {
+   "ingredients": {
+    "pumpkin_seeds": 1,
+    "flint": 1
+   }
+  },
+  "spider_whistle": {
+   "ingredients": {
+    "silk": 3,
+    "twigs": 2
+   }
+  },
+  "walking_stick": {
+   "ingredients": {
+    "lucy": 1,
+    "log": 3,
+    "charcoal": 1
+   }
+  },
+  "moonglassaxe": {
+   "ingredients": {
+    "twigs": 2,
+    "moonglass": 3
+   },
+   "tech": {
+    "CELESTIAL": 3
+   }
+  },
+  "ghostlyelixir_slowregen": {
+   "ingredients": {
+    "spidergland": 1,
+    "ghostflower": 1
+   }
+  },
+  "campfire": {
+   "ingredients": {
+    "cutgrass": 3,
+    "log": 2
+   },
+   "placer": "campfire_placer"
+  },
+  "carnivalgame_golf_shape_diagonal1x1": {
+   "ingredients": {},
+   "tech": {
+    "CARNIVAL_GOLFPROPS": 1
+   },
+   "placer": "carnivalgame_golf_shape_diagonal1x1_placer"
+  },
+  "hermitshop_winch_blueprint": {
+   "ingredients": {
+    "messagebottleempty": 1
+   },
+   "tech": {
+    "HERMITCRABSHOP": 1
+   }
+  },
+  "spicepack": {
+   "ingredients": {
+    "cutgrass": 4,
+    "twigs": 4,
+    "nitre": 2
+   }
+  },
+  "thurible": {
+   "ingredients": {
+    "cutstone": 2,
+    "nightmarefuel": 6,
+    "ash": 1
+   }
+  },
+  "boatrace_seastack_throwable_deploykit": {
+   "ingredients": {
+    "lucky_goldnugget": 2
+   },
+   "tech": {
+    "DRAGONOFFERING": 3
+   }
+  },
+  "rabbithouse": {
+   "ingredients": {
+    "boards": 4,
+    "carrot": 10,
+    "manrabbit_tail": 4
+   },
+   "tech": {
+    "SCIENCE": 2
+   },
+   "placer": "rabbithouse_placer"
+  },
+  "hermitcrabtea_succulent_picked_2": {
+   "ingredients": {
+    "messagebottleempty": 1,
+    "succulent_picked_dried": 4
+   },
+   "tech": {
+    "ANCIENT": 10,
+    "SCIENCE": 10,
+    "MAGIC": 10
+   }
+  },
+  "icestaff": {
+   "ingredients": {
+    "spear": 1,
+    "bluegem": 1
+   },
+   "tech": {
+    "MAGIC": 2
+   }
+  },
+  "yotc_shrinecarrat": {
+   "ingredients": {
+    "goldnugget": 4
+   },
+   "tech": {
+    "CARRATOFFERING": 3
+   }
+  },
+  "carnivaldecor_eggride2": {
+   "ingredients": {
+    "carnivaldecor_eggride2_kit": 1
+   }
+  },
+  "carnivalgame_golfprop_mediumspinner_ccw": {
+   "ingredients": {},
+   "tech": {
+    "CARNIVAL_GOLFPROPS": 1
+   },
+   "placer": "carnivalgame_golfprop_mediumspinner_ccw_placer"
+  },
+  "carnivalgame_golfprop_cutout5": {
+   "ingredients": {},
+   "tech": {
+    "CARNIVAL_GOLFPROPS": 1
+   },
+   "placer": "carnivalgame_golfprop_cutout5_placer"
+  },
+  "mask_dollbrokenhat": {
+   "ingredients": {
+    "marble": 2,
+    "silk": 4
+   }
+  },
+  "yotc_carrat_gym_direction": {
+   "ingredients": {
+    "lucky_goldnugget": 4
+   }
+  },
+  "turf_carpetfloor2": {
+   "ingredients": {
+    "boards": 1,
+    "beefalowool": 1
+   },
+   "tech": {
+    "SCIENCE": 2
+   }
+  },
+  "mastupgrade_lamp": {
+   "ingredients": {
+    "boards": 1,
+    "rope": 2,
+    "flint": 4
+   }
+  },
+  "wx78module_movespeed2": {
+   "ingredients": {
+    "scandata": 6,
+    "gears": 1,
+    "wx78module_movespeed": 1
+   },
+   "tech": {
+    "ROBOTMODULECRAFT": 1
+   }
+  },
+  "fumaroleshovel": {
+   "ingredients": {
+    "twigs": 4,
+    "mitegland": 2,
+    "nitre": 3
+   },
+   "tech": {
+    "SCIENCE": 2
+   }
+  },
+  "voidcloth_kit": {
+   "ingredients": {
+    "horrorfuel": 1,
+    "voidcloth": 1
+   },
+   "tech": {
+    "SHADOWFORGING": 2
+   }
+  },
+  "wall_dreadstone_item": {
+   "ingredients": {
+    "dreadstone": 4
+   },
+   "tech": {
+    "ANCIENT": 10,
+    "SCIENCE": 10,
+    "MAGIC": 10
+   }
+  },
+  "pumpkinhat": {
+   "ingredients": {
+    "pumpkin": 1
+   },
+   "tech": {
+    "SCIENCE": 10
+   }
+  },
+  "armor_bramble": {
+   "ingredients": {
+    "livinglog": 2,
+    "stinger": 4
+   }
+  },
+  "slingshot_frame_bone": {
+   "ingredients": {
+    "boneshard": 2,
+    "rope": 1
+   }
+  },
+  "turf_vent": {
+   "ingredients": {
+    "rocks": 3
+   },
+   "tech": {
+    "TURFCRAFTING": 2
+   }
+  },
+  "gelblob_storage_kit": {
+   "ingredients": {
+    "gelblob_bottle": 3,
+    "dreadstone": 5
+   },
+   "tech": {
+    "SHADOWFORGING": 2
+   }
+  },
+  "vaultrelic_planter": {
+   "ingredients": {
+    "cutstone": 1
+   },
+   "tech": {
+    "ANCIENT": 10,
+    "SCIENCE": 10,
+    "MAGIC": 10
+   }
+  },
+  "transmute_redgem": {
+   "ingredients": {
+    "bluegem": 2
+   }
+  },
+  "critter_perdling_builder": {
+   "ingredients": {
+    "featherhat": 1,
+    "trailmix": 1
+   },
+   "tech": {
+    "ORPHANAGE": 1
+   }
+  },
+  "spice_chili": {
+   "ingredients": {
+    "pepper": 3
+   },
+   "tech": {
+    "FOODPROCESSING": 1
+   }
+  },
+  "vault_pillar_guard_piece_2": {
+   "ingredients": {
+    "thulecite_pieces": 2,
+    "trinket_6": 1
+   }
+  },
+  "carnivaldecor_eggride5": {
+   "ingredients": {
+    "carnivaldecor_eggride5_kit": 1
+   }
+  },
+  "candybag": {
+   "ingredients": {
+    "cutgrass": 6
+   },
+   "tech": {
+    "SCIENCE": 10
+   }
+  },
+  "boat_bumper_yotd": {
+   "ingredients": {
+    "rope": 1
+   }
+  },
+  "glasscutter": {
+   "ingredients": {
+    "log": 1,
+    "moonglass": 5
+   },
+   "tech": {
+    "CELESTIAL": 3
+   }
+  },
+  "yotc_carrat_gym_reaction": {
+   "ingredients": {
+    "lucky_goldnugget": 4
+   }
+  },
+  "portablefirepit": {
+   "ingredients": {
+    "log": 3,
+    "rope": 1,
+    "rocks": 4
+   }
+  },
+  "wintercooking_pumpkinpie": {
+   "ingredients": {
+    "wintersfeastfuel": 1,
+    "ash": 1,
+    "phlegm": 1
+   },
+   "tech": {
+    "WINTERSFEASTCOOKING": 1
+   }
+  },
+  "wx78_drone_zap_remote": {
+   "ingredients": {
+    "scandata": 10,
+    "transistor": 1,
+    "wagpunk_bits": 8
+   }
+  },
+  "wormwood_fruitdragon": {
+   "ingredients": {
+    "dragonfruit": 1
+   }
+  },
+  "security_pulse_cage_full": {
+   "ingredients": {
+    "security_pulse_cage": 1
+   }
+  },
+  "merm_armory": {
+   "ingredients": {
+    "boards": 2,
+    "log": 5,
+    "cutgrass": 5
+   },
+   "placer": "merm_armory_placer"
+  },
+  "bluemooneye": {
+   "ingredients": {
+    "moonrockcrater": 1,
+    "bluegem": 1
+   }
+  },
+  "spider_healer_item": {
+   "ingredients": {
+    "honey": 2,
+    "ash": 2,
+    "silk": 2
+   }
+  },
+  "chesspiece_antlion_builder": {
+   "ingredients": {
+    "rocks": 2
+   },
+   "tech": {
+    "ANCIENT": 10,
+    "SCIENCE": 10,
+    "MAGIC": 10
+   }
+  },
+  "ghostlyelixir_shadow": {
+   "ingredients": {
+    "horrorfuel": 1,
+    "ghostflower": 3
+   }
+  },
+  "carnival_plaza": {
+   "ingredients": {
+    "carnival_plaza_kit": 1
+   }
+  },
+  "oceanfishinglure_hermit_drowsy": {
+   "ingredients": {
+    "cookiecuttershell": 1,
+    "stinger": 1
+   },
+   "tech": {
+    "ANCIENT": 10,
+    "SCIENCE": 10,
+    "MAGIC": 10
+   }
+  },
+  "critter_eets_builder": {
+   "ingredients": {
+    "garlic": 1,
+    "butterflymuffin": 1
+   },
+   "tech": {
+    "ORPHANAGE": 1
+   }
+  },
+  "chesspiece_clayhound_sketch": {
+   "ingredients": {
+    "lucky_goldnugget": 8
+   },
+   "tech": {
+    "WARGOFFERING": 3
+   }
+  },
+  "dreadstonehat": {
+   "ingredients": {
+    "dreadstone": 4,
+    "horrorfuel": 4
+   },
+   "tech": {
+    "ANCIENT": 10,
+    "SCIENCE": 10,
+    "MAGIC": 10
+   }
+  },
+  "hermitshop_oceanfishinglure_hermit_rain": {
+   "ingredients": {
+    "messagebottleempty": 1
+   },
+   "tech": {
+    "HERMITCRABSHOP": 5
+   }
+  },
+  "carnivalgame_memory_station": {
+   "ingredients": {
+    "carnivalgame_memory_kit": 1
+   }
+  },
+  "fence_item": {
+   "ingredients": {
+    "twigs": 3,
+    "rope": 1
+   },
+   "tech": {
+    "SCIENCE": 1
+   }
+  },
+  "winona_spotlight": {
+   "ingredients": {
+    "sewing_tape": 1,
+    "goldnugget": 2,
+    "fireflies": 1
+   },
+   "placer": "winona_spotlight_item_placer"
+  },
+  "armor_sanity": {
+   "ingredients": {
+    "nightmarefuel": 5,
+    "papyrus": 3
+   },
+   "tech": {
+    "MAGIC": 3
+   }
+  },
+  "blowdart_fire": {
+   "ingredients": {
+    "cutreeds": 2,
+    "charcoal": 1,
+    "feather_robin": 1
+   },
+   "tech": {
+    "SCIENCE": 2
+   }
+  },
+  "hermitcrabtea_succulent_picked_3": {
+   "ingredients": {
+    "messagebottleempty": 1,
+    "succulent_picked_dried": 2
+   },
+   "tech": {
+    "ANCIENT": 10,
+    "SCIENCE": 10,
+    "MAGIC": 10
+   }
+  },
+  "armor_lunarplant": {
+   "ingredients": {
+    "purebrilliance": 4,
+    "lunarplant_husk": 4
+   },
+   "tech": {
+    "LUNARFORGING": 2
+   }
+  },
+  "wx78module_light2": {
+   "ingredients": {
+    "scandata": 6,
+    "fireflies": 1,
+    "wx78module_light": 1
+   },
+   "tech": {
+    "ROBOTMODULECRAFT": 1
+   }
+  },
+  "ghostlyelixir_lunar": {
+   "ingredients": {
+    "purebrilliance": 1,
+    "ghostflower": 3
+   }
+  },
+  "pocketwatch_parts": {
+   "ingredients": {
+    "pocketwatch_dismantler": 1,
+    "thulecite_pieces": 8,
+    "nightmarefuel": 2
+   }
+  },
+  "kitcoondecor2_kit": {
+   "ingredients": {
+    "lucky_goldnugget": 12
+   },
+   "tech": {
+    "CATCOONOFFERING": 3
+   }
+  },
+  "yellowmooneye": {
+   "ingredients": {
+    "moonrockcrater": 1,
+    "yellowgem": 1
+   }
+  },
+  "carnivalgame_herding_station": {
+   "ingredients": {
+    "carnivalgame_herding_kit": 1
+   }
+  },
+  "fast_farmplot": {
+   "ingredients": {
+    "cutgrass": 10,
+    "poop": 6,
+    "rocks": 4
+   }
+  },
+  "strawhat": {
+   "ingredients": {
+    "cutgrass": 12
+   }
+  },
+  "chesspiece_toadstool_builder": {
+   "ingredients": {
+    "rocks": 2
+   },
+   "tech": {
+    "ANCIENT": 10,
+    "SCIENCE": 10,
+    "MAGIC": 10
+   }
+  },
+  "slingshot_handle_sticky": {
+   "ingredients": {
+    "glommerfuel": 1
+   }
+  },
+  "mutator_spitter": {
+   "ingredients": {
+    "monstermeat": 1,
+    "silk": 2,
+    "nitre": 4
+   },
+   "tech": {
+    "SPIDERCRAFT": 1
+   }
+  },
+  "arrowsign_post": {
+   "ingredients": {
+    "boards": 1
+   },
+   "tech": {
+    "SCIENCE": 1
+   },
+   "placer": "arrowsign_post_placer"
+  },
+  "deerclopseyeball_sentryward_kit": {
+   "ingredients": {
+    "security_pulse_cage_full": 1,
+    "moonglass": 8,
+    "purebrilliance": 5,
+    "moonrocknugget": 3
+   },
+   "tech": {
+    "LUNARFORGING": 2
+   }
+  },
+  "moon_device_construction1": {
+   "ingredients": {
+    "wagpunk_bits": 4,
+    "moonstorm_spark": 5,
+    "transistor": 2
+   },
+   "tech": {
+    "ANCIENT": 10,
+    "SCIENCE": 10,
+    "MAGIC": 10
+   },
+   "placer": "moon_device_construction1_placer"
+  },
+  "wx78_drone_delivery": {
+   "ingredients": {
+    "transistor": 1,
+    "boards": 3
+   }
+  },
+  "backpack": {
+   "ingredients": {
+    "cutgrass": 4,
+    "twigs": 4
+   },
+   "tech": {
+    "SCIENCE": 1
+   }
+  },
+  "voidclothhat": {
+   "ingredients": {
+    "horrorfuel": 4,
+    "voidcloth": 2
+   },
+   "tech": {
+    "SHADOWFORGING": 2
+   }
+  },
+  "chesspiece_vault_pillar_guard_builder": {
+   "ingredients": {
+    "rocks": 2
+   },
+   "tech": {
+    "ANCIENT": 10,
+    "SCIENCE": 10,
+    "MAGIC": 10
+   }
+  },
+  "shellweaver_hermitcrab_shell": {
+   "ingredients": {
+    "saltrock": 3,
+    "townportaltalisman": 1,
+    "slurtle_shellpieces": 3
+   },
+   "tech": {
+    "SHELLWEAVER": 3
+   }
+  },
+  "hermitshop_oceanfishingbobber_malbatross": {
+   "ingredients": {
+    "messagebottleempty": 1
+   },
+   "tech": {
+    "HERMITCRABSHOP": 7
+   }
+  },
+  "slingshotammo_gunpowder": {
+   "ingredients": {
+    "gunpowder": 1,
+    "cutgrass": 1,
+    "flint": 1
+   }
+  },
+  "book_fire": {
+   "ingredients": {
+    "book_brimstone": 1,
+    "featherpencil": 1,
+    "papyrus": 2
+   },
+   "tech": {
+    "BOOKCRAFT": 1
+   }
+  },
+  "carnivaldecor_eggride6_kit": {
+   "ingredients": {
+    "carnival_prizeticket": 36
+   },
+   "tech": {
+    "CARNIVAL_PRIZESHOP": 1
+   }
+  },
+  "carnival_vest_b": {
+   "ingredients": {
+    "carnival_prizeticket": 48
+   },
+   "tech": {
+    "CARNIVAL_PRIZESHOP": 1
+   }
+  },
+  "ghostlyelixir_fastregen": {
+   "ingredients": {
+    "reviver": 1,
+    "ghostflower": 3
+   }
+  },
+  "healingsalve_acid": {
+   "ingredients": {
+    "healingsalve": 1,
+    "nitre": 1,
+    "marble": 1,
+    "slurtleslime": 1
+   },
+   "tech": {
+    "SCIENCE": 2
+   }
+  },
+  "carnivalcannon_streamer_kit": {
+   "ingredients": {
+    "carnival_prizeticket": 18
+   },
+   "tech": {
+    "CARNIVAL_PRIZESHOP": 1
+   }
+  },
+  "mermarmorupgradedhat": {
+   "ingredients": {
+    "log": 1,
+    "cutgrass": 1
+   }
+  },
+  "carnival_prizebooth": {
+   "ingredients": {
+    "carnival_prizebooth_kit": 1
+   }
+  },
+  "book_birds": {
+   "ingredients": {
+    "papyrus": 2,
+    "bird_egg": 2
+   }
+  },
+  "multiplayer_portal_moonrock_constr_plans": {
+   "ingredients": {
+    "boards": 1,
+    "rope": 1
+   },
+   "tech": {
+    "CELESTIAL": 1
+   }
+  },
+  "merm_toolshed_upgraded": {
+   "ingredients": {
+    "boards": 4,
+    "tentaclespots": 1,
+    "twigs": 5,
+    "rocks": 5
+   },
+   "placer": "merm_toolshed_upgraded_placer"
+  },
+  "purplegem": {
+   "ingredients": {
+    "redgem": 1,
+    "bluegem": 1
+   },
+   "tech": {
+    "MAGIC": 2
+   }
+  },
+  "bodypillow_petals": {
+   "ingredients": {
+    "silk": 2,
+    "petals": 5
+   },
+   "tech": {
+    "RABBITOFFERING": 3
+   }
+  },
+  "fence_rotator": {
+   "ingredients": {
+    "spear": 1,
+    "flint": 2
+   },
+   "tech": {
+    "SCIENCE": 2
+   }
+  },
+  "winona_remote": {
+   "ingredients": {
+    "transistor": 1
+   }
+  },
+  "boatrace_start_throwable_deploykit": {
+   "ingredients": {
+    "goldnugget": 4
+   },
+   "tech": {
+    "DRAGONOFFERING": 3
+   }
+  },
+  "rabbithat": {
+   "ingredients": {
+    "rabbit": 1,
+    "cutgrass": 6
+   }
+  },
+  "portablespicer": {
+   "ingredients": {
+    "goldnugget": 2,
+    "cutstone": 3,
+    "twigs": 6
+   }
+  },
+  "handpillow_beefalowool": {
+   "ingredients": {
+    "lucky_goldnugget": 3,
+    "silk": 2,
+    "beefalowool": 3
+   },
+   "tech": {
+    "RABBITOFFERING": 3
+   }
+  },
+  "gestalt_cage": {
+   "ingredients": {
+    "thulecitebugnet": 1,
+    "wagpunk_bits": 2
+   },
+   "tech": {
+    "WAGPUNK_WORKSTATION": 2
+   }
+  },
+  "voidcloth_umbrella": {
+   "ingredients": {
+    "horrorfuel": 5,
+    "voidcloth": 1
+   },
+   "tech": {
+    "SHADOWFORGING": 2
+   }
+  },
+  "yotc_carrat_race_finish": {
+   "ingredients": {
+    "goldnugget": 1
+   }
+  },
+  "wx78module_spin": {
+   "ingredients": {
+    "scandata": 6,
+    "goose_feather": 1
+   },
+   "tech": {
+    "ROBOTMODULECRAFT": 1
+   }
+  },
+  "researchlab2": {
+   "ingredients": {
+    "boards": 4,
+    "cutstone": 2,
+    "transistor": 2
+   },
+   "tech": {
+    "SCIENCE": 1
+   },
+   "placer": "researchlab2_placer"
+  },
+  "wintercooking_sweetpotato": {
+   "ingredients": {
+    "wintersfeastfuel": 1,
+    "rocks": 2
+   },
+   "tech": {
+    "WINTERSFEASTCOOKING": 1
+   }
+  },
+  "papyrus": {
+   "ingredients": {
+    "cutreeds": 4
+   },
+   "tech": {
+    "SCIENCE": 1
+   }
+  },
+  "carnival_seedpacket": {
+   "ingredients": {
+    "carnival_prizeticket": 12
+   },
+   "tech": {
+    "CARNIVAL_PRIZESHOP": 1
+   }
+  },
+  "turf_fungus": {
+   "ingredients": {
+    "cutlichen": 1,
+    "spore_tall": 1
+   },
+   "tech": {
+    "TURFCRAFTING": 2
+   }
+  },
+  "cannonball_rock_item": {
+   "ingredients": {
+    "cutstone": 2,
+    "gunpowder": 1
+   },
+   "tech": {
+    "ANCIENT": 10,
+    "SCIENCE": 10,
+    "MAGIC": 10
+   }
+  },
+  "carnivaldecor_eggride6": {
+   "ingredients": {
+    "carnivaldecor_eggride6_kit": 1
+   }
+  },
+  "goldenpitchfork": {
+   "ingredients": {
+    "twigs": 4,
+    "goldnugget": 2
+   },
+   "tech": {
+    "SCIENCE": 2
+   }
+  },
+  "megaflare": {
+   "ingredients": {
+    "miniflare": 3,
+    "glommerfuel": 1
+   }
+  },
+  "armormarble": {
+   "ingredients": {
+    "marble": 6,
+    "rope": 2
+   },
+   "tech": {
+    "SCIENCE": 2
+   }
+  },
+  "reskin_tool": {
+   "ingredients": {
+    "twigs": 1,
+    "petals": 4
+   },
+   "tech": {
+    "SCIENCE": 2
+   }
+  },
+  "battlesong_healthgain": {
+   "ingredients": {
+    "papyrus": 1,
+    "featherpencil": 1,
+    "amulet": 1
+   }
+  },
+  "walter_rope": {
+   "ingredients": {
+    "cutgrass": 2
+   }
+  },
+  "boat_bumper_shell_kit": {
+   "ingredients": {
+    "slurtle_shellpieces": 3,
+    "rope": 1
+   },
+   "tech": {
+    "SEAFARING": 1
+   }
+  },
+  "wx78_drone_delivery_small": {
+   "ingredients": {
+    "transistor": 1,
+    "boards": 3
+   }
+  },
+  "wanderingtradershop_bluegem": {
+   "ingredients": {
+    "pigskin": 3
+   },
+   "tech": {
+    "ANCIENT": 10,
+    "SCIENCE": 10,
+    "MAGIC": 10
+   }
+  },
+  "spiderhat": {
+   "ingredients": {
+    "silk": 4,
+    "spidergland": 2,
+    "monstermeat": 1
+   }
+  },
+  "yots_lantern_post": {
+   "ingredients": {
+    "lucky_goldnugget": 6
+   }
+  },
+  "saltlick_improved": {
+   "ingredients": {
+    "boards": 2,
+    "saltrock": 6
+   },
+   "tech": {
+    "SCIENCE": 2
+   },
+   "placer": "saltlick_improved_placer"
+  },
+  "cane": {
+   "ingredients": {
+    "goldnugget": 2,
+    "walrus_tusk": 1,
+    "twigs": 4
+   },
+   "tech": {
+    "SCIENCE": 2
+   }
+  },
+  "slingshot_frame_wagpunk_1": {
+   "ingredients": {
+    "slingshot_frame_wagpunk_0": 1,
+    "chestupgrade_stacksize": 1
+   }
+  },
+  "lunar_forge": {
+   "ingredients": {
+    "moonrocknugget": 5,
+    "moonglass": 5,
+    "purebrilliance": 1
+   }
+  },
+  "chesspiece_pipe_builder": {
+   "ingredients": {
+    "rocks": 2
+   },
+   "tech": {
+    "SCULPTING": 1
+   }
+  },
+  "shovel": {
+   "ingredients": {
+    "twigs": 2,
+    "flint": 2
+   },
+   "tech": {
+    "SCIENCE": 1
+   }
+  },
+  "spiderden_bedazzler": {
+   "ingredients": {
+    "silk": 1,
+    "papyrus": 1,
+    "boards": 2
+   }
+  },
+  "eyebrellahat": {
+   "ingredients": {
+    "deerclops_eyeball": 1,
+    "twigs": 15,
+    "boneshard": 4
+   },
+   "tech": {
+    "SCIENCE": 2
+   }
+  },
+  "handpillow_kelp": {
+   "ingredients": {
+    "lucky_goldnugget": 2,
+    "silk": 2,
+    "kelp": 3
+   },
+   "tech": {
+    "RABBITOFFERING": 3
+   }
+  },
+  "seafaring_prototyper": {
+   "ingredients": {
+    "boards": 4
+   },
+   "tech": {
+    "SCIENCE": 1
+   },
+   "placer": "seafaring_prototyper_placer"
+  },
+  "transmute_dreadstone": {
+   "ingredients": {
+    "horrorfuel": 3
+   }
+  },
+  "wurt_swampitem_lunar": {
+   "ingredients": {
+    "driftwood_log": 1,
+    "turf_marsh": 1,
+    "purebrilliance": 1
+   }
+  },
+  "critter_dragonling_builder": {
+   "ingredients": {
+    "lavae_cocoon": 1,
+    "hotchili": 1
+   },
+   "tech": {
+    "ORPHANAGE": 1
+   }
+  },
+  "potatosack": {
+   "ingredients": {
+    "cutgrass": 2,
+    "rocks": 3
+   }
+  },
+  "sleepbomb": {
+   "ingredients": {
+    "shroom_skin": 1,
+    "canary_poisoned": 1
+   },
+   "tech": {
+    "ANCIENT": 10,
+    "SCIENCE": 10,
+    "MAGIC": 10
+   }
+  },
+  "multitool_axe_pickaxe": {
+   "ingredients": {
+    "goldenaxe": 1,
+    "goldenpickaxe": 1,
+    "thulecite": 2
+   },
+   "tech": {
+    "ANCIENT": 4
+   }
+  },
+  "mapscroll": {
+   "ingredients": {
+    "featherpencil": 1,
+    "papyrus": 1
+   },
+   "tech": {
+    "CARTOGRAPHY": 2
+   }
+  },
+  "lantern": {
+   "ingredients": {
+    "twigs": 3,
+    "rope": 2,
+    "lightbulb": 2
+   },
+   "tech": {
+    "SCIENCE": 2
+   }
+  },
+  "rope_bridge_kit": {
+   "ingredients": {
+    "rope": 2,
+    "boards": 4
+   },
+   "tech": {
+    "SCIENCE": 2
+   }
+  },
+  "sweatervest": {
+   "ingredients": {
+    "houndstooth": 8,
+    "silk": 6
+   },
+   "tech": {
+    "SCIENCE": 2
+   }
+  },
+  "mushroom_farm": {
+   "ingredients": {
+    "spoiled_food": 8,
+    "poop": 5,
+    "livinglog": 2
+   },
+   "tech": {
+    "SCIENCE": 2
+   },
+   "placer": "mushroom_farm_placer"
+  },
+  "bomb_lunarplant": {
+   "ingredients": {
+    "purebrilliance": 4,
+    "lunarplant_husk": 4,
+    "moonglass_charged": 1
+   },
+   "tech": {
+    "LUNARFORGING": 2
+   }
+  },
+  "shovel_lunarplant": {
+   "ingredients": {
+    "purebrilliance": 1,
+    "lunarplant_husk": 2
+   },
+   "tech": {
+    "LUNARFORGING": 2
+   }
+  },
+  "boat_item": {
+   "ingredients": {
+    "boards": 4
+   },
+   "tech": {
+    "SEAFARING": 1
+   }
+  },
+  "staff_lunarplant": {
+   "ingredients": {
+    "purebrilliance": 3,
+    "lunarplant_husk": 6
+   },
+   "tech": {
+    "LUNARFORGING": 2
+   }
+  },
+  "chesspiece_muse_builder": {
+   "ingredients": {
+    "rocks": 2
+   },
+   "tech": {
+    "ANCIENT": 10,
+    "SCIENCE": 10,
+    "MAGIC": 10
+   }
+  },
+  "book_brimstone": {
+   "ingredients": {
+    "papyrus": 2,
+    "redgem": 1
+   },
+   "tech": {
+    "MAGIC": 3
+   }
+  },
+  "winona_battery_high_item": {
+   "ingredients": {
+    "sewing_tape": 1,
+    "boards": 2,
+    "transistor": 2
+   }
+  },
+  "transmute_flint": {
+   "ingredients": {
+    "rocks": 3
+   }
+  },
+  "steeringwheel_item": {
+   "ingredients": {
+    "boards": 2,
+    "rope": 1
+   },
+   "tech": {
+    "SEAFARING": 1
+   }
+  },
+  "boatpatch_kelp": {
+   "ingredients": {
+    "kelp": 3
+   }
+  },
+  "turf_cave": {
+   "ingredients": {
+    "guano": 2
+   },
+   "tech": {
+    "TURFCRAFTING": 2
+   }
+  },
+  "carnivalgame_wheelspin_station": {
+   "ingredients": {
+    "carnivalgame_wheelspin_kit": 1
+   }
+  },
+  "pumpkin_lantern": {
+   "ingredients": {
+    "pumpkin": 1,
+    "fireflies": 1
+   },
+   "tech": {
+    "SCIENCE": 1
+   }
+  },
+  "wortox_souljar": {
+   "ingredients": {
+    "messagebottleempty": 1,
+    "marble": 2,
+    "redgem": 1
+   }
+  },
+  "decor_flowervase": {
+   "ingredients": {
+    "log": 2,
+    "rope": 1
+   },
+   "tech": {
+    "CARPENTRY": 2
+   }
+  },
+  "hermitcrabtea_tillweed_3": {
+   "ingredients": {
+    "messagebottleempty": 1,
+    "tillweed_dried": 2
+   },
+   "tech": {
+    "ANCIENT": 10,
+    "SCIENCE": 10,
+    "MAGIC": 10
+   }
+  },
+  "beeswax": {
+   "ingredients": {
+    "honeycomb": 1
+   },
+   "tech": {
+    "SCIENCE": 2
+   }
+  },
+  "chesspiece_klaus_builder": {
+   "ingredients": {
+    "rocks": 2
+   },
+   "tech": {
+    "ANCIENT": 10,
+    "SCIENCE": 10,
+    "MAGIC": 10
+   }
+  },
+  "carnivaldecor_figure_season3": {
+   "ingredients": {
+    "carnivaldecor_figure_kit_season3": 1
+   }
+  },
+  "trident": {
+   "ingredients": {
+    "gnarwail_horn": 3,
+    "kelp": 4,
+    "twigs": 2
+   },
+   "tech": {
+    "ANCIENT": 10,
+    "SCIENCE": 10,
+    "MAGIC": 10
+   }
+  },
+  "eyemaskhat": {
+   "ingredients": {
+    "milkywhites": 3,
+    "monstermeat": 2
+   }
+  },
+  "sewing_tape": {
+   "ingredients": {
+    "silk": 1,
+    "cutgrass": 3
+   }
+  },
+  "oceanfishingrod": {
+   "ingredients": {
+    "boards": 1,
+    "silk": 3
+   },
+   "tech": {
+    "SCIENCE": 1
+   }
+  },
+  "wx78module_chess": {
+   "ingredients": {
+    "scandata": 3,
+    "gears": 1
+   },
+   "tech": {
+    "ROBOTMODULECRAFT": 1
+   }
+  },
+  "wx78_scanner_item": {
+   "ingredients": {
+    "transistor": 1,
+    "silk": 1
+   }
+  },
+  "wx78module_radar": {
+   "ingredients": {
+    "scandata": 2,
+    "compass": 1
+   },
+   "tech": {
+    "ROBOTMODULECRAFT": 1
+   }
+  },
+  "chesspiece_guardianphase3_builder": {
+   "ingredients": {
+    "rocks": 2
+   },
+   "tech": {
+    "ANCIENT": 10,
+    "SCIENCE": 10,
+    "MAGIC": 10
+   }
+  },
+  "chesspiece_minotaur_builder": {
+   "ingredients": {
+    "rocks": 2
+   },
+   "tech": {
+    "ANCIENT": 10,
+    "SCIENCE": 10,
+    "MAGIC": 10
+   }
+  },
+  "chesspiece_kitcoon_builder": {
+   "ingredients": {
+    "rocks": 2
+   },
+   "tech": {
+    "ANCIENT": 10,
+    "SCIENCE": 10,
+    "MAGIC": 10
+   }
+  },
+  "shadow_forge_kit": {
+   "ingredients": {
+    "nightmarefuel": 5,
+    "dreadstone": 2,
+    "horrorfuel": 1
+   },
+   "tech": {
+    "ANCIENT": 4
+   }
+  },
+  "eyeturret_item": {
+   "ingredients": {
+    "deerclops_eyeball": 1,
+    "minotaurhorn": 1,
+    "thulecite": 5
+   },
+   "tech": {
+    "ANCIENT": 4
+   }
+  },
+  "hermitcrab_relocation_kit": {
+   "ingredients": {
+    "cookiecuttershell": 4,
+    "moonrocknugget": 4
+   },
+   "tech": {
+    "ANCIENT": 10,
+    "SCIENCE": 10,
+    "MAGIC": 10
+   }
+  },
+  "dragonheadhat": {
+   "ingredients": {
+    "lucky_goldnugget": 8
+   },
+   "tech": {
+    "PERDOFFERING": 1
+   }
+  },
+  "carnivalgame_golfprop_cutout8": {
+   "ingredients": {},
+   "tech": {
+    "CARNIVAL_GOLFPROPS": 1
+   },
+   "placer": "carnivalgame_golfprop_cutout8_placer"
+  },
+  "shellweaver": {
+   "ingredients": {
+    "cookiecuttershell": 5,
+    "moonglass": 5,
+    "moonrocknugget": 3
+   },
+   "tech": {
+    "ANCIENT": 10,
+    "SCIENCE": 10,
+    "MAGIC": 10
+   },
+   "placer": "shellweaver_placer"
+  },
+  "book_gardening": {
+   "ingredients": {
+    "papyrus": 2,
+    "seeds": 1,
+    "poop": 1
+   }
+  },
+  "tillweedsalve": {
+   "ingredients": {
+    "tillweed": 1,
+    "petals": 1,
+    "charcoal": 1
+   },
+   "tech": {
+    "SCIENCE": 1
+   }
+  },
+  "flowerhat": {
+   "ingredients": {
+    "petals": 12
+   }
+  },
+  "chesspiece_malbatross_builder": {
+   "ingredients": {
+    "rocks": 2
+   },
+   "tech": {
+    "ANCIENT": 10,
+    "SCIENCE": 10,
+    "MAGIC": 10
+   }
+  },
+  "birdcage": {
+   "ingredients": {
+    "papyrus": 2,
+    "goldnugget": 6,
+    "seeds": 2
+   },
+   "tech": {
+    "SCIENCE": 2
+   },
+   "placer": "birdcage_placer"
+  },
+  "researchlab4": {
+   "ingredients": {
+    "rabbit": 4,
+    "boards": 4,
+    "tophat": 1
+   },
+   "tech": {
+    "SCIENCE": 1
+   },
+   "placer": "researchlab4_placer"
+  },
+  "mutator_moon": {
+   "ingredients": {
+    "monstermeat": 2,
+    "silk": 3,
+    "moonglass": 2
+   },
+   "tech": {
+    "SPIDERCRAFT": 1
+   }
+  },
+  "meatrack_hermit_multi": {
+   "ingredients": {
+    "driftwood_log": 3,
+    "barnacle": 4,
+    "rope": 3
+   },
+   "tech": {
+    "ANCIENT": 10,
+    "SCIENCE": 10,
+    "MAGIC": 10
+   },
+   "placer": "meatrack_hermit_multi_placer"
+  },
+  "wereitem_beaver": {
+   "ingredients": {
+    "monstermeat": 3,
+    "log": 2
+   }
+  },
+  "wx78module_maxhealth": {
+   "ingredients": {
+    "scandata": 2,
+    "spidergland": 1
+   },
+   "tech": {
+    "ROBOTMODULECRAFT": 1
+   }
+  },
+  "shellweaver_icestaff2": {
+   "ingredients": {
+    "saltrock": 1,
+    "icestaff": 1
+   },
+   "tech": {
+    "SHELLWEAVER": 1
+   }
+  },
+  "shellweaver_nonslipgritboosted": {
+   "ingredients": {
+    "saltrock": 1,
+    "nonslipgrit": 1
+   },
+   "tech": {
+    "SHELLWEAVER": 3
+   }
+  },
+  "armorskeleton": {
+   "ingredients": {
+    "boneshard": 10,
+    "nightmarefuel": 6
+   }
+  },
+  "boat_bumper_shell": {
+   "ingredients": {
+    "slurtle_shellpieces": 3,
+    "rope": 1
+   }
+  },
+  "oceanfishingbobber_malbatross": {
+   "ingredients": {
+    "malbatross_feather": 1
+   },
+   "tech": {
+    "FISHING": 1
+   }
+  },
+  "beebox": {
+   "ingredients": {
+    "boards": 2,
+    "honeycomb": 1,
+    "bee": 4
+   },
+   "tech": {
+    "SCIENCE": 2
+   },
+   "placer": "beebox_placer"
+  },
+  "balloonvest": {
+   "ingredients": {
+    "balloons_empty": 1
+   }
+  },
+  "madscience_lab": {
+   "ingredients": {
+    "cutstone": 2,
+    "transistor": 2
+   },
+   "tech": {
+    "SCIENCE": 10
+   },
+   "placer": "madscience_lab_placer"
+  },
+  "mask_kinghat": {
+   "ingredients": {
+    "marble": 2,
+    "silk": 4,
+    "papyrus": 1
+   }
+  },
+  "wall_hay_item": {
+   "ingredients": {
+    "cutgrass": 4,
+    "twigs": 2
+   },
+   "tech": {
+    "SCIENCE": 1
+   }
+  },
+  "hermitcrabtea_petals_1": {
+   "ingredients": {
+    "messagebottleempty": 1,
+    "petals_dried": 8
+   },
+   "tech": {
+    "ANCIENT": 10,
+    "SCIENCE": 10,
+    "MAGIC": 10
+   }
+  },
+  "rabbitkingshop_rabbitkinghorn": {
+   "ingredients": {
+    "carrot": 4,
+    "cutreeds": 1
+   },
+   "tech": {
+    "RABBITKINGSHOP": 2
+   }
+  },
+  "chesspiece_anchor_sketch": {
+   "ingredients": {
+    "papyrus": 1
+   },
+   "tech": {
+    "SEAFARING": 2
+   }
+  },
+  "mutator_healer": {
+   "ingredients": {
+    "monstermeat": 2,
+    "silk": 2,
+    "honey": 2
+   },
+   "tech": {
+    "SPIDERCRAFT": 1
+   }
+  },
+  "wx78_drone_scout": {
+   "ingredients": {
+    "transistor": 1,
+    "compass": 1
+   }
+  },
+  "telestaff": {
+   "ingredients": {
+    "nightmarefuel": 4,
+    "livinglog": 2,
+    "purplegem": 2
+   },
+   "tech": {
+    "MAGIC": 3
+   }
+  },
+  "transmute_houndstooth": {
+   "ingredients": {
+    "boneshard": 2
+   }
+  },
+  "wanderingtradershop_flint": {
+   "ingredients": {
+    "ash": 1
+   },
+   "tech": {
+    "ANCIENT": 10,
+    "SCIENCE": 10,
+    "MAGIC": 10
+   }
+  },
+  "ticoon_builder": {
+   "ingredients": {
+    "lucky_goldnugget": 1
+   },
+   "tech": {
+    "CATCOONOFFERING": 3
+   }
+  },
+  "moonrockidol": {
+   "ingredients": {
+    "moonrocknugget": 1,
+    "purplegem": 1
+   },
+   "tech": {
+    "CELESTIAL": 1
+   }
+  },
+  "pirate_flag_pole": {
+   "ingredients": {
+    "blackflag": 1,
+    "log": 2
+   },
+   "tech": {
+    "ANCIENT": 10,
+    "SCIENCE": 10,
+    "MAGIC": 10
+   },
+   "placer": "pirate_flag_pole_placer"
+  },
+  "treegrowthsolution": {
+   "ingredients": {
+    "fig": 2,
+    "glommerfuel": 1
+   },
+   "tech": {
+    "SCIENCE": 2
+   }
+  },
+  "wagpunk_workstation_blueprint_moonstorm_goggleshat": {
+   "ingredients": {
+    "papyrus": 1
+   },
+   "tech": {
+    "WAGPUNK_WORKSTATION": 2
+   }
+  },
+  "wx78module_bee": {
+   "ingredients": {
+    "scandata": 8,
+    "royal_jelly": 1,
+    "wx78module_maxsanity": 1
+   },
+   "tech": {
+    "ROBOTMODULECRAFT": 1
+   }
+  },
+  "slingshot_band_tentacle": {
+   "ingredients": {
+    "coontail": 1,
+    "tentaclespots": 1
+   }
+  },
+  "hermitshop_oceanfishingbobber_robin_winter": {
+   "ingredients": {
+    "messagebottleempty": 1
+   },
+   "tech": {
+    "HERMITCRABSHOP": 3
+   }
+  },
+  "lunarplant_kit": {
+   "ingredients": {
+    "purebrilliance": 1,
+    "lunarplant_husk": 1
+   },
+   "tech": {
+    "LUNARFORGING": 2
+   }
+  },
+  "greenamulet": {
+   "ingredients": {
+    "thulecite": 2,
+    "nightmarefuel": 3,
+    "greengem": 1
+   },
+   "tech": {
+    "ANCIENT": 2
+   }
+  },
+  "hermitcrabtea_tillweed_2": {
+   "ingredients": {
+    "messagebottleempty": 1,
+    "tillweed_dried": 4
+   },
+   "tech": {
+    "ANCIENT": 10,
+    "SCIENCE": 10,
+    "MAGIC": 10
+   }
+  },
+  "woodcarvedhat": {
+   "ingredients": {
+    "lucy": 1,
+    "log": 6,
+    "pinecone": 1
+   }
+  },
+  "transmute_nitre": {
+   "ingredients": {
+    "goldnugget": 2
+   }
+  },
+  "wathgrithrhat": {
+   "ingredients": {
+    "goldnugget": 2,
+    "rocks": 2
+   }
+  },
+  "carnivaldecor_eggride3_kit": {
+   "ingredients": {
+    "carnival_prizeticket": 36
+   },
+   "tech": {
+    "CARNIVAL_PRIZESHOP": 1
+   }
+  },
+  "endtable": {
+   "ingredients": {
+    "marble": 2,
+    "boards": 2,
+    "turf_carpetfloor": 2
+   },
+   "tech": {
+    "ANCIENT": 10,
+    "SCIENCE": 10,
+    "MAGIC": 10
+   },
+   "placer": "endtable_placer"
+  },
+  "decor_lamp": {
+   "ingredients": {
+    "twigs": 2,
+    "coontail": 2,
+    "lightbulb": 2
+   },
+   "tech": {
+    "CARPENTRY": 2
+   }
+  },
+  "balloonparty": {
+   "ingredients": {
+    "balloons_empty": 1
+   }
+  },
+  "slingshot2": {
+   "ingredients": {
+    "twigs": 1,
+    "mosquitosack": 2
+   }
+  },
+  "record": {
+   "ingredients": {
+    "batwing": 1,
+    "charcoal": 1
+   },
+   "tech": {
+    "SCIENCE": 2
+   }
+  },
+  "fumaroleaxe": {
+   "ingredients": {
+    "twigs": 4,
+    "mitegland": 2,
+    "nitre": 3
+   },
+   "tech": {
+    "SCIENCE": 2
+   }
+  },
+  "hammer": {
+   "ingredients": {
+    "twigs": 3,
+    "rocks": 3,
+    "cutgrass": 6
+   }
+  },
+  "blue_mushroomhat": {
+   "ingredients": {
+    "blue_cap": 6
+   },
+   "tech": {
+    "ANCIENT": 10,
+    "SCIENCE": 10,
+    "MAGIC": 10
+   }
+  },
+  "fence_gate_item": {
+   "ingredients": {
+    "boards": 2,
+    "rope": 1
+   },
+   "tech": {
+    "SCIENCE": 2
+   }
+  },
+  "chesspiece_crabking_builder": {
+   "ingredients": {
+    "rocks": 2
+   },
+   "tech": {
+    "ANCIENT": 10,
+    "SCIENCE": 10,
+    "MAGIC": 10
+   }
+  },
+  "yoth_knightstick": {
+   "ingredients": {
+    "lucky_goldnugget": 6
+   },
+   "tech": {
+    "KNIGHTOFFERING": 3
+   }
+  },
+  "ruinsrelic_table": {
+   "ingredients": {
+    "cutstone": 1
+   },
+   "tech": {
+    "ANCIENT": 10,
+    "SCIENCE": 10,
+    "MAGIC": 10
+   },
+   "placer": "ruinsrelic_table_placer"
+  },
+  "trap_fumarole": {
+   "ingredients": {
+    "flint": 4,
+    "mitegland": 2,
+    "nitre": 4
+   },
+   "tech": {
+    "SCIENCE": 2
+   }
+  },
+  "rainhat": {
+   "ingredients": {
+    "mole": 2,
+    "strawhat": 1,
+    "boneshard": 1
+   },
+   "tech": {
+    "SCIENCE": 2
+   }
+  },
+  "healingsalve_fumarole": {
+   "ingredients": {
+    "ash": 2,
+    "flint": 1,
+    "mitegland": 1
+   },
+   "tech": {
+    "SCIENCE": 2
+   }
+  },
+  "shellweaver_desiccantboosted": {
+   "ingredients": {
+    "saltrock": 1,
+    "desiccant": 1
+   },
+   "tech": {
+    "SHELLWEAVER": 3
+   }
+  },
+  "shellweaver_desiccant": {
+   "ingredients": {
+    "saltrock": 1,
+    "papyrus": 1
+   },
+   "tech": {
+    "SHELLWEAVER": 1
+   }
+  },
+  "opalstaff": {
+   "ingredients": {
+    "nightmarefuel": 4,
+    "livinglog": 2,
+    "opalpreciousgem": 1
+   }
+  },
+  "slingshotammo_marble": {
+   "ingredients": {
+    "marble": 1
+   },
+   "tech": {
+    "SCIENCE": 2
+   }
+  },
+  "carnivalgame_wheelspin_kit": {
+   "ingredients": {
+    "goldnugget": 1,
+    "seeds": 3
+   },
+   "tech": {
+    "CARNIVAL_HOSTSHOP": 3
+   }
+  },
+  "carnivalgame_golf_shape_line1x1": {
+   "ingredients": {},
+   "tech": {
+    "CARNIVAL_GOLFPROPS": 1
+   },
+   "placer": "carnivalgame_golf_shape_line1x1_placer"
+  },
+  "deerclopseyeball_sentryward": {
+   "ingredients": {
+    "security_pulse_cage_full": 1,
+    "moonglass": 8,
+    "purebrilliance": 5,
+    "moonrocknugget": 3
+   }
+  },
+  "oar_monkey": {
+   "ingredients": {
+    "log": 1,
+    "palmcone_scale": 1
+   }
+  },
+  "scraphat": {
+   "ingredients": {
+    "wagpunk_bits": 3
+   }
+  },
+  "yotr_food2": {
+   "ingredients": {
+    "lucky_goldnugget": 5
+   },
+   "tech": {
+    "RABBITOFFERING": 3
+   }
+  },
+  "saddle_wathgrithr": {
+   "ingredients": {
+    "goldnugget": 4,
+    "marble": 3,
+    "feather_robin_winter": 6
+   }
+  },
+  "hermitcrabtea_forgetmelots_3": {
+   "ingredients": {
+    "messagebottleempty": 1,
+    "forgetmelots_dried": 2
+   },
+   "tech": {
+    "ANCIENT": 10,
+    "SCIENCE": 10,
+    "MAGIC": 10
+   }
+  },
+  "birdtrap": {
+   "ingredients": {
+    "twigs": 3,
+    "silk": 4
+   },
+   "tech": {
+    "SCIENCE": 1
+   }
+  },
+  "cattoy_mouse": {
+   "ingredients": {
+    "lucky_goldnugget": 6
+   },
+   "tech": {
+    "CATCOONOFFERING": 3
+   }
+  },
+  "carnivalgame_shooting_kit": {
+   "ingredients": {
+    "goldnugget": 1,
+    "seeds": 3
+   },
+   "tech": {
+    "CARNIVAL_HOSTSHOP": 3
+   }
+  },
+  "yotr_food4": {
+   "ingredients": {
+    "lucky_goldnugget": 5
+   },
+   "tech": {
+    "RABBITOFFERING": 3
+   }
+  },
+  "book_horticulture_upgraded": {
+   "ingredients": {
+    "book_horticulture": 1,
+    "featherpencil": 1,
+    "papyrus": 2
+   },
+   "tech": {
+    "BOOKCRAFT": 1
+   }
+  },
+  "inspectacleshat": {
+   "ingredients": {
+    "goggleshat": 1,
+    "transistor": 2
+   }
+  },
+  "hermitcrabtea_petals_evil_3": {
+   "ingredients": {
+    "messagebottleempty": 1,
+    "petals_evil_dried": 4
+   },
+   "tech": {
+    "ANCIENT": 10,
+    "SCIENCE": 10,
+    "MAGIC": 10
+   }
+  },
+  "yotr_decor_1_item": {
+   "ingredients": {
+    "lucky_goldnugget": 5
+   },
+   "tech": {
+    "RABBITOFFERING": 3
+   }
+  },
+  "kitcoon_nametag": {
+   "ingredients": {
+    "lucky_goldnugget": 6
+   },
+   "tech": {
+    "CATCOONOFFERING": 3
+   }
+  },
+  "moondial": {
+   "ingredients": {
+    "bluemooneye": 1,
+    "moonrocknugget": 2,
+    "ice": 2
+   },
+   "tech": {
+    "MAGIC": 2
+   },
+   "placer": "moondial_placer"
+  },
+  "slingshot_handle_jelly": {
+   "ingredients": {
+    "royal_jelly": 1
+   }
+  },
+  "flotationcushion": {
+   "ingredients": {
+    "mosquitosack": 1,
+    "rope": 1
+   },
+   "tech": {
+    "SEAFARING": 1
+   }
+  },
+  "saddlehorn": {
+   "ingredients": {
+    "twigs": 2,
+    "boneshard": 2,
+    "feather_crow": 1
+   },
+   "tech": {
+    "SCIENCE": 2
+   }
+  },
+  "cookbook": {
+   "ingredients": {
+    "papyrus": 1,
+    "carrot": 1
+   },
+   "tech": {
+    "SCIENCE": 1
+   }
+  },
+  "handpillow_steelwool": {
+   "ingredients": {
+    "lucky_goldnugget": 5,
+    "silk": 2,
+    "steelwool": 2
+   },
+   "tech": {
+    "RABBITOFFERING": 3
+   }
+  },
+  "kitcoondecor2": {
+   "ingredients": {
+    "lucky_goldnugget": 12
+   }
+  },
+  "archive_resonator_item": {
+   "ingredients": {
+    "moonrocknugget": 1,
+    "thulecite": 1
+   },
+   "tech": {
+    "ANCIENT": 10,
+    "SCIENCE": 10,
+    "MAGIC": 10
+   }
+  },
+  "livinglog": {
+   "ingredients": {}
+  },
+  "slingshotammo_lunarplanthusk": {
+   "ingredients": {
+    "lunarplant_husk": 1
+   },
+   "tech": {
+    "LUNARFORGING": 2
+   }
+  },
+  "book_horticulture": {
+   "ingredients": {
+    "papyrus": 2,
+    "seeds": 5,
+    "poop": 5
+   },
+   "tech": {
+    "SCIENCE": 1
+   }
+  },
+  "nightlight": {
+   "ingredients": {
+    "goldnugget": 8,
+    "nightmarefuel": 2,
+    "redgem": 1
+   },
+   "tech": {
+    "MAGIC": 2
+   },
+   "placer": "nightlight_placer"
+  },
+  "punchingbag": {
+   "ingredients": {
+    "cutgrass": 3,
+    "boards": 1
+   },
+   "tech": {
+    "SCIENCE": 1
+   },
+   "placer": "punchingbag_placer"
+  },
+  "lighter": {
+   "ingredients": {
+    "rope": 1,
+    "goldnugget": 1,
+    "petals": 3
+   }
+  },
+  "hermitshop_oceanfishingbobber_crow": {
+   "ingredients": {
+    "messagebottleempty": 1
+   },
+   "tech": {
+    "HERMITCRABSHOP": 3
+   }
+  },
+  "battlesong_sanitygain": {
+   "ingredients": {
+    "papyrus": 1,
+    "featherpencil": 1,
+    "moonbutterflywings": 1
+   }
+  },
+  "battlesong_fireresistance": {
+   "ingredients": {
+    "papyrus": 1,
+    "featherpencil": 1,
+    "oceanfish_small_9_inv": 1
+   }
+  },
+  "ghostlyelixir_revive": {
+   "ingredients": {
+    "forgetmelots": 1,
+    "ghostflower": 3
+   }
+  },
+  "hermitshop_oceanfishinglure_hermit_drowsy": {
+   "ingredients": {
+    "messagebottleempty": 1
+   },
+   "tech": {
+    "HERMITCRABSHOP": 5
+   }
+  },
+  "icehat": {
+   "ingredients": {
+    "rope": 2,
+    "ice": 10
+   },
+   "tech": {
+    "SCIENCE": 2
+   }
+  },
+  "pocketwatch_revive": {
+   "ingredients": {
+    "pocketwatch_parts": 1,
+    "livinglog": 2,
+    "boneshard": 4
+   }
+  },
+  "oceanfishingbobber_robin": {
+   "ingredients": {
+    "feather_robin": 1
+   },
+   "tech": {
+    "FISHING": 1
+   }
+  },
+  "turf_ruinsbrick_glow": {
+   "ingredients": {
+    "rocks": 2
+   },
+   "tech": {
+    "ANCIENT": 10,
+    "SCIENCE": 10,
+    "MAGIC": 10
+   }
+  },
+  "turfcraftingstation": {
+   "ingredients": {
+    "thulecite": 1,
+    "cutstone": 3,
+    "wetgoop": 1
+   },
+   "tech": {
+    "ANCIENT": 10,
+    "SCIENCE": 10,
+    "MAGIC": 10
+   },
+   "placer": "turfcraftingstation_placer"
+  },
+  "yotc_carrat_gym_stamina_item": {
+   "ingredients": {
+    "lucky_goldnugget": 4
+   },
+   "tech": {
+    "CARRATOFFERING": 3
+   }
+  },
+  "boat_rotator": {
+   "ingredients": {
+    "boards": 2,
+    "rope": 1,
+    "gears": 1
+   }
+  },
+  "spear": {
+   "ingredients": {
+    "twigs": 2,
+    "rope": 1,
+    "flint": 1
+   },
+   "tech": {
+    "SCIENCE": 1
+   }
+  },
+  "beeswax_spray": {
+   "ingredients": {
+    "horrorfuel": 5,
+    "beeswax": 3,
+    "mosquitosack": 2
+   },
+   "tech": {
+    "SHADOWFORGING": 2
+   }
+  },
+  "carnival_popcorn": {
+   "ingredients": {
+    "carnival_prizeticket": 12
+   },
+   "tech": {
+    "CARNIVAL_PRIZESHOP": 1
+   }
+  },
+  "dumbbell_gem": {
+   "ingredients": {
+    "thulecite": 2,
+    "purplegem": 1,
+    "twigs": 1
+   }
+  },
+  "wx78_gestalttrapper": {
+   "ingredients": {
+    "scandata": 12,
+    "wagpunk_bits": 2
+   }
+  },
+  "yoth_chair_rocking_item": {
+   "ingredients": {
+    "lucky_goldnugget": 2
+   },
+   "tech": {
+    "KNIGHTOFFERING": 3
+   }
+  },
+  "hermitcrabtea_moon_tree_blossom_3": {
+   "ingredients": {
+    "messagebottleempty": 1,
+    "moon_tree_blossom_dried": 4
+   },
+   "tech": {
+    "ANCIENT": 10,
+    "SCIENCE": 10,
+    "MAGIC": 10
+   }
+  },
+  "earmuffshat": {
+   "ingredients": {
+    "rabbit": 2,
+    "twigs": 1
+   }
+  },
+  "chesspiece_manrabbit_builder": {
+   "ingredients": {
+    "rocks": 2
+   },
+   "tech": {
+    "ANCIENT": 10,
+    "SCIENCE": 10,
+    "MAGIC": 10
+   }
+  },
+  "wormwood_berrybush2": {
+   "ingredients": {
+    "spoiled_food": 3,
+    "berries_juicy": 8
+   }
+  },
+  "slingshotammo_slow": {
+   "ingredients": {
+    "moonrocknugget": 1,
+    "purplegem": 1
+   },
+   "tech": {
+    "MAGIC": 3
+   }
+  },
+  "kitcoondecor1_kit": {
+   "ingredients": {
+    "lucky_goldnugget": 12
+   },
+   "tech": {
+    "CATCOONOFFERING": 3
+   }
+  },
+  "chesspiece_carrat_sketch": {
+   "ingredients": {
+    "lucky_goldnugget": 8
+   },
+   "tech": {
+    "CARRATOFFERING": 3
+   }
+  },
+  "hermitcrabtea_foliage_3": {
+   "ingredients": {
+    "messagebottleempty": 1,
+    "foliage_dried": 4
+   },
+   "tech": {
+    "ANCIENT": 10,
+    "SCIENCE": 10,
+    "MAGIC": 10
+   }
+  },
+  "boat_rotator_kit": {
+   "ingredients": {
+    "boards": 2,
+    "rope": 1,
+    "gears": 1
+   },
+   "tech": {
+    "SEAFARING": 1
+   }
+  },
+  "mushroom_light": {
+   "ingredients": {
+    "shroom_skin": 1,
+    "fertilizer": 1
+   },
+   "tech": {
+    "ANCIENT": 10,
+    "SCIENCE": 10,
+    "MAGIC": 10
+   },
+   "placer": "mushroom_light_placer"
+  },
+  "chesspiece_wagboss_robot_builder": {
+   "ingredients": {
+    "rocks": 2
+   },
+   "tech": {
+    "ANCIENT": 10,
+    "SCIENCE": 10,
+    "MAGIC": 10
+   }
+  },
+  "hermitshop_supertacklecontainer": {
+   "ingredients": {
+    "messagebottleempty": 6
+   },
+   "tech": {
+    "ANCIENT": 10,
+    "SCIENCE": 10,
+    "MAGIC": 10
+   }
+  },
+  "beefalohat": {
+   "ingredients": {
+    "beefalowool": 8,
+    "horn": 1
+   },
+   "tech": {
+    "SCIENCE": 1
+   }
+  },
+  "mast_malbatross_item": {
+   "ingredients": {
+    "driftwood_log": 3,
+    "rope": 3,
+    "malbatross_feathered_weave": 4
+   },
+   "tech": {
+    "SEAFARING": 1
+   }
+  },
+  "firecrackers": {
+   "ingredients": {
+    "lucky_goldnugget": 1
+   },
+   "tech": {
+    "PERDOFFERING": 1
+   }
+  },
+  "chesspiece_formal_builder": {
+   "ingredients": {
+    "rocks": 2
+   },
+   "tech": {
+    "ANCIENT": 10,
+    "SCIENCE": 10,
+    "MAGIC": 10
+   }
+  },
+  "ipecacsyrup": {
+   "ingredients": {
+    "red_cap": 1,
+    "honey": 1,
+    "spoiled_food": 1
+   }
+  },
+  "hermitshop_oceanfishingbobber_robin": {
+   "ingredients": {
+    "messagebottleempty": 1
+   },
+   "tech": {
+    "HERMITCRABSHOP": 3
+   }
+  },
+  "hermitcrabtea_petals_evil_1": {
+   "ingredients": {
+    "messagebottleempty": 1,
+    "petals_evil_dried": 8
+   },
+   "tech": {
+    "ANCIENT": 10,
+    "SCIENCE": 10,
+    "MAGIC": 10
+   }
+  },
+  "sentryward": {
+   "ingredients": {
+    "purplemooneye": 1,
+    "compass": 1,
+    "boards": 2
+   },
+   "tech": {
+    "MAGIC": 2
+   },
+   "placer": "sentryward_placer"
+  },
+  "wood_table_round": {
+   "ingredients": {
+    "boards": 2,
+    "rope": 1
+   },
+   "tech": {
+    "CARPENTRY": 2
+   },
+   "placer": "wood_table_round_placer"
+  },
+  "carnivalgame_feedchicks_kit": {
+   "ingredients": {
+    "goldnugget": 1,
+    "seeds": 3
+   },
+   "tech": {
+    "CARNIVAL_HOSTSHOP": 3
+   }
+  },
+  "coldfire": {
+   "ingredients": {
+    "cutgrass": 3,
+    "nitre": 2
+   },
+   "tech": {
+    "SCIENCE": 1
+   },
+   "placer": "coldfire_placer"
+  },
+  "yots_snakeshrine": {
+   "ingredients": {
+    "goldnugget": 4,
+    "boards": 2
+   },
+   "tech": {
+    "SCIENCE": 10
+   },
+   "placer": "yots_snakeshrine_placer"
+  },
+  "phonograph": {
+   "ingredients": {
+    "goldnugget": 3,
+    "transistor": 2,
+    "gears": 1
+   },
+   "tech": {
+    "SCIENCE": 2
+   }
+  },
+  "slingshotammo_poop": {
+   "ingredients": {
+    "poop": 1
+   },
+   "tech": {
+    "SCIENCE": 1
+   }
+  },
+  "chesspiece_kitcoon_sketch": {
+   "ingredients": {
+    "lucky_goldnugget": 8
+   },
+   "tech": {
+    "CATCOONOFFERING": 3
+   }
+  },
+  "carnivalfood_corntea": {
+   "ingredients": {
+    "carnival_prizeticket": 12
+   },
+   "tech": {
+    "CARNIVAL_PRIZESHOP": 1
+   }
+  },
+  "wintercooking_gravy": {
+   "ingredients": {
+    "wintersfeastfuel": 1,
+    "spoiled_food": 1,
+    "boneshard": 1
+   },
+   "tech": {
+    "WINTERSFEASTCOOKING": 1
+   }
+  },
+  "panflute": {
+   "ingredients": {
+    "cutreeds": 5,
+    "mandrake": 1,
+    "rope": 1
+   },
+   "tech": {
+    "MAGIC": 2
+   }
+  },
+  "woby_treat": {
+   "ingredients": {
+    "monstermeat_dried": 1
+   }
+  },
+  "shellweaver_messagebottleempty": {
+   "ingredients": {
+    "saltrock": 1,
+    "ash": 4,
+    "moonglass": 3
+   },
+   "tech": {
+    "SHELLWEAVER": 1
+   }
+  },
+  "chesspiece_yots_sketch": {
+   "ingredients": {
+    "lucky_goldnugget": 8
+   },
+   "tech": {
+    "WORMOFFERING": 3
+   }
+  },
+  "carnivalgame_golfprop_cutout9": {
+   "ingredients": {},
+   "tech": {
+    "CARNIVAL_GOLFPROPS": 1
+   },
+   "placer": "carnivalgame_golfprop_cutout9_placer"
+  },
+  "mast_yotd_item": {
+   "ingredients": {
+    "lucky_goldnugget": 1
+   },
+   "tech": {
+    "DRAGONOFFERING": 3
+   }
+  },
+  "winterhat": {
+   "ingredients": {
+    "beefalowool": 4,
+    "silk": 4
+   },
+   "tech": {
+    "SCIENCE": 2
+   }
+  },
+  "umbrella": {
+   "ingredients": {
+    "twigs": 6,
+    "pigskin": 1,
+    "silk": 2
+   },
+   "tech": {
+    "SCIENCE": 1
+   }
+  },
+  "minisign_item": {
+   "ingredients": {
+    "boards": 1
+   },
+   "tech": {
+    "SCIENCE": 1
+   }
+  },
+  "winona_spotlight_item": {
+   "ingredients": {
+    "sewing_tape": 1,
+    "goldnugget": 2,
+    "fireflies": 1
+   }
+  },
+  "carnivalcannon_sparkle_kit": {
+   "ingredients": {
+    "carnival_prizeticket": 18
+   },
+   "tech": {
+    "CARNIVAL_PRIZESHOP": 1
+   }
+  },
+  "beehat": {
+   "ingredients": {
+    "silk": 8,
+    "rope": 1
+   },
+   "tech": {
+    "SCIENCE": 2
+   }
+  },
+  "carnivaldecor_plant_kit": {
+   "ingredients": {
+    "carnival_prizeticket": 24
+   },
+   "tech": {
+    "CARNIVAL_PRIZESHOP": 1
+   }
+  },
+  "trunkvest_winter": {
+   "ingredients": {
+    "trunk_winter": 1,
+    "silk": 8,
+    "beefalowool": 2
+   },
+   "tech": {
+    "SCIENCE": 2
+   }
+  },
+  "turf_desertdirt": {
+   "ingredients": {
+    "rocks": 1,
+    "boneshard": 1
+   },
+   "tech": {
+    "TURFCRAFTING": 2
+   }
+  },
+  "saddle_race": {
+   "ingredients": {
+    "livinglog": 2,
+    "silk": 4,
+    "butterflywings": 68
+   },
+   "tech": {
+    "SCIENCE": 2
+   }
+  },
+  "mosquitomusk": {
+   "ingredients": {
+    "mosquitosack": 1,
+    "beefalowool": 1
+   }
+  },
+  "portabletent_item": {
+   "ingredients": {
+    "bedroll_straw": 1,
+    "twigs": 4,
+    "rope": 2
+   },
+   "tech": {
+    "SCIENCE": 1
+   }
+  },
+  "nightsword": {
+   "ingredients": {
+    "nightmarefuel": 5,
+    "livinglog": 1
+   },
+   "tech": {
+    "MAGIC": 3
+   }
+  },
+  "wx78module_music": {
+   "ingredients": {
+    "scandata": 4,
+    "singingshell_octave3": 1
+   },
+   "tech": {
+    "ROBOTMODULECRAFT": 1
+   }
+  },
+  "wintersfeastoven": {
+   "ingredients": {
+    "cutstone": 1,
+    "marble": 1,
+    "log": 1
+   },
+   "tech": {
+    "SCIENCE": 10
+   },
+   "placer": "wintersfeastoven_placer"
+  },
+  "wolfgang_whistle": {
+   "ingredients": {
+    "flint": 1,
+    "rope": 1
+   }
+  },
+  "carnivalgame_golfprop_cutout3": {
+   "ingredients": {},
+   "tech": {
+    "CARNIVAL_GOLFPROPS": 1
+   },
+   "placer": "carnivalgame_golfprop_cutout3_placer"
+  },
+  "thulecitebugnet": {
+   "ingredients": {
+    "thulecite": 2,
+    "refined_dust": 1
+   },
+   "tech": {
+    "ANCIENT": 10,
+    "SCIENCE": 10,
+    "MAGIC": 10
+   }
+  },
+  "chesspiece_yots_builder": {
+   "ingredients": {
+    "rocks": 2
+   },
+   "tech": {
+    "ANCIENT": 10,
+    "SCIENCE": 10,
+    "MAGIC": 10
+   }
+  },
+  "yotp_food2": {
+   "ingredients": {
+    "lucky_goldnugget": 1
+   },
+   "tech": {
+    "PIGOFFERING": 3
+   }
+  },
+  "decor_pictureframe": {
+   "ingredients": {
+    "log": 2,
+    "twigs": 2
+   },
+   "tech": {
+    "CARPENTRY": 2
+   }
+  },
+  "hermit_chair_rocking": {
+   "ingredients": {
+    "driftwood_log": 4
+   },
+   "tech": {
+    "CARPENTRY": 2
+   },
+   "placer": "hermit_chair_rocking_placer"
+  },
+  "chesspiece_clayhound_builder": {
+   "ingredients": {
+    "rocks": 2
+   },
+   "tech": {
+    "ANCIENT": 10,
+    "SCIENCE": 10,
+    "MAGIC": 10
+   }
+  },
+  "carnivalgame_golfgame_kit_easy": {
+   "ingredients": {
+    "goldnugget": 1,
+    "seeds": 3
+   },
+   "tech": {
+    "CARNIVAL_HOSTSHOP": 3
+   }
+  },
+  "icebox": {
+   "ingredients": {
+    "goldnugget": 2,
+    "gears": 1,
+    "cutstone": 1
+   },
+   "tech": {
+    "SCIENCE": 2
+   },
+   "placer": "icebox_placer"
+  },
+  "ghostlyelixir_retaliation": {
+   "ingredients": {
+    "livinglog": 1,
+    "ghostflower": 3
+   }
+  },
+  "mast": {
+   "ingredients": {
+    "boards": 3,
+    "rope": 3,
+    "silk": 8
+   }
+  },
+  "pocketwatch_weapon": {
+   "ingredients": {
+    "pocketwatch_parts": 3,
+    "marble": 4,
+    "nightmarefuel": 8
+   },
+   "tech": {
+    "MAGIC": 3
+   }
+  },
+  "slingshotex": {
+   "ingredients": {
+    "twigs": 1,
+    "mosquitosack": 2
+   }
+  },
+  "slingshot_frame_wagpunk_0": {
+   "ingredients": {
+    "wagpunk_bits": 2,
+    "transistor": 1,
+    "trinket_6": 1
+   }
+  },
+  "vault_pillar_guard_constr": {
+   "ingredients": {
+    "vault_pillar_guard_piece_1": 1,
+    "vault_pillar_guard_piece_2": 1,
+    "vault_pillar_guard_piece_3": 1
+   }
+  },
+  "vaultrelic_vase": {
+   "ingredients": {
+    "thulecite_pieces": 1,
+    "moonrocknugget": 1
+   },
+   "tech": {
+    "ANCIENT": 10,
+    "SCIENCE": 10,
+    "MAGIC": 10
+   }
+  },
+  "wintercooking_pavlova": {
+   "ingredients": {
+    "wintersfeastfuel": 1,
+    "moon_tree_blossom": 2
+   },
+   "tech": {
+    "WINTERSFEASTCOOKING": 1
+   }
+  },
+  "stone_table_square": {
+   "ingredients": {
+    "cutstone": 3,
+    "rope": 2
+   },
+   "tech": {
+    "CARPENTRY": 3
+   },
+   "placer": "stone_table_square_placer"
+  },
+  "wx78module_heat": {
+   "ingredients": {
+    "scandata": 4,
+    "redgem": 1
+   },
+   "tech": {
+    "ROBOTMODULECRAFT": 1
+   }
+  },
+  "slingshotammo_rock": {
+   "ingredients": {
+    "rocks": 1
+   }
+  },
+  "dumbbell_redgem": {
+   "ingredients": {
+    "thulecite": 2,
+    "redgem": 1,
+    "twigs": 1
+   }
+  },
+  "yotd_oar": {
+   "ingredients": {
+    "goldnugget": 1
+   },
+   "tech": {
+    "DRAGONOFFERING": 3
+   }
+  },
+  "dragonflyfurnace": {
+   "ingredients": {
+    "dragon_scales": 1,
+    "redgem": 2,
+    "charcoal": 10
+   },
+   "tech": {
+    "ANCIENT": 10,
+    "SCIENCE": 10,
+    "MAGIC": 10
+   },
+   "placer": "dragonflyfurnace_placer"
+  },
+  "shadowlumber_builder": {
+   "ingredients": {
+    "nightmarefuel": 2,
+    "axe": 1
+   },
+   "tech": {
+    "ANCIENT": 10,
+    "SCIENCE": 10,
+    "MAGIC": 10
+   }
+  },
+  "critter_eyeofterror_builder": {
+   "ingredients": {
+    "milkywhites": 1,
+    "baconeggs": 1
+   },
+   "tech": {
+    "ORPHANAGE": 1
+   }
+  },
+  "purpleamulet": {
+   "ingredients": {
+    "goldnugget": 6,
+    "nightmarefuel": 4,
+    "purplegem": 1
+   },
+   "tech": {
+    "MAGIC": 3
+   }
+  },
+  "spear_wathgrithr": {
+   "ingredients": {
+    "twigs": 2,
+    "flint": 2,
+    "goldnugget": 2
+   }
+  },
+  "chesspiece_wagboss_lunar_builder": {
+   "ingredients": {
+    "rocks": 2
+   },
+   "tech": {
+    "ANCIENT": 10,
+    "SCIENCE": 10,
+    "MAGIC": 10
+   }
+  },
+  "pocketwatch_heal": {
+   "ingredients": {
+    "pocketwatch_parts": 1,
+    "marble": 2,
+    "redgem": 1
+   }
+  },
+  "wx78_drone_delivery_small_item": {
+   "ingredients": {
+    "transistor": 1,
+    "boards": 3
+   }
+  },
+  "shadow_beef_bell": {
+   "ingredients": {
+    "shadowheart_infused": 1,
+    "horrorfuel": 5,
+    "dreadstone": 4,
+    "voidcloth": 2
+   },
+   "tech": {
+    "SHADOWFORGING": 2
+   }
+  },
+  "yotb_pattern_fragment_2": {
+   "ingredients": {
+    "lucky_goldnugget": 5
+   },
+   "tech": {
+    "BEEFOFFERING": 3
+   }
+  },
+  "balloon": {
+   "ingredients": {
+    "balloons_empty": 1
+   }
+  },
+  "yotc_seedpacket_rare": {
+   "ingredients": {
+    "lucky_goldnugget": 4
+   },
+   "tech": {
+    "CARRATOFFERING": 3
+   }
+  },
+  "carnivalgame_golf_shape_curve1x2": {
+   "ingredients": {},
+   "tech": {
+    "CARNIVAL_GOLFPROPS": 1
+   },
+   "placer": "carnivalgame_golf_shape_curve1x2_placer"
+  },
+  "wanderingtradershop_twigs": {
+   "ingredients": {
+    "ash": 2
+   },
+   "tech": {
+    "ANCIENT": 10,
+    "SCIENCE": 10,
+    "MAGIC": 10
+   }
+  },
+  "green_mushroomhat": {
+   "ingredients": {
+    "green_cap": 6
+   },
+   "tech": {
+    "ANCIENT": 10,
+    "SCIENCE": 10,
+    "MAGIC": 10
+   }
+  },
+  "mermthrone": {
+   "ingredients": {
+    "kelp": 20,
+    "pigskin": 10,
+    "beefalowool": 15
+   }
+  },
+  "wormwood_sapling": {
+   "ingredients": {
+    "twigs": 5
+   }
+  },
+  "hermitcrabtea_moon_tree_blossom_1": {
+   "ingredients": {
+    "messagebottleempty": 1,
+    "moon_tree_blossom_dried": 8
+   },
+   "tech": {
+    "ANCIENT": 10,
+    "SCIENCE": 10,
+    "MAGIC": 10
+   }
+  },
+  "mast_broken": {
+   "ingredients": {
+    "boards": 3,
+    "rope": 3,
+    "silk": 8
+   }
+  },
+  "carnivalgame_golf_shape_curve2x2": {
+   "ingredients": {},
+   "tech": {
+    "CARNIVAL_GOLFPROPS": 1
+   },
+   "placer": "carnivalgame_golf_shape_curve2x2_placer"
+  },
+  "wintercooking_cabbagerolls": {
+   "ingredients": {
+    "wintersfeastfuel": 1,
+    "cutreeds": 2
+   },
+   "tech": {
+    "WINTERSFEASTCOOKING": 1
+   }
+  },
+  "chesspiece_yotd_builder": {
+   "ingredients": {
+    "rocks": 2
+   },
+   "tech": {
+    "ANCIENT": 10,
+    "SCIENCE": 10,
+    "MAGIC": 10
+   }
+  },
+  "rabbitkinghorn": {
+   "ingredients": {
+    "carrot": 4,
+    "cutreeds": 1
+   }
+  },
+  "armor_voidcloth": {
+   "ingredients": {
+    "horrorfuel": 4,
+    "voidcloth": 4
+   },
+   "tech": {
+    "SHADOWFORGING": 2
+   }
+  },
+  "shadowminer_builder": {
+   "ingredients": {
+    "nightmarefuel": 2,
+    "pickaxe": 1
+   },
+   "tech": {
+    "ANCIENT": 10,
+    "SCIENCE": 10,
+    "MAGIC": 10
+   }
+  },
+  "hermitshop_tacklecontainer": {
+   "ingredients": {
+    "messagebottleempty": 3
+   },
+   "tech": {
+    "HERMITCRABSHOP": 3
+   }
+  },
+  "carnivalgame_golfprop_cutout1": {
+   "ingredients": {},
+   "tech": {
+    "CARNIVAL_GOLFPROPS": 1
+   },
+   "placer": "carnivalgame_golfprop_cutout1_placer"
+  },
+  "dumbbell": {
+   "ingredients": {
+    "rocks": 4,
+    "twigs": 1
+   }
+  },
+  "carnivalgame_golfprop_cutout4": {
+   "ingredients": {},
+   "tech": {
+    "CARNIVAL_GOLFPROPS": 1
+   },
+   "placer": "carnivalgame_golfprop_cutout4_placer"
+  },
+  "transmute_marble": {
+   "ingredients": {
+    "cutstone": 2
+   }
+  },
+  "yotb_pattern_fragment_1": {
+   "ingredients": {
+    "lucky_goldnugget": 5
+   },
+   "tech": {
+    "BEEFOFFERING": 3
+   }
+  },
+  "mermarmorhat": {
+   "ingredients": {
+    "log": 1,
+    "cutgrass": 1
+   }
+  },
+  "dock_woodposts_item": {
+   "ingredients": {
+    "log": 2
+   },
+   "tech": {
+    "ANCIENT": 10,
+    "SCIENCE": 10,
+    "MAGIC": 10
+   }
+  },
+  "mastupgrade_lamp_item_yotd": {
+   "ingredients": {
+    "lucky_goldnugget": 3
+   },
+   "tech": {
+    "DRAGONOFFERING": 3
+   }
+  },
+  "bugnet": {
+   "ingredients": {
+    "twigs": 4,
+    "silk": 2,
+    "rope": 1
+   },
+   "tech": {
+    "SCIENCE": 1
+   }
+  },
+  "battlesong_instant_panic": {
+   "ingredients": {
+    "papyrus": 1,
+    "featherpencil": 1,
+    "purplegem": 1
+   }
+  },
+  "oceanfishinglure_spinner_green": {
+   "ingredients": {
+    "flint": 1,
+    "green_cap": 1,
+    "beefalowool": 1
+   },
+   "tech": {
+    "FISHING": 1
+   }
+  },
+  "tophat_magician": {
+   "ingredients": {
+    "tophat": 1,
+    "nightmarefuel": 2
+   }
+  },
+  "pocketwatch_dismantler": {
+   "ingredients": {
+    "goldnugget": 1,
+    "flint": 1,
+    "twigs": 3
+   }
+  },
+  "tacklestation": {
+   "ingredients": {
+    "driftwood_log": 1,
+    "transistor": 1,
+    "boneshard": 1
+   },
+   "tech": {
+    "SCIENCE": 1
+   },
+   "placer": "tacklestation_placer"
+  },
+  "yotd_dragonshrine": {
+   "ingredients": {
+    "goldnugget": 4,
+    "boards": 2
+   },
+   "tech": {
+    "SCIENCE": 10
+   },
+   "placer": "yotd_dragonshrine_placer"
+  },
+  "carnivalgame_golfprop_spring_nofaced": {
+   "ingredients": {},
+   "tech": {
+    "CARNIVAL_GOLFPROPS": 1
+   },
+   "placer": "carnivalgame_golfprop_spring_nofaced_placer"
+  },
+  "decor_centerpiece": {
+   "ingredients": {
+    "twigs": 1,
+    "rocks": 1,
+    "flint": 1,
+    "goldnugget": 1
+   },
+   "tech": {
+    "CARPENTRY": 2
+   }
+  },
+  "featherhat": {
+   "ingredients": {
+    "feather_crow": 3,
+    "feather_robin": 2,
+    "tentaclespots": 2
+   },
+   "tech": {
+    "SCIENCE": 2
+   }
+  },
+  "resurrectionstatue": {
+   "ingredients": {
+    "boards": 4,
+    "beardhair": 4
+   },
+   "tech": {
+    "MAGIC": 2
+   },
+   "placer": "resurrectionstatue_placer"
+  },
+  "orangemooneye": {
+   "ingredients": {
+    "moonrockcrater": 1,
+    "orangegem": 1
+   }
+  },
+  "critter_glomling_builder": {
+   "ingredients": {
+    "glommerfuel": 1,
+    "taffy": 1
+   },
+   "tech": {
+    "ORPHANAGE": 1
+   }
+  },
+  "spidereggsack": {
+   "ingredients": {
+    "silk": 12,
+    "spidergland": 4,
+    "papyrus": 3
+   }
+  },
+  "carnivalgame_golfprop_cutout2": {
+   "ingredients": {},
+   "tech": {
+    "CARNIVAL_GOLFPROPS": 1
+   },
+   "placer": "carnivalgame_golfprop_cutout2_placer"
+  },
+  "carnivalgame_golfprop_movingwall_red": {
+   "ingredients": {},
+   "tech": {
+    "CARNIVAL_GOLFPROPS": 1
+   },
+   "placer": "carnivalgame_golfprop_movingwall_red_placer"
+  },
+  "plantregistryhat": {
+   "ingredients": {
+    "fertilizer": 1,
+    "seeds": 3,
+    "transistor": 1
+   },
+   "tech": {
+    "SCIENCE": 2
+   }
+  },
+  "yoth_knighthat": {
+   "ingredients": {
+    "goldnugget": 4,
+    "feather_robin": 1
+   }
+  },
+  "fumarolepickaxe": {
+   "ingredients": {
+    "twigs": 4,
+    "mitegland": 2,
+    "nitre": 3
+   },
+   "tech": {
+    "SCIENCE": 2
+   }
+  },
+  "carnivalgame_golfprop_wormhole_limited": {
+   "ingredients": {},
+   "tech": {
+    "CARNIVAL_GOLFPROPS": 1
+   },
+   "placer": "carnivalgame_golfprop_wormhole_limited_placer"
+  },
+  "hermitcrabtea_petals_evil_2": {
+   "ingredients": {
+    "messagebottleempty": 1,
+    "petals_evil_dried": 6
+   },
+   "tech": {
+    "ANCIENT": 10,
+    "SCIENCE": 10,
+    "MAGIC": 10
+   }
+  },
+  "wardrobe": {
+   "ingredients": {
+    "boards": 4,
+    "cutgrass": 3
+   },
+   "tech": {
+    "SCIENCE": 2
+   },
+   "placer": "wardrobe_placer"
+  },
+  "tacklecontainer": {
+   "ingredients": {
+    "cookiecuttershell": 2,
+    "rope": 1
+   }
+  },
+  "oceanfishinglure_spoon_green": {
+   "ingredients": {
+    "flint": 2,
+    "green_cap": 1
+   },
+   "tech": {
+    "FISHING": 1
+   }
+  },
+  "vault_pillar_guard_dormant": {
+   "ingredients": {
+    "vault_pillar_guard_piece_1": 1,
+    "vault_pillar_guard_piece_2": 1,
+    "vault_pillar_guard_piece_3": 1,
+    "thulecite": 8,
+    "moonrocknugget": 8,
+    "cutstone": 8
+   }
+  },
+  "mermhat": {
+   "ingredients": {
+    "pondfish": 1,
+    "cutreeds": 1,
+    "twigs": 2
+   }
+  },
+  "pumpkincarver3": {
+   "ingredients": {
+    "pumpkin_seeds": 1,
+    "flint": 1
+   }
+  },
+  "carnivalgame_golfgame_kit_diy": {
+   "ingredients": {
+    "goldnugget": 1,
+    "seeds": 3
+   },
+   "tech": {
+    "CARNIVAL_HOSTSHOP": 3
+   }
+  },
+  "carnivalgame_golfprop_spring_nofaced_onetime": {
+   "ingredients": {},
+   "tech": {
+    "CARNIVAL_GOLFPROPS": 1
+   },
+   "placer": "carnivalgame_golfprop_spring_nofaced_onetime_placer"
+  },
+  "oceanfishinglure_spoon_red": {
+   "ingredients": {
+    "flint": 2,
+    "red_cap": 1
+   },
+   "tech": {
+    "FISHING": 1
+   }
+  },
+  "blueprint_craftingset_ruins_builder": {
+   "ingredients": {
+    "papyrus": 3
+   },
+   "tech": {
+    "ANCIENT": 2
+   }
+  },
+  "tent": {
+   "ingredients": {
+    "silk": 6,
+    "twigs": 4,
+    "rope": 3
+   },
+   "tech": {
+    "SCIENCE": 2
+   },
+   "placer": "tent_placer"
+  },
+  "cotl_tabernacle_level3": {
+   "ingredients": {
+    "rocks": 10,
+    "goldnugget": 10,
+    "cutstone": 15,
+    "log": 4
+   }
+  },
+  "halloween_experiment_moon": {
+   "ingredients": {
+    "moonbutterflywings": 1,
+    "moon_tree_blossom": 1
+   },
+   "tech": {
+    "MADSCIENCE": 1
+   }
+  },
+  "anchor_item": {
+   "ingredients": {
+    "boards": 2,
+    "rope": 3,
+    "cutstone": 3
+   },
+   "tech": {
+    "SEAFARING": 1
+   }
+  },
+  "merm_toolshed": {
+   "ingredients": {
+    "boards": 2,
+    "twigs": 5,
+    "rocks": 5
+   },
+   "placer": "merm_toolshed_placer"
+  },
+  "wood_stool": {
+   "ingredients": {
+    "boards": 1
+   },
+   "tech": {
+    "CARPENTRY": 2
+   },
+   "placer": "wood_stool_placer"
+  },
+  "refined_dust": {
+   "ingredients": {
+    "saltrock": 1,
+    "rocks": 2,
+    "nitre": 1
+   },
+   "tech": {
+    "ANCIENT": 10,
+    "SCIENCE": 10,
+    "MAGIC": 10
+   }
+  },
+  "succulent_potted": {
+   "ingredients": {
+    "succulent_picked": 2,
+    "cutstone": 1
+   },
+   "tech": {
+    "SCIENCE": 2
+   },
+   "placer": "succulent_potted_placer"
+  },
+  "trophyscale_fish": {
+   "ingredients": {
+    "ice": 4,
+    "boards": 2,
+    "cutstone": 1
+   },
+   "tech": {
+    "SCIENCE": 2
+   },
+   "placer": "trophyscale_fish_placer"
+  },
+  "critter_lunarmothling_builder": {
+   "ingredients": {
+    "moonbutterfly": 1,
+    "flowersalad": 1
+   },
+   "tech": {
+    "ORPHANAGE": 1
+   }
+  },
+  "yotr_rabbitshrine": {
+   "ingredients": {
+    "goldnugget": 4,
+    "boards": 2
+   },
+   "tech": {
+    "SCIENCE": 10
+   },
+   "placer": "yotr_rabbitshrine_placer"
+  },
+  "costume_blacksmith_body": {
+   "ingredients": {
+    "silk": 6
+   }
+  },
+  "transmute_goldnugget": {
+   "ingredients": {
+    "nitre": 3
+   }
+  },
+  "turf_shellbeach": {
+   "ingredients": {
+    "rocks": 1,
+    "slurtle_shellpieces": 1
+   },
+   "tech": {
+    "ANCIENT": 10,
+    "SCIENCE": 10,
+    "MAGIC": 10
+   }
+  },
+  "turf_marsh": {
+   "ingredients": {
+    "cutreeds": 1,
+    "spoiled_food": 2
+   },
+   "tech": {
+    "MASHTURFCRAFTING": 2
+   }
+  },
+  "oceanfishingbobber_canary": {
+   "ingredients": {
+    "feather_canary": 1
+   },
+   "tech": {
+    "FISHING": 1
+   }
+  },
+  "yotc_carrat_gym_speed_item": {
+   "ingredients": {
+    "lucky_goldnugget": 4
+   },
+   "tech": {
+    "CARRATOFFERING": 3
+   }
+  },
+  "chesspiece_daywalker_builder": {
+   "ingredients": {
+    "rocks": 2
+   },
+   "tech": {
+    "ANCIENT": 10,
+    "SCIENCE": 10,
+    "MAGIC": 10
+   }
+  },
+  "chesspiece_butterfly_builder": {
+   "ingredients": {
+    "rocks": 2
+   },
+   "tech": {
+    "ANCIENT": 10,
+    "SCIENCE": 10,
+    "MAGIC": 10
+   }
+  },
+  "hermitcrabtea_tillweed_1": {
+   "ingredients": {
+    "messagebottleempty": 1,
+    "tillweed_dried": 6
+   },
+   "tech": {
+    "ANCIENT": 10,
+    "SCIENCE": 10,
+    "MAGIC": 10
+   }
+  },
+  "table_winters_feast": {
+   "ingredients": {
+    "boards": 1,
+    "beefalowool": 1
+   },
+   "tech": {
+    "SCIENCE": 10
+   },
+   "placer": "table_winters_feast_placer"
+  },
+  "chesspiece_stalker_builder": {
+   "ingredients": {
+    "rocks": 2
+   },
+   "tech": {
+    "ANCIENT": 10,
+    "SCIENCE": 10,
+    "MAGIC": 10
+   }
+  },
+  "giftwrap": {
+   "ingredients": {
+    "papyrus": 1,
+    "petals": 1
+   },
+   "tech": {
+    "SCIENCE": 10
+   }
+  },
+  "wintercooking_berrysauce": {
+   "ingredients": {
+    "wintersfeastfuel": 1,
+    "mosquitosack": 2
+   },
+   "tech": {
+    "WINTERSFEASTCOOKING": 1
+   }
+  },
+  "archive_resonator": {
+   "ingredients": {
+    "moonrocknugget": 1,
+    "thulecite": 1
+   }
+  },
+  "mutator_dropper": {
+   "ingredients": {
+    "monstermeat": 1,
+    "silk": 1,
+    "manrabbit_tail": 1
+   },
+   "tech": {
+    "SPIDERCRAFT": 1
+   }
+  },
+  "turf_fungus_moon": {
+   "ingredients": {
+    "moonrocknugget": 1,
+    "moon_cap": 2
+   },
+   "tech": {
+    "CELESTIAL": 3
+   }
+  },
+  "onemanband": {
+   "ingredients": {
+    "goldnugget": 2,
+    "nightmarefuel": 4,
+    "pigskin": 2
+   },
+   "tech": {
+    "MAGIC": 2
+   }
+  },
+  "wintercooking_bibingka": {
+   "ingredients": {
+    "wintersfeastfuel": 1,
+    "foliage": 2
+   },
+   "tech": {
+    "WINTERSFEASTCOOKING": 1
+   }
+  },
+  "wintercooking_latkes": {
+   "ingredients": {
+    "wintersfeastfuel": 1,
+    "twigs": 1,
+    "cutgrass": 1
+   },
+   "tech": {
+    "WINTERSFEASTCOOKING": 1
+   }
+  },
+  "book_research_station": {
+   "ingredients": {
+    "papyrus": 2,
+    "transistor": 1
+   }
+  },
+  "hermitcrabtea_forgetmelots_2": {
+   "ingredients": {
+    "messagebottleempty": 1,
+    "forgetmelots_dried": 4
+   },
+   "tech": {
+    "ANCIENT": 10,
+    "SCIENCE": 10,
+    "MAGIC": 10
+   }
+  },
+  "terrariumchest": {
+   "ingredients": {
+    "boards": 3
+   }
+  },
+  "turf_pebblebeach": {
+   "ingredients": {
+    "rocks": 1,
+    "driftwood_log": 1
+   },
+   "tech": {
+    "TURFCRAFTING": 2
+   }
+  },
+  "turf_cotl_brick": {
+   "ingredients": {
+    "cutstone": 1,
+    "flint": 2
+   },
+   "tech": {
+    "ANCIENT": 10,
+    "SCIENCE": 10,
+    "MAGIC": 10
+   }
+  },
+  "healingsalve": {
+   "ingredients": {
+    "ash": 2,
+    "rocks": 1,
+    "spidergland": 1
+   },
+   "tech": {
+    "SCIENCE": 1
+   }
+  },
+  "shadow_battleaxe": {
+   "ingredients": {
+    "shadowheart_infused": 1,
+    "horrorfuel": 5,
+    "dreadstone": 3,
+    "voidcloth": 2
+   },
+   "tech": {
+    "SHADOWFORGING": 2
+   }
+  },
+  "ocean_trawler_kit": {
+   "ingredients": {
+    "boards": 2,
+    "rope": 2,
+    "silk": 6
+   },
+   "tech": {
+    "SEAFARING": 1
+   }
+  },
+  "book_sleep": {
+   "ingredients": {
+    "papyrus": 2,
+    "nightmarefuel": 2
+   },
+   "tech": {
+    "MAGIC": 2
+   }
+  },
+  "halloween_experiment_bravery": {
+   "ingredients": {
+    "froglegs": 1,
+    "goldnugget": 1
+   },
+   "tech": {
+    "MADSCIENCE": 1
+   }
+  },
+  "wintercooking_roastturkey": {
+   "ingredients": {
+    "wintersfeastfuel": 1,
+    "log": 1,
+    "charcoal": 1
+   },
+   "tech": {
+    "WINTERSFEASTCOOKING": 1
+   }
+  },
+  "blowdart_sleep": {
+   "ingredients": {
+    "cutreeds": 2,
+    "stinger": 1,
+    "feather_crow": 1
+   },
+   "tech": {
+    "SCIENCE": 2
+   }
+  },
+  "wathgrithr_improvedhat": {
+   "ingredients": {
+    "goldnugget": 2,
+    "beefalowool": 2,
+    "marble": 1
+   }
+  },
+  "spice_garlic": {
+   "ingredients": {
+    "garlic": 3
+   },
+   "tech": {
+    "FOODPROCESSING": 1
+   }
+  },
+  "turf_underrock": {
+   "ingredients": {
+    "rocks": 3
+   },
+   "tech": {
+    "TURFCRAFTING": 2
+   }
+  },
+  "wintercooking_stuffing": {
+   "ingredients": {
+    "wintersfeastfuel": 1,
+    "beardhair": 2
+   },
+   "tech": {
+    "WINTERSFEASTCOOKING": 1
+   }
+  },
+  "wintercooking_tourtiere": {
+   "ingredients": {
+    "wintersfeastfuel": 1,
+    "acorn": 1,
+    "pinecone": 1
+   },
+   "tech": {
+    "WINTERSFEASTCOOKING": 1
+   }
+  },
+  "moon_mushroomhat": {
+   "ingredients": {
+    "moon_cap": 4,
+    "red_mushroomhat": 1
+   },
+   "tech": {
+    "CELESTIAL": 1
+   }
+  },
+  "boat_bumper_kelp": {
+   "ingredients": {
+    "kelp": 3,
+    "cutgrass": 3
+   }
+  },
+  "chesspiece_pawn_builder": {
+   "ingredients": {
+    "rocks": 2
+   },
+   "tech": {
+    "ANCIENT": 10,
+    "SCIENCE": 10,
+    "MAGIC": 10
+   }
+  },
+  "carnivaldecor_eggride2_kit": {
+   "ingredients": {
+    "carnival_prizeticket": 36
+   },
+   "tech": {
+    "CARNIVAL_PRIZESHOP": 1
+   }
+  },
+  "alterguardianhat": {
+   "ingredients": {
+    "alterguardianhatshard": 5
+   }
+  },
+  "wintercooking_festivefish": {
+   "ingredients": {
+    "wintersfeastfuel": 1,
+    "spoiled_fish_small": 1,
+    "petals": 1
+   },
+   "tech": {
+    "WINTERSFEASTCOOKING": 1
+   }
+  },
+  "wintercooking_tamales": {
+   "ingredients": {
+    "wintersfeastfuel": 1,
+    "stinger": 2
+   },
+   "tech": {
+    "WINTERSFEASTCOOKING": 1
+   }
+  },
+  "chesspiece_wormboss_builder": {
+   "ingredients": {
+    "rocks": 2
+   },
+   "tech": {
+    "ANCIENT": 10,
+    "SCIENCE": 10,
+    "MAGIC": 10
+   }
+  },
+  "slingshotammo_moonglass": {
+   "ingredients": {
+    "moonglass": 1
+   },
+   "tech": {
+    "CELESTIAL": 3
+   }
+  },
+  "saddle_shadow": {
+   "ingredients": {
+    "shadowheart_infused": 1,
+    "horrorfuel": 8,
+    "dreadstone": 8,
+    "voidcloth": 5
+   },
+   "tech": {
+    "SHADOWFORGING": 2
+   }
+  },
+  "wagpunkbits_kit": {
+   "ingredients": {
+    "wagpunk_bits": 1,
+    "transistor": 1
+   },
+   "tech": {
+    "ANCIENT": 10,
+    "SCIENCE": 10,
+    "MAGIC": 10
+   }
+  },
+  "skeletonhat": {
+   "ingredients": {
+    "boneshard": 10,
+    "nightmarefuel": 4
+   }
+  },
+  "wanderingtradershop_pigskin": {
+   "ingredients": {
+    "beefalowool": 3
+   },
+   "tech": {
+    "ANCIENT": 10,
+    "SCIENCE": 10,
+    "MAGIC": 10
+   }
+  },
+  "transmute_twigs": {
+   "ingredients": {
+    "log": 1
+   }
+  },
+  "yotc_carrat_gym_stamina": {
+   "ingredients": {
+    "lucky_goldnugget": 4
+   }
+  },
+  "carnival_vest_a": {
+   "ingredients": {
+    "carnival_prizeticket": 24
+   },
+   "tech": {
+    "CARNIVAL_PRIZESHOP": 1
+   }
+  },
+  "wargshrine": {
+   "ingredients": {
+    "goldnugget": 4,
+    "boards": 2
+   },
+   "tech": {
+    "SCIENCE": 10
+   },
+   "placer": "wargshrine_placer"
+  },
+  "perdshrine": {
+   "ingredients": {
+    "goldnugget": 4,
+    "boards": 2
+   },
+   "tech": {
+    "SCIENCE": 10
+   },
+   "placer": "perdshrine_placer"
+  },
+  "pigshrine": {
+   "ingredients": {
+    "goldnugget": 4,
+    "boards": 2
+   },
+   "tech": {
+    "SCIENCE": 10
+   },
+   "placer": "pigshrine_placer"
+  },
+  "vault_orb_refined": {
+   "ingredients": {
+    "vault_orb": 1
+   },
+   "tech": {
+    "VAULT_REFINE": 1
+   }
+  },
+  "houndstooth_blowpipe": {
+   "ingredients": {
+    "security_pulse_cage_full": 1,
+    "lunarplant_husk": 3,
+    "purebrilliance": 3,
+    "moonrocknugget": 3
+   },
+   "tech": {
+    "LUNARFORGING": 2
+   }
+  },
+  "yotc_carrat_scale": {
+   "ingredients": {
+    "lucky_goldnugget": 1
+   }
+  },
+  "ruinsrelic_chair": {
+   "ingredients": {
+    "cutstone": 1
+   },
+   "tech": {
+    "ANCIENT": 10,
+    "SCIENCE": 10,
+    "MAGIC": 10
+   },
+   "placer": "ruinsrelic_chair_placer"
+  },
+  "costume_tree_body": {
+   "ingredients": {
+    "silk": 4,
+    "log": 3
+   }
+  },
+  "thulecite": {
+   "ingredients": {
+    "thulecite_pieces": 6
+   },
+   "tech": {
+    "ANCIENT": 2
+   }
+  },
+  "merm_armory_upgraded": {
+   "ingredients": {
+    "boards": 4,
+    "tentaclespots": 1,
+    "log": 5,
+    "cutgrass": 5
+   },
+   "placer": "merm_armory_upgraded_placer"
+  },
+  "pighouse": {
+   "ingredients": {
+    "boards": 4,
+    "cutstone": 3,
+    "pigskin": 4
+   },
+   "tech": {
+    "SCIENCE": 2
+   },
+   "placer": "pighouse_placer"
+  },
+  "magician_chest": {
+   "ingredients": {
+    "silk": 1,
+    "boards": 4,
+    "nightmarefuel": 9
+   },
+   "placer": "magician_chest_placer"
+  },
+  "carnivaldecor_eggride4": {
+   "ingredients": {
+    "carnivaldecor_eggride4_kit": 1
+   }
+  },
+  "carnivalgame_puckdrop_station": {
+   "ingredients": {
+    "carnivalgame_puckdrop_kit": 1
+   }
+  },
+  "shieldofterror": {
+   "ingredients": {
+    "gears": 2,
+    "nightmarefuel": 3
+   }
+  },
+  "minisign": {
+   "ingredients": {
+    "boards": 1
+   }
+  },
+  "carnivalcannon_confetti": {
+   "ingredients": {
+    "carnivalcannon_confetti_kit": 1
+   }
+  },
+  "yotc_carratshrine": {
+   "ingredients": {
+    "goldnugget": 4,
+    "boards": 2
+   },
+   "tech": {
+    "SCIENCE": 10
+   },
+   "placer": "yotc_carratshrine_placer"
+  },
+  "chesspiece_twinsofterror_builder": {
+   "ingredients": {
+    "rocks": 2
+   },
+   "tech": {
+    "ANCIENT": 10,
+    "SCIENCE": 10,
+    "MAGIC": 10
+   }
+  },
+  "turf_ruinstrim": {
+   "ingredients": {
+    "rocks": 2,
+    "nightmarefuel": 1
+   },
+   "tech": {
+    "ANCIENT": 10,
+    "SCIENCE": 10,
+    "MAGIC": 10
+   }
+  },
+  "nightcaphat": {
+   "ingredients": {
+    "lucky_goldnugget": 4
+   },
+   "tech": {
+    "RABBITOFFERING": 3
+   }
+  },
+  "mask_toadyhat": {
+   "ingredients": {
+    "marble": 2
+   }
+  },
+  "hivehat": {
+   "ingredients": {
+    "honeycomb": 4,
+    "honey": 3,
+    "royal_jelly": 2,
+    "bee": 4
+   }
+  },
+  "carnivalgame_memory_kit": {
+   "ingredients": {
+    "goldnugget": 1,
+    "seeds": 3
+   },
+   "tech": {
+    "CARNIVAL_HOSTSHOP": 3
+   }
+  },
+  "spice_salt": {
+   "ingredients": {
+    "saltrock": 3
+   },
+   "tech": {
+    "FOODPROCESSING": 1
+   }
+  },
+  "footballhat": {
+   "ingredients": {
+    "pigskin": 1,
+    "rope": 1
+   },
+   "tech": {
+    "SCIENCE": 2
+   }
+  },
+  "trap_teeth": {
+   "ingredients": {
+    "log": 1,
+    "rope": 1,
+    "houndstooth": 1
+   },
+   "tech": {
+    "SCIENCE": 2
+   }
+  },
+  "wx78module_taser": {
+   "ingredients": {
+    "scandata": 5,
+    "goatmilk": 1
+   },
+   "tech": {
+    "ROBOTMODULECRAFT": 1
+   }
+  },
+  "slingshot999ex": {
+   "ingredients": {
+    "twigs": 1,
+    "mosquitosack": 2
+   }
+  },
+  "transmute_cutstone": {
+   "ingredients": {
+    "marble": 1
+   }
+  },
+  "bedroll_furry": {
+   "ingredients": {
+    "bedroll_straw": 1,
+    "manrabbit_tail": 2
+   },
+   "tech": {
+    "SCIENCE": 2
+   }
+  },
+  "portablefirepit_item": {
+   "ingredients": {
+    "log": 3,
+    "rope": 1,
+    "rocks": 4
+   }
+  },
+  "wendy_butterfly": {
+   "ingredients": {
+    "ghostflower": 2,
+    "butterflywings": 1
+   }
+  },
+  "costume_doll_body": {
+   "ingredients": {
+    "silk": 6
+   }
+  },
+  "raincoat": {
+   "ingredients": {
+    "tentaclespots": 2,
+    "rope": 2,
+    "boneshard": 2
+   },
+   "tech": {
+    "SCIENCE": 1
+   }
+  },
+  "transmute_yellowgem": {
+   "ingredients": {
+    "orangegem": 3
+   }
+  },
+  "transistor": {
+   "ingredients": {
+    "goldnugget": 2,
+    "cutstone": 1
+   },
+   "tech": {
+    "SCIENCE": 1
+   }
+  },
+  "hermitcrabtea_petals_3": {
+   "ingredients": {
+    "messagebottleempty": 1,
+    "petals_dried": 4
+   },
+   "tech": {
+    "ANCIENT": 10,
+    "SCIENCE": 10,
+    "MAGIC": 10
+   }
+  },
+  "walterhat": {
+   "ingredients": {
+    "silk": 4
+   }
+  },
+  "rabbitkingspear": {
+   "ingredients": {
+    "beardhair": 3,
+    "manrabbit_tail": 1,
+    "rope": 1
+   }
+  },
+  "yotc_carrat_gym_speed": {
+   "ingredients": {
+    "lucky_goldnugget": 4
+   }
+  },
+  "hermitcrabtea_succulent_picked_1": {
+   "ingredients": {
+    "messagebottleempty": 1,
+    "succulent_picked_dried": 6
+   },
+   "tech": {
+    "ANCIENT": 10,
+    "SCIENCE": 10,
+    "MAGIC": 10
+   }
+  },
+  "hermitcrabtea_petals_2": {
+   "ingredients": {
+    "messagebottleempty": 1,
+    "petals_dried": 6
+   },
+   "tech": {
+    "ANCIENT": 10,
+    "SCIENCE": 10,
+    "MAGIC": 10
+   }
+  },
+  "yotb_sewingmachine_item": {
+   "ingredients": {
+    "stinger": 1,
+    "goldnugget": 1,
+    "silk": 2
+   },
+   "tech": {
+    "BEEFOFFERING": 3
+   }
+  },
+  "goldenshovel": {
+   "ingredients": {
+    "twigs": 4,
+    "goldnugget": 2
+   },
+   "tech": {
+    "SCIENCE": 2
+   }
+  },
+  "hermitcrabtea_firenettles_2": {
+   "ingredients": {
+    "messagebottleempty": 1,
+    "firenettles_dried": 4
+   },
+   "tech": {
+    "ANCIENT": 10,
+    "SCIENCE": 10,
+    "MAGIC": 10
+   }
+  },
+  "trap": {
+   "ingredients": {
+    "twigs": 2,
+    "cutgrass": 6
+   }
+  },
+  "transmute_purplegem": {
+   "ingredients": {
+    "bluegem": 1,
+    "redgem": 1
+   }
+  },
+  "carnivaldecor_lamp_kit": {
+   "ingredients": {
+    "carnival_prizeticket": 48
+   },
+   "tech": {
+    "CARNIVAL_PRIZESHOP": 1
+   }
+  },
+  "decor_portraitframe": {
+   "ingredients": {
+    "log": 2,
+    "twigs": 2,
+    "goldnugget": 1,
+    "featherpencil": 1
+   },
+   "tech": {
+    "CARPENTRY": 2
+   }
+  },
+  "turf_mosaic_red": {
+   "ingredients": {
+    "marble": 1
+   },
+   "tech": {
+    "SCIENCE": 2
+   }
+  },
+  "punchingbag_lunar": {
+   "ingredients": {
+    "cutgrass": 3,
+    "boards": 1,
+    "purebrilliance": 1
+   },
+   "tech": {
+    "MAGIC": 2
+   },
+   "placer": "punchingbag_lunar_placer"
+  },
+  "carnival_gametoken_multiple": {
+   "ingredients": {
+    "goldnugget": 1
+   },
+   "tech": {
+    "CARNIVAL_HOSTSHOP": 3
+   }
+  },
+  "wood_chair": {
+   "ingredients": {
+    "boards": 1
+   },
+   "tech": {
+    "CARPENTRY": 2
+   },
+   "placer": "wood_chair_placer"
+  },
+  "w_radio": {
+   "ingredients": {
+    "wagpunk_bits": 5,
+    "transistor": 2
+   },
+   "tech": {
+    "ANCIENT": 10,
+    "SCIENCE": 10,
+    "MAGIC": 10
+   }
+  },
+  "turf_grass": {
+   "ingredients": {
+    "cutgrass": 1,
+    "petals": 1
+   },
+   "tech": {
+    "TURFCRAFTING": 2
+   }
+  },
+  "chesspiece_warg_mutated_builder": {
+   "ingredients": {
+    "rocks": 2
+   },
+   "tech": {
+    "ANCIENT": 10,
+    "SCIENCE": 10,
+    "MAGIC": 10
+   }
+  },
+  "firepit": {
+   "ingredients": {
+    "log": 2,
+    "rocks": 12
+   },
+   "placer": "firepit_placer"
+  },
+  "carnivalgame_golfprop_spring": {
+   "ingredients": {},
+   "tech": {
+    "CARNIVAL_GOLFPROPS": 1
+   },
+   "placer": "carnivalgame_golfprop_spring_placer"
+  },
+  "hermitshop_oceanfishingbobber_canary": {
+   "ingredients": {
+    "messagebottleempty": 1
+   },
+   "tech": {
+    "HERMITCRABSHOP": 3
+   }
+  },
+  "carnivaldecor_lamp": {
+   "ingredients": {
+    "carnivaldecor_lamp_kit": 1
+   }
+  },
+  "carnivalcannon_sparkle": {
+   "ingredients": {
+    "carnivalcannon_sparkle_kit": 1
+   }
+  },
+  "armorwood": {
+   "ingredients": {
+    "log": 8,
+    "rope": 2
+   },
+   "tech": {
+    "SCIENCE": 1
+   }
+  },
+  "bodypillow_beefalowool": {
+   "ingredients": {
+    "lucky_goldnugget": 4,
+    "silk": 2,
+    "beefalowool": 3
+   },
+   "tech": {
+    "RABBITOFFERING": 3
+   }
+  },
+  "carnivalgame_golfprop_movingwall_blue": {
+   "ingredients": {},
+   "tech": {
+    "CARNIVAL_GOLFPROPS": 1
+   },
+   "placer": "carnivalgame_golfprop_movingwall_blue_placer"
+  },
+  "offering_pot_upgraded": {
+   "ingredients": {
+    "boards": 3,
+    "cutreeds": 3,
+    "tentaclespots": 1
+   },
+   "placer": "offering_pot_upgraded_placer"
+  },
+  "premiumwateringcan": {
+   "ingredients": {
+    "driftwood_log": 2,
+    "rope": 1,
+    "malbatross_beak": 1
+   },
+   "tech": {
+    "SCIENCE": 2
+   }
+  },
+  "transmute_purebrilliance": {
+   "ingredients": {
+    "moonglass_charged": 3
+   }
+  },
+  "carnivalgame_golfprop_smallspinner_cw": {
+   "ingredients": {},
+   "tech": {
+    "CARNIVAL_GOLFPROPS": 1
+   },
+   "placer": "carnivalgame_golfprop_smallspinner_cw_placer"
+  },
+  "mastupgrade_lightningrod": {
+   "ingredients": {
+    "goldnugget": 5
+   }
+  },
+  "pocketwatch_portal": {
+   "ingredients": {
+    "pocketwatch_recall": 1,
+    "purplegem": 1
+   },
+   "tech": {
+    "MAGIC": 2
+   }
+  },
+  "greenstaff": {
+   "ingredients": {
+    "nightmarefuel": 4,
+    "livinglog": 2,
+    "greengem": 2
+   },
+   "tech": {
+    "ANCIENT": 2
+   }
+  },
+  "yotc_carrat_scale_item": {
+   "ingredients": {
+    "lucky_goldnugget": 1
+   },
+   "tech": {
+    "CARRATOFFERING": 3
+   }
+  },
+  "researchlab": {
+   "ingredients": {
+    "goldnugget": 1,
+    "log": 4,
+    "rocks": 4
+   },
+   "placer": "researchlab_placer"
+  },
+  "yoth_knightshrine": {
+   "ingredients": {
+    "goldnugget": 4,
+    "boards": 2
+   },
+   "tech": {
+    "SCIENCE": 10
+   },
+   "placer": "yoth_knightshrine_placer"
+  },
+  "hermitshop_chum": {
+   "ingredients": {
+    "messagebottleempty": 1
+   },
+   "tech": {
+    "HERMITCRABSHOP": 7
+   }
+  },
+  "yotc_carrat_race_start": {
+   "ingredients": {
+    "goldnugget": 1
+   }
+  },
+  "turf_meteor": {
+   "ingredients": {
+    "moonrocknugget": 1,
+    "moonglass": 2
+   },
+   "tech": {
+    "CELESTIAL": 3
+   }
+  },
+  "carnival_prizebooth_kit": {
+   "ingredients": {
+    "goldnugget": 1,
+    "seeds": 3
+   },
+   "tech": {
+    "CARNIVAL_HOSTSHOP": 3
+   }
+  },
+  "winona_teleport_pad": {
+   "ingredients": {
+    "sewing_tape": 6,
+    "boards": 3,
+    "transistor": 6
+   }
+  },
+  "hermitshop_chum_blueprint": {
+   "ingredients": {
+    "messagebottleempty": 5
+   },
+   "tech": {
+    "HERMITCRABSHOP": 7
+   }
+  },
+  "chesspiece_moon_sketch": {
+   "ingredients": {
+    "papyrus": 1
+   },
+   "tech": {
+    "CELESTIAL": 3
+   }
+  },
+  "armor_yoth_knight": {
+   "ingredients": {
+    "goldnugget": 6,
+    "silk": 4
+   }
+  },
+  "carnivalgame_golfprop_cutout7": {
+   "ingredients": {},
+   "tech": {
+    "CARNIVAL_GOLFPROPS": 1
+   },
+   "placer": "carnivalgame_golfprop_cutout7_placer"
+  },
+  "shadowduelist_builder": {
+   "ingredients": {
+    "nightmarefuel": 2,
+    "spear": 1
+   },
+   "tech": {
+    "ANCIENT": 10,
+    "SCIENCE": 10,
+    "MAGIC": 10
+   }
+  },
+  "merm_tool": {
+   "ingredients": {
+    "twigs": 1,
+    "rocks": 1
+   }
+  }
+ },
+ "essentials": {
+  "axe": {
+   "ingredients": {
+    "twigs": 1,
+    "flint": 1
+   },
+   "prefab": "axe"
+  },
+  "pickaxe": {
+   "ingredients": {
+    "twigs": 2,
+    "flint": 2
+   },
+   "prefab": "pickaxe"
+  },
+  "shovel": {
+   "ingredients": {
+    "twigs": 2,
+    "flint": 2
+   },
+   "tech": {
+    "SCIENCE": 1
+   },
+   "prefab": "shovel"
+  },
+  "hammer": {
+   "ingredients": {
+    "twigs": 3,
+    "rocks": 3,
+    "cutgrass": 6
+   },
+   "prefab": "hammer"
+  },
+  "goldenaxe": {
+   "ingredients": {
+    "twigs": 4,
+    "goldnugget": 2
+   },
+   "tech": {
+    "SCIENCE": 2
+   },
+   "prefab": "goldenaxe"
+  },
+  "goldenpickaxe": {
+   "ingredients": {
+    "twigs": 4,
+    "goldnugget": 2
+   },
+   "tech": {
+    "SCIENCE": 2
+   },
+   "prefab": "goldenpickaxe"
+  },
+  "goldenshovel": {
+   "ingredients": {
+    "twigs": 4,
+    "goldnugget": 2
+   },
+   "tech": {
+    "SCIENCE": 2
+   },
+   "prefab": "goldenshovel"
+  },
+  "walking_stick": {
+   "ingredients": {
+    "lucy": 1,
+    "log": 3,
+    "charcoal": 1
+   },
+   "prefab": "walking_stick"
+  },
+  "spear": {
+   "ingredients": {
+    "twigs": 2,
+    "rope": 1,
+    "flint": 1
+   },
+   "tech": {
+    "SCIENCE": 1
+   },
+   "prefab": "spear"
+  },
+  "boomerang": {
+   "ingredients": {
+    "boards": 1,
+    "silk": 1,
+    "charcoal": 1
+   },
+   "tech": {
+    "SCIENCE": 2
+   },
+   "prefab": "boomerang"
+  },
+  "firestaff": {
+   "ingredients": {
+    "nightmarefuel": 2,
+    "spear": 1,
+    "redgem": 1
+   },
+   "tech": {
+    "MAGIC": 3
+   },
+   "prefab": "firestaff"
+  },
+  "icestaff": {
+   "ingredients": {
+    "spear": 1,
+    "bluegem": 1
+   },
+   "tech": {
+    "MAGIC": 2
+   },
+   "prefab": "icestaff"
+  },
+  "panflute": {
+   "ingredients": {
+    "cutreeds": 5,
+    "mandrake": 1,
+    "rope": 1
+   },
+   "tech": {
+    "MAGIC": 2
+   },
+   "prefab": "panflute"
+  },
+  "torch": {
+   "ingredients": {
+    "cutgrass": 2,
+    "twigs": 2
+   },
+   "prefab": "torch"
+  },
+  "lantern": {
+   "ingredients": {
+    "twigs": 3,
+    "rope": 2,
+    "lightbulb": 2
+   },
+   "tech": {
+    "SCIENCE": 2
+   },
+   "prefab": "lantern"
+  },
+  "minerhat": {
+   "ingredients": {
+    "strawhat": 1,
+    "goldnugget": 1,
+    "fireflies": 1
+   },
+   "tech": {
+    "SCIENCE": 2
+   },
+   "prefab": "minerhat"
+  },
+  "campfire": {
+   "ingredients": {
+    "cutgrass": 3,
+    "log": 2
+   },
+   "placer": "campfire_placer",
+   "prefab": "campfire"
+  },
+  "firepit": {
+   "ingredients": {
+    "log": 2,
+    "rocks": 12
+   },
+   "placer": "firepit_placer",
+   "prefab": "firepit"
+  },
+  "footballhat": {
+   "ingredients": {
+    "pigskin": 1,
+    "rope": 1
+   },
+   "tech": {
+    "SCIENCE": 2
+   },
+   "prefab": "footballhat"
+  },
+  "armorwood": {
+   "ingredients": {
+    "log": 8,
+    "rope": 2
+   },
+   "tech": {
+    "SCIENCE": 1
+   },
+   "prefab": "armorwood"
+  },
+  "armorgrass": {
+   "ingredients": {
+    "cutgrass": 10,
+    "twigs": 2
+   },
+   "prefab": "armorgrass"
+  },
+  "backpack": {
+   "ingredients": {
+    "cutgrass": 4,
+    "twigs": 4
+   },
+   "tech": {
+    "SCIENCE": 1
+   },
+   "prefab": "backpack"
+  },
+  "treasurechest": {
+   "ingredients": {
+    "boards": 3
+   },
+   "tech": {
+    "SCIENCE": 1
+   },
+   "placer": "treasurechest_placer",
+   "prefab": "treasurechest"
+  },
+  "sciencemachine": {
+   "ingredients": {
+    "goldnugget": 1,
+    "log": 4,
+    "rocks": 4
+   },
+   "placer": "researchlab_placer",
+   "prefab": "researchlab"
+  },
+  "alchemyengine": {
+   "ingredients": {
+    "boards": 4,
+    "cutstone": 2,
+    "transistor": 2
+   },
+   "tech": {
+    "SCIENCE": 1
+   },
+   "placer": "researchlab2_placer",
+   "prefab": "researchlab2"
+  },
+  "cookpot": {
+   "ingredients": {
+    "cutstone": 3,
+    "charcoal": 6,
+    "twigs": 6
+   },
+   "tech": {
+    "SCIENCE": 1
+   },
+   "placer": "cookpot_placer",
+   "prefab": "cookpot"
+  },
+  "meatrack": {
+   "ingredients": {
+    "twigs": 3,
+    "charcoal": 2,
+    "rope": 3
+   },
+   "tech": {
+    "SCIENCE": 1
+   },
+   "placer": "meatrack_placer",
+   "prefab": "meatrack"
+  },
+  "birdtrap": {
+   "ingredients": {
+    "twigs": 3,
+    "silk": 4
+   },
+   "tech": {
+    "SCIENCE": 1
+   },
+   "prefab": "birdtrap"
+  },
+  "birdcage": {
+   "ingredients": {
+    "papyrus": 2,
+    "goldnugget": 6,
+    "seeds": 2
+   },
+   "tech": {
+    "SCIENCE": 2
+   },
+   "placer": "birdcage_placer",
+   "prefab": "birdcage"
+  },
+  "slow_farmplot": {
+   "ingredients": {
+    "cutgrass": 8,
+    "poop": 4,
+    "log": 4
+   },
+   "prefab": "slow_farmplot"
+  },
+  "rainhat": {
+   "ingredients": {
+    "mole": 2,
+    "strawhat": 1,
+    "boneshard": 1
+   },
+   "tech": {
+    "SCIENCE": 2
+   },
+   "prefab": "rainhat"
+  },
+  "raincoat": {
+   "ingredients": {
+    "tentaclespots": 2,
+    "rope": 2,
+    "boneshard": 2
+   },
+   "tech": {
+    "SCIENCE": 1
+   },
+   "prefab": "raincoat"
+  },
+  "umbrella": {
+   "ingredients": {
+    "twigs": 6,
+    "pigskin": 1,
+    "silk": 2
+   },
+   "tech": {
+    "SCIENCE": 1
+   },
+   "prefab": "umbrella"
+  },
+  "winterhat": {
+   "ingredients": {
+    "beefalowool": 4,
+    "silk": 4
+   },
+   "tech": {
+    "SCIENCE": 2
+   },
+   "prefab": "winterhat"
+  },
+  "beefalohat": {
+   "ingredients": {
+    "beefalowool": 8,
+    "horn": 1
+   },
+   "tech": {
+    "SCIENCE": 1
+   },
+   "prefab": "beefalohat"
+  },
+  "tophat": {
+   "ingredients": {
+    "silk": 6
+   },
+   "tech": {
+    "SCIENCE": 1
+   },
+   "prefab": "tophat"
+  },
+  "earmuffshat": {
+   "ingredients": {
+    "rabbit": 2,
+    "twigs": 1
+   },
+   "prefab": "earmuffshat"
+  },
+  "healingsalve": {
+   "ingredients": {
+    "ash": 2,
+    "rocks": 1,
+    "spidergland": 1
+   },
+   "tech": {
+    "SCIENCE": 1
+   },
+   "prefab": "healingsalve"
+  },
+  "bandage": {
+   "ingredients": {
+    "papyrus": 1,
+    "honey": 2
+   },
+   "tech": {
+    "SCIENCE": 2
+   },
+   "prefab": "bandage"
+  },
+  "rope": {
+   "ingredients": {
+    "cutgrass": 3
+   },
+   "tech": {
+    "SCIENCE": 1
+   },
+   "prefab": "rope"
+  },
+  "grass_umbrella": {
+   "ingredients": {
+    "twigs": 4,
+    "cutgrass": 3,
+    "petals": 6
+   },
+   "prefab": "grass_umbrella"
+  },
+  "trap_teeth": {
+   "ingredients": {
+    "log": 1,
+    "rope": 1,
+    "houndstooth": 1
+   },
+   "tech": {
+    "SCIENCE": 2
+   },
+   "prefab": "trap_teeth"
+  },
+  "onemanband": {
+   "ingredients": {
+    "goldnugget": 2,
+    "nightmarefuel": 4,
+    "pigskin": 2
+   },
+   "tech": {
+    "MAGIC": 2
+   },
+   "prefab": "onemanband"
+  },
+  "dumbbell": {
+   "ingredients": {
+    "rocks": 4,
+    "twigs": 1
+   },
+   "prefab": "dumbbell"
+  }
+ },
+ "gathering": {
+  "cutgrass": {
+   "source": "grass",
+   "action": "PICK"
+  },
+  "twigs": {
+   "source": "sapling",
+   "action": "PICK"
+  },
+  "flint": {
+   "source": "flint (ground)",
+   "action": "PICKUP"
+  },
+  "log": {
+   "source": "evergreen/deciduoustree",
+   "action": "CHOP",
+   "tool": "axe"
+  },
+  "rocks": {
+   "source": "rock1/rock2",
+   "action": "MINE",
+   "tool": "pickaxe"
+  },
+  "berries": {
+   "source": "berrybush (ripe)",
+   "action": "PICK"
+  },
+  "carrot": {
+   "source": "carrot_planted",
+   "action": "DIG"
+  },
+  "seeds": {
+   "source": "ground seeds",
+   "action": "PICKUP"
+  },
+  "petals": {
+   "source": "flowers",
+   "action": "PICK"
+  },
+  "honey": {
+   "source": "beehive",
+   "action": "PICK",
+   "danger": "bees"
+  },
+  "spidergland": {
+   "source": "spider (kill)",
+   "action": "ATTACK"
+  },
+  "monstermeat": {
+   "source": "spider/hound (kill)",
+   "action": "ATTACK"
+  },
+  "pigskin": {
+   "source": "pig (kill) / werepig",
+   "action": "ATTACK"
+  },
+  "silk": {
+   "source": "spider (kill)",
+   "action": "ATTACK"
+  },
+  "stinger": {
+   "source": "bee (kill)",
+   "action": "ATTACK"
+  },
+  "butterflywings": {
+   "source": "butterfly (kill)",
+   "action": "ATTACK"
+  },
+  "egg": {
+   "source": "birdcage / bird (kill)",
+   "action": "PICKUP"
+  },
+  "goldnugget": {
+   "source": "rock1 (rare) / pig king trade",
+   "action": "MINE"
+  },
+  "charcoal": {
+   "source": "burnt tree",
+   "action": "CHOP"
+  },
+  "drumstick": {
+   "source": "turkey (kill)",
+   "action": "ATTACK"
+  },
+  "smallmeat": {
+   "source": "rabbit/crow/robin (kill)",
+   "action": "ATTACK"
+  },
+  "meat": {
+   "source": "beefalo/pig (kill)",
+   "action": "ATTACK"
+  }
+ },
+ "crockpot_dishes": {
+  "butterflymuffin": {
+   "health": 20,
+   "hunger": 37.5,
+   "sanity": 5,
+   "cooktime": 2,
+   "perishtime": 7200,
+   "priority": 1,
+   "weight": 1,
+   "foodtype": "VEGGIE",
+   "test": "(names.butterflywings or names.moonbutterflywings) and not tags.meat and tags.veggie and tags.veggie >= 0.5"
+  },
+  "frogglebunwich": {
+   "health": 20,
+   "hunger": 37.5,
+   "sanity": 5,
+   "cooktime": 2,
+   "perishtime": 7200,
+   "priority": 1,
+   "foodtype": "MEAT",
+   "test": "(names.froglegs or names.froglegs_cooked) and tags.veggie and tags.veggie >= 0.5"
+  },
+  "taffy": {
+   "health": -3,
+   "hunger": 25.0,
+   "sanity": 15,
+   "cooktime": 2,
+   "perishtime": 7200,
+   "priority": 10,
+   "foodtype": "GOODIES",
+   "test": "tags.sweetener and tags.sweetener >= 3 and not tags.meat"
+  },
+  "pumpkincookie": {
+   "health": 0,
+   "hunger": 37.5,
+   "sanity": 15,
+   "cooktime": 2,
+   "perishtime": 4800,
+   "priority": 10,
+   "foodtype": "VEGGIE",
+   "test": "(names.pumpkin or names.pumpkin_cooked) and tags.sweetener and tags.sweetener >= 2"
+  },
+  "stuffedeggplant": {
+   "health": 3,
+   "hunger": 37.5,
+   "sanity": 5,
+   "cooktime": 2,
+   "perishtime": 7200,
+   "priority": 1,
+   "foodtype": "VEGGIE",
+   "test": "(names.eggplant or names.eggplant_cooked) and tags.veggie and tags.veggie > 1"
+  },
+  "fishsticks": {
+   "health": 40,
+   "hunger": 37.5,
+   "sanity": 5,
+   "cooktime": 2,
+   "perishtime": 4800,
+   "priority": 10,
+   "foodtype": "MEAT",
+   "test": "tags.fish and names.twigs and (tags.inedible and tags.inedible <= 1)"
+  },
+  "honeynuggets": {
+   "health": 20,
+   "hunger": 37.5,
+   "sanity": 5,
+   "cooktime": 2,
+   "perishtime": 7200,
+   "priority": 2,
+   "foodtype": "MEAT",
+   "test": "names.honey and tags.meat and tags.meat <= 1.5 and not tags.inedible"
+  },
+  "honeyham": {
+   "health": 30,
+   "hunger": 75.0,
+   "sanity": 5,
+   "cooktime": 2,
+   "perishtime": 7200,
+   "priority": 2,
+   "foodtype": "MEAT",
+   "test": "names.honey and tags.meat and tags.meat > 1.5 and not tags.inedible"
+  },
+  "dragonpie": {
+   "health": 40,
+   "hunger": 75.0,
+   "sanity": 5,
+   "cooktime": 2,
+   "perishtime": 7200,
+   "priority": 1,
+   "foodtype": "VEGGIE",
+   "test": "(names.dragonfruit or names.dragonfruit_cooked) and not tags.meat"
+  },
+  "kabobs": {
+   "health": 3,
+   "hunger": 37.5,
+   "sanity": 5,
+   "cooktime": 2,
+   "perishtime": 7200,
+   "priority": 5,
+   "foodtype": "MEAT",
+   "test": "tags.meat and names.twigs and (not tags.monster or tags.monster <= 1) and (tags.inedible and tags.inedible <= 1)"
+  },
+  "mandrakesoup": {
+   "health": "TUNING.HEALING_SUPERHUGE",
+   "hunger": "TUNING.CALORIES_SUPERHUGE",
+   "sanity": 5,
+   "cooktime": 3,
+   "perishtime": 480,
+   "priority": 10,
+   "foodtype": "VEGGIE",
+   "test": "names.mandrake"
+  },
+  "baconeggs": {
+   "health": 20,
+   "hunger": 75.0,
+   "sanity": 5,
+   "cooktime": 2,
+   "perishtime": 9600,
+   "priority": 10,
+   "foodtype": "MEAT",
+   "test": "tags.egg and tags.egg > 1 and tags.meat and tags.meat > 1 and not tags.veggie"
+  },
+  "meatballs": {
+   "health": 3,
+   "hunger": 62.5,
+   "sanity": 5,
+   "cooktime": 0.75,
+   "perishtime": 4800,
+   "priority": -1,
+   "foodtype": "MEAT",
+   "test": "tags.meat and not tags.inedible"
+  },
+  "bonestew": {
+   "health": 12,
+   "hunger": 150.0,
+   "sanity": 5,
+   "cooktime": 0.75,
+   "perishtime": 4800,
+   "priority": 0,
+   "foodtype": "MEAT",
+   "test": "tags.meat and tags.meat >= 3 and not tags.inedible"
+  },
+  "perogies": {
+   "health": 40,
+   "hunger": 37.5,
+   "sanity": 5,
+   "cooktime": 1,
+   "perishtime": 9600,
+   "priority": 5,
+   "foodtype": "MEAT",
+   "test": "tags.egg and tags.meat and tags.veggie and tags.veggie >= 0.5 and not tags.inedible"
+  },
+  "turkeydinner": {
+   "health": 20,
+   "hunger": 75.0,
+   "sanity": 5,
+   "cooktime": 3,
+   "perishtime": 480,
+   "priority": 10,
+   "foodtype": "MEAT",
+   "test": "names.drumstick and names.drumstick > 1 and tags.meat and tags.meat > 1 and ((tags.veggie and tags.veggie >= 0.5) or tags.fruit)"
+  },
+  "ratatouille": {
+   "health": 3,
+   "hunger": 25.0,
+   "sanity": 5,
+   "cooktime": 1,
+   "perishtime": 7200,
+   "priority": 0,
+   "foodtype": "VEGGIE",
+   "test": "not tags.meat and tags.veggie and tags.veggie >= 0.5 and not tags.inedible"
+  },
+  "jammypreserves": {
+   "health": 3,
+   "hunger": 37.5,
+   "sanity": 5,
+   "cooktime": 0.5,
+   "perishtime": 7200,
+   "priority": 0,
+   "foodtype": "VEGGIE",
+   "test": "tags.fruit and not tags.meat and not tags.veggie and not tags.inedible"
+  },
+  "fruitmedley": {
+   "health": 20,
+   "hunger": 25.0,
+   "sanity": 5,
+   "cooktime": 0.5,
+   "perishtime": 480,
+   "priority": 0,
+   "foodtype": "VEGGIE",
+   "test": "tags.fruit and tags.fruit >= 3 and not tags.meat and not tags.veggie"
+  },
+  "fishtacos": {
+   "health": 20,
+   "hunger": 37.5,
+   "sanity": 5,
+   "cooktime": 0.5,
+   "perishtime": 480,
+   "priority": 10,
+   "foodtype": "MEAT",
+   "test": "tags.fish and (names.corn or names.corn_cooked or names.oceanfish_small_5_inv or names.oceanfish_medium_5_inv)"
+  },
+  "waffles": {
+   "health": 60,
+   "hunger": 37.5,
+   "sanity": 5,
+   "cooktime": 0.5,
+   "perishtime": 480,
+   "priority": 10,
+   "foodtype": "VEGGIE",
+   "test": "names.butter and (names.berries or names.berries_cooked or names.berries_juicy or names.berries_juicy_cooked) and tags.egg"
+  },
+  "monsterlasagna": {
+   "health": -20,
+   "hunger": 37.5,
+   "sanity": -20,
+   "cooktime": 0.5,
+   "perishtime": 480,
+   "priority": 10,
+   "foodtype": "MEAT",
+   "test": "tags.monster and tags.monster >= 2 and not tags.inedible"
+  },
+  "powcake": {
+   "health": -3,
+   "hunger": 0,
+   "sanity": 0,
+   "cooktime": 0.5,
+   "perishtime": 9000000,
+   "priority": 10,
+   "foodtype": "VEGGIE",
+   "test": "names.twigs and names.honey and (names.corn or names.corn_cooked or names.oceanfish_small_5_inv or names.oceanfish_medium_5_inv)"
+  },
+  "unagi": {
+   "health": 20,
+   "hunger": 37.5,
+   "sanity": 5,
+   "cooktime": 0.5,
+   "perishtime": 4800,
+   "priority": 20,
+   "foodtype": "MEAT",
+   "test": "(names.cutlichen or names.kelp or names.kelp_cooked or names.kelp_dried) and (names.eel or names.eel_cooked or names.pondeel)"
+  },
+  "wetgoop": {
+   "health": 0,
+   "hunger": 0,
+   "sanity": 0,
+   "cooktime": 0.25,
+   "perishtime": 480,
+   "priority": -10,
+   "foodtype": "",
+   "test": "true"
+  },
+  "flowersalad": {
+   "health": 40,
+   "hunger": 12.5,
+   "sanity": 5,
+   "cooktime": 0.5,
+   "perishtime": 480,
+   "priority": 10,
+   "foodtype": "VEGGIE",
+   "test": "names.cactus_flower and tags.veggie and tags.veggie >= 2 and not tags.meat and not tags.inedible and not tags.egg and not tags.sweetener and not tags.fruit"
+  },
+  "icecream": {
+   "health": 0,
+   "hunger": 25.0,
+   "sanity": 50,
+   "cooktime": 0.5,
+   "perishtime": 240,
+   "priority": 10,
+   "foodtype": "GOODIES",
+   "test": "tags.frozen and tags.dairy and tags.sweetener and not tags.meat and not tags.veggie and not tags.inedible and not tags.egg"
+  },
+  "watermelonicle": {
+   "health": 3,
+   "hunger": 12.5,
+   "sanity": 20,
+   "cooktime": 0.5,
+   "perishtime": 240,
+   "priority": 10,
+   "foodtype": "VEGGIE",
+   "test": "names.watermelon and tags.frozen and names.twigs and not tags.meat and not tags.veggie and not tags.egg"
+  },
+  "trailmix": {
+   "health": 30,
+   "hunger": 12.5,
+   "sanity": 5,
+   "cooktime": 0.5,
+   "perishtime": 7200,
+   "priority": 10,
+   "foodtype": "VEGGIE",
+   "test": "(names.acorn or names.acorn_cooked) and tags.seed and tags.seed >= 1 and (names.berries or names.berries_cooked or names.berries_juicy or names.berries_juicy_cooked) and tags.fruit and tags.fruit >= 1 and not tags.meat and not tags.veggie and not tags.egg and not tags.dairy"
+  },
+  "hotchili": {
+   "health": 20,
+   "hunger": 37.5,
+   "sanity": 0,
+   "cooktime": 0.5,
+   "perishtime": 4800,
+   "priority": 10,
+   "foodtype": "MEAT",
+   "test": "tags.meat and tags.veggie and tags.meat >= 1.5 and tags.veggie >= 1.5"
+  },
+  "guacamole": {
+   "health": 20,
+   "hunger": 37.5,
+   "sanity": 0,
+   "cooktime": 0.5,
+   "perishtime": 4800,
+   "priority": 10,
+   "foodtype": "MEAT",
+   "test": "names.mole and (names.rock_avocado_fruit_ripe or names.cactus_meat) and not tags.fruit"
+  },
+  "jellybean": {
+   "health": "TUNING.JELLYBEAN_TICK_VALUE",
+   "hunger": 0,
+   "sanity": 5,
+   "cooktime": 2.5,
+   "perishtime": "nil",
+   "priority": 12,
+   "foodtype": "GOODIES",
+   "test": "names.royal_jelly and not tags.inedible and not tags.monster"
+  },
+  "vegstinger": {
+   "health": 3,
+   "hunger": 25.0,
+   "sanity": 33,
+   "cooktime": 0.5,
+   "perishtime": 7200,
+   "priority": 15,
+   "foodtype": "VEGGIE",
+   "test": "(names.asparagus or names.asparagus_cooked or names.tomato or names.tomato_cooked) and tags.veggie and tags.veggie > 2 and tags.frozen and not tags.meat and not tags.inedible and not tags.egg"
+  },
+  "bananapop": {
+   "health": 20,
+   "hunger": 12.5,
+   "sanity": 33,
+   "cooktime": 0.5,
+   "perishtime": 240,
+   "priority": 20,
+   "foodtype": "VEGGIE",
+   "test": "(names.cave_banana or names.cave_banana_cooked) and tags.frozen and names.twigs and not tags.meat and not tags.fish"
+  },
+  "ceviche": {
+   "health": 20,
+   "hunger": 25.0,
+   "sanity": 5,
+   "cooktime": 0.5,
+   "perishtime": 4800,
+   "priority": 20,
+   "foodtype": "MEAT",
+   "test": "tags.fish and tags.fish >= 2 and tags.frozen and not tags.inedible and not tags.egg"
+  },
+  "salsa": {
+   "health": 3,
+   "hunger": 25.0,
+   "sanity": 33,
+   "cooktime": 0.5,
+   "perishtime": 7200,
+   "priority": 20,
+   "foodtype": "VEGGIE",
+   "test": "(names.tomato or names.tomato_cooked) and (names.onion or names.onion_cooked) and not tags.meat and not tags.inedible and not tags.egg"
+  },
+  "pepperpopper": {
+   "health": 30,
+   "hunger": 25.0,
+   "sanity": -5,
+   "cooktime": 2,
+   "perishtime": 7200,
+   "priority": 20,
+   "foodtype": "MEAT",
+   "test": "(names.pepper or names.pepper_cooked) and tags.meat and tags.meat <= 1.5 and not tags.inedible"
+  },
+  "californiaroll": {
+   "health": 20,
+   "hunger": 37.5,
+   "sanity": 10,
+   "cooktime": 0.5,
+   "perishtime": 4800,
+   "priority": 20,
+   "foodtype": "MEAT",
+   "test": "((names.kelp or 0) + (names.kelp_cooked or 0) + (names.kelp_dried or 0)) == 2 and (tags.fish and tags.fish >= 1)"
+  },
+  "seafoodgumbo": {
+   "health": 40,
+   "hunger": 37.5,
+   "sanity": 20,
+   "cooktime": 1,
+   "perishtime": 4800,
+   "priority": 10,
+   "foodtype": "MEAT",
+   "test": "tags.fish and tags.fish > 2"
+  },
+  "surfnturf": {
+   "health": 60,
+   "hunger": 37.5,
+   "sanity": 33,
+   "cooktime": 1,
+   "perishtime": 4800,
+   "priority": 30,
+   "foodtype": "MEAT",
+   "test": "tags.meat and tags.meat >= 2.5 and tags.fish and tags.fish >= 1.5 and not tags.frozen"
+  },
+  "sweettea": {
+   "health": 3,
+   "hunger": 0,
+   "sanity": 15,
+   "cooktime": 1,
+   "perishtime": 240,
+   "priority": 1,
+   "foodtype": "VEGGIE",
+   "test": "(names.forgetmelots or names.forgetmelots_dried) and tags.sweetener and tags.frozen and not tags.monster and not tags.veggie and not tags.meat and not tags.fish and not tags.egg and not tags.fat and not tags.dairy and not tags.inedible"
+  },
+  "koalefig_trunk": {
+   "health": 60,
+   "hunger": "TUNING.CALORIES_SUPERHUGE",
+   "sanity": 15,
+   "cooktime": 2,
+   "perishtime": 7200,
+   "priority": 40,
+   "foodtype": "MEAT",
+   "test": "(names.trunk_summer or names.trunk_cooked or names.trunk_winter) and (names.fig or names.fig_cooked)"
+  },
+  "figatoni": {
+   "health": 30,
+   "cooktime": 2,
+   "priority": 30,
+   "foodtype": "VEGGIE",
+   "test": "(names.fig or names.fig_cooked) and tags.veggie and tags.veggie >= 2 and not tags.meat"
+  },
+  "figkabab": {
+   "health": 20,
+   "hunger": 37.5,
+   "sanity": 10,
+   "cooktime": 1,
+   "perishtime": 7200,
+   "priority": 30,
+   "foodtype": "MEAT",
+   "test": "(names.fig or names.fig_cooked) and names.twigs and tags.meat and tags.meat >= 1 and (not tags.monster or tags.monster <= 1)"
+  },
+  "frognewton": {
+   "health": 20,
+   "hunger": 25.0,
+   "sanity": 5,
+   "cooktime": 1,
+   "perishtime": 7200,
+   "priority": 1,
+   "foodtype": "MEAT",
+   "test": "(names.fig or names.fig_cooked) and (names.froglegs or names.froglegs_cooked)"
+  },
+  "justeggs": {
+   "health": 3,
+   "hunger": 50.0,
+   "sanity": 5,
+   "cooktime": 0.5,
+   "perishtime": 4800,
+   "priority": 0,
+   "foodtype": "MEAT",
+   "test": "tags.egg and tags.egg >= 3"
+  },
+  "veggieomlet": {
+   "health": 20,
+   "hunger": 37.5,
+   "sanity": 5,
+   "cooktime": 1,
+   "perishtime": 9600,
+   "priority": 1,
+   "foodtype": "MEAT",
+   "test": "tags.egg and tags.egg >= 1 and tags.veggie and tags.veggie >= 1 and not tags.meat and not tags.dairy"
+  },
+  "talleggs": {
+   "health": 60,
+   "hunger": "TUNING.CALORIES_SUPERHUGE",
+   "sanity": 5,
+   "cooktime": 2,
+   "perishtime": 7200,
+   "priority": 10,
+   "foodtype": "MEAT",
+   "test": "names.tallbirdegg and tags.veggie and tags.veggie >= 1"
+  },
+  "beefalofeed": {
+   "health": 15.0,
+   "hunger": "TUNING.CALORIES_MOREHUGE",
+   "sanity": 0,
+   "cooktime": 0.5,
+   "perishtime": 9600,
+   "priority": -5,
+   "foodtype": "ROUGHAGE",
+   "test": "tags.inedible and not tags.monster and not tags.meat and not tags.fish and not tags.egg and not tags.fat and not tags.dairy and not tags.magic"
+  },
+  "beefalotreat": {
+   "health": "TUNING.HEALING_MOREHUGE",
+   "hunger": 25.0,
+   "sanity": 0,
+   "cooktime": 2,
+   "perishtime": 9600,
+   "priority": -4,
+   "foodtype": "ROUGHAGE",
+   "test": "tags.inedible and tags.seed and (names.forgetmelots or names.forgetmelots_dried) and not tags.monster and not tags.meat and not tags.fish and not tags.egg and not tags.fat and not tags.dairy and not tags.magic"
+  }
+ },
+ "mobs": {
+  "spider": {
+   "hp": 100.0,
+   "damage": 20.0
+  },
+  "spider_warrior": {
+   "hp": 200.0,
+   "damage": 20.0
+  },
+  "spider_hider": {
+   "hp": 150.0,
+   "damage": 20.0
+  },
+  "spider_spitter": {
+   "hp": 175.0
+  },
+  "frog": {
+   "hp": 100.0,
+   "damage": 10.0
+  },
+  "hound": {
+   "hp": 150.0,
+   "damage": 20.0
+  },
+  "tentacle": {
+   "hp": 500.0,
+   "damage": 34.0
+  },
+  "bee": {
+   "hp": 100.0,
+   "damage": 10.0
+  },
+  "mosquito": {
+   "hp": 100.0,
+   "damage": 3.0
+  },
+  "werepig": {
+   "hp": 350.0,
+   "damage": 40.0
+  },
+  "walrus": {
+   "hp": 150.0,
+   "damage": 33.0
+  },
+  "spiderqueen": {
+   "hp": 1250.0,
+   "damage": 80.0
+  },
+  "deerclops": {
+   "hp": 2000.0,
+   "damage": 150.0
+  },
+  "merm": {
+   "hp": 250.0,
+   "damage": 30.0
+  },
+  "beefalo": {
+   "hp": 500.0
+  },
+  "rabbit": {
+   "hp": 25.0
+  },
+  "bat": {
+   "hp": 50.0,
+   "damage": 20.0
+  },
+  "tallbird": {
+   "hp": 400.0,
+   "damage": 50.0
+  },
+  "koalefant": {
+   "hp": 500.0,
+   "damage": 50.0
+  },
+  "penguin": {
+   "hp": 150.0,
+   "damage": 33.0
+  }
+ },
+ "survival": {
+  "starving_threshold": 5,
+  "winter_freezing_threshold": null,
+  "summer_overheating_threshold": null,
+  "hounds_first_day": 6,
+  "winter_days": [
+   21,
+   35
+  ],
+  "spring_days": [
+   36,
+   55
+  ],
+  "summer_days": [
+   56,
+   70
+  ],
+  "deerclops_night": 30
+ },
+ "day_cycle": {
+  "total_day_s": 480,
+  "segment_s": 30,
+  "phases": [
+   "day",
+   "dusk",
+   "night"
+  ],
+  "night_survival": "torch (~60s) or campfire; carry 2 twigs+2 cutgrass torch kit"
+ }
+}
