@@ -236,8 +236,18 @@ def death_reflex(st):
         # record the death in the run log (measurement layer)
         try:
             from lib import run_log as rl
-            rl.end_run(rl._RUNS and list(rl._RUNS.keys())[-1] if rl._RUNS else "",
-                       st, cause)
+            # Session A2 T4: the agent owns run lifecycle; read its run_id
+            # from the file it publishes. Fallback: distinct reflex id.
+            rid = ""
+            try:
+                with open(os.path.join(os.path.dirname(os.path.abspath(__file__)),
+                                       "data", "current_run.txt")) as f:
+                    rid = f.read().strip()
+            except Exception:
+                pass
+            if not rid:
+                rid = f"reflex-{int(time.time())}"
+            rl.end_run(rid, st, cause)
         except Exception:
             pass
         print(f"[reflex] 💀 WILSON DIED ({cause}) - revive sent")

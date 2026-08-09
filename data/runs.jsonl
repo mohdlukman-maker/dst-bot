@@ -9,3 +9,4 @@
 {"run_id": "2026-08-08T15:54:40", "started_at": 1786175680, "ended_at": 1786175680, "duration_s": 0, "mod_version": "v9-test", "day_reached": 1, "season": "", "cause": "test", "final_health": null, "final_hunger": null, "structures": [], "notes": ""}
 {"run_id": "", "started_at": 1786178282, "ended_at": 1786178282, "duration_s": 0, "mod_version": "", "day_reached": 3, "season": "autumn", "cause": "unknown", "final_health": 50, "final_hunger": 100, "structures": [], "notes": ""}
 {"run_id": "", "started_at": 1786179497, "ended_at": 1786179497, "duration_s": 0, "mod_version": "", "day_reached": 5, "season": "autumn", "cause": "mob:tentacle", "final_health": 50, "final_hunger": 100, "structures": [], "notes": ""}
+{"run_id": "", "started_at": 1786266918, "ended_at": 1786266918, "duration_s": 0, "mod_version": "", "day_reached": 3, "season": "autumn", "cause": "unknown", "final_health": 50, "final_hunger": 100, "structures": [], "notes": ""}

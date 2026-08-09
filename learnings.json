@@ -1,12 +1,13 @@
 {
  "gather_success": {
-  "twigs": 53,
-  "cutgrass": 39,
-  "flint": 8,
-  "axe": 25,
-  "torch": 22,
-  "pinecone": 2,
-  "log": 3
+  "twigs": 94,
+  "cutgrass": 59,
+  "flint": 13,
+  "axe": 35,
+  "torch": 25,
+  "pinecone": 10,
+  "log": 10,
+  "campfire": 1
  },
  "gather_fail": {},
  "lessons": [

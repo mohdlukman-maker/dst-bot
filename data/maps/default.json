@@ -1903,7 +1903,2404 @@
    "z": -6.0,
    "last_seen_day": 5,
    "last_seen_ts": 1786179415
+  },
+  "pollen|-151|-15": {
+   "prefab": "pollen",
+   "x": -151.0,
+   "z": -15.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786266020
+  },
+  "robin|-157|-9": {
+   "prefab": "robin",
+   "x": -157.0,
+   "z": -9.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786266020
+  },
+  "evergreen|-143|-11": {
+   "prefab": "evergreen",
+   "x": -143.0,
+   "z": -11.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786266068
+  },
+  "evergreen|-142|-2": {
+   "prefab": "evergreen",
+   "x": -142.0,
+   "z": -2.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786266068
+  },
+  "evergreen|-138|1": {
+   "prefab": "evergreen",
+   "x": -138.0,
+   "z": 1.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786266068
+  },
+  "sapling|-147|-15": {
+   "prefab": "sapling",
+   "x": -147.0,
+   "z": -15.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786266020
+  },
+  "sapling|-155|-18": {
+   "prefab": "sapling",
+   "x": -155.0,
+   "z": -18.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786266068
+  },
+  "sapling|-146|-6": {
+   "prefab": "sapling",
+   "x": -146.0,
+   "z": -6.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786266068
+  },
+  "lunarhail|-151|-15": {
+   "prefab": "lunarhail",
+   "x": -151.0,
+   "z": -15.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786266020
+  },
+  "rain|-151|-15": {
+   "prefab": "rain",
+   "x": -151.0,
+   "z": -15.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786266020
+  },
+  "bee|-179|-14": {
+   "prefab": "bee",
+   "x": -179.0,
+   "z": -14.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786266020
+  },
+  "snow|-151|-15": {
+   "prefab": "snow",
+   "x": -151.0,
+   "z": -15.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786266020
+  },
+  "dug_sapling|-147|-15": {
+   "prefab": "dug_sapling",
+   "x": -147.0,
+   "z": -15.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786266068
+  },
+  "puffin|-139|-16": {
+   "prefab": "puffin",
+   "x": -139.0,
+   "z": -16.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786266058
+  },
+  "otter|-161|31": {
+   "prefab": "otter",
+   "x": -161.0,
+   "z": 31.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786266058
+  },
+  "beehive|-171|13": {
+   "prefab": "beehive",
+   "x": -171.0,
+   "z": 13.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786266101
+  },
+  "oceanfish_small_5|-130|-13": {
+   "prefab": "oceanfish_small_5",
+   "x": -130.0,
+   "z": -13.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786266058
+  },
+  "oceanfish_small_5|-127|-11": {
+   "prefab": "oceanfish_small_5",
+   "x": -127.0,
+   "z": -11.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786266068
+  },
+  "burnable_locator_medium|-162|30": {
+   "prefab": "burnable_locator_medium",
+   "x": -162.0,
+   "z": 30.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786266101
+  },
+  "burnable_locator_medium|-159|33": {
+   "prefab": "burnable_locator_medium",
+   "x": -159.0,
+   "z": 33.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786266058
+  },
+  "burnable_locator_medium|-162|33": {
+   "prefab": "burnable_locator_medium",
+   "x": -162.0,
+   "z": 33.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786266101
+  },
+  "snow|-153|4": {
+   "prefab": "snow",
+   "x": -153.0,
+   "z": 4.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786266058
+  },
+  "boatlip_otterden|-162|33": {
+   "prefab": "boatlip_otterden",
+   "x": -162.0,
+   "z": 33.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786266101
+  },
+  "evergreen|-142|14": {
+   "prefab": "evergreen",
+   "x": -142.0,
+   "z": 14.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786266080
+  },
+  "bee|-167|1": {
+   "prefab": "bee",
+   "x": -167.0,
+   "z": 1.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786266058
+  },
+  "bee|-176|10": {
+   "prefab": "bee",
+   "x": -176.0,
+   "z": 10.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786266058
+  },
+  "boat_otterden|-162|33": {
+   "prefab": "boat_otterden",
+   "x": -162.0,
+   "z": 33.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786266101
+  },
+  "otterden|-162|33": {
+   "prefab": "otterden",
+   "x": -162.0,
+   "z": 33.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786266101
+  },
+  "fishschoolspawnblocker|-150|-25": {
+   "prefab": "fishschoolspawnblocker",
+   "x": -150.0,
+   "z": -25.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786266068
+  },
+  "float_fx_front|-139|-16": {
+   "prefab": "float_fx_front",
+   "x": -139.0,
+   "z": -16.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786266058
+  },
+  "float_fx_back|-139|-16": {
+   "prefab": "float_fx_back",
+   "x": -139.0,
+   "z": -16.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786266058
+  },
+  "pollen|-153|4": {
+   "prefab": "pollen",
+   "x": -153.0,
+   "z": 4.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786266058
+  },
+  "rain|-153|4": {
+   "prefab": "rain",
+   "x": -153.0,
+   "z": 4.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786266058
+  },
+  "lunarhail|-153|4": {
+   "prefab": "lunarhail",
+   "x": -153.0,
+   "z": 4.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786266058
+  },
+  "robin|-152|-5": {
+   "prefab": "robin",
+   "x": -152.0,
+   "z": -5.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786266058
+  },
+  "fireflies|-118|-2": {
+   "prefab": "fireflies",
+   "x": -118.0,
+   "z": -2.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786266068
+  },
+  "bee|-176|-5": {
+   "prefab": "bee",
+   "x": -176.0,
+   "z": -5.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786266068
+  },
+  "otter|-146|20": {
+   "prefab": "otter",
+   "x": -146.0,
+   "z": 20.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786266068
+  },
+  "oceanfish_small_5|-125|-15": {
+   "prefab": "oceanfish_small_5",
+   "x": -125.0,
+   "z": -15.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786266068
+  },
+  "schoolherd_oceanfish_small_5|-124|-10": {
+   "prefab": "schoolherd_oceanfish_small_5",
+   "x": -124.0,
+   "z": -10.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786266068
+  },
+  "crow|-135|-5": {
+   "prefab": "crow",
+   "x": -135.0,
+   "z": -5.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786266068
+  },
+  "pollen|-147|-6": {
+   "prefab": "pollen",
+   "x": -147.0,
+   "z": -6.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786266068
+  },
+  "rain|-147|-6": {
+   "prefab": "rain",
+   "x": -147.0,
+   "z": -6.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786266068
+  },
+  "lunarhail|-147|-6": {
+   "prefab": "lunarhail",
+   "x": -147.0,
+   "z": -6.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786266068
+  },
+  "snow|-147|-6": {
+   "prefab": "snow",
+   "x": -147.0,
+   "z": -6.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786266068
+  },
+  "fireflies|-178|29": {
+   "prefab": "fireflies",
+   "x": -178.0,
+   "z": 29.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786266101
+  },
+  "fireflies|-186|29": {
+   "prefab": "fireflies",
+   "x": -186.0,
+   "z": 29.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786266101
+  },
+  "bee|-168|-11": {
+   "prefab": "bee",
+   "x": -168.0,
+   "z": -11.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786266080
+  },
+  "evergreen|-187|10": {
+   "prefab": "evergreen",
+   "x": -187.0,
+   "z": 10.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786266101
+  },
+  "evergreen|-138|18": {
+   "prefab": "evergreen",
+   "x": -138.0,
+   "z": 18.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786266080
+  },
+  "robin|-159|1": {
+   "prefab": "robin",
+   "x": -159.0,
+   "z": 1.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786266080
+  },
+  "otter|-144|13": {
+   "prefab": "otter",
+   "x": -144.0,
+   "z": 13.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786266080
+  },
+  "pollen|-167|19": {
+   "prefab": "pollen",
+   "x": -167.0,
+   "z": 19.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786266080
+  },
+  "sapling|-186|17": {
+   "prefab": "sapling",
+   "x": -186.0,
+   "z": 17.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786266101
+  },
+  "lunarhail|-167|19": {
+   "prefab": "lunarhail",
+   "x": -167.0,
+   "z": 19.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786266080
+  },
+  "rain|-167|19": {
+   "prefab": "rain",
+   "x": -167.0,
+   "z": 19.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786266080
+  },
+  "snow|-167|19": {
+   "prefab": "snow",
+   "x": -167.0,
+   "z": 19.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786266080
+  },
+  "crow|-177|12": {
+   "prefab": "crow",
+   "x": -177.0,
+   "z": 12.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786266101
+  },
+  "otter|-169|12": {
+   "prefab": "otter",
+   "x": -169.0,
+   "z": 12.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786266101
+  },
+  "flower|-194|-2": {
+   "prefab": "flower",
+   "x": -194.0,
+   "z": -2.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786266101
+  },
+  "flower|-202|-4": {
+   "prefab": "flower",
+   "x": -202.0,
+   "z": -4.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786266101
+  },
+  "flower|-197|-10": {
+   "prefab": "flower",
+   "x": -197.0,
+   "z": -10.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786266101
+  },
+  "snow|-187|16": {
+   "prefab": "snow",
+   "x": -187.0,
+   "z": 16.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786266101
+  },
+  "playing_card|-196|-4": {
+   "prefab": "playing_card",
+   "x": -196.0,
+   "z": -4.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786266101
+  },
+  "playing_card|-199|-5": {
+   "prefab": "playing_card",
+   "x": -199.0,
+   "z": -5.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786266101
+  },
+  "playing_card|-199|-9": {
+   "prefab": "playing_card",
+   "x": -199.0,
+   "z": -9.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786266101
+  },
+  "fireflies|-195|41": {
+   "prefab": "fireflies",
+   "x": -195.0,
+   "z": 41.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786266101
+  },
+  "evergreen|-195|29": {
+   "prefab": "evergreen",
+   "x": -195.0,
+   "z": 29.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786266101
+  },
+  "bee|-173|7": {
+   "prefab": "bee",
+   "x": -173.0,
+   "z": 7.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786266101
+  },
+  "bee|-184|-8": {
+   "prefab": "bee",
+   "x": -184.0,
+   "z": -8.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786266101
+  },
+  "balatro_machine|-198|-6": {
+   "prefab": "balatro_machine",
+   "x": -198.0,
+   "z": -6.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786266101
+  },
+  "butterfly|-202|-1": {
+   "prefab": "butterfly",
+   "x": -202.0,
+   "z": -1.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786266101
+  },
+  "seeds|-184|10": {
+   "prefab": "seeds",
+   "x": -184.0,
+   "z": 10.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786266101
+  },
+  "berrybush|-195|-3": {
+   "prefab": "berrybush",
+   "x": -195.0,
+   "z": -3.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786266101
+  },
+  "berrybush|-202|-3": {
+   "prefab": "berrybush",
+   "x": -202.0,
+   "z": -3.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786266101
+  },
+  "berrybush|-195|-10": {
+   "prefab": "berrybush",
+   "x": -195.0,
+   "z": -10.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786266101
+  },
+  "lunarhail|-187|16": {
+   "prefab": "lunarhail",
+   "x": -187.0,
+   "z": 16.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786266101
+  },
+  "rain|-187|16": {
+   "prefab": "rain",
+   "x": -187.0,
+   "z": 16.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786266101
+  },
+  "pollen|-187|16": {
+   "prefab": "pollen",
+   "x": -187.0,
+   "z": 16.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786266101
+  },
+  "robin|-181|11": {
+   "prefab": "robin",
+   "x": -181.0,
+   "z": 11.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786266101
+  },
+  "pond|-219|53": {
+   "prefab": "pond",
+   "x": -219.0,
+   "z": 53.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786266111
+  },
+  "pond|-215|57": {
+   "prefab": "pond",
+   "x": -215.0,
+   "z": 57.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786266111
+  },
+  "pond|-246|53": {
+   "prefab": "pond",
+   "x": -246.0,
+   "z": 53.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786266386
+  },
+  "fireflies|-215|26": {
+   "prefab": "fireflies",
+   "x": -215.0,
+   "z": 26.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786266111
+  },
+  "fireflies|-247|17": {
+   "prefab": "fireflies",
+   "x": -247.0,
+   "z": 17.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786266376
+  },
+  "lunarhail|-227|32": {
+   "prefab": "lunarhail",
+   "x": -227.0,
+   "z": 32.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786266111
+  },
+  "evergreen|-235|5": {
+   "prefab": "evergreen",
+   "x": -235.0,
+   "z": 5.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786266269
+  },
+  "stagehand|-224|8": {
+   "prefab": "stagehand",
+   "x": -224.0,
+   "z": 8.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786266111
+  },
+  "butterfly|-222|4": {
+   "prefab": "butterfly",
+   "x": -222.0,
+   "z": 4.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786266111
+  },
+  "berrybush|-214|42": {
+   "prefab": "berrybush",
+   "x": -214.0,
+   "z": 42.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786266111
+  },
+  "berrybush|-203|41": {
+   "prefab": "berrybush",
+   "x": -203.0,
+   "z": 41.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786266111
+  },
+  "flower|-223|9": {
+   "prefab": "flower",
+   "x": -223.0,
+   "z": 9.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786266111
+  },
+  "flower|-227|9": {
+   "prefab": "flower",
+   "x": -227.0,
+   "z": 9.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786266111
+  },
+  "flower|-227|6": {
+   "prefab": "flower",
+   "x": -227.0,
+   "z": 6.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786266111
+  },
+  "chester_eyebone|-219|10": {
+   "prefab": "chester_eyebone",
+   "x": -219.0,
+   "z": 10.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786266111
+  },
+  "frog|-222|41": {
+   "prefab": "frog",
+   "x": -222.0,
+   "z": 41.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786266111
+  },
+  "frog|-228|44": {
+   "prefab": "frog",
+   "x": -228.0,
+   "z": 44.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786266111
+  },
+  "frog|-225|54": {
+   "prefab": "frog",
+   "x": -225.0,
+   "z": 54.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786266111
+  },
+  "sapling|-234|10": {
+   "prefab": "sapling",
+   "x": -234.0,
+   "z": 10.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786266111
+  },
+  "sapling|-250|25": {
+   "prefab": "sapling",
+   "x": -250.0,
+   "z": 25.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786266111
+  },
+  "sapling|-251|30": {
+   "prefab": "sapling",
+   "x": -251.0,
+   "z": 30.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786266386
+  },
+  "pollen|-227|32": {
+   "prefab": "pollen",
+   "x": -227.0,
+   "z": 32.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786266111
+  },
+  "rain|-227|32": {
+   "prefab": "rain",
+   "x": -227.0,
+   "z": 32.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786266111
+  },
+  "marsh_plant|-221|53": {
+   "prefab": "marsh_plant",
+   "x": -221.0,
+   "z": 53.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786266111
+  },
+  "marsh_plant|-214|55": {
+   "prefab": "marsh_plant",
+   "x": -214.0,
+   "z": 55.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786266111
+  },
+  "snow|-227|32": {
+   "prefab": "snow",
+   "x": -227.0,
+   "z": 32.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786266111
+  },
+  "grass|-254|53": {
+   "prefab": "grass",
+   "x": -254.0,
+   "z": 53.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786266386
+  },
+  "grass|-247|57": {
+   "prefab": "grass",
+   "x": -247.0,
+   "z": 57.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786266386
+  },
+  "grass|-259|58": {
+   "prefab": "grass",
+   "x": -259.0,
+   "z": 58.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786266386
+  },
+  "fireflies|-259|18": {
+   "prefab": "fireflies",
+   "x": -259.0,
+   "z": 18.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786266376
+  },
+  "dug_sapling|-250|25": {
+   "prefab": "dug_sapling",
+   "x": -250.0,
+   "z": 25.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786266386
+  },
+  "evergreen|-259|41": {
+   "prefab": "evergreen",
+   "x": -259.0,
+   "z": 41.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786266386
+  },
+  "evergreen|-271|14": {
+   "prefab": "evergreen",
+   "x": -271.0,
+   "z": 14.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786266376
+  },
+  "marsh_plant|-246|51": {
+   "prefab": "marsh_plant",
+   "x": -246.0,
+   "z": 51.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786266386
+  },
+  "marsh_plant|-244|54": {
+   "prefab": "marsh_plant",
+   "x": -244.0,
+   "z": 54.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786266386
+  },
+  "marsh_plant|-247|55": {
+   "prefab": "marsh_plant",
+   "x": -247.0,
+   "z": 55.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786266386
+  },
+  "pollen|-252|30": {
+   "prefab": "pollen",
+   "x": -252.0,
+   "z": 30.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786266269
+  },
+  "seeds|-258|45": {
+   "prefab": "seeds",
+   "x": -258.0,
+   "z": 45.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786266386
+  },
+  "robin|-245|34": {
+   "prefab": "robin",
+   "x": -245.0,
+   "z": 34.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786266279
+  },
+  "robin|-242|33": {
+   "prefab": "robin",
+   "x": -242.0,
+   "z": 33.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786266279
+  },
+  "robin|-254|18": {
+   "prefab": "robin",
+   "x": -254.0,
+   "z": 18.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786266269
+  },
+  "beehive|-258|10": {
+   "prefab": "beehive",
+   "x": -258.0,
+   "z": 10.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786266376
+  },
+  "sapling|-263|37": {
+   "prefab": "sapling",
+   "x": -263.0,
+   "z": 37.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786266386
+  },
+  "sapling|-271|17": {
+   "prefab": "sapling",
+   "x": -271.0,
+   "z": 17.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786266376
+  },
+  "lunarhail|-252|30": {
+   "prefab": "lunarhail",
+   "x": -252.0,
+   "z": 30.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786266269
+  },
+  "rain|-252|30": {
+   "prefab": "rain",
+   "x": -252.0,
+   "z": 30.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786266269
+  },
+  "torchfire|-252|28": {
+   "prefab": "torchfire",
+   "x": -252.0,
+   "z": 28.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786266269
+  },
+  "snow|-252|30": {
+   "prefab": "snow",
+   "x": -252.0,
+   "z": 30.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786266269
+  },
+  "rabbithole|-275|65": {
+   "prefab": "rabbithole",
+   "x": -275.0,
+   "z": 65.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786266386
+  },
+  "pollen|-255|53": {
+   "prefab": "pollen",
+   "x": -255.0,
+   "z": 53.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786266386
+  },
+  "pond|-238|61": {
+   "prefab": "pond",
+   "x": -238.0,
+   "z": 61.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786266386
+  },
+  "pond|-247|70": {
+   "prefab": "pond",
+   "x": -247.0,
+   "z": 70.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786266386
+  },
+  "flower|-247|62": {
+   "prefab": "flower",
+   "x": -247.0,
+   "z": 62.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786266386
+  },
+  "flower|-231|58": {
+   "prefab": "flower",
+   "x": -231.0,
+   "z": 58.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786266386
+  },
+  "robin|-258|45": {
+   "prefab": "robin",
+   "x": -258.0,
+   "z": 45.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786266279
+  },
+  "lunarhail|-255|53": {
+   "prefab": "lunarhail",
+   "x": -255.0,
+   "z": 53.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786266386
+  },
+  "rain|-255|53": {
+   "prefab": "rain",
+   "x": -255.0,
+   "z": 53.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786266386
+  },
+  "torchfire|-256|52": {
+   "prefab": "torchfire",
+   "x": -256.0,
+   "z": 52.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786266366
+  },
+  "snow|-255|53": {
+   "prefab": "snow",
+   "x": -255.0,
+   "z": 53.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786266386
+  },
+  "grass|-266|58": {
+   "prefab": "grass",
+   "x": -266.0,
+   "z": 58.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786266376
+  },
+  "beehive|-286|54": {
+   "prefab": "beehive",
+   "x": -286.0,
+   "z": 54.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786266376
+  },
+  "mole|-285|49": {
+   "prefab": "mole",
+   "x": -285.0,
+   "z": 49.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786266291
+  },
+  "snow|-263|37": {
+   "prefab": "snow",
+   "x": -263.0,
+   "z": 37.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786266376
+  },
+  "seeds|-244|34": {
+   "prefab": "seeds",
+   "x": -244.0,
+   "z": 34.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786266313
+  },
+  "seeds|-254|18": {
+   "prefab": "seeds",
+   "x": -254.0,
+   "z": 18.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786266376
+  },
+  "mole_move_fx|-285|49": {
+   "prefab": "mole_move_fx",
+   "x": -285.0,
+   "z": 49.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786266291
+  },
+  "lunarhail|-263|37": {
+   "prefab": "lunarhail",
+   "x": -263.0,
+   "z": 37.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786266376
+  },
+  "pollen|-263|37": {
+   "prefab": "pollen",
+   "x": -263.0,
+   "z": 37.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786266376
+  },
+  "rain|-263|37": {
+   "prefab": "rain",
+   "x": -263.0,
+   "z": 37.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786266376
+  },
+  "torchfire|-263|35": {
+   "prefab": "torchfire",
+   "x": -263.0,
+   "z": 35.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786266356
+  },
+  "robin|-270|36": {
+   "prefab": "robin",
+   "x": -270.0,
+   "z": 36.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786266291
+  },
+  "crow|-244|34": {
+   "prefab": "crow",
+   "x": -244.0,
+   "z": 34.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786266323
+  },
+  "crow|-261|43": {
+   "prefab": "crow",
+   "x": -261.0,
+   "z": 43.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786266356
+  },
+  "robin|-256|41": {
+   "prefab": "robin",
+   "x": -256.0,
+   "z": 41.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786266333
+  },
+  "crow|-267|44": {
+   "prefab": "crow",
+   "x": -267.0,
+   "z": 44.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786266376
+  },
+  "puffin|-258|49": {
+   "prefab": "puffin",
+   "x": -258.0,
+   "z": 49.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786266376
+  },
+  "grass|-363|146": {
+   "prefab": "grass",
+   "x": -363.0,
+   "z": 146.0,
+   "last_seen_day": 4,
+   "last_seen_ts": 1786267543
+  },
+  "grass|-374|153": {
+   "prefab": "grass",
+   "x": -374.0,
+   "z": 153.0,
+   "last_seen_day": 4,
+   "last_seen_ts": 1786267543
+  },
+  "grass|-359|138": {
+   "prefab": "grass",
+   "x": -359.0,
+   "z": 138.0,
+   "last_seen_day": 4,
+   "last_seen_ts": 1786267779
+  },
+  "fireflies|-334|170": {
+   "prefab": "fireflies",
+   "x": -334.0,
+   "z": 170.0,
+   "last_seen_day": 2,
+   "last_seen_ts": 1786266688
+  },
+  "spider|-342|160": {
+   "prefab": "spider",
+   "x": -342.0,
+   "z": 160.0,
+   "last_seen_day": 2,
+   "last_seen_ts": 1786266688
+  },
+  "spider|-338|141": {
+   "prefab": "spider",
+   "x": -338.0,
+   "z": 141.0,
+   "last_seen_day": 2,
+   "last_seen_ts": 1786266688
+  },
+  "spider|-330|152": {
+   "prefab": "spider",
+   "x": -330.0,
+   "z": 152.0,
+   "last_seen_day": 2,
+   "last_seen_ts": 1786266688
+  },
+  "spiderden|-338|142": {
+   "prefab": "spiderden",
+   "x": -338.0,
+   "z": 142.0,
+   "last_seen_day": 2,
+   "last_seen_ts": 1786266688
+  },
+  "evergreen|-355|154": {
+   "prefab": "evergreen",
+   "x": -355.0,
+   "z": 154.0,
+   "last_seen_day": 2,
+   "last_seen_ts": 1786266688
+  },
+  "evergreen|-343|145": {
+   "prefab": "evergreen",
+   "x": -343.0,
+   "z": 145.0,
+   "last_seen_day": 2,
+   "last_seen_ts": 1786266688
+  },
+  "evergreen|-362|138": {
+   "prefab": "evergreen",
+   "x": -362.0,
+   "z": 138.0,
+   "last_seen_day": 2,
+   "last_seen_ts": 1786266688
+  },
+  "robin|-369|157": {
+   "prefab": "robin",
+   "x": -369.0,
+   "z": 157.0,
+   "last_seen_day": 2,
+   "last_seen_ts": 1786266688
+  },
+  "berrybush|-367|141": {
+   "prefab": "berrybush",
+   "x": -367.0,
+   "z": 141.0,
+   "last_seen_day": 2,
+   "last_seen_ts": 1786266688
+  },
+  "berrybush|-354|130": {
+   "prefab": "berrybush",
+   "x": -354.0,
+   "z": 130.0,
+   "last_seen_day": 4,
+   "last_seen_ts": 1786267821
+  },
+  "crawlinghorror|-367|143": {
+   "prefab": "crawlinghorror",
+   "x": -367.0,
+   "z": 143.0,
+   "last_seen_day": 2,
+   "last_seen_ts": 1786266688
+  },
+  "pollen|-357|157": {
+   "prefab": "pollen",
+   "x": -357.0,
+   "z": 157.0,
+   "last_seen_day": 2,
+   "last_seen_ts": 1786266688
+  },
+  "rabbithole|-362|153": {
+   "prefab": "rabbithole",
+   "x": -362.0,
+   "z": 153.0,
+   "last_seen_day": 4,
+   "last_seen_ts": 1786267564
+  },
+  "rabbithole|-383|154": {
+   "prefab": "rabbithole",
+   "x": -383.0,
+   "z": 154.0,
+   "last_seen_day": 4,
+   "last_seen_ts": 1786267564
+  },
+  "rabbithole|-374|177": {
+   "prefab": "rabbithole",
+   "x": -374.0,
+   "z": 177.0,
+   "last_seen_day": 2,
+   "last_seen_ts": 1786266688
+  },
+  "sapling|-362|142": {
+   "prefab": "sapling",
+   "x": -362.0,
+   "z": 142.0,
+   "last_seen_day": 4,
+   "last_seen_ts": 1786267564
+  },
+  "sapling|-379|137": {
+   "prefab": "sapling",
+   "x": -379.0,
+   "z": 137.0,
+   "last_seen_day": 4,
+   "last_seen_ts": 1786267769
+  },
+  "lunarhail|-357|157": {
+   "prefab": "lunarhail",
+   "x": -357.0,
+   "z": 157.0,
+   "last_seen_day": 2,
+   "last_seen_ts": 1786266688
+  },
+  "rain|-357|157": {
+   "prefab": "rain",
+   "x": -357.0,
+   "z": 157.0,
+   "last_seen_day": 2,
+   "last_seen_ts": 1786266688
+  },
+  "shadowskittish|-345|166": {
+   "prefab": "shadowskittish",
+   "x": -345.0,
+   "z": 166.0,
+   "last_seen_day": 2,
+   "last_seen_ts": 1786266688
+  },
+  "snow|-357|157": {
+   "prefab": "snow",
+   "x": -357.0,
+   "z": 157.0,
+   "last_seen_day": 2,
+   "last_seen_ts": 1786266688
+  },
+  "grass|-370|130": {
+   "prefab": "grass",
+   "x": -370.0,
+   "z": 130.0,
+   "last_seen_day": 4,
+   "last_seen_ts": 1786267811
+  },
+  "fireflies|-375|130": {
+   "prefab": "fireflies",
+   "x": -375.0,
+   "z": 130.0,
+   "last_seen_day": 4,
+   "last_seen_ts": 1786267811
+  },
+  "fireflies|-367|118": {
+   "prefab": "fireflies",
+   "x": -367.0,
+   "z": 118.0,
+   "last_seen_day": 4,
+   "last_seen_ts": 1786267821
+  },
+  "fireflies|-402|153": {
+   "prefab": "fireflies",
+   "x": -402.0,
+   "z": 153.0,
+   "last_seen_day": 4,
+   "last_seen_ts": 1786267543
+  },
+  "robin|-355|142": {
+   "prefab": "robin",
+   "x": -355.0,
+   "z": 142.0,
+   "last_seen_day": 4,
+   "last_seen_ts": 1786267543
+  },
+  "evergreen|-387|133": {
+   "prefab": "evergreen",
+   "x": -387.0,
+   "z": 133.0,
+   "last_seen_day": 4,
+   "last_seen_ts": 1786267543
+  },
+  "evergreen|-371|137": {
+   "prefab": "evergreen",
+   "x": -371.0,
+   "z": 137.0,
+   "last_seen_day": 4,
+   "last_seen_ts": 1786267564
+  },
+  "evergreen|-375|121": {
+   "prefab": "evergreen",
+   "x": -375.0,
+   "z": 121.0,
+   "last_seen_day": 4,
+   "last_seen_ts": 1786267769
+  },
+  "dug_berrybush|-366|141": {
+   "prefab": "dug_berrybush",
+   "x": -366.0,
+   "z": 141.0,
+   "last_seen_day": 4,
+   "last_seen_ts": 1786267779
+  },
+  "seeds|-367|124": {
+   "prefab": "seeds",
+   "x": -367.0,
+   "z": 124.0,
+   "last_seen_day": 4,
+   "last_seen_ts": 1786267574
+  },
+  "crawlinghorror|-366|127": {
+   "prefab": "crawlinghorror",
+   "x": -366.0,
+   "z": 127.0,
+   "last_seen_day": 4,
+   "last_seen_ts": 1786267543
+  },
+  "rabbit|-382|159": {
+   "prefab": "rabbit",
+   "x": -382.0,
+   "z": 159.0,
+   "last_seen_day": 4,
+   "last_seen_ts": 1786267543
+  },
+  "rabbit|-370|159": {
+   "prefab": "rabbit",
+   "x": -370.0,
+   "z": 159.0,
+   "last_seen_day": 4,
+   "last_seen_ts": 1786267543
+  },
+  "crow|-380|148": {
+   "prefab": "crow",
+   "x": -380.0,
+   "z": 148.0,
+   "last_seen_day": 4,
+   "last_seen_ts": 1786267543
+  },
+  "crow|-369|144": {
+   "prefab": "crow",
+   "x": -369.0,
+   "z": 144.0,
+   "last_seen_day": 4,
+   "last_seen_ts": 1786267543
+  },
+  "sapling|-363|122": {
+   "prefab": "sapling",
+   "x": -363.0,
+   "z": 122.0,
+   "last_seen_day": 4,
+   "last_seen_ts": 1786267811
+  },
+  "pollen|-379|136": {
+   "prefab": "pollen",
+   "x": -379.0,
+   "z": 136.0,
+   "last_seen_day": 4,
+   "last_seen_ts": 1786267543
+  },
+  "rain|-379|136": {
+   "prefab": "rain",
+   "x": -379.0,
+   "z": 136.0,
+   "last_seen_day": 4,
+   "last_seen_ts": 1786267543
+  },
+  "lunarhail|-379|136": {
+   "prefab": "lunarhail",
+   "x": -379.0,
+   "z": 136.0,
+   "last_seen_day": 4,
+   "last_seen_ts": 1786267543
+  },
+  "snow|-379|136": {
+   "prefab": "snow",
+   "x": -379.0,
+   "z": 136.0,
+   "last_seen_day": 4,
+   "last_seen_ts": 1786267543
+  },
+  "grass|-359|133": {
+   "prefab": "grass",
+   "x": -359.0,
+   "z": 133.0,
+   "last_seen_day": 4,
+   "last_seen_ts": 1786267811
+  },
+  "seeds|-380|148": {
+   "prefab": "seeds",
+   "x": -380.0,
+   "z": 148.0,
+   "last_seen_day": 4,
+   "last_seen_ts": 1786267769
+  },
+  "evergreen|-370|118": {
+   "prefab": "evergreen",
+   "x": -370.0,
+   "z": 118.0,
+   "last_seen_day": 4,
+   "last_seen_ts": 1786267779
+  },
+  "berrybush|-363|105": {
+   "prefab": "berrybush",
+   "x": -363.0,
+   "z": 105.0,
+   "last_seen_day": 4,
+   "last_seen_ts": 1786267821
+  },
+  "butterfly|-353|115": {
+   "prefab": "butterfly",
+   "x": -353.0,
+   "z": 115.0,
+   "last_seen_day": 4,
+   "last_seen_ts": 1786267564
+  },
+  "butterfly|-357|103": {
+   "prefab": "butterfly",
+   "x": -357.0,
+   "z": 103.0,
+   "last_seen_day": 4,
+   "last_seen_ts": 1786267564
+  },
+  "crawlinghorror|-385|127": {
+   "prefab": "crawlinghorror",
+   "x": -385.0,
+   "z": 127.0,
+   "last_seen_day": 4,
+   "last_seen_ts": 1786267564
+  },
+  "flower|-354|114": {
+   "prefab": "flower",
+   "x": -354.0,
+   "z": 114.0,
+   "last_seen_day": 4,
+   "last_seen_ts": 1786267821
+  },
+  "robin|-362|130": {
+   "prefab": "robin",
+   "x": -362.0,
+   "z": 130.0,
+   "last_seen_day": 4,
+   "last_seen_ts": 1786267574
+  },
+  "pollen|-371|130": {
+   "prefab": "pollen",
+   "x": -371.0,
+   "z": 130.0,
+   "last_seen_day": 4,
+   "last_seen_ts": 1786267564
+  },
+  "rain|-371|130": {
+   "prefab": "rain",
+   "x": -371.0,
+   "z": 130.0,
+   "last_seen_day": 4,
+   "last_seen_ts": 1786267564
+  },
+  "lunarhail|-371|130": {
+   "prefab": "lunarhail",
+   "x": -371.0,
+   "z": 130.0,
+   "last_seen_day": 4,
+   "last_seen_ts": 1786267564
+  },
+  "snow|-371|130": {
+   "prefab": "snow",
+   "x": -371.0,
+   "z": 130.0,
+   "last_seen_day": 4,
+   "last_seen_ts": 1786267564
+  },
+  "crawlinghorror|-383|134": {
+   "prefab": "crawlinghorror",
+   "x": -383.0,
+   "z": 134.0,
+   "last_seen_day": 4,
+   "last_seen_ts": 1786267574
+  },
+  "evergreen|-358|117": {
+   "prefab": "evergreen",
+   "x": -358.0,
+   "z": 117.0,
+   "last_seen_day": 4,
+   "last_seen_ts": 1786267821
+  },
+  "evergreen|-366|114": {
+   "prefab": "evergreen",
+   "x": -366.0,
+   "z": 114.0,
+   "last_seen_day": 4,
+   "last_seen_ts": 1786267779
+  },
+  "pollen|-363|121": {
+   "prefab": "pollen",
+   "x": -363.0,
+   "z": 121.0,
+   "last_seen_day": 4,
+   "last_seen_ts": 1786267779
+  },
+  "butterfly|-359|133": {
+   "prefab": "butterfly",
+   "x": -359.0,
+   "z": 133.0,
+   "last_seen_day": 4,
+   "last_seen_ts": 1786267574
+  },
+  "butterfly|-368|104": {
+   "prefab": "butterfly",
+   "x": -368.0,
+   "z": 104.0,
+   "last_seen_day": 4,
+   "last_seen_ts": 1786267574
+  },
+  "flower|-347|101": {
+   "prefab": "flower",
+   "x": -347.0,
+   "z": 101.0,
+   "last_seen_day": 4,
+   "last_seen_ts": 1786267821
+  },
+  "seeds|-358|100": {
+   "prefab": "seeds",
+   "x": -358.0,
+   "z": 100.0,
+   "last_seen_day": 4,
+   "last_seen_ts": 1786267574
+  },
+  "sapling|-362|109": {
+   "prefab": "sapling",
+   "x": -362.0,
+   "z": 109.0,
+   "last_seen_day": 4,
+   "last_seen_ts": 1786267821
+  },
+  "sapling|-346|114": {
+   "prefab": "sapling",
+   "x": -346.0,
+   "z": 114.0,
+   "last_seen_day": 4,
+   "last_seen_ts": 1786267821
+  },
+  "lunarhail|-363|121": {
+   "prefab": "lunarhail",
+   "x": -363.0,
+   "z": 121.0,
+   "last_seen_day": 4,
+   "last_seen_ts": 1786267779
+  },
+  "rain|-363|121": {
+   "prefab": "rain",
+   "x": -363.0,
+   "z": 121.0,
+   "last_seen_day": 4,
+   "last_seen_ts": 1786267779
+  },
+  "shadowskittish|-348|122": {
+   "prefab": "shadowskittish",
+   "x": -348.0,
+   "z": 122.0,
+   "last_seen_day": 4,
+   "last_seen_ts": 1786267821
+  },
+  "snow|-363|121": {
+   "prefab": "snow",
+   "x": -363.0,
+   "z": 121.0,
+   "last_seen_day": 4,
+   "last_seen_ts": 1786267779
+  },
+  "shadowskittish|-348|138": {
+   "prefab": "shadowskittish",
+   "x": -348.0,
+   "z": 138.0,
+   "last_seen_day": 4,
+   "last_seen_ts": 1786267769
+  },
+  "evergreen|-371|114": {
+   "prefab": "evergreen",
+   "x": -371.0,
+   "z": 114.0,
+   "last_seen_day": 4,
+   "last_seen_ts": 1786267769
+  },
+  "crawlinghorror|-346|129": {
+   "prefab": "crawlinghorror",
+   "x": -346.0,
+   "z": 129.0,
+   "last_seen_day": 4,
+   "last_seen_ts": 1786267769
+  },
+  "robin|-359|120": {
+   "prefab": "robin",
+   "x": -359.0,
+   "z": 120.0,
+   "last_seen_day": 4,
+   "last_seen_ts": 1786267769
+  },
+  "pollen|-370|122": {
+   "prefab": "pollen",
+   "x": -370.0,
+   "z": 122.0,
+   "last_seen_day": 4,
+   "last_seen_ts": 1786267769
+  },
+  "lunarhail|-370|122": {
+   "prefab": "lunarhail",
+   "x": -370.0,
+   "z": 122.0,
+   "last_seen_day": 4,
+   "last_seen_ts": 1786267769
+  },
+  "rain|-370|122": {
+   "prefab": "rain",
+   "x": -370.0,
+   "z": 122.0,
+   "last_seen_day": 4,
+   "last_seen_ts": 1786267769
+  },
+  "torchfire|-370|121": {
+   "prefab": "torchfire",
+   "x": -370.0,
+   "z": 121.0,
+   "last_seen_day": 4,
+   "last_seen_ts": 1786267769
+  },
+  "snow|-370|122": {
+   "prefab": "snow",
+   "x": -370.0,
+   "z": 122.0,
+   "last_seen_day": 4,
+   "last_seen_ts": 1786267769
+  },
+  "spider|-353|140": {
+   "prefab": "spider",
+   "x": -353.0,
+   "z": 140.0,
+   "last_seen_day": 4,
+   "last_seen_ts": 1786267779
+  },
+  "robin|-358|116": {
+   "prefab": "robin",
+   "x": -358.0,
+   "z": 116.0,
+   "last_seen_day": 4,
+   "last_seen_ts": 1786267779
+  },
+  "shadowskittish|-368|107": {
+   "prefab": "shadowskittish",
+   "x": -368.0,
+   "z": 107.0,
+   "last_seen_day": 4,
+   "last_seen_ts": 1786267779
+  },
+  "crawlinghorror|-355|122": {
+   "prefab": "crawlinghorror",
+   "x": -355.0,
+   "z": 122.0,
+   "last_seen_day": 4,
+   "last_seen_ts": 1786267811
+  },
+  "torchfire|-363|120": {
+   "prefab": "torchfire",
+   "x": -363.0,
+   "z": 120.0,
+   "last_seen_day": 4,
+   "last_seen_ts": 1786267779
+  },
+  "grass|-347|109": {
+   "prefab": "grass",
+   "x": -347.0,
+   "z": 109.0,
+   "last_seen_day": 4,
+   "last_seen_ts": 1786267821
+  },
+  "seeds|-363|110": {
+   "prefab": "seeds",
+   "x": -363.0,
+   "z": 110.0,
+   "last_seen_day": 4,
+   "last_seen_ts": 1786267821
+  },
+  "spider|-359|118": {
+   "prefab": "spider",
+   "x": -359.0,
+   "z": 118.0,
+   "last_seen_day": 4,
+   "last_seen_ts": 1786267811
+  },
+  "shadowskittish|-359|127": {
+   "prefab": "shadowskittish",
+   "x": -359.0,
+   "z": 127.0,
+   "last_seen_day": 4,
+   "last_seen_ts": 1786267811
+  },
+  "evergreen|-363|101": {
+   "prefab": "evergreen",
+   "x": -363.0,
+   "z": 101.0,
+   "last_seen_day": 4,
+   "last_seen_ts": 1786267811
+  },
+  "evergreen|-362|113": {
+   "prefab": "evergreen",
+   "x": -362.0,
+   "z": 113.0,
+   "last_seen_day": 4,
+   "last_seen_ts": 1786267811
+  },
+  "evergreen|-354|102": {
+   "prefab": "evergreen",
+   "x": -354.0,
+   "z": 102.0,
+   "last_seen_day": 4,
+   "last_seen_ts": 1786267821
+  },
+  "crow|-378|115": {
+   "prefab": "crow",
+   "x": -378.0,
+   "z": 115.0,
+   "last_seen_day": 4,
+   "last_seen_ts": 1786267811
+  },
+  "lunarhail|-360|107": {
+   "prefab": "lunarhail",
+   "x": -360.0,
+   "z": 107.0,
+   "last_seen_day": 4,
+   "last_seen_ts": 1786267811
+  },
+  "pollen|-360|107": {
+   "prefab": "pollen",
+   "x": -360.0,
+   "z": 107.0,
+   "last_seen_day": 4,
+   "last_seen_ts": 1786267811
+  },
+  "rain|-360|107": {
+   "prefab": "rain",
+   "x": -360.0,
+   "z": 107.0,
+   "last_seen_day": 4,
+   "last_seen_ts": 1786267811
+  },
+  "torchfire|-360|106": {
+   "prefab": "torchfire",
+   "x": -360.0,
+   "z": 106.0,
+   "last_seen_day": 4,
+   "last_seen_ts": 1786267811
+  },
+  "snow|-360|107": {
+   "prefab": "snow",
+   "x": -360.0,
+   "z": 107.0,
+   "last_seen_day": 4,
+   "last_seen_ts": 1786267811
+  },
+  "grass|-331|102": {
+   "prefab": "grass",
+   "x": -331.0,
+   "z": 102.0,
+   "last_seen_day": 4,
+   "last_seen_ts": 1786267821
+  },
+  "grass|-339|85": {
+   "prefab": "grass",
+   "x": -339.0,
+   "z": 85.0,
+   "last_seen_day": 4,
+   "last_seen_ts": 1786267821
+  },
+  "spider|-361|121": {
+   "prefab": "spider",
+   "x": -361.0,
+   "z": 121.0,
+   "last_seen_day": 4,
+   "last_seen_ts": 1786267821
+  },
+  "evergreen|-339|101": {
+   "prefab": "evergreen",
+   "x": -339.0,
+   "z": 101.0,
+   "last_seen_day": 4,
+   "last_seen_ts": 1786267821
+  },
+  "crawlinghorror|-344|116": {
+   "prefab": "crawlinghorror",
+   "x": -344.0,
+   "z": 116.0,
+   "last_seen_day": 4,
+   "last_seen_ts": 1786267821
+  },
+  "pollen|-348|108": {
+   "prefab": "pollen",
+   "x": -348.0,
+   "z": 108.0,
+   "last_seen_day": 4,
+   "last_seen_ts": 1786267821
+  },
+  "sapling|-339|105": {
+   "prefab": "sapling",
+   "x": -339.0,
+   "z": 105.0,
+   "last_seen_day": 4,
+   "last_seen_ts": 1786267821
+  },
+  "lunarhail|-348|108": {
+   "prefab": "lunarhail",
+   "x": -348.0,
+   "z": 108.0,
+   "last_seen_day": 4,
+   "last_seen_ts": 1786267821
+  },
+  "rain|-348|108": {
+   "prefab": "rain",
+   "x": -348.0,
+   "z": 108.0,
+   "last_seen_day": 4,
+   "last_seen_ts": 1786267821
+  },
+  "torchfire|-349|109": {
+   "prefab": "torchfire",
+   "x": -349.0,
+   "z": 109.0,
+   "last_seen_day": 4,
+   "last_seen_ts": 1786267821
+  },
+  "snow|-348|108": {
+   "prefab": "snow",
+   "x": -348.0,
+   "z": 108.0,
+   "last_seen_day": 4,
+   "last_seen_ts": 1786267821
+  },
+  "rabbithole|-475|26": {
+   "prefab": "rabbithole",
+   "x": -475.0,
+   "z": 26.0,
+   "last_seen_day": 6,
+   "last_seen_ts": 1786268770
+  },
+  "log|-456|41": {
+   "prefab": "log",
+   "x": -456.0,
+   "z": 41.0,
+   "last_seen_day": 6,
+   "last_seen_ts": 1786268770
+  },
+  "axe|-453|42": {
+   "prefab": "axe",
+   "x": -453.0,
+   "z": 42.0,
+   "last_seen_day": 6,
+   "last_seen_ts": 1786268770
+  },
+  "sapling|-470|30": {
+   "prefab": "sapling",
+   "x": -470.0,
+   "z": 30.0,
+   "last_seen_day": 6,
+   "last_seen_ts": 1786268679
+  },
+  "sapling|-475|34": {
+   "prefab": "sapling",
+   "x": -475.0,
+   "z": 34.0,
+   "last_seen_day": 6,
+   "last_seen_ts": 1786268770
+  },
+  "sapling|-483|14": {
+   "prefab": "sapling",
+   "x": -483.0,
+   "z": 14.0,
+   "last_seen_day": 5,
+   "last_seen_ts": 1786268290
+  },
+  "sculpture_bishophead|-478|18": {
+   "prefab": "sculpture_bishophead",
+   "x": -478.0,
+   "z": 18.0,
+   "last_seen_day": 6,
+   "last_seen_ts": 1786268679
+  },
+  "snow|-464|22": {
+   "prefab": "snow",
+   "x": -464.0,
+   "z": 22.0,
+   "last_seen_day": 5,
+   "last_seen_ts": 1786268290
+  },
+  "fireflies|-454|18": {
+   "prefab": "fireflies",
+   "x": -454.0,
+   "z": 18.0,
+   "last_seen_day": 5,
+   "last_seen_ts": 1786268290
+  },
+  "fireflies|-438|33": {
+   "prefab": "fireflies",
+   "x": -438.0,
+   "z": 33.0,
+   "last_seen_day": 5,
+   "last_seen_ts": 1786268290
+  },
+  "twigs|-455|41": {
+   "prefab": "twigs",
+   "x": -455.0,
+   "z": 41.0,
+   "last_seen_day": 6,
+   "last_seen_ts": 1786268770
+  },
+  "evergreen|-479|22": {
+   "prefab": "evergreen",
+   "x": -479.0,
+   "z": 22.0,
+   "last_seen_day": 5,
+   "last_seen_ts": 1786268290
+  },
+  "evergreen|-479|9": {
+   "prefab": "evergreen",
+   "x": -479.0,
+   "z": 9.0,
+   "last_seen_day": 5,
+   "last_seen_ts": 1786268290
+  },
+  "evergreen|-478|5": {
+   "prefab": "evergreen",
+   "x": -478.0,
+   "z": 5.0,
+   "last_seen_day": 5,
+   "last_seen_ts": 1786268290
+  },
+  "grass|-491|21": {
+   "prefab": "grass",
+   "x": -491.0,
+   "z": 21.0,
+   "last_seen_day": 6,
+   "last_seen_ts": 1786268679
+  },
+  "pinecone|-454|43": {
+   "prefab": "pinecone",
+   "x": -454.0,
+   "z": 43.0,
+   "last_seen_day": 6,
+   "last_seen_ts": 1786268770
+  },
+  "rock1|-462|-3": {
+   "prefab": "rock1",
+   "x": -462.0,
+   "z": -3.0,
+   "last_seen_day": 5,
+   "last_seen_ts": 1786268290
+  },
+  "skeleton_player|-455|42": {
+   "prefab": "skeleton_player",
+   "x": -455.0,
+   "z": 42.0,
+   "last_seen_day": 6,
+   "last_seen_ts": 1786268770
+  },
+  "flint|-482|17": {
+   "prefab": "flint",
+   "x": -482.0,
+   "z": 17.0,
+   "last_seen_day": 6,
+   "last_seen_ts": 1786268679
+  },
+  "berrybush|-466|37": {
+   "prefab": "berrybush",
+   "x": -466.0,
+   "z": 37.0,
+   "last_seen_day": 6,
+   "last_seen_ts": 1786268770
+  },
+  "pollen|-464|22": {
+   "prefab": "pollen",
+   "x": -464.0,
+   "z": 22.0,
+   "last_seen_day": 5,
+   "last_seen_ts": 1786268290
+  },
+  "lunarhail|-464|22": {
+   "prefab": "lunarhail",
+   "x": -464.0,
+   "z": 22.0,
+   "last_seen_day": 5,
+   "last_seen_ts": 1786268290
+  },
+  "rain|-464|22": {
+   "prefab": "rain",
+   "x": -464.0,
+   "z": 22.0,
+   "last_seen_day": 5,
+   "last_seen_ts": 1786268290
+  },
+  "torchfire|-464|21": {
+   "prefab": "torchfire",
+   "x": -464.0,
+   "z": 21.0,
+   "last_seen_day": 5,
+   "last_seen_ts": 1786268290
+  },
+  "evergreen_sparse|-459|17": {
+   "prefab": "evergreen_sparse",
+   "x": -459.0,
+   "z": 17.0,
+   "last_seen_day": 5,
+   "last_seen_ts": 1786268290
+  },
+  "evergreen_sparse|-459|26": {
+   "prefab": "evergreen_sparse",
+   "x": -459.0,
+   "z": 26.0,
+   "last_seen_day": 6,
+   "last_seen_ts": 1786268679
+  },
+  "evergreen_sparse|-470|18": {
+   "prefab": "evergreen_sparse",
+   "x": -470.0,
+   "z": 18.0,
+   "last_seen_day": 6,
+   "last_seen_ts": 1786268679
+  },
+  "flower|-490|61": {
+   "prefab": "flower",
+   "x": -490.0,
+   "z": 61.0,
+   "last_seen_day": 6,
+   "last_seen_ts": 1786268770
+  },
+  "flower|-495|65": {
+   "prefab": "flower",
+   "x": -495.0,
+   "z": 65.0,
+   "last_seen_day": 6,
+   "last_seen_ts": 1786268770
+  },
+  "flower|-478|70": {
+   "prefab": "flower",
+   "x": -478.0,
+   "z": 70.0,
+   "last_seen_day": 6,
+   "last_seen_ts": 1786268770
+  },
+  "sapling|-494|50": {
+   "prefab": "sapling",
+   "x": -494.0,
+   "z": 50.0,
+   "last_seen_day": 6,
+   "last_seen_ts": 1786268770
+  },
+  "snow|-479|43": {
+   "prefab": "snow",
+   "x": -479.0,
+   "z": 43.0,
+   "last_seen_day": 6,
+   "last_seen_ts": 1786268679
+  },
+  "evergreen|-482|41": {
+   "prefab": "evergreen",
+   "x": -482.0,
+   "z": 41.0,
+   "last_seen_day": 6,
+   "last_seen_ts": 1786268770
+  },
+  "evergreen|-475|49": {
+   "prefab": "evergreen",
+   "x": -475.0,
+   "z": 49.0,
+   "last_seen_day": 6,
+   "last_seen_ts": 1786268770
+  },
+  "evergreen|-487|41": {
+   "prefab": "evergreen",
+   "x": -487.0,
+   "z": 41.0,
+   "last_seen_day": 6,
+   "last_seen_ts": 1786268760
+  },
+  "carrot_planted|-466|54": {
+   "prefab": "carrot_planted",
+   "x": -466.0,
+   "z": 54.0,
+   "last_seen_day": 6,
+   "last_seen_ts": 1786268770
+  },
+  "grass|-478|53": {
+   "prefab": "grass",
+   "x": -478.0,
+   "z": 53.0,
+   "last_seen_day": 6,
+   "last_seen_ts": 1786268770
+  },
+  "grass|-483|69": {
+   "prefab": "grass",
+   "x": -483.0,
+   "z": 69.0,
+   "last_seen_day": 6,
+   "last_seen_ts": 1786268770
+  },
+  "pollen|-479|43": {
+   "prefab": "pollen",
+   "x": -479.0,
+   "z": 43.0,
+   "last_seen_day": 6,
+   "last_seen_ts": 1786268679
+  },
+  "lunarhail|-479|43": {
+   "prefab": "lunarhail",
+   "x": -479.0,
+   "z": 43.0,
+   "last_seen_day": 6,
+   "last_seen_ts": 1786268679
+  },
+  "rain|-479|43": {
+   "prefab": "rain",
+   "x": -479.0,
+   "z": 43.0,
+   "last_seen_day": 6,
+   "last_seen_ts": 1786268679
+  },
+  "berrybush|-487|58": {
+   "prefab": "berrybush",
+   "x": -487.0,
+   "z": 58.0,
+   "last_seen_day": 6,
+   "last_seen_ts": 1786268770
+  },
+  "berrybush|-499|46": {
+   "prefab": "berrybush",
+   "x": -499.0,
+   "z": 46.0,
+   "last_seen_day": 6,
+   "last_seen_ts": 1786268760
+  },
+  "evergreen_sparse|-459|37": {
+   "prefab": "evergreen_sparse",
+   "x": -459.0,
+   "z": 37.0,
+   "last_seen_day": 6,
+   "last_seen_ts": 1786268770
+  },
+  "grass|-490|69": {
+   "prefab": "grass",
+   "x": -490.0,
+   "z": 69.0,
+   "last_seen_day": 6,
+   "last_seen_ts": 1786268770
+  },
+  "log|-474|71": {
+   "prefab": "log",
+   "x": -474.0,
+   "z": 71.0,
+   "last_seen_day": 6,
+   "last_seen_ts": 1786268770
+  },
+  "axe|-475|71": {
+   "prefab": "axe",
+   "x": -475.0,
+   "z": 71.0,
+   "last_seen_day": 6,
+   "last_seen_ts": 1786268770
+  },
+  "flower|-502|62": {
+   "prefab": "flower",
+   "x": -502.0,
+   "z": 62.0,
+   "last_seen_day": 6,
+   "last_seen_ts": 1786268760
+  },
+  "sapling|-502|46": {
+   "prefab": "sapling",
+   "x": -502.0,
+   "z": 46.0,
+   "last_seen_day": 6,
+   "last_seen_ts": 1786268760
+  },
+  "sapling|-507|58": {
+   "prefab": "sapling",
+   "x": -507.0,
+   "z": 58.0,
+   "last_seen_day": 6,
+   "last_seen_ts": 1786268760
+  },
+  "cutgrass|-475|68": {
+   "prefab": "cutgrass",
+   "x": -475.0,
+   "z": 68.0,
+   "last_seen_day": 6,
+   "last_seen_ts": 1786268770
+  },
+  "snow|-494|50": {
+   "prefab": "snow",
+   "x": -494.0,
+   "z": 50.0,
+   "last_seen_day": 6,
+   "last_seen_ts": 1786268760
+  },
+  "twigs|-475|71": {
+   "prefab": "twigs",
+   "x": -475.0,
+   "z": 71.0,
+   "last_seen_day": 6,
+   "last_seen_ts": 1786268770
+  },
+  "leif|-478|71": {
+   "prefab": "leif",
+   "x": -478.0,
+   "z": 71.0,
+   "last_seen_day": 6,
+   "last_seen_ts": 1786268770
+  },
+  "pinecone|-474|70": {
+   "prefab": "pinecone",
+   "x": -474.0,
+   "z": 70.0,
+   "last_seen_day": 6,
+   "last_seen_ts": 1786268770
+  },
+  "skeleton_player|-474|70": {
+   "prefab": "skeleton_player",
+   "x": -474.0,
+   "z": 70.0,
+   "last_seen_day": 6,
+   "last_seen_ts": 1786268770
+  },
+  "evergreen|-502|58": {
+   "prefab": "evergreen",
+   "x": -502.0,
+   "z": 58.0,
+   "last_seen_day": 6,
+   "last_seen_ts": 1786268760
+  },
+  "pollen|-494|50": {
+   "prefab": "pollen",
+   "x": -494.0,
+   "z": 50.0,
+   "last_seen_day": 6,
+   "last_seen_ts": 1786268760
+  },
+  "crawlinghorror|-480|61": {
+   "prefab": "crawlinghorror",
+   "x": -480.0,
+   "z": 61.0,
+   "last_seen_day": 6,
+   "last_seen_ts": 1786268770
+  },
+  "lunarhail|-494|50": {
+   "prefab": "lunarhail",
+   "x": -494.0,
+   "z": 50.0,
+   "last_seen_day": 6,
+   "last_seen_ts": 1786268760
+  },
+  "rain|-494|50": {
+   "prefab": "rain",
+   "x": -494.0,
+   "z": 50.0,
+   "last_seen_day": 6,
+   "last_seen_ts": 1786268760
+  },
+  "berrybush|-502|38": {
+   "prefab": "berrybush",
+   "x": -502.0,
+   "z": 38.0,
+   "last_seen_day": 6,
+   "last_seen_ts": 1786268760
+  },
+  "robin|-490|75": {
+   "prefab": "robin",
+   "x": -490.0,
+   "z": 75.0,
+   "last_seen_day": 6,
+   "last_seen_ts": 1786268770
+  },
+  "dug_sapling|-464|59": {
+   "prefab": "dug_sapling",
+   "x": -464.0,
+   "z": 59.0,
+   "last_seen_day": 6,
+   "last_seen_ts": 1786268770
+  },
+  "sapling|-486|70": {
+   "prefab": "sapling",
+   "x": -486.0,
+   "z": 70.0,
+   "last_seen_day": 6,
+   "last_seen_ts": 1786268770
+  },
+  "snow|-479|52": {
+   "prefab": "snow",
+   "x": -479.0,
+   "z": 52.0,
+   "last_seen_day": 6,
+   "last_seen_ts": 1786268770
+  },
+  "evergreen_sparse|-450|46": {
+   "prefab": "evergreen_sparse",
+   "x": -450.0,
+   "z": 46.0,
+   "last_seen_day": 6,
+   "last_seen_ts": 1786268770
+  },
+  "seeds|-490|75": {
+   "prefab": "seeds",
+   "x": -490.0,
+   "z": 75.0,
+   "last_seen_day": 6,
+   "last_seen_ts": 1786268770
+  },
+  "evergreen|-479|58": {
+   "prefab": "evergreen",
+   "x": -479.0,
+   "z": 58.0,
+   "last_seen_day": 6,
+   "last_seen_ts": 1786268770
+  },
+  "lunarhail|-479|52": {
+   "prefab": "lunarhail",
+   "x": -479.0,
+   "z": 52.0,
+   "last_seen_day": 6,
+   "last_seen_ts": 1786268770
+  },
+  "berrybush|-471|62": {
+   "prefab": "berrybush",
+   "x": -471.0,
+   "z": 62.0,
+   "last_seen_day": 6,
+   "last_seen_ts": 1786268770
+  },
+  "pollen|-479|52": {
+   "prefab": "pollen",
+   "x": -479.0,
+   "z": 52.0,
+   "last_seen_day": 6,
+   "last_seen_ts": 1786268770
+  },
+  "rain|-479|52": {
+   "prefab": "rain",
+   "x": -479.0,
+   "z": 52.0,
+   "last_seen_day": 6,
+   "last_seen_ts": 1786268770
+  },
+  "shadowskittish|-481|37": {
+   "prefab": "shadowskittish",
+   "x": -481.0,
+   "z": 37.0,
+   "last_seen_day": 6,
+   "last_seen_ts": 1786268770
+  },
+  "robin|-494|55": {
+   "prefab": "robin",
+   "x": -494.0,
+   "z": 55.0,
+   "last_seen_day": 6,
+   "last_seen_ts": 1786268770
+  },
+  "robin|-470|78": {
+   "prefab": "robin",
+   "x": -470.0,
+   "z": 78.0,
+   "last_seen_day": 6,
+   "last_seen_ts": 1786268770
   }
  },
- "base": null
+ "base": {
+  "x": -150.1,
+  "z": -14.9
+ }
 }

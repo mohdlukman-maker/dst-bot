@@ -26,10 +26,25 @@ import os, sys, time, re, json, math, random
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from lib import invariants
 from lib import run_log as run_logger
+from lib.targets import TargetTracker
+from lib.explore import Explorer
+from lib import decision_log as decision_logger
 
 RUN_ID = run_logger.start_run(mod_version="v8-invariants", notes="autonomous agent run")
+# Session A2 T4: publish the run id so the reflex's death records join this
+# run instead of writing run_id="" (which also poisoned the _CLOSED guard).
+# NOTE: HERE is defined BELOW this block - use __file__ directly.
+try:
+    with open(os.path.join(os.path.dirname(os.path.abspath(__file__)),
+                           "data", "current_run.txt"), "w") as f:
+        f.write(RUN_ID)
+except Exception:
+    pass
 last_health = None   # module-level: shared by main() and _main_loop()
+_damage_log_last = 0.0   # Session A2 T3: rate-limit the damage warning (2s)
 _food_attempted = set()  # (guid, prefab) food spots tried this life (re-target guard)
+TRACKER = TargetTracker()  # Session A Task 3: GUID-based re-target guard (180s auto-clear)
+EXPLORER = Explorer("default")  # Session A Task 4: visited-grid frontier explorer (persisted)
 
 DOC = os.path.join(os.path.expanduser("~"), "Documents", "Klei", "DoNotStarveTogether")
 CS = os.path.join(DOC, "40630831", "client_save")
@@ -70,7 +85,21 @@ def get_state():
     try:
         raw = open(STATE_F, "rb").read()
         m = re.match(rb"KLEI\s+\d+\s+(.*)", raw, re.DOTALL)
-        return json.loads(m.group(1).decode())
+        st = json.loads(m.group(1).decode())
+        # derived scalar: nearest threat distance (flat key, _get_path-safe).
+        # Tests the thing that matters for a flee - did the gap open? -
+        # without list-index paths (threats[0] is not stable identity).
+        threats = st.get("threats") or []
+        st["nearest_threat_d"] = min((t.get("d", 999) for t in threats), default=999)
+        # Session A2 T1: combined ownership map (item_counts + equipped).
+        # Crafted tools auto-equip -> they live in equipslots, not itemslots,
+        # so item_counts misses them and craft expectations score refuted
+        # even when the craft succeeded.
+        owned = dict(st.get("item_counts") or {})
+        for it in (st.get("equipped") or []):
+            owned[it] = owned.get(it, 0) + 1
+        st["owned"] = owned
+        return st
     except Exception:
         return {}
 
@@ -157,29 +186,40 @@ CRAFT_PRIORITIES = [
 QUESTION_F = os.path.join(HERE, "agent_question.json")
 ANSWER_F = os.path.join(HERE, "agent_answer.json")
 
-def ask_question(question, context=None):
+# Module-level: is a question outstanding? (non-blocking questions, Session A)
+_question_outstanding = False
+_question_asked_at = 0.0
+
+def ask_question_async(question, context=None):
+    """Write the question. Do NOT wait. Returns immediately.
+    Skips if a question is already outstanding and under 120s old."""
+    global _question_outstanding, _question_asked_at
+    now = time.time()
+    if _question_outstanding and (now - _question_asked_at) < 120:
+        return
     save_json(QUESTION_F, {
-        "ts": time.time(),
+        "ts": now,
         "question": question,
         "context": context or {},
         "stage": current_stage_id(),
     })
     log(f"❓ QUESTION ASKED: {question}")
-    # wait for the AI to answer (poll agent_answer.json)
-    waited = 0
-    while waited < 300:   # up to 5 min
+    _question_outstanding = True
+    _question_asked_at = now
+
+def check_answer():
+    """Non-blocking. Returns the answer string if one has arrived, else None.
+    Clears the outstanding flag when an answer is consumed."""
+    global _question_outstanding
+    try:
         if os.path.exists(ANSWER_F):
-            try:
-                ans = json.load(open(ANSWER_F, encoding="utf-8"))
-                os.remove(ANSWER_F)
-                log(f"💬 ANSWER: {ans.get('answer')}")
-                return ans
-            except Exception:
-                pass
-        time.sleep(5)
-        waited += 5
-    log("⏰ no answer in 5 min - resuming cautiously")
-    return {"answer": "none"}
+            ans = json.load(open(ANSWER_F, encoding="utf-8"))
+            os.remove(ANSWER_F)
+            _question_outstanding = False
+            return ans.get("answer")
+    except Exception:
+        pass
+    return None
 
 def current_stage_id():
     ag = load_json(AGENT_F, {})
@@ -223,7 +263,7 @@ def current_plan(st):
         if stage["complete"](st):
             next_stage()
             stage = get_current_stage()
-            ask_question(
+            ask_question_async(
                 f"Stage '{stage['id']}' is next: {stage['desc']}",
                 {"stage": stage["id"]})
     except Exception:
@@ -249,6 +289,7 @@ def pick_target(st, want_prefabs, visited):
     """Nearest harvestable target weighted by learning + value.
     TOOL-AWARE: without an axe, trees are worthless (10x slower chopping) -
     gather grass/sapling/flint first so the axe gets crafted."""
+    TRACKER.maybe_clear()   # Session A Task 3: after 180s, regrown resources are retryable
     nb = st.get("nearby") or []
     pos = st.get("pos") or {}
     px, pz = pos.get("x", 0), pos.get("z", 0)
@@ -259,6 +300,10 @@ def pick_target(st, want_prefabs, visited):
         n = e.get("n")
         if not e.get("ok"): continue
         if n not in RESOURCE_VALUE: continue
+        # Session A Task 3: never re-target a GUID that's done or in flight
+        g = e.get("guid")
+        if g is not None and (g in TRACKER.done or g == TRACKER.in_flight):
+            continue
         # axe-less: never target trees (need axe to chop efficiently)
         if not has_axe and n in ("evergreen", "deciduoustree"):
             continue
@@ -270,8 +315,41 @@ def pick_target(st, want_prefabs, visited):
         score = RESOURCE_VALUE.get(n, 1) + gather_reliability(n)*2 - d*0.1
         if score > best_score:
             best_score = score
-            best = (n, e.get("x"), e.get("z"), d)
+            best = (n, e.get("x"), e.get("z"), d, e.get("guid"))
     return best
+
+# ---------------- Session A Task 5: falsifiable decisions ----------------
+PRODUCTS = {   # prefab -> what it yields, for gather expectations
+    "grass": "cutgrass", "sapling": "twigs", "flint": "flint",
+    "evergreen": "log", "deciduoustree": "log", "rock1": "rocks",
+    "rock2": "rocks", "berrybush": "berries", "carrot_planted": "carrot",
+    "seeds": "seeds",
+}
+
+def plan_digest(st):
+    """The WHOLE current plan (stage + needs + wants) as a string - the
+    field that makes planner bugs visible in the decision record."""
+    try:
+        needs, wp = current_plan(st)
+        return f"stage={current_stage_id()} needs={dict(needs)} wants={sorted(wp)}"
+    except Exception:
+        return "stage=?"
+
+def log_before(state, goal, action, why, expected):
+    """Record a falsifiable decision BEFORE acting. Returns decision_id."""
+    try:
+        return decision_logger.log_decision(RUN_ID, state, goal, action, why, expected)
+    except Exception:
+        return ""
+
+def log_after(decision_id, state_after):
+    """Close the decision AFTER the result. Returns the verdict string."""
+    if not decision_id:
+        return ""
+    try:
+        return decision_logger.log_outcome(decision_id, state_after)
+    except Exception:
+        return ""
 
 def try_craft(st):
     """Local craft: iterate taught priorities, craft what's possible."""
@@ -281,11 +359,16 @@ def try_craft(st):
         if name in equipped: continue
         if name in ("torch",) and any("torch" in e for e in equipped): continue
         if all(counts.get(m, 0) >= c for m, c in mats.items()):
+            d_craft = log_before(st, f"craft {name} ({plan_digest(st)})",
+                                 {"action": "craft", "recipe": name},
+                                 f"materials present: {mats}",
+                                 {f"owned.{name}": "+1"})
             send({"action": "craft", "recipe": name})
             time.sleep(2)
             if name in ("torch", "axe", "pickaxe", "spear"):
                 send({"action": "equip", "item": name})
                 time.sleep(1)
+            log_after(d_craft, get_state())
             log(f"🔨 LOCAL CRAFT: {name} (materials present)")
             learn_gather(name, True)
             return True
@@ -299,12 +382,25 @@ def verify_collection(start_counts, end_counts):
             gained[k] = v - start_counts.get(k, 0)
     return gained
 
+def find_job_result(st, cmdid):
+    """Session A Task 2: find this command's result in the mod's ring buffer
+    (st["results"], newest first, entries {id, result, t}).
+    Returns the result dict (job report OR dispatch error) or None."""
+    try:
+        for entry in (st or {}).get("results") or []:
+            if entry.get("id") == cmdid:
+                return entry.get("result") or {}
+    except Exception:
+        pass
+    return None
+
 def roam_once(st, settle=5, want_prefabs=None):
     """One autonomous roam pass: pick target -> walk -> fire gather -> verify at end."""
     needs, wp = current_plan(st)
     if want_prefabs is None:
         want_prefabs = wp
     visited = set()
+    last_report = None
     start_counts = dict(st.get("item_counts") or {})
     pos = st.get("pos") or {}
     log(f"🌍 ROAM at ({pos.get('x'):.0f},{pos.get('z'):.0f}) | needs: {needs}")
@@ -336,14 +432,36 @@ def roam_once(st, settle=5, want_prefabs=None):
                 except Exception:
                     dest = None
                 if dest is None:
-                    # fallback: next cardinal direction (avoid immediate repeat)
-                    dx, dz = [(1,0),(0,1),(-1,0),(0,-1)][explored % 4]
-                    dest = (px2 + dx*40, pz2 + dz*40)
+                    # Session A Task 4: visited-grid frontier (replaces cardinal cycling)
+                    bx = bz = None
+                    try:
+                        from lib import world_map as wm3
+                        b = wm3.get_base("default")
+                        if b:
+                            bx, bz = b.get("x"), b.get("z")
+                    except Exception:
+                        pass
+                    base_xz = (bx, bz) if bx is not None and bz is not None else None
+                    dest = EXPLORER.next_target(st, base_xz, 200)
+                    if dest is None:
+                        # everything in range explored -> head to base, give up this pass
+                        log("🧭 all reachable cells explored - heading to base")
+                        if base_xz is not None:
+                            send({"action": "move_to", "x": bx, "z": bz})
+                            time.sleep(8)
+                        break
+                d_exp = log_before(st, f"explore->({dest[0]:.0f},{dest[1]:.0f}) ({plan_digest(st)})",
+                                   {"action": "move_to", "x": dest[0], "z": dest[1]},
+                                   "frontier explore - no known resource", {"pos": "changes"})
                 send({"action": "move_to", "x": dest[0], "z": dest[1]})
                 log(f"🧭 explore -> ({dest[0]:.0f},{dest[1]:.0f})")
                 time.sleep(10)
                 st2 = get_state()
+                log_after(d_exp, st2)
                 pos = st2.get("pos") or pos
+                # Session A Task 4: fill + persist the visited grid
+                EXPLORER.observe(st2)
+                EXPLORER.save()
                 # record what we discovered
                 try:
                     from lib import world_map as wm2
@@ -360,21 +478,51 @@ def roam_once(st, settle=5, want_prefabs=None):
                 # give up this pass: batch confirmation, return counts
                 end_counts = dict(st.get("item_counts") or {})
                 log(f"✅ ROAM pass done (no targets): {end_counts}")
-                return end_counts
+                return end_counts, last_report
             continue
-        n, tx, tz, d = t
+        n, tx, tz, d, guid = t
         visited.add((n, tx, tz))
+        d_move = log_before(st, f"move->({tx},{tz}) for {n} ({plan_digest(st)})",
+                            {"action": "move_to", "x": tx, "z": tz},
+                            f"roam target {n} at d={d}", {"pos": "changes"})
         send({"action": "move_to", "x": tx, "z": tz})
         time.sleep(min(9, 2 + d/4))
+        st_moved = get_state()
+        log_after(d_move, st_moved)
         # count = max_swings in the mod. Trees need 10-20 swings (never cap at 3);
         # pick-mode targets (grass/sapling/flint) finish in 1 swing anyway.
         swing_cap = 25 if n in ("evergreen", "deciduoustree", "rock1", "rock2") else 3
-        send({"action": "gather_job", "prefab": n, "count": swing_cap})
+        prod = PRODUCTS.get(n, n)
+        d_job = log_before(st_moved, f"gather {n}->{prod} ({plan_digest(st_moved)})",
+                           {"action": "gather_job", "prefab": n, "count": swing_cap},
+                           f"roam target at ({tx},{tz})",
+                           {f"item_counts.{prod}": "+1"})
+        TRACKER.fired({"guid": guid})   # Session A Task 3: mark in flight BEFORE the job runs
+        cmdid = send({"action": "gather_job", "prefab": n, "count": swing_cap})
         log(f"  🎯 {n}@({tx},{tz}) fired (max_swings={swing_cap})")
-        # settle must cover the work time: trees need ~20s, picks ~5s
-        time.sleep(settle + (18 if n in ("evergreen", "deciduoustree", "rock1", "rock2") else 0))
+        # Session A2 T2: wait for the mod's own verdict as the completion
+        # signal, not a fixed sleep. A tree chopped with a torch equipped
+        # (light guard refuses the swap at night) takes longer than 23s;
+        # reading state mid-job scored refuted on successful gathers.
+        deadline = time.time() + 45          # hard cap; do not wait forever
+        report = None
+        st = None
+        while time.time() < deadline:
+            time.sleep(1.5)
+            st = get_state()
+            report = find_job_result(st, cmdid)
+            if report is not None:
+                break
+        # deadline passed with no report: genuinely inconclusive - log it
+        if report is None:
+            log(f"  ⏳ no job report within 45s for {n} (cmdid {cmdid}) - outcome inconclusive")
+        if report:
+            report["prefab"] = n
+            last_report = report
+            log(f"  📋 job report: {json.dumps(report)}")
+        TRACKER.reported(report)   # Session A Task 3: completes or fails -> done, no retry this roam
+        log_after(d_job, st)
         # LOCAL verification after each gather
-        st = get_state()
         gained = verify_collection(start_counts, dict(st.get("item_counts") or {}))
         if gained:
             for g, cnt in gained.items():
@@ -385,8 +533,7 @@ def roam_once(st, settle=5, want_prefabs=None):
     # batch confirmation at end
     st = get_state()
     end_counts = dict(st.get("item_counts") or {})
-    gained = verify_collection(dict(st.get("item_counts") or {}), end_counts)  # no-op; use saved start
-    return end_counts
+    return end_counts, last_report
 
 def main():
     global RUN_ID
@@ -398,16 +545,32 @@ def main():
         wm.observe("default", get_state())
     except Exception:
         pass
+    # Session A fix T2: the leash needs a denominator. Spawn is a mediocre
+    # base; a mediocre anchor beats no anchor. (set_base was never called -
+    # the leash + explorer leash were inert.)
+    try:
+        from lib import world_map as wm
+        p = (get_state() or {}).get("pos") or {}
+        if not wm.get_base("default") and p.get("x") is not None and p.get("z") is not None:
+            wm.set_base("default", p["x"], p["z"])
+            log(f"🏠 base set to spawn ({p['x']:.0f},{p['z']:.0f})")
+    except Exception:
+        pass
+    cause = "unknown"
+    notes = ""
     try:
         _main_loop()
+        cause = "manual_stop"
     except KeyboardInterrupt:
-        run_logger.end_run(RUN_ID, get_state(), "manual_stop")
+        cause = "manual_stop"
         raise
     except Exception as e:
-        run_logger.end_run(RUN_ID, get_state(), "crash", {"notes": str(e)})
+        cause = "crash"
+        notes = f"{type(e).__name__}: {e}"
         raise
     finally:
-        run_logger.end_run(RUN_ID, get_state(), "unknown")
+        run_logger.end_run(RUN_ID, get_state(), cause,
+                           {"notes": notes} if notes else None)
 
 
 def _main_loop():
@@ -420,6 +583,10 @@ def _main_loop():
         age = time.time() - os.path.getmtime(STATE_F) if os.path.exists(STATE_F) else 999
         if age > 10:
             time.sleep(5); continue
+        # non-blocking question answers (Session A)
+        ans = check_answer()
+        if ans is not None:
+            log(f"💬 ANSWER: {ans}")
         # DEATH: Wilson is a ghost (health 50, playerghost tag). The reflex
         # auto-revives. While a ghost, DO NOT gather (ghosts can't hold items).
         # Wait for the revive, then reset the plan state for the respawn.
@@ -442,61 +609,6 @@ def _main_loop():
                 save_json(AGENT_F, ag)
             except Exception:
                 pass
-        # LOW HEALTH OR HUNGER -> food gathering outranks the plan. Wilson
-        # nearly starved (hunger 5) because the override only checked health.
-        h = st.get("health") or [150]
-        hung = st.get("hunger") or [150]
-        if h[0] < 50 or hung[0] < 60:
-            # track attempted food spots so a dug-out carrot isn't re-targeted
-            # forever (that loop had Wilson digging the same spent tuft every 8s)
-            food_targets = [e for e in (st.get("nearby") or [])
-                            if e.get("ok") and e.get("n") in
-                            ("carrot_planted", "berrybush", "berrybush2", "seeds")
-                            and e.get("d", 99) < 35
-                            and (e.get("guid"), e.get("n")) not in _food_attempted]
-            # prefer seeds (reliable PICKUP) over carrots/bushes (DIG/ripe-gated)
-            food_targets.sort(key=lambda e: 0 if e.get("n") == "seeds" else 1)
-            if food_targets:
-                f = min(food_targets, key=lambda e: e.get("d", 99))
-                _food_attempted.add((f.get("guid"), f.get("n")))
-                send({"action": "move_to", "x": f.get("x"), "z": f.get("z")})
-                time.sleep(min(8, 2 + (f.get("d", 5))/4))
-                send({"action": "gather_job", "prefab": f.get("n"), "count": 3})
-                log(f"🍎 HUNGER {hung[0]:.0f}: gathering food {f.get('n')}@({f.get('x')},{f.get('z')})")
-                time.sleep(8)
-                st = get_state()
-                counts2 = st.get("item_counts") or {}
-                for food in ("berries", "carrot", "seeds"):
-                    if counts2.get(food, 0) > 0:
-                        send({"action": "eat", "item": food})
-                        log(f"🍽 EATING {food} (hunger {counts2.get(food)} left)")
-                        time.sleep(4)
-                        break
-                continue
-        # critical health -> EAT available food first, THEN wait
-        if h[0] < 25 or (st.get("hunger") or [150])[0] < 40:
-            counts = st.get("item_counts") or {}
-            FOOD_ITEMS = ["berries", "carrot", "seeds", "cookedmeat", "cooked_smallmeat",
-                          "smallmeat", "meat", "drumstick", "cooked_drumstick",
-                          "robin", "crow", "butterfly", "mushroom", "red_mushroom",
-                          "green_mushroom", "blue_mushroom", "petals"]
-            ate = False
-            for food in FOOD_ITEMS:
-                if counts.get(food, 0) > 0:
-                    send({"action": "eat", "item": food})
-                    log(f"🍽 EATING {food} (low health/hunger)")
-                    time.sleep(4)
-                    ate = True
-                    break
-            if not ate:
-                if h[0] < 15:
-                    log("⚠️ health critical, no food available")
-                    ask_question(
-                        "I'm critically low on health/hunger with no food nearby. "
-                        "Where is the nearest safe food source?",
-                        {"health": h[0], "hunger": st.get("hunger"), "items": counts})
-                    time.sleep(5)
-            continue
         # THREAT GUARD (v8 Q1 discriminator): NOT every _combat entity is a threat.
         # crows/robins/rabbits/butterflies/beefalo carry _combat but are passive.
         # Real threats: (a) targeting us, (b) hostile/monster tagged, (c) known
@@ -523,10 +635,19 @@ def _main_loop():
             dx2, dz2 = px2 - tx2, pz2 - tz2
             mag2 = math.sqrt(dx2*dx2 + dz2*dz2) or 1
             nx2, nz2 = px2 + dx2/mag2*20, pz2 + dz2/mag2*20
+            # NOTE: _get_path only walks dicts (no list indices), so a per-threat
+            # path like threats.0.d would always resolve None -> permanent
+            # refuted. "threats": "changes" compares the list by value: a flee
+            # that changed nothing scores refuted, a disengage scores confirmed.
+            d_fl = log_before(st, f"FLEE {names} ({plan_digest(st)})",
+                              {"action": "move_to", "x": nx2, "z": nz2},
+                              f"threat {names} at {nearest_t.get('d')}m",
+                              {"nearest_threat_d": "increases"})
             send({"action": "preempt_job"})
             send({"action": "move_to", "x": nx2, "z": nz2})
             log(f"🏃 FLEEING from {names} -> ({nx2:.0f},{nz2:.0f})")
             time.sleep(6)
+            log_after(d_fl, get_state())
             # only AFTER disengaging, ask what to do about the area
             st_after = get_state()
             if not [t for t in (st_after.get("threats") or []) if t.get("d", 99) < 12]:
@@ -534,9 +655,79 @@ def _main_loop():
             else:
                 log("   STILL threatened - keeping distance")
             continue
+        # LOW HEALTH OR HUNGER -> food gathering outranks the plan. Wilson
+        # nearly starved (hunger 5) because the override only checked health.
+        h = st.get("health") or [150]
+        hung = st.get("hunger") or [150]
+        if h[0] < 50 or hung[0] < 60:
+            # track attempted food spots so a dug-out carrot isn't re-targeted
+            # forever (that loop had Wilson digging the same spent tuft every 8s)
+            food_targets = [e for e in (st.get("nearby") or [])
+                            if e.get("ok") and e.get("n") in
+                            ("carrot_planted", "berrybush", "berrybush2", "seeds")
+                            and e.get("d", 99) < 35
+                            and (e.get("guid"), e.get("n")) not in _food_attempted]
+            # prefer seeds (reliable PICKUP) over carrots/bushes (DIG/ripe-gated)
+            food_targets.sort(key=lambda e: 0 if e.get("n") == "seeds" else 1)
+            if food_targets:
+                f = min(food_targets, key=lambda e: e.get("d", 99))
+                _food_attempted.add((f.get("guid"), f.get("n")))
+                d_fm = log_before(st, f"food move->({f.get('x')},{f.get('z')}) ({plan_digest(st)})",
+                                  {"action": "move_to", "x": f.get("x"), "z": f.get("z")},
+                                  f"food override hunger={hung[0]:.0f}", {"pos": "changes"})
+                send({"action": "move_to", "x": f.get("x"), "z": f.get("z")})
+                time.sleep(min(8, 2 + (f.get("d", 5))/4))
+                st_f = get_state()
+                log_after(d_fm, st_f)
+                prod_f = PRODUCTS.get(f.get("n"), f.get("n"))
+                d_fg = log_before(st_f, f"gather food {f.get('n')}->{prod_f} ({plan_digest(st_f)})",
+                                  {"action": "gather_job", "prefab": f.get("n"), "count": 3},
+                                  f"food override hunger={hung[0]:.0f}",
+                                  {f"item_counts.{prod_f}": "+1"})
+                send({"action": "gather_job", "prefab": f.get("n"), "count": 3})
+                log(f"🍎 HUNGER {hung[0]:.0f}: gathering food {f.get('n')}@({f.get('x')},{f.get('z')})")
+                time.sleep(8)
+                st = get_state()
+                log_after(d_fg, st)
+                counts2 = st.get("item_counts") or {}
+                for food in ("berries", "carrot", "seeds"):
+                    if counts2.get(food, 0) > 0:
+                        send({"action": "eat", "item": food})
+                        log(f"🍽 EATING {food} (hunger {counts2.get(food)} left)")
+                        time.sleep(4)
+                        break
+                continue
+        # critical health -> EAT available food first, THEN wait
+        if h[0] < 25 or (st.get("hunger") or [150])[0] < 40:
+            counts = st.get("item_counts") or {}
+            FOOD_ITEMS = ["berries", "carrot", "seeds", "cookedmeat", "cooked_smallmeat",
+                          "smallmeat", "meat", "drumstick", "cooked_drumstick",
+                          "robin", "crow", "butterfly", "mushroom", "red_mushroom",
+                          "green_mushroom", "blue_mushroom", "petals"]
+            ate = False
+            for food in FOOD_ITEMS:
+                if counts.get(food, 0) > 0:
+                    send({"action": "eat", "item": food})
+                    log(f"🍽 EATING {food} (low health/hunger)")
+                    time.sleep(4)
+                    ate = True
+                    break
+            if not ate:
+                if h[0] < 15:
+                    log("⚠️ health critical, no food available")
+                    ask_question_async(
+                        "I'm critically low on health/hunger with no food nearby. "
+                        "Where is the nearest safe food source?",
+                        {"health": h[0], "hunger": st.get("hunger"), "items": counts})
+            time.sleep(3)   # Session A fix T1: don't hot-spin while critically low
+            continue
         # INVARIANT 2: unexplained damage -> retreat (v8: health delta is ground truth)
         if invariants.unexplained_damage(st, last_health, deliberately_fighting=False):
-            log("⚠️ INVARIANT: unexplained damage - retreating")
+            # Session A2 T3: log once per burst, not thousands per second
+            now_dl = time.time()
+            if now_dl - _damage_log_last >= 2:
+                log("⚠️ INVARIANT: unexplained damage - retreating")
+                _damage_log_last = now_dl
             send({"action": "preempt_job"})
             # move away from nearest AGGRESSIVE threat only (a robin peck or
             # darkness damage must not send Wilson fleeing into water - that's
@@ -561,6 +752,10 @@ def _main_loop():
                 send({"action": "move_to", "x": tx, "z": tz})
                 log(f"  fleeing from {nearest.get('n')} -> ({tx:.0f},{tz:.0f})")
                 time.sleep(6)
+            else:
+                # Session A2 T3: no threat to flee (darkness/starvation/
+                # freezing/sanity damage) - breathe instead of hot-spinning
+                time.sleep(2)
             continue
         # INVARIANT 1: the leash - never travel further than you can get back
         base = worldmap.get_base("default") if 'worldmap' in sys.modules else {}
@@ -568,9 +763,13 @@ def _main_loop():
             if not invariants.can_get_home(st, (base.get("x", 0), base.get("z", 0))):
                 bx, bz = base.get("x"), base.get("z")
                 log(f"🔗 LEASH: too far from base ({bx},{bz}) for food/light - heading home")
+                d_ls = log_before(st, f"leash return ({plan_digest(st)})",
+                                  {"action": "move_to", "x": bx, "z": bz},
+                                  f"leash: home at ({bx},{bz})", {"pos": "changes"})
                 send({"action": "preempt_job"})
                 send({"action": "move_to", "x": bx, "z": bz})
                 time.sleep(8)
+                log_after(d_ls, get_state())
                 continue
         # INVARIANT 4: campfire kit - never travel without 3 cutgrass + 2 logs.
         # TOOL-AWARE: logs need an axe (bare-hand chopping is 10x slower and
@@ -587,10 +786,21 @@ def _main_loop():
                 st = get_state()
                 for e in (st.get("nearby") or []):
                     if e.get("n") in ("grass", "evergreen", "deciduoustree") and e.get("ok"):
+                        d_km = log_before(st, f"kit move->({e.get('x')},{e.get('z')}) ({plan_digest(st)})",
+                                          {"action": "move_to", "x": e.get("x"), "z": e.get("z")},
+                                          "campfire kit gather", {"pos": "changes"})
                         send({"action": "move_to", "x": e.get("x"), "z": e.get("z")})
                         time.sleep(5)
+                        st_k = get_state()
+                        log_after(d_km, st_k)
+                        prod_k = PRODUCTS.get(e.get("n"), e.get("n"))
+                        d_kg = log_before(st_k, f"kit gather {e.get('n')}->{prod_k} ({plan_digest(st_k)})",
+                                          {"action": "gather_job", "prefab": e.get("n"), "count": 3},
+                                          "campfire kit gather",
+                                          {f"item_counts.{prod_k}": "+1"})
                         send({"action": "gather_job", "prefab": e.get("n"), "count": 3})
                         time.sleep(5)
+                        log_after(d_kg, get_state())
                         break
         elif not has_axe:
             # no axe yet: gather only tool-less resources (grass/sapling/flint),
@@ -602,19 +812,46 @@ def _main_loop():
         needs, want_prefabs = current_plan(st)
         stage = get_current_stage()
         before = dict(st.get("item_counts") or {})
-        end_counts = roam_once(st, want_prefabs=want_prefabs)
+        end_counts, last_report = roam_once(st, want_prefabs=want_prefabs)
         # did this pass collect anything?
         gained = {k: v - before.get(k, 0) for k, v in end_counts.items() if v > before.get(k, 0)}
         if gained:
             stuck_streak = 0
         else:
-            stuck_streak += 1
-            if stuck_streak >= 2:
-                # STUCK: ask instead of wandering (user correction)
-                ask_question(stage["asks_when_stuck"], {
-                    "stage": stage["id"], "items": end_counts,
-                    "phase": st.get("phase"), "day": st.get("day")})
-                stuck_streak = 0
+            # Session A Task 2: branch on the job's own verdict, not just counts
+            report = last_report or {}
+            reason = report.get("reason")
+            if reason == "stalled":
+                # target unreachable -> pick a different one; NOT a stuck signal
+                log("  ⚠️ job stalled - target unreachable, picking another (not stuck)")
+            elif reason == "swing_cap":
+                # tree/rock needs more swings -> re-issue with a higher count
+                p = report.get("prefab")
+                if p:
+                    log(f"  ⚠️ swing_cap on {p} - re-issuing with count 60")
+                    d_ri = log_before(st, f"re-issue gather {p}->{PRODUCTS.get(p, p)} ({plan_digest(st)})",
+                                      {"action": "gather_job", "prefab": p, "count": 60},
+                                      "swing_cap re-issue",
+                                      {f"item_counts.{PRODUCTS.get(p, p)}": "+1"})
+                    send({"action": "gather_job", "prefab": p, "count": 60})
+                    time.sleep(5)
+                    log_after(d_ri, get_state())
+            elif report.get("ok") is False and "no matching entity" in str(report.get("error", "")):
+                # target gone -> move on; NOT a stuck signal
+                log("  ⚠️ target gone (no matching entity) - moving on (not stuck)")
+            elif report.get("lost"):
+                for k in (report.get("lost") or {}):
+                    if k in ("axe", "pickaxe", "shovel", "hammer", "goldenaxe", "goldenshovel"):
+                        log(f"  🔨 TOOL BROKE: {k} - needs recrafting")
+            else:
+                stuck_streak += 1
+                if stuck_streak >= 2:
+                    # STUCK: ask instead of wandering (user correction) - non-blocking
+                    ask_question_async(stage["asks_when_stuck"], {
+                        "stage": stage["id"], "items": end_counts,
+                        "phase": st.get("phase"), "day": st.get("day")})
+                    stuck_streak = 0
+                    continue
         last_health = (st.get("health") or [150])[0]
         # checkpoint
         ag = load_json(AGENT_F, {})

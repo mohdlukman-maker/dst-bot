@@ -1,4 +1,14 @@
 #!/usr/bin/env python3
+# TODO (Session A, deferred by design): cap/slim the _DECISIONS dict.
+# _DECISIONS stores the full `before` state (incl. nearby[]) and only
+# log_outcome pops entries - any path that never closes a decision leaks
+# a snapshot. Do NOT fix with a flat "field: value" digest: _get_path
+# splits on dots and walks NESTED dicts ("item_counts.log" resolves as
+# state["item_counts"]["log"]), so a flat key returns None for every
+# lookup, every expectation scores inconclusive, and the learning data
+# goes quietly worthless. If slimmed, keep the same nested shape the
+# expectations reference (or change _get_path to match). Leak magnitude:
+# a few hundred snapshots over a long run - acceptable for now.
 """
 lib/decision_log.py — falsifiable predictions (Task 3).
 
@@ -130,12 +140,14 @@ def log_outcome(decision_id: str, state_after: dict) -> str:
                     results.append("confirmed")
                 else:
                     results.append("refuted")
-        if "refuted" in results:
-            verdict = "refuted"
-        elif "inconclusive" in results and "confirmed" not in results:
+        if not results:
             verdict = "inconclusive"
-        elif "inconclusive" in results:
-            verdict = "inconclusive" if "confirmed" not in results else "confirmed"
+        elif "refuted" in results:
+            verdict = "refuted"
+        elif "confirmed" in results:
+            verdict = "confirmed"
+        else:
+            verdict = "inconclusive"
 
         record = {
             "decision_id": decision_id,

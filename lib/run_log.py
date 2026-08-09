@@ -36,7 +36,9 @@ def start_run(mod_version: str, notes: str = "") -> str:
     base = datetime.now().strftime("%Y-%m-%dT%H:%M:%S")
     run_id = base
     n = 1
-    while run_id in _RUNS or run_id in _CLOSED:
+    # _CLOSED holds (run_id, bucket) tuples since Session A2 T5 - a string
+    # `in` check would never match. Check the first element of each key.
+    while run_id in _RUNS or any(k[0] == run_id for k in _CLOSED):
         run_id = f"{base}-{n}"
         n += 1
     _RUNS[run_id] = {
@@ -52,9 +54,19 @@ def end_run(run_id: str, final_state: dict, cause: str, extra: dict = None) -> b
     Idempotent: a run_id is only ever written once (v9 fix - the try/except/
     finally triple-call produced double entries)."""
     try:
-        if run_id in _CLOSED:
+        # Session A2 T4: a falsy run_id must never poison _CLOSED - give it
+        # a distinct generated id before the guard.
+        if not run_id:
+            run_id = f"orphan-{int(time.time())}-{id(final_state) & 0xFFFF}"
+        # Session A2 T5: dedupe on (run_id, 10s bucket). A run can die many
+        # times, but not twice within ten seconds - and a flapping is_ghost
+        # read within 2s must record once. (Keying on run_id alone dropped
+        # every death after the first; discarding the key recorded the same
+        # death twice. The bucket keeps both ends honest.)
+        dedupe_key = (run_id, int(time.time()) // 10)
+        if dedupe_key in _CLOSED:
             return False
-        _CLOSED.add(run_id)
+        _CLOSED.add(dedupe_key)
         meta = _RUNS.pop(run_id, None)
         fs = final_state if isinstance(final_state, dict) else {}
         ex = extra if isinstance(extra, dict) else {}

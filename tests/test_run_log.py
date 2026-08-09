@@ -84,6 +84,30 @@ class TestRunLog(unittest.TestCase):
         self.assertFalse(run_log.end_run(rid, {"day": 9}, "starvation"))  # 2nd call refused
         self.assertEqual(len(self._runs()), 1)
 
+    def test_two_deaths_30s_apart_two_records(self):
+        # Session A2 T5: a run can die many times - different 10s buckets
+        rid = "run-deaths"
+        clock = [1000.0]
+        def fake_time():
+            return clock[0]
+        with mock.patch.object(run_log.time, "time", side_effect=fake_time):
+            self.assertTrue(run_log.end_run(rid, {"day": 3}, "mob:spider"))
+            clock[0] = 1030.0   # 30s later -> next bucket
+            self.assertTrue(run_log.end_run(rid, {"day": 3}, "starvation"))
+        self.assertEqual(len(self._runs()), 2)
+
+    def test_same_death_within_2s_one_record(self):
+        # Session A2 T5: a flapping is_ghost read must not double-record
+        rid = "run-flap"
+        clock = [1000.0]
+        def fake_time():
+            return clock[0]
+        with mock.patch.object(run_log.time, "time", side_effect=fake_time):
+            self.assertTrue(run_log.end_run(rid, {"day": 3}, "mob:spider"))
+            clock[0] = 1002.0   # 2s later -> same 10s bucket -> refused
+            self.assertFalse(run_log.end_run(rid, {"day": 3}, "mob:spider"))
+        self.assertEqual(len(self._runs()), 1)
+
     def test_corrupt_line_skipped(self):
         path = os.path.join(run_log._DATA_DIR, "runs.jsonl")
         with open(path, "a", encoding="utf-8") as f:

@@ -1,0 +1,11 @@
+{
+ "ts": 1786268826.9515817,
+ "question": "I have an axe but still need a torch (2 cutgrass + 2 twigs). The area is picked clean. Where should I look?",
+ "context": {
+  "stage": "tools",
+  "items": {},
+  "phase": "night",
+  "day": 6
+ },
+ "stage": "tools"
+}

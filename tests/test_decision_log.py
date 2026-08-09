@@ -92,6 +92,65 @@ class TestDecisionLog(unittest.TestCase):
         self.assertEqual(len(refs_a), 2)
         self.assertTrue(all(r["run_id"] == "A" for r in refs_a))
 
+    def test_empty_expected_inconclusive(self):
+        # Session A fix T5: expectation-less decisions must NOT score confirmed
+        did = decision_log.log_decision("r", {"a": 1}, "g", {"action": "x"}, "w", {})
+        self.assertEqual(decision_log.log_outcome(did, {"a": 2}), "inconclusive")
+
+    def test_mixed_confirmed_and_inconclusive_confirmed(self):
+        # T5: mixed scores confirmed only when at least one expectation held.
+        # NOTE: state must be NESTED - _get_path walks dicts by dot-path.
+        before = {"item_counts": {"twigs": 0}}
+        after = {"item_counts": {"twigs": 1}}
+        did = decision_log.log_decision("r", before, "g", {"action": "x"}, "w",
+                                        {"item_counts.twigs": "+1", "pos.x": "changes"})
+        # twigs +1 held (confirmed); pos.x missing in BOTH -> inconclusive
+        self.assertEqual(decision_log.log_outcome(did, after), "confirmed")
+
+    def test_nearest_threat_distance_increases_confirmed(self):
+        # Task 7 follow-up: a flee that opened the gap scores confirmed
+        before = {"nearest_threat_d": 8}
+        after = {"nearest_threat_d": 20}
+        did = decision_log.log_decision("r", before, "g", {"action": "x"}, "w",
+                                        {"nearest_threat_d": "increases"})
+        self.assertEqual(decision_log.log_outcome(did, after), "confirmed")
+
+    def test_craft_auto_equip_confirmed(self):
+        # Session A2 T1: crafted tool auto-equips -> lives in equipped, not
+        # item_counts. The owned map must make the expectation score confirmed.
+        before = {"item_counts": {"twigs": 1, "flint": 1}, "equipped": []}
+        after = {"item_counts": {"twigs": 1, "flint": 1}, "equipped": ["axe"]}
+        # simulate what get_state() derives
+        for st_ in (before, after):
+            owned = dict(st_.get("item_counts") or {})
+            for it in (st_.get("equipped") or []):
+                owned[it] = owned.get(it, 0) + 1
+            st_["owned"] = owned
+        did = decision_log.log_decision("r", before, "g", {"action": "craft"}, "w",
+                                        {"owned.axe": "+1"})
+        self.assertEqual(decision_log.log_outcome(did, after), "confirmed")
+
+    def test_craft_auto_equip_refuted(self):
+        # craft did not land -> owned.axe stays 0 -> refuted
+        before = {"item_counts": {"twigs": 1, "flint": 1}, "equipped": []}
+        after = {"item_counts": {"twigs": 1, "flint": 1}, "equipped": []}
+        for st_ in (before, after):
+            owned = dict(st_.get("item_counts") or {})
+            for it in (st_.get("equipped") or []):
+                owned[it] = owned.get(it, 0) + 1
+            st_["owned"] = owned
+        did = decision_log.log_decision("r", before, "g", {"action": "craft"}, "w",
+                                        {"owned.axe": "+1"})
+        self.assertEqual(decision_log.log_outcome(did, after), "refuted")
+
+    def test_nearest_threat_distance_decreases_refuted(self):
+        # Task 7 follow-up: a flee that let the merm close 8->3 scores refuted
+        before = {"nearest_threat_d": 8}
+        after = {"nearest_threat_d": 3}
+        did = decision_log.log_decision("r", before, "g", {"action": "x"}, "w",
+                                        {"nearest_threat_d": "increases"})
+        self.assertEqual(decision_log.log_outcome(did, after), "refuted")
+
 
 if __name__ == "__main__":
     unittest.main(verbosity=2)

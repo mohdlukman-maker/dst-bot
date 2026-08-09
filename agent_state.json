@@ -1,10 +1,6 @@
 {
- "ts": 1786179919.1295214,
- "stage": "tools",
- "items": {
-  "log": 1,
-  "twigs": 4,
-  "axe": 1
- },
- "mode": "stage"
+ "ts": 1786268832.9652357,
+ "items": {},
+ "mode": "stage",
+ "stage": "tools"
 }
