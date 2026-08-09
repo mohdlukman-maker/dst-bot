@@ -4297,6 +4297,377 @@
    "z": 78.0,
    "last_seen_day": 6,
    "last_seen_ts": 1786268770
+  },
+  "grass|-23|-146": {
+   "prefab": "grass",
+   "x": -23.0,
+   "z": -146.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786273920
+  },
+  "grass|-26|-151": {
+   "prefab": "grass",
+   "x": -26.0,
+   "z": -151.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786273920
+  },
+  "grass|-15|-134": {
+   "prefab": "grass",
+   "x": -15.0,
+   "z": -134.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786273920
+  },
+  "fireflies|1|-163": {
+   "prefab": "fireflies",
+   "x": 1.0,
+   "z": -163.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786274225
+  },
+  "fireflies|-14|-178": {
+   "prefab": "fireflies",
+   "x": -14.0,
+   "z": -178.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786274225
+  },
+  "fireflies|-3|-131": {
+   "prefab": "fireflies",
+   "x": -3.0,
+   "z": -131.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786273920
+  },
+  "wormhole|20|-168": {
+   "prefab": "wormhole",
+   "x": 20.0,
+   "z": -168.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786274225
+  },
+  "multiplayer_portal|-2|-150": {
+   "prefab": "multiplayer_portal",
+   "x": -2.0,
+   "z": -150.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786274225
+  },
+  "rabbithole|-19|-135": {
+   "prefab": "rabbithole",
+   "x": -19.0,
+   "z": -135.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786273920
+  },
+  "butterfly|-10|-152": {
+   "prefab": "butterfly",
+   "x": -10.0,
+   "z": -152.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786273920
+  },
+  "butterfly|3|-160": {
+   "prefab": "butterfly",
+   "x": 3.0,
+   "z": -160.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786273920
+  },
+  "butterfly|0|-140": {
+   "prefab": "butterfly",
+   "x": 0.0,
+   "z": -140.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786273920
+  },
+  "robin|-6|-165": {
+   "prefab": "robin",
+   "x": -6.0,
+   "z": -165.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786273920
+  },
+  "flower|-3|-158": {
+   "prefab": "flower",
+   "x": -3.0,
+   "z": -158.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786274225
+  },
+  "flower|-9|-152": {
+   "prefab": "flower",
+   "x": -9.0,
+   "z": -152.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786274225
+  },
+  "flower|-7|-148": {
+   "prefab": "flower",
+   "x": -7.0,
+   "z": -148.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786274225
+  },
+  "carnival_host|-8|-161": {
+   "prefab": "carnival_host",
+   "x": -8.0,
+   "z": -161.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786273920
+  },
+  "evergreen|-14|-170": {
+   "prefab": "evergreen",
+   "x": -14.0,
+   "z": -170.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786273920
+  },
+  "evergreen|6|-166": {
+   "prefab": "evergreen",
+   "x": 6.0,
+   "z": -166.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786274225
+  },
+  "evergreen|10|-158": {
+   "prefab": "evergreen",
+   "x": 10.0,
+   "z": -158.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786274225
+  },
+  "sapling|13|-167": {
+   "prefab": "sapling",
+   "x": 13.0,
+   "z": -167.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786274225
+  },
+  "pollen|-6|-157": {
+   "prefab": "pollen",
+   "x": -6.0,
+   "z": -157.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786273920
+  },
+  "rain|-6|-157": {
+   "prefab": "rain",
+   "x": -6.0,
+   "z": -157.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786273920
+  },
+  "lunarhail|-6|-157": {
+   "prefab": "lunarhail",
+   "x": -6.0,
+   "z": -157.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786273920
+  },
+  "snow|-6|-157": {
+   "prefab": "snow",
+   "x": -6.0,
+   "z": -157.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786273920
+  },
+  "rock1|101|-159": {
+   "prefab": "rock1",
+   "x": 101.0,
+   "z": -159.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786274142
+  },
+  "rock1|110|-159": {
+   "prefab": "rock1",
+   "x": 110.0,
+   "z": -159.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786274142
+  },
+  "rock1|85|-134": {
+   "prefab": "rock1",
+   "x": 85.0,
+   "z": -134.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786274142
+  },
+  "seeds|76|-175": {
+   "prefab": "seeds",
+   "x": 76.0,
+   "z": -175.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786274142
+  },
+  "rock2|106|-158": {
+   "prefab": "rock2",
+   "x": 106.0,
+   "z": -158.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786274142
+  },
+  "rock2|106|-138": {
+   "prefab": "rock2",
+   "x": 106.0,
+   "z": -138.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786274142
+  },
+  "rock2|101|-174": {
+   "prefab": "rock2",
+   "x": 101.0,
+   "z": -174.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786274142
+  },
+  "flint|109|-154": {
+   "prefab": "flint",
+   "x": 109.0,
+   "z": -154.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786274142
+  },
+  "flint|109|-142": {
+   "prefab": "flint",
+   "x": 109.0,
+   "z": -142.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786274142
+  },
+  "flint|85|-142": {
+   "prefab": "flint",
+   "x": 85.0,
+   "z": -142.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786274142
+  },
+  "lunarhail|98|-154": {
+   "prefab": "lunarhail",
+   "x": 98.0,
+   "z": -154.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786274142
+  },
+  "rain|98|-154": {
+   "prefab": "rain",
+   "x": 98.0,
+   "z": -154.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786274142
+  },
+  "pollen|98|-154": {
+   "prefab": "pollen",
+   "x": 98.0,
+   "z": -154.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786274142
+  },
+  "snow|98|-154": {
+   "prefab": "snow",
+   "x": 98.0,
+   "z": -154.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786274142
+  },
+  "grass|22|-174": {
+   "prefab": "grass",
+   "x": 22.0,
+   "z": -174.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786274225
+  },
+  "grass|25|-167": {
+   "prefab": "grass",
+   "x": 25.0,
+   "z": -167.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786274225
+  },
+  "grass|5|-194": {
+   "prefab": "grass",
+   "x": 5.0,
+   "z": -194.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786274225
+  },
+  "fireflies|6|-183": {
+   "prefab": "fireflies",
+   "x": 6.0,
+   "z": -183.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786274225
+  },
+  "evergreen|18|-178": {
+   "prefab": "evergreen",
+   "x": 18.0,
+   "z": -178.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786274225
+  },
+  "carrot_planted|29|-190": {
+   "prefab": "carrot_planted",
+   "x": 29.0,
+   "z": -190.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786274225
+  },
+  "rabbithole|-6|-187": {
+   "prefab": "rabbithole",
+   "x": -6.0,
+   "z": -187.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786274225
+  },
+  "crow|6|-176": {
+   "prefab": "crow",
+   "x": 6.0,
+   "z": -176.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786274225
+  },
+  "sapling|22|-179": {
+   "prefab": "sapling",
+   "x": 22.0,
+   "z": -179.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786274225
+  },
+  "sapling|17|-187": {
+   "prefab": "sapling",
+   "x": 17.0,
+   "z": -187.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786274225
+  },
+  "pollen|12|-168": {
+   "prefab": "pollen",
+   "x": 12.0,
+   "z": -168.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786274225
+  },
+  "rain|12|-168": {
+   "prefab": "rain",
+   "x": 12.0,
+   "z": -168.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786274225
+  },
+  "lunarhail|12|-168": {
+   "prefab": "lunarhail",
+   "x": 12.0,
+   "z": -168.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786274225
+  },
+  "snow|12|-168": {
+   "prefab": "snow",
+   "x": 12.0,
+   "z": -168.0,
+   "last_seen_day": 1,
+   "last_seen_ts": 1786274225
   }
  },
  "base": {

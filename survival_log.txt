@@ -221791,3 +221791,140 @@ LESSONS:
 [17:51:55] ⚠️ INVARIANT: unexplained damage - retreating
 [17:51:55] ⚠️ INVARIANT: unexplained damage - retreating
 [17:51:55] ⚠️ INVARIANT: unexplained damage - retreating
+[19:12:00] 🤖 LOCAL AGENT ONLINE (plan-driven + v8 invariants)
+[19:12:00] 🌍 ROAM at (-6,-157) | needs: {'twigs': 4, 'flint': 3, 'cutgrass': 2, 'rope': 1, 'log': 1}
+[19:12:07]   🎯 sapling@(13,-167) fired (max_swings=3)
+[19:12:09]   📋 job report: {"ok": true, "reply": "job started: sapling", "prefab": "sapling"}
+[19:12:15]   🎯 sapling@(22,-179) fired (max_swings=3)
+[19:12:16]   📋 job report: {"ok": true, "reply": "job started: sapling", "prefab": "sapling"}
+[19:12:16]   ✅ confirmed local: {'twigs': 1}
+[19:12:20]   🎯 sapling@(17,-187) fired (max_swings=3)
+[19:12:22]   📋 job report: {"ok": true, "reply": "job started: sapling", "prefab": "sapling"}
+[19:12:22]   ✅ confirmed local: {'twigs': 1}
+[19:12:27]   🎯 sapling@(17,-203) fired (max_swings=3)
+[19:12:29]   📋 job report: {"ok": true, "reply": "job started: sapling", "prefab": "sapling"}
+[19:12:29]   ✅ confirmed local: {'twigs': 1}
+[19:12:33]   🎯 grass@(22,-198) fired (max_swings=3)
+[19:12:34]   📋 job report: {"ok": true, "reply": "job started: grass", "prefab": "grass"}
+[19:12:34]   ✅ confirmed local: {'twigs': 1}
+[19:12:40]   🎯 grass@(37,-203) fired (max_swings=3)
+[19:12:42]   📋 job report: {"ok": true, "reply": "job started: grass", "prefab": "grass"}
+[19:12:42]   ✅ confirmed local: {'cutgrass': 1}
+[19:12:47] 🔨 LOCAL CRAFT: torch (materials present)
+[19:12:47] 🌍 ROAM at (37,-203) | needs: {'flint': 3, 'rope': 1, 'cutgrass': 1, 'log': 1}
+[19:12:50]   🎯 sapling@(41,-202) fired (max_swings=3)
+[19:12:51]   📋 job report: {"ok": true, "reply": "job started: sapling", "prefab": "sapling"}
+[19:12:55]   🎯 sapling@(45,-206) fired (max_swings=3)
+[19:12:56]   📋 job report: {"ok": true, "reply": "job started: sapling", "prefab": "sapling"}
+[19:12:59]   🎯 sapling@(45,-210) fired (max_swings=3)
+[19:13:00]   📋 job report: {"ok": true, "reply": "job started: sapling", "prefab": "sapling"}
+[19:13:04]   🎯 sapling@(50,-206) fired (max_swings=3)
+[19:13:05]   📋 job report: {"ok": true, "reply": "job started: sapling", "prefab": "sapling"}
+[19:13:05]   ✅ confirmed local: {'twigs': 1}
+[19:13:13]   🎯 grass@(73,-207) fired (max_swings=3)
+[19:13:15]   📋 job report: {"ok": true, "reply": "job started: grass", "prefab": "grass"}
+[19:13:23]   🎯 flint@(74,-182) fired (max_swings=3)
+[19:13:24]   📋 job report: {"ok": true, "reply": "job started: flint", "prefab": "flint"}
+[19:13:24]   ✅ confirmed local: {'cutgrass': 1, 'flint': 1}
+[19:13:29] 🔨 LOCAL CRAFT: axe (materials present)
+[19:13:29] 🌍 ROAM at (74,-182) | needs: {'flint': 1, 'rope': 1, 'cutgrass': 1, 'log': 1}
+[19:13:33]   🎯 sapling@(70,-179) fired (max_swings=3)
+[19:13:34]   📋 job report: {"ok": true, "reply": "job started: sapling", "prefab": "sapling"}
+[19:13:34]   ✅ confirmed local: {'axe': 1}
+[19:13:43]   🎯 flint@(49,-163) fired (max_swings=3)
+[19:13:44]   📋 job report: {"ok": true, "reply": "job started: flint", "prefab": "flint"}
+[19:13:44]   ✅ confirmed local: {'flint': 1, 'twigs': 1}
+[19:13:47]   🎯 sapling@(54,-162) fired (max_swings=3)
+[19:13:49]   📋 job report: {"ok": true, "reply": "job started: sapling", "prefab": "sapling"}
+[19:13:52]   🎯 sapling@(57,-158) fired (max_swings=3)
+[19:13:54]   📋 job report: {"ok": true, "reply": "job started: sapling", "prefab": "sapling"}
+[19:13:54]   ✅ confirmed local: {'twigs': 1}
+[19:13:58]   🎯 sapling@(50,-150) fired (max_swings=3)
+[19:14:00]   📋 job report: {"ok": true, "reply": "job started: sapling", "prefab": "sapling"}
+[19:14:00]   ✅ confirmed local: {'twigs': 1}
+[19:14:05]   🎯 sapling@(45,-139) fired (max_swings=3)
+[19:14:06]   📋 job report: {"ok": true, "reply": "job started: sapling", "prefab": "sapling"}
+[19:14:08] 🔥 KIT: gather 2 cutgrass, 2 log (campfire kit) (priority job)
+[19:14:28] 🌍 ROAM at (49,-142) | needs: {'flint': 1, 'cutgrass': 2, 'rope': 1, 'log': 1}
+[19:14:32]   🎯 sapling@(57,-138) fired (max_swings=3)
+[19:14:34]   📋 job report: {"ok": true, "reply": "job started: sapling", "prefab": "sapling"}
+[19:14:43]   🎯 flint@(85,-142) fired (max_swings=3)
+[19:14:44]   📋 job report: {"ok": true, "reply": "job started: flint", "prefab": "flint"}
+[19:14:44]   ✅ confirmed local: {'twigs': 1}
+[19:14:52]   🎯 flint@(109,-142) fired (max_swings=3)
+[19:14:54]   📋 job report: {"ok": true, "reply": "job started: flint", "prefab": "flint"}
+[19:14:59]   🎯 flint@(109,-154) fired (max_swings=3)
+[19:15:00]   📋 job report: {"ok": true, "reply": "job started: flint", "prefab": "flint"}
+[19:15:07]   🎯 flint@(102,-171) fired (max_swings=3)
+[19:15:08]   📋 job report: {"ok": true, "reply": "job started: flint", "prefab": "flint"}
+[19:15:16]   🎯 flint@(122,-186) fired (max_swings=3)
+[19:15:18]   📋 job report: {"ok": true, "reply": "job started: flint", "prefab": "flint"}
+[19:15:20] 🔥 KIT: gather 2 cutgrass, 2 log (campfire kit) (priority job)
+[19:15:20] 🌍 ROAM at (122,-186) | needs: {'flint': 1, 'cutgrass': 2, 'rope': 1, 'log': 1}
+[19:15:24]   🎯 flint@(133,-190) fired (max_swings=3)
+[19:15:26]   📋 job report: {"ok": true, "reply": "job started: flint", "prefab": "flint"}
+[19:15:30]   🎯 flint@(142,-187) fired (max_swings=3)
+[19:15:32]   📋 job report: {"ok": true, "reply": "job started: flint", "prefab": "flint"}
+[19:15:32] 🧭 explore -> (13,-167)
+[19:15:46]   🎯 flint@(109,-154) fired (max_swings=3)
+[19:15:48]   📋 job report: {"ok": true, "reply": "job started: flint", "prefab": "flint"}
+[19:15:53]   🎯 flint@(109,-142) fired (max_swings=3)
+[19:15:54]   📋 job report: {"ok": true, "reply": "job started: flint", "prefab": "flint"}
+[19:16:02]   🎯 flint@(85,-142) fired (max_swings=3)
+[19:16:04]   📋 job report: {"ok": true, "reply": "job started: flint", "prefab": "flint"}
+[19:16:06] 🔥 KIT: gather 2 cutgrass, 2 log (campfire kit) (priority job)
+[19:16:26] 🌍 ROAM at (59,-136) | needs: {'flint': 1, 'cutgrass': 2, 'rope': 1, 'log': 1}
+[19:16:28]   🎯 evergreen@(58,-135) fired (max_swings=25)
+[19:16:29]   📋 job report: {"ok": true, "reply": "job started: evergreen", "prefab": "evergreen"}
+[19:16:35]   🎯 sapling@(50,-150) fired (max_swings=3)
+[19:16:36]   📋 job report: {"ok": false, "needs_tool": "shovel", "error": "no_tool", "prefab": "sapling"}
+[19:16:41]   🎯 evergreen@(49,-142) fired (max_swings=25)
+[19:16:42]   📋 job report: {"ok": true, "reply": "job started: evergreen", "prefab": "evergreen"}
+[19:16:47]   🎯 evergreen@(37,-142) fired (max_swings=25)
+[19:16:49]   📋 job report: {"ok": true, "reply": "job started: evergreen", "prefab": "evergreen"}
+[19:16:53]   🎯 sapling@(38,-146) fired (max_swings=3)
+[19:16:55]   📋 job report: {"ok": false, "needs_tool": "shovel", "error": "no_tool", "prefab": "sapling"}
+[19:16:55]   ✅ confirmed local: {'log': 3, 'pinecone': 2}
+[19:16:55] 🧭 explore -> (13,-167)
+[19:17:07] 🔥 KIT: gather 2 cutgrass (campfire kit) (priority job)
+[19:17:30] 🔨 LOCAL CRAFT: axe (materials present)
+[19:17:30] 🌍 ROAM at (22,-174) | needs: {'flint': 1, 'rope': 1, 'cutgrass': 1}
+[19:17:30] 🔄 STAGE ADVANCED: tools -> campfire
+[19:17:30] ❓ QUESTION ASKED: Stage 'campfire' is next: Build a campfire before night (3 cutgrass + 2 logs)
+[19:17:36]   🎯 sapling@(30,-150) fired (max_swings=3)
+[19:17:38]   📋 job report: {"ok": true, "reply": "job started: sapling", "prefab": "sapling"}
+[19:17:38]   ✅ confirmed local: {'axe': 1, 'cutgrass': 1}
+[19:17:41]   🎯 sapling@(30,-146) fired (max_swings=3)
+[19:17:42]   📋 job report: {"ok": true, "reply": "job started: sapling", "prefab": "sapling"}
+[19:17:42]   ✅ confirmed local: {'twigs': 1}
+[19:17:46]   🎯 sapling@(34,-150) fired (max_swings=3)
+[19:17:47]   📋 job report: {"ok": true, "reply": "job started: sapling", "prefab": "sapling"}
+[19:17:47]   ✅ confirmed local: {'twigs': 1}
+[19:17:56]   🎯 grass@(42,-175) fired (max_swings=3)
+[19:17:57]   📋 job report: {"ok": true, "reply": "job started: grass", "prefab": "grass"}
+[19:17:57]   ✅ confirmed local: {'twigs': 1}
+[19:18:01]   🎯 sapling@(46,-183) fired (max_swings=3)
+[19:18:03]   📋 job report: {"ok": true, "reply": "job started: sapling", "prefab": "sapling"}
+[19:18:03]   ✅ confirmed local: {'cutgrass': 1}
+[19:18:08]   🎯 sapling@(57,-179) fired (max_swings=3)
+[19:18:09]   📋 job report: {"ok": true, "reply": "job started: sapling", "prefab": "sapling"}
+[19:18:09]   ✅ confirmed local: {'twigs': 1}
+[19:18:11] 🔥 KIT: gather 1 cutgrass (campfire kit) (priority job)
+[19:18:33] 🔨 LOCAL CRAFT: campfire (materials present)
+[19:18:33] 🌍 ROAM at (69,-171) | needs: {'flint': 3, 'rope': 1}
+[19:18:33] 🌙 night + no light - stop roaming
+[19:18:35] 🔥 KIT: gather 3 cutgrass, 1 log (campfire kit) (priority job)
+[19:18:55] 🌍 ROAM at (62,-158) | needs: {'flint': 2, 'cutgrass': 2, 'rope': 1, 'log': 1}
+[19:19:04]   🎯 flint@(85,-142) fired (max_swings=3)
+[19:19:06]   📋 job report: {"ok": true, "reply": "job started: flint", "prefab": "flint"}
+[19:19:06]   ✅ confirmed local: {'flint': 1}
+[19:19:14]   🎯 flint@(109,-142) fired (max_swings=3)
+[19:19:15]   📋 job report: {"ok": true, "reply": "job started: flint", "prefab": "flint"}
+[19:19:20]   🎯 flint@(109,-154) fired (max_swings=3)
+[19:19:21]   📋 job report: {"ok": true, "reply": "job started: flint", "prefab": "flint"}
+[19:19:28]   🎯 flint@(102,-171) fired (max_swings=3)
+[19:19:29]   📋 job report: {"ok": true, "reply": "job started: flint", "prefab": "flint"}
+[19:19:37]   🎯 flint@(122,-186) fired (max_swings=3)
+[19:19:39]   📋 job report: {"ok": true, "reply": "job started: flint", "prefab": "flint"}
+[19:19:44]   🎯 flint@(133,-190) fired (max_swings=3)
+[19:19:45]   📋 job report: {"ok": true, "reply": "job started: flint", "prefab": "flint"}

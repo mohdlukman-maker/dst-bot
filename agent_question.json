@@ -1,11 +1,8 @@
 {
- "ts": 1786268826.9515817,
- "question": "I have an axe but still need a torch (2 cutgrass + 2 twigs). The area is picked clean. Where should I look?",
+ "ts": 1786274250.0435266,
+ "question": "Stage 'campfire' is next: Build a campfire before night (3 cutgrass + 2 logs)",
  "context": {
-  "stage": "tools",
-  "items": {},
-  "phase": "night",
-  "day": 6
+  "stage": "campfire"
  },
- "stage": "tools"
+ "stage": "campfire"
 }
