@@ -1,0 +1,12 @@
+name = "DST AI Bot"
+description = "AI bot channel: writes player state to state.json, runs commands from command.json."
+author = "Hermes"
+version = "0.2.0"
+forumthread = ""
+api_version = 10
+dont_starve_compatible = false
+reign_of_giants_compatible = false
+shipwrecked_compatible = false
+dst_compatible = true
+client_only_mod = false
+all_clients_require_mod = false
