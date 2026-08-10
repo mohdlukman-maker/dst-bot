@@ -916,8 +916,19 @@ local function job_tick()
             local ba2 = GLOBAL.BufferedAction(myplayer, job.target, job.action)
             myplayer.components.locomotor:PushAction(ba2, true)
             job.swings = job.swings + 1
+            job.pick_pushed_at = TheSimRef:GetRealTime()
         elseif job.phase == "settling" then
             return  -- picksomething fired; settling will sweep
+        else
+            -- STALL WATCHDOG (pick mode): if the engine silently rejects the
+            -- PICK (out of range / target went invalid - the "I can't do
+            -- that" case), 'picksomething' never fires and job.phase stays
+            -- "working" forever with no other check to catch it, unlike
+            -- work-mode's workleft watchdog. Time out after 5s.
+            if job.pick_pushed_at and TheSimRef:GetRealTime() - job.pick_pushed_at > 5000 then
+                job_report("failed", job.phase, "stalled_pick")
+                return
+            end
         end
         return
     end

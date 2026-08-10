@@ -92,6 +92,10 @@ def ensure_light(st):
     if not light_reflex_armed:
         light_reflex_armed = True
         if "torch" in items:
+            # preempt first: a chop/mine job may be mid-swing with the axe
+            # equipped - swapping hands under it without preempting kills
+            # the job as tool_broke instead of a clean "preempted" report.
+            send({"action": "preempt_job"})
             send({"action": "equip", "item": "torch"})
             return "equipped torch (dusk prep)"
         # no torch yet: preempt jobs and signal the deliberative layer
@@ -124,6 +128,7 @@ def ensure_fire_fuel(st):
         if not has_light:
             # if we have a torch in inventory, equip it NOW
             if "torch" in items:
+                send({"action": "preempt_job"})
                 send({"action": "equip", "item": "torch"})
                 return "EMERGENCY: dark + no fire - equipped torch"
             # no torch held: if we carry the materials, CRAFT one immediately
@@ -201,7 +206,10 @@ def flee_threats(st):
             tx, tz = px + 1, pz + 1   # unknown direction: nudge NE
         dx, dz = px - tx, pz - tz     # opposite of threat direction
         mag = math.sqrt(dx*dx + dz*dz) or 1
-        step = 15
+        # postmortem (2026-08-10): 15 units wasn't enough to clear a dense
+        # tentacle cluster - Wilson fled one tentacle's range straight into
+        # the next one's. Widened to 30, matching local_agent.py's flee.
+        step = 30
         nx, nz = px + dx/mag*step, pz + dz/mag*step
         send({"action": "preempt_job"})
         send({"action": "move_to", "x": nx, "z": nz})

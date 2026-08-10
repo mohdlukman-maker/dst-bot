@@ -221928,3 +221928,834 @@ LESSONS:
 [19:19:39]   📋 job report: {"ok": true, "reply": "job started: flint", "prefab": "flint"}
 [19:19:44]   🎯 flint@(133,-190) fired (max_swings=3)
 [19:19:45]   📋 job report: {"ok": true, "reply": "job started: flint", "prefab": "flint"}
+[19:59:52] 🤖 LOCAL AGENT ONLINE (plan-driven + v8 invariants)
+[19:59:52] 🌍 ROAM at (245,-311) | needs: {'twigs': 4, 'flint': 3, 'cutgrass': 2, 'rope': 1, 'log': 1}
+[20:00:00]   🎯 sapling@(269,-303) fired (max_swings=3)
+[20:00:02]   📋 job report: {"ok": true, "reply": "job started: sapling", "prefab": "sapling"}
+[20:00:06]   🎯 flint@(277,-299) fired (max_swings=3)
+[20:00:07]   📋 job report: {"ok": true, "reply": "job started: flint", "prefab": "flint"}
+[20:00:07]   ✅ confirmed local: {'twigs': 1, 'flint': 1}
+[20:00:12]   🎯 sapling@(282,-311) fired (max_swings=3)
+[20:00:14]   📋 job report: {"ok": true, "reply": "job started: sapling", "prefab": "sapling"}
+[20:00:16]   🎯 sapling@(282,-314) fired (max_swings=3)
+[20:00:18]   📋 job report: {"ok": true, "reply": "job started: sapling", "prefab": "sapling"}
+[20:00:18]   ✅ confirmed local: {'twigs': 1}
+[20:00:21]   🎯 sapling@(282,-318) fired (max_swings=3)
+[20:00:22]   📋 job report: {"ok": true, "reply": "job started: sapling", "prefab": "sapling"}
+[20:00:22]   ✅ confirmed local: {'twigs': 2}
+[20:00:25]   🎯 grass@(282,-322) fired (max_swings=3)
+[20:00:27]   📋 job report: {"ok": true, "reply": "job started: grass", "prefab": "grass"}
+[20:00:27]   ✅ confirmed local: {'cutgrass': 1}
+[20:00:32] 🔨 LOCAL CRAFT: axe (materials present)
+[20:00:32] 🌍 ROAM at (282,-322) | needs: {'flint': 1, 'cutgrass': 2, 'rope': 1, 'log': 1}
+[20:00:35]   🎯 grass@(286,-323) fired (max_swings=3)
+[20:00:36]   📋 job report: {"ok": true, "reply": "job started: grass", "prefab": "grass"}
+[20:00:36]   ✅ confirmed local: {'cutgrass': 1}
+[20:00:43]   🎯 grass@(266,-331) fired (max_swings=3)
+[20:00:45]   📋 job report: {"ok": true, "reply": "job started: grass", "prefab": "grass"}
+[20:00:48]   🎯 grass@(269,-339) fired (max_swings=3)
+[20:00:50]   📋 job report: {"ok": true, "reply": "job started: grass", "prefab": "grass"}
+[20:00:50]   ✅ confirmed local: {'cutgrass': 1}
+[20:00:54]   🎯 grass@(261,-338) fired (max_swings=3)
+[20:00:55]   📋 job report: {"ok": true, "reply": "job started: grass", "prefab": "grass"}
+[20:00:55]   ✅ confirmed local: {'cutgrass': 2}
+[20:01:02]   🎯 sapling@(242,-339) fired (max_swings=3)
+[20:01:03]   📋 job report: {"ok": true, "reply": "job started: sapling", "prefab": "sapling"}
+[20:01:03]   ✅ confirmed local: {'twigs': 1}
+[20:01:07]   🎯 sapling@(242,-347) fired (max_swings=3)
+[20:01:09]   📋 job report: {"ok": true, "reply": "job started: sapling", "prefab": "sapling"}
+[20:01:11] 🔥 KIT: gather 2 log (campfire kit) (priority job)
+[20:01:34] 🔨 LOCAL CRAFT: torch (materials present)
+[20:01:34] 🌍 ROAM at (245,-339) | needs: {'flint': 2, 'rope': 1, 'log': 1}
+[20:01:43]   🎯 flint@(202,-342) fired (max_swings=3)
+[20:01:44]   📋 job report: {"ok": true, "reply": "job started: flint", "prefab": "flint"}
+[20:01:44]   ✅ confirmed local: {'flint': 1, 'axe': 1}
+[20:01:51]   🎯 flint@(190,-327) fired (max_swings=3)
+[20:01:52]   📋 job report: {"ok": true, "reply": "job started: flint", "prefab": "flint"}
+[20:01:56]   🎯 sapling@(181,-330) fired (max_swings=3)
+[20:01:58]   📋 job report: {"ok": true, "reply": "job started: sapling", "prefab": "sapling"}
+[20:02:02]   🎯 grass@(190,-330) fired (max_swings=3)
+[20:02:04]   📋 job report: {"ok": true, "reply": "job started: grass", "prefab": "grass"}
+[20:02:04]   ✅ confirmed local: {'cutgrass': 1, 'twigs': 1}
+[20:02:10]   🎯 sapling@(205,-342) fired (max_swings=3)
+[20:02:12]   📋 job report: {"ok": true, "reply": "job started: sapling", "prefab": "sapling"}
+[20:02:15]   🎯 sapling@(209,-339) fired (max_swings=3)
+[20:02:16]   📋 job report: {"ok": true, "reply": "job started: sapling", "prefab": "sapling"}
+[20:02:16]   ✅ confirmed local: {'twigs': 1}
+[20:02:18] 🔥 KIT: gather 2 log (campfire kit) (priority job)
+[20:02:42] 🔨 LOCAL CRAFT: axe (materials present)
+[20:02:42] 🌍 ROAM at (218,-343) | needs: {'flint': 1, 'rope': 1, 'log': 1}
+[20:02:42] 🔄 STAGE ADVANCED: tools -> campfire
+[20:02:42] ❓ QUESTION ASKED: Stage 'campfire' is next: Build a campfire before night (3 cutgrass + 2 logs)
+[20:02:45]   🎯 grass@(226,-339) fired (max_swings=3)
+[20:02:46]   📋 job report: {"ok": true, "reply": "job started: grass", "prefab": "grass"}
+[20:02:46]   ✅ confirmed local: {'cutgrass': 1, 'axe': 1}
+[20:02:52]   🎯 sapling@(226,-355) fired (max_swings=3)
+[20:02:54]   📋 job report: {"ok": true, "reply": "job started: sapling", "prefab": "sapling"}
+[20:02:58]   🎯 evergreen@(218,-362) fired (max_swings=25)
+[20:03:00]   📋 job report: {"ok": true, "reply": "job started: evergreen", "prefab": "evergreen"}
+[20:03:08]   🎯 flint@(205,-387) fired (max_swings=3)
+[20:03:10]   📋 job report: {"ok": true, "reply": "job started: flint", "prefab": "flint"}
+[20:03:10]   ✅ confirmed local: {'flint': 1}
+[20:03:12]   🎯 sapling@(202,-387) fired (max_swings=3)
+[20:03:14]   📋 job report: {"ok": true, "reply": "job started: sapling", "prefab": "sapling"}
+[20:03:18]   🎯 sapling@(206,-395) fired (max_swings=3)
+[20:03:19]   📋 job report: {"ok": true, "reply": "job started: sapling", "prefab": "sapling"}
+[20:03:19]   ✅ confirmed local: {'twigs': 1}
+[20:03:21] 🔥 KIT: gather 2 log (campfire kit) (priority job)
+[20:03:44] 🔨 LOCAL CRAFT: axe (materials present)
+[20:03:44] 🌍 ROAM at (205,-402) | needs: {'flint': 1, 'rope': 1, 'log': 1}
+[20:03:50]   🎯 sapling@(209,-395) fired (max_swings=3)
+[20:03:52]   📋 job report: {"ok": true, "reply": "job started: sapling", "prefab": "sapling"}
+[20:03:52]   ✅ confirmed local: {'cutgrass': 1, 'axe': 1}
+[20:03:55]   🎯 sapling@(210,-390) fired (max_swings=3)
+[20:03:56]   📋 job report: {"ok": true, "reply": "job started: sapling", "prefab": "sapling"}
+[20:03:56]   ✅ confirmed local: {'twigs': 1}
+[20:04:01]   🎯 evergreen@(206,-381) fired (max_swings=25)
+[20:04:02]   📋 job report: {"workleft": 15, "lost": {"axe": 1}, "elapsed": 1, "status": "failed", "swings": 1, "phase": "working", "reason": "tool_broke", "prefab": "evergreen"}
+[20:04:02]   ✅ confirmed local: {'twigs': 1}
+[20:04:06]   🎯 grass@(213,-379) fired (max_swings=3)
+[20:04:08]   📋 job report: {"ok": true, "reply": "job started: grass", "prefab": "grass"}
+[20:04:12]   🎯 grass@(213,-371) fired (max_swings=3)
+[20:04:13]   📋 job report: {"ok": false, "needs_tool": "shovel", "error": "no_tool", "prefab": "grass"}
+[20:04:17]   🎯 evergreen@(217,-370) fired (max_swings=25)
+[20:04:19]   📋 job report: {"workleft": 15, "lost": {"axe": 1}, "elapsed": 1, "status": "failed", "swings": 0, "phase": "working", "reason": "tool_broke", "prefab": "evergreen"}
+[20:04:21] 🔥 KIT: gather 2 log (campfire kit) (priority job)
+[20:04:41] 🌍 ROAM at (213,-371) | needs: {'flint': 3, 'rope': 1, 'log': 1}
+[20:04:43]   🎯 evergreen@(210,-366) fired (max_swings=25)
+[20:04:45]   📋 job report: {"workleft": 10, "lost": {"axe": 1}, "elapsed": 1, "status": "failed", "swings": 0, "phase": "working", "reason": "tool_broke", "prefab": "evergreen"}
+[20:04:45]   ✅ confirmed local: {'cutgrass': 1}
+[20:04:51]   🎯 sapling@(194,-362) fired (max_swings=3)
+[20:04:52]   📋 job report: {"ok": true, "reply": "job started: sapling", "prefab": "sapling"}
+[20:04:55]   🎯 grass@(193,-366) fired (max_swings=3)
+[20:04:57]   📋 job report: {"ok": true, "reply": "job started: grass", "prefab": "grass"}
+[20:04:57]   ✅ confirmed local: {'twigs': 1}
+[20:05:01]   🎯 evergreen@(203,-371) fired (max_swings=25)
+[20:05:03]   📋 job report: {"workleft": 10, "lost": {"axe": 1}, "elapsed": 1, "status": "failed", "swings": 0, "phase": "working", "reason": "tool_broke", "prefab": "evergreen"}
+[20:05:03]   ✅ confirmed local: {'cutgrass': 1}
+[20:05:03] 🧭 explore -> (242,-339)
+[20:05:13] 🧭 explore -> (109,-154)
+[20:05:26]   🎯 sapling@(213,-294) fired (max_swings=3)
+[20:05:28]   📋 job report: {"ok": true, "reply": "job started: sapling", "prefab": "sapling"}
+[20:05:30] 🔥 KIT: gather 2 log (campfire kit) (priority job)
+[20:05:50] 🌍 ROAM at (206,-279) | needs: {'flint': 3, 'rope': 1, 'log': 1}
+[20:05:57]   🎯 flint@(177,-282) fired (max_swings=3)
+[20:05:58]   📋 job report: {"ok": true, "reply": "job started: flint", "prefab": "flint"}
+[20:05:58]   ✅ confirmed local: {'flint': 1}
+[20:06:03]   🎯 sapling@(173,-295) fired (max_swings=3)
+[20:06:05]   📋 job report: {"ok": true, "reply": "job started: sapling", "prefab": "sapling"}
+[20:06:08]   🎯 sapling@(174,-299) fired (max_swings=3)
+[20:06:09]   📋 job report: {"ok": true, "reply": "job started: sapling", "prefab": "sapling"}
+[20:06:13]   🎯 sapling@(170,-306) fired (max_swings=3)
+[20:06:15]   📋 job report: {"ok": true, "reply": "job started: sapling", "prefab": "sapling"}
+[20:06:15]   ✅ confirmed local: {'twigs': 1}
+[20:06:17]   🎯 sapling@(169,-310) fired (max_swings=3)
+[20:06:19]   📋 job report: {"ok": true, "reply": "job started: sapling", "prefab": "sapling"}
+[20:06:19]   ✅ confirmed local: {'twigs': 2}
+[20:06:28]   🎯 flint@(190,-327) fired (max_swings=3)
+[20:06:29]   📋 job report: {"ok": true, "reply": "job started: flint", "prefab": "flint"}
+[20:06:31] 🔥 KIT: gather 2 log (campfire kit) (priority job)
+[20:06:54] 🔨 LOCAL CRAFT: axe (materials present)
+[20:06:54] 🌍 ROAM at (184,-331) | needs: {'flint': 1, 'rope': 1, 'log': 1}
+[20:06:59]   🎯 grass@(186,-306) fired (max_swings=3)
+[20:07:01]   📋 job report: {"ok": true, "reply": "job started: grass", "prefab": "grass"}
+[20:07:01]   ✅ confirmed local: {'cutgrass': 1}
+[20:07:07]   🎯 sapling@(198,-306) fired (max_swings=3)
+[20:07:08]   📋 job report: {"ok": true, "reply": "job started: sapling", "prefab": "sapling"}
+[20:07:08]   ✅ confirmed local: {'cutgrass': 1, 'twigs': 1}
+[20:07:14]   🎯 evergreen@(205,-294) fired (max_swings=25)
+[20:07:15]   📋 job report: {"ok": true, "reply": "job started: evergreen", "prefab": "evergreen"}
+[20:07:21]   🎯 evergreen@(198,-287) fired (max_swings=25)
+[20:07:22]   📋 job report: {"ok": true, "reply": "job started: evergreen", "prefab": "evergreen"}
+[20:07:30]   🎯 evergreen@(190,-283) fired (max_swings=25)
+[20:07:31]   📋 job report: {"ok": true, "reply": "job started: evergreen", "prefab": "evergreen"}
+[20:07:31] 🧭 explore -> (198,-306)
+[20:07:48] 🍎 HUNGER 56: gathering food seeds@(231,-282)
+[20:07:56] 🍽 EATING seeds (hunger 1 left)
+[20:08:00] 🔥 KIT: gather 2 log (campfire kit) (priority job)
+[20:08:23] 🔨 LOCAL CRAFT: torch (materials present)
+[20:08:23] 🌍 ROAM at (234,-274) | needs: {'flint': 2, 'rope': 1, 'log': 1}
+[20:08:25]   🎯 evergreen@(234,-274) fired (max_swings=25)
+[20:08:27]   📋 job report: {"workleft": 6, "lost": {"axe": 1}, "elapsed": 1, "status": "failed", "swings": 1, "phase": "working", "reason": "tool_broke", "prefab": "evergreen"}
+[20:08:27]   ✅ confirmed local: {'axe': 1}
+[20:08:31]   🎯 sapling@(241,-267) fired (max_swings=3)
+[20:08:33]   📋 job report: {"ok": true, "reply": "job started: sapling", "prefab": "sapling"}
+[20:08:33] 🧭 explore -> (241,-267)
+[20:08:51]   🎯 evergreen@(261,-255) fired (max_swings=25)
+[20:08:52]   📋 job report: {"workleft": 15, "lost": {"axe": 1}, "elapsed": 1, "status": "failed", "swings": 1, "phase": "working", "reason": "tool_broke", "prefab": "evergreen"}
+[20:08:57]   🎯 sapling@(270,-251) fired (max_swings=3)
+[20:08:58]   📋 job report: {"ok": true, "reply": "job started: sapling", "prefab": "sapling"}
+[20:09:01]   🎯 evergreen@(270,-255) fired (max_swings=25)
+[20:09:03]   📋 job report: {"workleft": 10, "lost": {"axe": 1}, "elapsed": 0, "status": "failed", "swings": 0, "phase": "working", "reason": "tool_broke", "prefab": "evergreen"}
+[20:09:03]   ✅ confirmed local: {'twigs': 1}
+[20:09:10] 🍎 HUNGER 48: gathering food berrybush@(258,-254)
+[20:09:18] 🍽 EATING berries (hunger 1 left)
+[20:09:22] 🔥 KIT: gather 2 log (campfire kit) (priority job)
+[20:09:42] 🌍 ROAM at (261,-255) | needs: {'flint': 3, 'rope': 1, 'log': 1}
+[20:09:48]   🎯 sapling@(278,-275) fired (max_swings=3)
+[20:09:50]   📋 job report: {"ok": true, "reply": "job started: sapling", "prefab": "sapling"}
+[20:09:55]   🎯 flint@(293,-271) fired (max_swings=3)
+[20:09:57]   📋 job report: {"ok": true, "reply": "job started: flint", "prefab": "flint"}
+[20:09:57]   ✅ confirmed local: {'flint': 1}
+[20:10:02]   🎯 flint@(305,-270) fired (max_swings=3)
+[20:10:03]   📋 job report: {"ok": true, "reply": "job started: flint", "prefab": "flint"}
+[20:10:10]   🎯 flint@(302,-250) fired (max_swings=3)
+[20:10:12]   📋 job report: {"ok": true, "reply": "job started: flint", "prefab": "flint"}
+[20:10:17]   🎯 sapling@(294,-259) fired (max_swings=3)
+[20:10:18]   📋 job report: {"ok": true, "reply": "job started: sapling", "prefab": "sapling"}
+[20:10:25]   🎯 sapling@(298,-278) fired (max_swings=3)
+[20:10:26]   📋 job report: {"ok": true, "reply": "job started: sapling", "prefab": "sapling"}
+[20:10:26]   ✅ confirmed local: {'twigs': 2}
+[20:10:31] 🍎 HUNGER 44: gathering food seeds@(297,-279)
+[20:10:39] 🍽 EATING seeds (hunger 1 left)
+[20:10:50] 🍎 HUNGER 47: gathering food seeds@(293,-258)
+[20:10:58] 🍽 EATING seeds (hunger 1 left)
+[20:11:10] 🍎 HUNGER 49: gathering food carrot_planted@(317,-266)
+[20:11:18] 🍽 EATING carrot (hunger 1 left)
+[20:11:22] 🔥 KIT: gather 2 log (campfire kit) (priority job)
+[20:11:45] 🔨 LOCAL CRAFT: axe (materials present)
+[20:11:45] 🌍 ROAM at (314,-263) | needs: {'flint': 1, 'rope': 1, 'log': 1}
+[20:11:54]   🎯 flint@(330,-282) fired (max_swings=3)
+[20:11:55]   📋 job report: {"ok": true, "reply": "job started: flint", "prefab": "flint"}
+[20:11:55]   ✅ confirmed local: {'cutgrass': 1, 'axe': 1}
+[20:11:59]   🎯 flint@(330,-290) fired (max_swings=3)
+[20:12:01]   📋 job report: {"ok": true, "reply": "job started: flint", "prefab": "flint"}
+[20:12:05]   🎯 sapling@(318,-291) fired (max_swings=3)
+[20:12:07]   📋 job report: {"ok": true, "reply": "job started: sapling", "prefab": "sapling"}
+[20:12:11]   🎯 sapling@(310,-290) fired (max_swings=3)
+[20:12:56]   ⏳ no job report within 45s for sapling (cmdid 1786363931451) - outcome inconclusive
+[20:13:03]   🎯 flint@(305,-270) fired (max_swings=3)
+[20:13:05]   📋 job report: {"ok": true, "reply": "job started: flint", "prefab": "flint"}
+[20:13:12]   🎯 flint@(302,-250) fired (max_swings=3)
+[20:13:13]   📋 job report: {"ok": true, "reply": "job started: flint", "prefab": "flint"}
+[20:13:21] 🍎 HUNGER 41: gathering food seeds@(316,-255)
+[20:13:29] 🍽 EATING seeds (hunger 1 left)
+[20:13:33] 🔥 KIT: gather 2 log (campfire kit) (priority job)
+[20:13:56] 🔨 LOCAL CRAFT: axe (materials present)
+[20:13:56] 🌍 ROAM at (318,-259) | needs: {'flint': 1, 'rope': 1, 'log': 1}
+[20:14:01]   🎯 sapling@(313,-271) fired (max_swings=3)
+[20:14:02]   📋 job report: {"ok": true, "reply": "job started: sapling", "prefab": "sapling"}
+[20:14:02]   ✅ confirmed local: {'axe': 1}
+[20:14:11]   🎯 flint@(330,-290) fired (max_swings=3)
+[20:14:12]   📋 job report: {"ok": true, "reply": "job started: flint", "prefab": "flint"}
+[20:14:12]   ✅ confirmed local: {'flint': 1}
+[20:14:19]   🎯 sapling@(310,-290) fired (max_swings=3)
+[20:14:20]   📋 job report: {"ok": true, "reply": "job started: sapling", "prefab": "sapling"}
+[20:14:24]   🎯 sapling@(306,-287) fired (max_swings=3)
+[20:14:25]   📋 job report: {"ok": true, "reply": "job started: sapling", "prefab": "sapling"}
+[20:14:29]   🎯 sapling@(298,-286) fired (max_swings=3)
+[20:14:30]   📋 job report: {"ok": true, "reply": "job started: sapling", "prefab": "sapling"}
+[20:14:30]   ✅ confirmed local: {'twigs': 2}
+[20:14:36]   🎯 grass@(285,-278) fired (max_swings=3)
+[20:14:38]   📋 job report: {"ok": true, "reply": "job started: grass", "prefab": "grass"}
+[20:14:46] 🍎 HUNGER 32: gathering food seeds@(300,-286)
+[20:14:54] 🍽 EATING seeds (hunger 1 left)
+[20:15:05] 🍎 HUNGER 34: gathering food carrot_planted@(290,-306)
+[20:15:13] 🍽 EATING carrot (hunger 1 left)
+[20:15:22] 🍎 HUNGER 44: gathering food carrot_planted@(281,-299)
+[20:15:30] 🍽 EATING carrot (hunger 1 left)
+[20:15:41] 🍎 HUNGER 54: gathering food seeds@(276,-279)
+[20:15:49] 🍽 EATING seeds (hunger 1 left)
+[20:15:53] 🔥 KIT: gather 2 log (campfire kit) (priority job)
+[20:16:16] 🔨 LOCAL CRAFT: axe (materials present)
+[20:16:16] 🌍 ROAM at (273,-287) | needs: {'flint': 1, 'rope': 1, 'log': 1}
+[20:16:18]   🎯 evergreen@(269,-274) fired (max_swings=25)
+[20:16:20]   📋 job report: {"ok": true, "reply": "job started: evergreen", "prefab": "evergreen"}
+[20:16:26]   🎯 evergreen@(270,-255) fired (max_swings=25)
+[20:16:28]   📋 job report: {"ok": false, "needs_tool": "shovel", "error": "no_tool", "prefab": "evergreen"}
+[20:16:28]   ✅ confirmed local: {'log': 2, 'pinecone': 1}
+[20:16:35]   🎯 evergreen@(261,-255) fired (max_swings=25)
+[20:16:37]   📋 job report: {"ok": true, "reply": "job started: evergreen", "prefab": "evergreen"}
+[20:16:44]   🎯 sapling@(241,-267) fired (max_swings=3)
+[20:16:46]   📋 job report: {"ok": false, "needs_tool": "shovel", "error": "no_tool", "prefab": "sapling"}
+[20:16:46]   ✅ confirmed local: {'pinecone': 1}
+[20:16:53]   🎯 sapling@(278,-239) fired (max_swings=3)
+[20:16:55]   📋 job report: {"ok": false, "needs_tool": "shovel", "error": "no_tool", "prefab": "sapling"}
+[20:16:55] 🧭 explore -> (269,-303)
+[20:17:10] 🔨 LOCAL CRAFT: torch (materials present)
+[20:17:10] 🌍 ROAM at (269,-303) | needs: {'flint': 2, 'rope': 1}
+[20:17:10] 🧭 explore -> (273,-287)
+[20:17:20] 🧭 explore -> (278,-275)
+[20:17:39]   🎯 flint@(305,-270) fired (max_swings=3)
+[20:17:40]   📋 job report: {"ok": true, "reply": "job started: flint", "prefab": "flint"}
+[20:17:40]   ✅ confirmed local: {'axe': 1, 'flint': 1}
+[20:17:47]   🎯 flint@(302,-250) fired (max_swings=3)
+[20:17:49]   📋 job report: {"ok": true, "reply": "job started: flint", "prefab": "flint"}
+[20:17:49] 🧭 explore -> (285,-278)
+[20:18:08]   🎯 grass@(314,-274) fired (max_swings=3)
+[20:18:09]   📋 job report: {"ok": true, "reply": "job started: grass", "prefab": "grass"}
+[20:18:15]   🎯 sapling@(310,-290) fired (max_swings=3)
+[20:18:17]   📋 job report: {"ok": true, "reply": "job started: sapling", "prefab": "sapling"}
+[20:18:17]   ✅ confirmed local: {'cutgrass': 1}
+[20:18:38] 🍎 HUNGER 31: gathering food seeds@(306,-283)
+[20:18:46] 🍽 EATING seeds (hunger 1 left)
+[20:18:56] 🍎 HUNGER 28: gathering food seeds@(312,-300)
+[20:19:04] 🍽 EATING seeds (hunger 1 left)
+[20:19:08] 🍽 EATING seeds (low health/hunger)
+[20:19:15] 🍽 EATING seeds (low health/hunger)
+[20:19:58] 🍎 HUNGER 23: gathering food seeds@(310,-281)
+[20:20:06] 🍽 EATING seeds (hunger 1 left)
+[20:20:38] 🍎 HUNGER 22: gathering food seeds@(303,-288)
+[20:20:46] 🍽 EATING seeds (hunger 1 left)
+[20:21:32] 🏃 FLEEING from {'crawlinghorror'} -> (297,-267)
+[20:21:38]    STILL threatened - keeping distance
+[20:21:46] 🍎 HUNGER 17: gathering food seeds@(271,-262)
+[20:22:01] 🍎 HUNGER 15: gathering food carrot_planted@(241,-223)
+[20:22:09] 🏃 FLEEING from {'crawlinghorror'} -> (216,-204)
+[20:22:15]    STILL threatened - keeping distance
+[20:22:15] 🏃 FLEEING from {'crawlinghorror'} -> (200,-194)
+[20:22:21]    STILL threatened - keeping distance
+[20:22:39] 🏃 FLEEING from {'crawlinghorror'} -> (146,-147)
+[20:22:45]    STILL threatened - keeping distance
+[20:22:51] 🍎 HUNGER 19: gathering food carrot_planted@(130,-147)
+[20:23:07] 🍎 HUNGER 17: gathering food carrot_planted@(134,-178)
+[20:23:15] 🏃 FLEEING from {'crawlinghorror'} -> (167,-188)
+[20:23:21]    STILL threatened - keeping distance
+[20:23:21] 🏃 FLEEING from {'bee', 'crawlinghorror'} -> (186,-191)
+[20:23:27]    STILL threatened - keeping distance
+[20:23:41] 🍎 HUNGER 12: gathering food berrybush@(214,-147)
+[20:23:49] 🏃 FLEEING from {'crawlinghorror'} -> (240,-117)
+[20:23:55]    STILL threatened - keeping distance
+[20:23:55] 🏃 FLEEING from {'crawlinghorror'} -> (253,-103)
+[20:24:01]    STILL threatened - keeping distance
+[20:24:01] 🏃 FLEEING from {'crawlinghorror'} -> (264,-90)
+[20:24:07]    STILL threatened - keeping distance
+[20:24:07] 🏃 FLEEING from {'crawlinghorror'} -> (262,-68)
+[20:24:13]    disengaged - noting danger spot, continuing
+[20:24:16] 🏃 FLEEING from {'crawlinghorror'} -> (243,-45)
+[20:24:22]    STILL threatened - keeping distance
+[20:24:22] 🏃 FLEEING from {'crawlinghorror'} -> (255,-25)
+[20:24:28]    STILL threatened - keeping distance
+[20:24:28] 🏃 FLEEING from {'crawlinghorror'} -> (258,-8)
+[20:24:34]    STILL threatened - keeping distance
+[20:24:46] 🏃 FLEEING from {'crawlinghorror'} -> (269,35)
+[20:24:52]    disengaged - noting danger spot, continuing
+[20:24:58] 🏃 FLEEING from {'tentacle'} -> (280,25)
+[20:25:04]    STILL threatened - keeping distance
+[20:25:04] 🏃 FLEEING from {'tentacle', 'crawlinghorror'} -> (280,49)
+[20:25:10]    STILL threatened - keeping distance
+[20:25:10] 🏃 FLEEING from {'tentacle', 'crawlinghorror'} -> (311,52)
+[20:25:16]    STILL threatened - keeping distance
+[20:25:16] 🏃 FLEEING from {'tentacle', 'crawlinghorror'} -> (313,58)
+[20:25:22]    STILL threatened - keeping distance
+[20:25:22] 🏃 FLEEING from {'tentacle'} -> (291,81)
+[20:25:28]    STILL threatened - keeping distance
+[20:25:28] 🏃 FLEEING from {'tentacle'} -> (302,44)
+[20:25:34]    STILL threatened - keeping distance
+[20:25:34] 🏃 FLEEING from {'tentacle'} -> (305,46)
+[20:25:40]    STILL threatened - keeping distance
+[20:25:40] ⚠️ INVARIANT: unexplained damage - retreating
+[20:25:40]   fleeing from tentacle -> (299,33)
+[20:25:46] 🏃 FLEEING from {'tentacle'} -> (296,38)
+[20:25:52]    STILL threatened - keeping distance
+[20:25:52] 🏃 FLEEING from {'tentacle'} -> (312,61)
+[20:25:58]    STILL threatened - keeping distance
+[20:25:58] 🏃 FLEEING from {'tentacle'} -> (312,59)
+[20:26:04]    STILL threatened - keeping distance
+[20:26:04] ⚠️ INVARIANT: unexplained damage - retreating
+[20:26:04]   fleeing from tentacle -> (270,46)
+[20:26:10] 🏃 FLEEING from {'tentacle'} -> (277,36)
+[20:26:16]    STILL threatened - keeping distance
+[20:26:16] ⚠️ INVARIANT: unexplained damage - retreating
+[20:26:16]   fleeing from tentacle -> (273,6)
+[20:26:22] ⚠️ INVARIANT: unexplained damage - retreating
+[20:26:22]   fleeing from tentacle -> (259,19)
+[20:26:28] ⚠️ INVARIANT: unexplained damage - retreating
+[20:26:30] ⚠️ INVARIANT: unexplained damage - retreating
+[20:26:32] ⚠️ INVARIANT: unexplained damage - retreating
+[20:26:34] ⚠️ INVARIANT: unexplained damage - retreating
+[20:26:36] ⚠️ INVARIANT: unexplained damage - retreating
+[20:26:38] ⚠️ INVARIANT: unexplained damage - retreating
+[20:26:40] ⚠️ INVARIANT: unexplained damage - retreating
+[20:26:42] ⚠️ INVARIANT: unexplained damage - retreating
+[20:26:44] ⚠️ INVARIANT: unexplained damage - retreating
+[20:26:46] ⚠️ INVARIANT: unexplained damage - retreating
+[20:26:48] ⚠️ INVARIANT: unexplained damage - retreating
+[20:26:50] ⚠️ INVARIANT: unexplained damage - retreating
+[20:26:52] ⚠️ INVARIANT: unexplained damage - retreating
+[20:26:54] ⚠️ INVARIANT: unexplained damage - retreating
+[20:26:56] ⚠️ INVARIANT: unexplained damage - retreating
+[20:26:58] ⚠️ INVARIANT: unexplained damage - retreating
+[20:27:00] ⚠️ INVARIANT: unexplained damage - retreating
+[20:27:02] ⚠️ INVARIANT: unexplained damage - retreating
+[20:27:04] ⚠️ INVARIANT: unexplained damage - retreating
+[20:27:06] ⚠️ INVARIANT: unexplained damage - retreating
+[20:27:08] ⚠️ INVARIANT: unexplained damage - retreating
+[20:27:10] ⚠️ INVARIANT: unexplained damage - retreating
+[20:27:12] ⚠️ INVARIANT: unexplained damage - retreating
+[20:27:14] ⚠️ INVARIANT: unexplained damage - retreating
+[20:27:16] ⚠️ INVARIANT: unexplained damage - retreating
+[20:27:18] ⚠️ INVARIANT: unexplained damage - retreating
+[20:27:20] ⚠️ INVARIANT: unexplained damage - retreating
+[20:27:22] ⚠️ INVARIANT: unexplained damage - retreating
+[20:27:24] ⚠️ INVARIANT: unexplained damage - retreating
+[20:27:26] ⚠️ INVARIANT: unexplained damage - retreating
+[20:27:28] ⚠️ INVARIANT: unexplained damage - retreating
+[20:29:50] 🤖 LOCAL AGENT ONLINE (plan-driven + v8 invariants)
+[20:29:50] 🌍 ROAM at (285,9) | needs: {'twigs': 4, 'flint': 3, 'cutgrass': 2, 'rope': 1, 'log': 1}
+[20:29:50] 🧭 explore -> (293,153)
+[20:30:09]   🎯 flint@(303,69) fired (max_swings=3)
+[20:30:10]   📋 job report: {"ok": true, "reply": "job started: flint", "prefab": "flint"}
+[20:30:10] 🧭 explore -> (293,153)
+[20:30:20] 🧭 explore -> (293,153)
+[20:30:30] ✅ ROAM pass done (no targets): {}
+[20:33:41] 🤖 LOCAL AGENT ONLINE (plan-driven + v8 invariants)
+[20:33:41] 🌍 ROAM at (286,26) | needs: {'twigs': 4, 'flint': 3, 'cutgrass': 2, 'rope': 1, 'log': 1}
+[20:33:41] 🧭 explore -> (293,153)
+[20:33:59]   🎯 flint@(303,69) fired (max_swings=3)
+[20:34:01]   📋 job report: {"ok": true, "reply": "job started: flint", "prefab": "flint"}
+[20:34:01] 🧭 explore -> (293,153)
+[20:34:11] 🧭 explore -> (293,153)
+[20:34:21] ✅ ROAM pass done (no targets): {}
+[20:34:27] 🍎 HUNGER 57: gathering food seeds@(297,59)
+[20:34:35] 🍽 EATING seeds (hunger 1 left)
+[20:34:39] 🏃 FLEEING from {'tentacle'} -> (309,68)
+[20:34:45]    STILL threatened - keeping distance
+[20:34:53] 🍎 HUNGER 58: gathering food seeds@(301,69)
+[20:35:01] 🍽 EATING seeds (hunger 1 left)
+[20:35:05] 🌍 ROAM at (294,60) | needs: {'twigs': 4, 'flint': 3, 'cutgrass': 2, 'rope': 1, 'log': 1}
+[20:35:05] 🧭 explore -> (293,153)
+[20:35:15] 🧭 explore -> (293,153)
+[20:35:25] ✅ ROAM pass done (no targets): {}
+[20:35:25] ❓ QUESTION ASKED: I have an axe but still need a torch (2 cutgrass + 2 twigs). The area is picked clean. Where should I look?
+[20:35:25] 🌍 ROAM at (297,49) | needs: {'twigs': 4, 'flint': 3, 'cutgrass': 2, 'rope': 1, 'log': 1}
+[20:35:25] 🧭 explore -> (293,153)
+[20:35:35] 🧭 explore -> (293,153)
+[20:35:45] ✅ ROAM pass done (no targets): {}
+[20:35:47] 🏃 FLEEING from {'tentacle'} -> (279,55)
+[20:35:53]    STILL threatened - keeping distance
+[20:35:53] 🏃 FLEEING from {'tentacle'} -> (293,67)
+[20:35:59]    STILL threatened - keeping distance
+[20:35:59] 🌍 ROAM at (298,55) | needs: {'twigs': 4, 'flint': 3, 'cutgrass': 2, 'rope': 1, 'log': 1}
+[20:35:59] 🧭 explore -> (293,153)
+[20:36:09] 🧭 explore -> (293,153)
+[20:36:19] ✅ ROAM pass done (no targets): {}
+[20:36:19] 🌍 ROAM at (297,49) | needs: {'twigs': 4, 'flint': 3, 'cutgrass': 2, 'rope': 1, 'log': 1}
+[20:36:19] 🧭 explore -> (293,153)
+[20:36:29] 🧭 explore -> (293,153)
+[20:36:40] ✅ ROAM pass done (no targets): {}
+[20:36:42] 🏃 FLEEING from {'tentacle'} -> (282,53)
+[20:36:48]    STILL threatened - keeping distance
+[20:36:48] 🏃 FLEEING from {'tentacle'} -> (294,70)
+[20:36:54]    STILL threatened - keeping distance
+[20:36:54] 🏃 FLEEING from {'tentacle'} -> (277,47)
+[20:37:00]    disengaged - noting danger spot, continuing
+[20:37:07] 🍎 HUNGER 42: gathering food seeds@(285,19)
+[20:37:21] 🍎 HUNGER 40: gathering food seeds@(290,-2)
+[20:37:29] 🍽 EATING seeds (hunger 1 left)
+[20:37:33] 🏃 FLEEING from {'crawlinghorror'} -> (315,-41)
+[20:37:39]    STILL threatened - keeping distance
+[20:37:39] 🏃 FLEEING from {'crawlinghorror'} -> (313,-42)
+[20:37:45]    STILL threatened - keeping distance
+[20:37:45] 🌍 ROAM at (304,-24) | needs: {'twigs': 4, 'flint': 3, 'cutgrass': 2, 'rope': 1, 'log': 1}
+[20:37:45] 🧭 explore -> (293,153)
+[20:37:55] 🧭 explore -> (293,153)
+[20:38:05] ✅ ROAM pass done (no targets): {}
+[20:38:05] ❓ QUESTION ASKED: I have an axe but still need a torch (2 cutgrass + 2 twigs). The area is picked clean. Where should I look?
+[20:38:05] 🌍 ROAM at (296,-4) | needs: {'twigs': 4, 'flint': 3, 'cutgrass': 2, 'rope': 1, 'log': 1}
+[20:38:05] 🧭 explore -> (293,153)
+[20:38:21]   🎯 flint@(303,69) fired (max_swings=3)
+[20:38:23]   📋 job report: {"ok": true, "reply": "job started: flint", "prefab": "flint"}
+[20:38:23] 🧭 explore -> (293,153)
+[20:38:33] 🧭 explore -> (293,153)
+[20:38:43] ✅ ROAM pass done (no targets): {}
+[20:38:45] 🌍 ROAM at (298,59) | needs: {'twigs': 4, 'flint': 3, 'cutgrass': 2, 'rope': 1, 'log': 1}
+[20:38:45] 🧭 explore -> (293,153)
+[20:38:55] 🧭 explore -> (293,153)
+[20:39:05] ✅ ROAM pass done (no targets): {}
+[20:39:05] 🌍 ROAM at (299,51) | needs: {'twigs': 4, 'flint': 3, 'cutgrass': 2, 'rope': 1, 'log': 1}
+[20:39:05] 🧭 explore -> (293,153)
+[20:39:15] 🧭 explore -> (293,153)
+[20:39:25] ✅ ROAM pass done (no targets): {}
+[20:39:27] 🌍 ROAM at (297,62) | needs: {'twigs': 4, 'flint': 3, 'cutgrass': 2, 'rope': 1, 'log': 1}
+[20:39:27] 🧭 explore -> (293,153)
+[20:39:37] 🧭 explore -> (293,153)
+[20:39:47] ✅ ROAM pass done (no targets): {}
+[20:39:47] 🏃 FLEEING from {'tentacle'} -> (310,55)
+[20:39:53]    disengaged - noting danger spot, continuing
+[20:39:53] 🌍 ROAM at (292,46) | needs: {'twigs': 4, 'flint': 3, 'cutgrass': 2, 'rope': 1, 'log': 1}
+[20:39:53] 🧭 explore -> (293,153)
+[20:40:03] 🧭 explore -> (293,153)
+[20:40:13] ✅ ROAM pass done (no targets): {}
+[20:40:15] 🌍 ROAM at (298,62) | needs: {'twigs': 4, 'flint': 3, 'cutgrass': 2, 'rope': 1, 'log': 1}
+[20:40:15] 🧭 explore -> (293,153)
+[20:40:25] 🧭 explore -> (293,153)
+[20:40:35] ✅ ROAM pass done (no targets): {}
+[20:40:35] ❓ QUESTION ASKED: I have an axe but still need a torch (2 cutgrass + 2 twigs). The area is picked clean. Where should I look?
+[20:40:35] 🏃 FLEEING from {'tentacle'} -> (275,46)
+[20:40:41]    STILL threatened - keeping distance
+[20:40:41] 🌍 ROAM at (296,34) | needs: {'twigs': 4, 'flint': 3, 'cutgrass': 2, 'rope': 1, 'log': 1}
+[20:40:41] 🧭 explore -> (293,153)
+[20:40:51] 🧭 explore -> (293,153)
+[20:41:01] ✅ ROAM pass done (no targets): {}
+[20:41:03] 🌍 ROAM at (294,31) | needs: {'twigs': 4, 'flint': 3, 'cutgrass': 2, 'rope': 1, 'log': 1}
+[20:41:03] 🧭 explore -> (293,153)
+[20:41:18]   🎯 flint@(303,69) fired (max_swings=3)
+[20:41:19]   📋 job report: {"ok": true, "reply": "job started: flint", "prefab": "flint"}
+[20:41:19] 🧭 explore -> (293,153)
+[20:41:29] 🧭 explore -> (293,153)
+[20:41:39] ✅ ROAM pass done (no targets): {}
+[20:41:39] 🌍 ROAM at (298,51) | needs: {'twigs': 4, 'flint': 3, 'cutgrass': 2, 'rope': 1, 'log': 1}
+[20:41:39] 🧭 explore -> (293,153)
+[20:41:49] 🧭 explore -> (293,153)
+[20:41:59] ✅ ROAM pass done (no targets): {}
+[20:42:01] 🌍 ROAM at (297,50) | needs: {'twigs': 4, 'flint': 3, 'cutgrass': 2, 'rope': 1, 'log': 1}
+[20:42:01] 🧭 explore -> (293,153)
+[20:42:11] 🧭 explore -> (293,153)
+[20:42:21] ✅ ROAM pass done (no targets): {}
+[20:42:29] 🍎 HUNGER 57: gathering food seeds@(282,19)
+[20:42:37] 🍽 EATING seeds (hunger 1 left)
+[20:42:41] 🌍 ROAM at (282,19) | needs: {'twigs': 4, 'flint': 3, 'cutgrass': 2, 'rope': 1, 'log': 1}
+[20:42:41] 🧭 explore -> (293,153)
+[20:42:52] 🧭 explore -> (293,153)
+[20:43:02] ✅ ROAM pass done (no targets): {}
+[20:43:04] 🌍 ROAM at (294,53) | needs: {'twigs': 4, 'flint': 3, 'cutgrass': 2, 'rope': 1, 'log': 1}
+[20:43:04] 🧭 explore -> (293,153)
+[20:43:14] 🧭 explore -> (293,153)
+[20:43:24] ✅ ROAM pass done (no targets): {}
+[20:43:24] ❓ QUESTION ASKED: I have an axe but still need a torch (2 cutgrass + 2 twigs). The area is picked clean. Where should I look?
+[20:43:24] 🌍 ROAM at (296,50) | needs: {'twigs': 4, 'flint': 3, 'cutgrass': 2, 'rope': 1, 'log': 1}
+[20:43:24] 🧭 explore -> (293,153)
+[20:43:34] 🧭 explore -> (293,153)
+[20:43:44] ✅ ROAM pass done (no targets): {}
+[20:43:46] 🏃 FLEEING from {'tentacle'} -> (286,46)
+[20:43:52]    STILL threatened - keeping distance
+[20:44:00] 🍎 HUNGER 48: gathering food seeds@(275,25)
+[20:44:08] 🍽 EATING seeds (hunger 1 left)
+[20:44:12] 🌍 ROAM at (277,26) | needs: {'twigs': 4, 'flint': 3, 'cutgrass': 2, 'rope': 1, 'log': 1}
+[20:44:12] 🧭 explore -> (293,153)
+[20:44:22] 🧭 explore -> (293,153)
+[20:44:32] ✅ ROAM pass done (no targets): {}
+[20:44:32] 🌍 ROAM at (284,26) | needs: {'twigs': 4, 'flint': 3, 'cutgrass': 2, 'rope': 1, 'log': 1}
+[20:44:32] 🧭 explore -> (293,153)
+[20:44:42] 🌙 night + no light - stop roaming
+[20:44:44] 🏃 FLEEING from {'tentacle'} -> (293,70)
+[20:44:50]    STILL threatened - keeping distance
+[20:44:50] 🌍 ROAM at (299,57) | needs: {'twigs': 4, 'flint': 3, 'cutgrass': 2, 'rope': 1, 'log': 1}
+[20:44:50] 🌙 night + no light - stop roaming
+[20:44:50] 🌍 ROAM at (299,57) | needs: {'twigs': 4, 'flint': 3, 'cutgrass': 2, 'rope': 1, 'log': 1}
+[20:44:50] 🌙 night + no light - stop roaming
+[20:44:52] 🏃 FLEEING from {'tentacle'} -> (303,40)
+[20:44:58]    STILL threatened - keeping distance
+[20:44:58] 🏃 FLEEING from {'tentacle'} -> (307,44)
+[20:45:04]    STILL threatened - keeping distance
+[20:45:04] ⚠️ INVARIANT: unexplained damage - retreating
+[20:45:04]   fleeing from tentacle -> (317,37)
+[20:45:10] ⚠️ INVARIANT: unexplained damage - retreating
+[20:45:10]   fleeing from tentacle -> (263,23)
+[20:45:22] 🏃 FLEEING from {'crawlinghorror'} -> (271,-13)
+[20:45:28]    STILL threatened - keeping distance
+[20:45:28] 🏃 FLEEING from {'terrorbeak', 'crawlinghorror'} -> (283,-27)
+[20:45:34]    STILL threatened - keeping distance
+[20:45:34] 🏃 FLEEING from {'terrorbeak'} -> (329,-3)
+[20:45:40]    STILL threatened - keeping distance
+[20:45:40] 🏃 FLEEING from {'terrorbeak'} -> (350,15)
+[20:45:46]    STILL threatened - keeping distance
+[20:45:46] 🏃 FLEEING from {'terrorbeak', 'tentacle'} -> (358,34)
+[20:45:52]    STILL threatened - keeping distance
+[20:45:52] 🏃 FLEEING from {'merm', 'tentacle'} -> (339,24)
+[20:45:58]    STILL threatened - keeping distance
+[20:45:58] 🌍 ROAM at (354,25) | needs: {'twigs': 4, 'flint': 3, 'cutgrass': 2, 'rope': 1, 'log': 1}
+[20:45:58] 🧭 explore -> (314,157)
+[20:46:08] 🧭 explore -> (314,157)
+[20:46:18] ✅ ROAM pass done (no targets): {}
+[20:46:18] ❓ QUESTION ASKED: I have an axe but still need a torch (2 cutgrass + 2 twigs). The area is picked clean. Where should I look?
+[20:46:18] 🌍 ROAM at (359,35) | needs: {'twigs': 4, 'flint': 3, 'cutgrass': 2, 'rope': 1, 'log': 1}
+[20:46:18] 🧭 explore -> (314,157)
+[20:46:28] 🧭 explore -> (314,157)
+[20:46:38] ✅ ROAM pass done (no targets): {}
+[20:46:40] 🏃 FLEEING from {'tentacle'} -> (346,46)
+[20:46:46]    STILL threatened - keeping distance
+[20:46:46] 🏃 FLEEING from {'tentacle'} -> (353,18)
+[20:46:52]    STILL threatened - keeping distance
+[20:46:52] 🏃 FLEEING from {'tentacle'} -> (370,23)
+[20:46:58]    STILL threatened - keeping distance
+[20:46:58] 🌍 ROAM at (355,32) | needs: {'twigs': 4, 'flint': 3, 'cutgrass': 2, 'rope': 1, 'log': 1}
+[20:46:58] 🧭 explore -> (314,157)
+[20:47:08] 🧭 explore -> (314,157)
+[20:47:18] ✅ ROAM pass done (no targets): {}
+[20:47:18] 🌍 ROAM at (355,33) | needs: {'twigs': 4, 'flint': 3, 'cutgrass': 2, 'rope': 1, 'log': 1}
+[20:47:18] 🧭 explore -> (314,157)
+[20:47:28] 🧭 explore -> (314,157)
+[20:47:38] ✅ ROAM pass done (no targets): {}
+[20:47:40] 🌍 ROAM at (360,32) | needs: {'twigs': 4, 'flint': 3, 'cutgrass': 2, 'rope': 1, 'log': 1}
+[20:47:40] 🧭 explore -> (314,157)
+[20:47:50] 🧭 explore -> (314,157)
+[20:48:00] ✅ ROAM pass done (no targets): {}
+[20:48:00] 🌍 ROAM at (353,29) | needs: {'twigs': 4, 'flint': 3, 'cutgrass': 2, 'rope': 1, 'log': 1}
+[20:48:00] 🧭 explore -> (314,157)
+[20:48:10] 🧭 explore -> (314,157)
+[20:48:20] ✅ ROAM pass done (no targets): {}
+[20:48:22] 🌍 ROAM at (356,33) | needs: {'twigs': 4, 'flint': 3, 'cutgrass': 2, 'rope': 1, 'log': 1}
+[20:48:22] 🧭 explore -> (314,157)
+[20:48:32] 🧭 explore -> (314,157)
+[20:48:42] ✅ ROAM pass done (no targets): {}
+[20:48:42] ❓ QUESTION ASKED: I have an axe but still need a torch (2 cutgrass + 2 twigs). The area is picked clean. Where should I look?
+[20:48:42] 🏃 FLEEING from {'tentacle'} -> (362,15)
+[20:48:48]    STILL threatened - keeping distance
+[20:48:48] 🏃 FLEEING from {'tentacle'} -> (375,19)
+[20:48:54]    STILL threatened - keeping distance
+[20:48:54] 🏃 FLEEING from {'tentacle'} -> (356,31)
+[20:49:00]    STILL threatened - keeping distance
+[20:49:00] 🌍 ROAM at (356,22) | needs: {'twigs': 4, 'flint': 3, 'cutgrass': 2, 'rope': 1, 'log': 1}
+[20:49:00] 🧭 explore -> (314,157)
+[20:49:10] 🧭 explore -> (314,157)
+[20:49:20] ✅ ROAM pass done (no targets): {}
+[20:49:22] 🏃 FLEEING from {'tentacle'} -> (353,18)
+[20:49:28]    STILL threatened - keeping distance
+[20:49:28] 🏃 FLEEING from {'tentacle'} -> (338,26)
+[20:49:34]    STILL threatened - keeping distance
+[20:49:34] 🌍 ROAM at (358,36) | needs: {'twigs': 4, 'flint': 3, 'cutgrass': 2, 'rope': 1, 'log': 1}
+[20:49:34] 🧭 explore -> (314,157)
+[20:49:44] 🧭 explore -> (314,157)
+[20:49:54] ✅ ROAM pass done (no targets): {}
+[20:49:54] 🌍 ROAM at (323,24) | needs: {'twigs': 4, 'flint': 3, 'cutgrass': 2, 'rope': 1, 'log': 1}
+[20:49:54] 🧭 explore -> (301,154)
+[20:50:04] 🧭 explore -> (301,154)
+[20:50:14] ✅ ROAM pass done (no targets): {}
+[20:50:23] 🍎 HUNGER 59: gathering food seeds@(350,22)
+[20:50:35] 🍎 HUNGER 57: gathering food seeds@(324,24)
+[20:50:43] 🍽 EATING seeds (hunger 1 left)
+[20:50:47] 🌍 ROAM at (324,24) | needs: {'twigs': 4, 'flint': 3, 'cutgrass': 2, 'rope': 1, 'log': 1}
+[20:50:47] 🧭 explore -> (301,154)
+[20:50:57] 🧭 explore -> (301,154)
+[20:51:07] ✅ ROAM pass done (no targets): {}
+[20:51:07] ❓ QUESTION ASKED: I have an axe but still need a torch (2 cutgrass + 2 twigs). The area is picked clean. Where should I look?
+[20:51:07] 🌍 ROAM at (318,22) | needs: {'twigs': 4, 'flint': 3, 'cutgrass': 2, 'rope': 1, 'log': 1}
+[20:51:07] 🧭 explore -> (301,154)
+[20:51:17] 🧭 explore -> (301,154)
+[20:51:27] ✅ ROAM pass done (no targets): {}
+[20:51:29] 🌍 ROAM at (320,16) | needs: {'twigs': 4, 'flint': 3, 'cutgrass': 2, 'rope': 1, 'log': 1}
+[20:51:29] 🧭 explore -> (301,154)
+[20:51:39] 🧭 explore -> (301,154)
+[20:51:49] ✅ ROAM pass done (no targets): {}
+[20:51:49] 🌍 ROAM at (331,19) | needs: {'twigs': 4, 'flint': 3, 'cutgrass': 2, 'rope': 1, 'log': 1}
+[20:51:49] 🧭 explore -> (301,154)
+[20:51:59] 🧭 explore -> (301,154)
+[20:52:09] ✅ ROAM pass done (no targets): {}
+[20:52:11] 🌍 ROAM at (329,19) | needs: {'twigs': 4, 'flint': 3, 'cutgrass': 2, 'rope': 1, 'log': 1}
+[20:52:11] 🧭 explore -> (301,154)
+[20:52:21] 🧭 explore -> (301,154)
+[20:52:31] ✅ ROAM pass done (no targets): {}
+[20:52:31] 🌍 ROAM at (326,12) | needs: {'twigs': 4, 'flint': 3, 'cutgrass': 2, 'rope': 1, 'log': 1}
+[20:52:31] 🧭 explore -> (301,154)
+[20:52:41] 🧭 explore -> (301,154)
+[20:52:51] ✅ ROAM pass done (no targets): {}
+[20:52:57] 🍎 HUNGER 40: gathering food seeds@(330,12)
+[20:53:05] 🍽 EATING seeds (hunger 1 left)
+[20:53:09] ⚠️ INVARIANT: unexplained damage - retreating
+[20:53:09]   fleeing from crawlinghorror -> (314,-18)
+[20:53:23] 🍎 HUNGER 41: gathering food seeds@(309,-20)
+[20:53:31] 🏃 FLEEING from {'terrorbeak'} -> (341,12)
+[20:53:37]    STILL threatened - keeping distance
+[20:53:37] 🏃 FLEEING from {'tentacle'} -> (340,-5)
+[20:53:43]    STILL threatened - keeping distance
+[20:53:43] 🏃 FLEEING from {'tentacle'} -> (339,-9)
+[20:53:49]    STILL threatened - keeping distance
+[20:53:49] 🌍 ROAM at (329,10) | needs: {'twigs': 4, 'flint': 3, 'cutgrass': 2, 'rope': 1, 'log': 1}
+[20:53:49] 🧭 explore -> (301,154)
+[20:53:59] 🧭 explore -> (301,154)
+[20:54:09] ✅ ROAM pass done (no targets): {}
+[20:54:09] ❓ QUESTION ASKED: I have an axe but still need a torch (2 cutgrass + 2 twigs). The area is picked clean. Where should I look?
+[20:54:09] 🌍 ROAM at (323,15) | needs: {'twigs': 4, 'flint': 3, 'cutgrass': 2, 'rope': 1, 'log': 1}
+[20:54:09] 🧭 explore -> (301,154)
+[20:54:19] 🧭 explore -> (301,154)
+[20:54:29] ✅ ROAM pass done (no targets): {}
+[20:54:31] 🌍 ROAM at (333,19) | needs: {'twigs': 4, 'flint': 3, 'cutgrass': 2, 'rope': 1, 'log': 1}
+[20:54:31] 🧭 explore -> (301,154)
+[20:54:41] 🧭 explore -> (301,154)
+[20:54:51] ✅ ROAM pass done (no targets): {}
+[20:54:51] 🌍 ROAM at (324,15) | needs: {'twigs': 4, 'flint': 3, 'cutgrass': 2, 'rope': 1, 'log': 1}
+[20:54:51] 🧭 explore -> (301,154)
+[20:55:01] 🧭 explore -> (301,154)
+[20:55:11] ✅ ROAM pass done (no targets): {}
+[20:55:13] 🌍 ROAM at (325,16) | needs: {'twigs': 4, 'flint': 3, 'cutgrass': 2, 'rope': 1, 'log': 1}
+[20:55:13] 🧭 explore -> (301,154)
+[20:55:23] 🧭 explore -> (301,154)
+[20:55:33] ✅ ROAM pass done (no targets): {}
+[20:55:33] 🌍 ROAM at (322,14) | needs: {'twigs': 4, 'flint': 3, 'cutgrass': 2, 'rope': 1, 'log': 1}
+[20:55:33] 🧭 explore -> (301,154)
+[20:55:43] 🧭 explore -> (301,154)
+[20:55:53] ✅ ROAM pass done (no targets): {}
+[20:55:55] 🌍 ROAM at (322,16) | needs: {'twigs': 4, 'flint': 3, 'cutgrass': 2, 'rope': 1, 'log': 1}
+[20:55:55] 🧭 explore -> (301,154)
+[20:56:05] 🧭 explore -> (301,154)
+[20:56:15] ✅ ROAM pass done (no targets): {}
+[20:56:15] ❓ QUESTION ASKED: I have an axe but still need a torch (2 cutgrass + 2 twigs). The area is picked clean. Where should I look?
+[20:56:15] 🌍 ROAM at (325,17) | needs: {'twigs': 4, 'flint': 3, 'cutgrass': 2, 'rope': 1, 'log': 1}
+[20:56:15] 🧭 explore -> (301,154)
+[20:56:25] 🧭 explore -> (301,154)
+[20:56:35] ✅ ROAM pass done (no targets): {}
+[20:56:37] 🌍 ROAM at (325,16) | needs: {'twigs': 4, 'flint': 3, 'cutgrass': 2, 'rope': 1, 'log': 1}
+[20:56:37] 🧭 explore -> (301,154)
+[20:56:48] 🧭 explore -> (301,154)
+[20:56:58] ✅ ROAM pass done (no targets): {}
+[20:56:58] 🌍 ROAM at (321,14) | needs: {'twigs': 4, 'flint': 3, 'cutgrass': 2, 'rope': 1, 'log': 1}
+[20:56:58] 🧭 explore -> (301,154)
+[20:57:08] 🧭 explore -> (301,154)
+[20:57:18] ✅ ROAM pass done (no targets): {}
+[20:57:20] 🌍 ROAM at (320,15) | needs: {'twigs': 4, 'flint': 3, 'cutgrass': 2, 'rope': 1, 'log': 1}
+[20:57:20] 🧭 explore -> (301,154)
+[20:57:30] 🧭 explore -> (301,154)
+[20:57:40] ✅ ROAM pass done (no targets): {}
+[20:57:40] 🌍 ROAM at (321,15) | needs: {'twigs': 4, 'flint': 3, 'cutgrass': 2, 'rope': 1, 'log': 1}
+[20:57:40] 🧭 explore -> (301,154)
+[20:57:50] 🧭 explore -> (293,153)
+[20:58:00] ✅ ROAM pass done (no targets): {}
+[20:58:06] 🍎 HUNGER 60: gathering food seeds@(292,27)
+[20:58:14] 🍽 EATING seeds (hunger 1 left)
+[20:58:18] ⚠️ INVARIANT: unexplained damage - retreating
+[20:58:18]   fleeing from tentacle -> (265,40)
+[20:58:24] 🏃 FLEEING from {'tentacle'} -> (286,25)
+[20:58:30]    STILL threatened - keeping distance
+[20:58:33] 🍎 HUNGER 60: gathering food seeds@(285,31)
+[20:58:41] 🍽 EATING seeds (hunger 1 left)
+[20:58:45] ⚠️ INVARIANT: unexplained damage - retreating
+[20:58:45]   fleeing from tentacle -> (314,40)
+[20:58:51] ⚠️ INVARIANT: unexplained damage - retreating
+[20:58:51]   fleeing from tentacle -> (260,17)
+[20:58:57] ⚠️ INVARIANT: unexplained damage - retreating
+[20:58:57]   fleeing from tentacle -> (258,16)
+[20:59:03] ⚠️ INVARIANT: unexplained damage - retreating
+[20:59:03]   fleeing from tentacle -> (281,-14)
+[20:59:09] ⚠️ INVARIANT: unexplained damage - retreating
+[20:59:09]   fleeing from tentacle -> (260,8)
+[20:59:15] ⚠️ INVARIANT: unexplained damage - retreating
+[20:59:15]   fleeing from mosquito -> (278,-16)
+[20:59:21] ⚠️ INVARIANT: unexplained damage - retreating
+[20:59:21]   fleeing from tentacle -> (252,-2)
+[20:59:27] 🏃 FLEEING from {'mosquito'} -> (277,17)
+[20:59:33]    STILL threatened - keeping distance
+[20:59:40] 🍎 HUNGER 55: gathering food seeds@(268,-2)
+[20:59:48] 🍽 EATING seeds (hunger 1 left)
+[20:59:52] ⚠️ INVARIANT: unexplained damage - retreating
+[20:59:52]   fleeing from mosquito -> (298,-2)
+[20:59:58] ⚠️ INVARIANT: unexplained damage - retreating
+[21:00:00] ⚠️ INVARIANT: unexplained damage - retreating
+[21:00:02] ⚠️ INVARIANT: unexplained damage - retreating
+[21:00:04] ⚠️ INVARIANT: unexplained damage - retreating
+[21:00:06] ⚠️ INVARIANT: unexplained damage - retreating
+[21:00:08] ⚠️ INVARIANT: unexplained damage - retreating
+[21:00:10] ⚠️ INVARIANT: unexplained damage - retreating
+[21:00:20] 🍎 HUNGER 54: gathering food seeds@(272,-7)
+[21:00:28] 🍽 EATING seeds (hunger 1 left)
+[21:00:32] ⚠️ INVARIANT: unexplained damage - retreating
+[21:00:34] ⚠️ INVARIANT: unexplained damage - retreating
+[21:00:36] ⚠️ INVARIANT: unexplained damage - retreating
+[21:00:36]   fleeing from mosquito -> (298,9)
+[21:00:42] ⚠️ INVARIANT: unexplained damage - retreating
+[21:00:42]   fleeing from tentacle -> (279,-15)
+[21:00:48] ⚠️ INVARIANT: unexplained damage - retreating
+[21:00:48]   fleeing from tentacle -> (255,2)
+[21:00:54] ⚠️ INVARIANT: unexplained damage - retreating
+[21:00:54]   fleeing from mosquito -> (279,24)
+[21:01:00] ⚠️ INVARIANT: unexplained damage - retreating
+[21:01:00]   fleeing from tentacle -> (306,14)
+[21:01:06] ⚠️ INVARIANT: unexplained damage - retreating
+[21:01:06]   fleeing from tentacle -> (258,4)
+[21:01:12] 🏃 FLEEING from {'tentacle'} -> (284,-1)
+[21:01:18]    disengaged - noting danger spot, continuing
+[21:01:26] 🍎 HUNGER 48: gathering food seeds@(325,28)
+[21:01:34] 🏃 FLEEING from {'crawlinghorror', 'tentacle'} -> (355,43)
+[21:01:40]    STILL threatened - keeping distance
+[21:01:40] 🏃 FLEEING from {'crawlinghorror'} -> (380,44)
+[21:01:46]    STILL threatened - keeping distance
+[21:01:46] 🏃 FLEEING from {'spider_warrior', 'spider', 'tentacle'} -> (361,36)
+[21:01:52]    STILL threatened - keeping distance
+[21:01:52] 🏃 FLEEING from {'crawlinghorror'} -> (353,62)
+[21:01:58]    STILL threatened - keeping distance
+[21:01:58] 🏃 FLEEING from {'crawlinghorror', 'tentacle'} -> (369,41)
+[21:02:04]    STILL threatened - keeping distance
+[21:02:04] 🏃 FLEEING from {'crawlinghorror', 'tentacle'} -> (336,59)
+[21:02:10]    STILL threatened - keeping distance
+[21:02:10] 🏃 FLEEING from {'tentacle'} -> (337,21)
+[21:02:16]    STILL threatened - keeping distance
+[21:02:16] 🏃 FLEEING from {'tentacle'} -> (332,21)
+[21:02:22]    STILL threatened - keeping distance
+[21:02:22] 🏃 FLEEING from {'tentacle'} -> (354,48)
+[21:02:28]    STILL threatened - keeping distance
+[21:02:28] 🏃 FLEEING from {'tentacle'} -> (353,33)
+[21:02:34]    STILL threatened - keeping distance
+[21:02:34] 🏃 FLEEING from {'tentacle'} -> (324,26)
+[21:02:40]    STILL threatened - keeping distance
+[21:02:40] 🏃 FLEEING from {'tentacle'} -> (356,38)
+[21:02:46]    STILL threatened - keeping distance
+[21:02:46] 🏃 FLEEING from {'tentacle'} -> (352,31)
+[21:02:52]    STILL threatened - keeping distance
+[21:02:52] 🏃 FLEEING from {'tentacle'} -> (334,21)
+[21:02:58]    STILL threatened - keeping distance
+[21:02:58] 🏃 FLEEING from {'tentacle'} -> (321,30)
+[21:03:04]    STILL threatened - keeping distance
+[21:03:04] 🏃 FLEEING from {'tentacle'} -> (318,35)
+[21:03:10]    STILL threatened - keeping distance
+[21:03:10] 🏃 FLEEING from {'tentacle'} -> (320,34)
+[21:03:16]    STILL threatened - keeping distance
+[21:03:16] 🏃 FLEEING from {'tentacle'} -> (320,32)
+[21:03:22]    STILL threatened - keeping distance
+[21:03:22] 🏃 FLEEING from {'tentacle'} -> (334,59)
+[21:03:28]    STILL threatened - keeping distance
+[21:03:28] 🏃 FLEEING from {'tentacle'} -> (336,21)
+[21:03:34]    STILL threatened - keeping distance
+[21:03:34] 🏃 FLEEING from {'tentacle'} -> (322,38)
+[21:03:40]    STILL threatened - keeping distance
+[21:03:40] 🏃 FLEEING from {'tentacle'} -> (321,41)
+[21:03:46]    STILL threatened - keeping distance
+[21:03:46] 🏃 FLEEING from {'tentacle'} -> (352,31)
+[21:03:52]    STILL threatened - keeping distance
+[21:03:52] 🏃 FLEEING from {'tentacle'} -> (327,25)
+[21:03:58]    STILL threatened - keeping distance
+[21:03:58] 🍽 EATING seeds (low health/hunger)
+[21:04:13] 🍎 HUNGER 87: gathering food seeds@(330,47)
+[21:04:21] 🍽 EATING seeds (hunger 1 left)
+[21:04:25] ⚠️ health critical, no food available
+[21:04:25] ❓ QUESTION ASKED: I'm critically low on health/hunger with no food nearby. Where is the nearest safe food source?
+[21:04:28] ⚠️ health critical, no food available
+[21:04:31] ⚠️ health critical, no food available
+[21:04:34] ⚠️ health critical, no food available
+[21:04:37] ⚠️ health critical, no food available
+[21:04:40] ⚠️ health critical, no food available
+[21:04:43] ⚠️ health critical, no food available
+[21:04:46] ⚠️ health critical, no food available
+[21:04:49] ⚠️ health critical, no food available
+[21:04:52] ⚠️ health critical, no food available
+[21:04:58] 🍎 HUNGER 84: gathering food seeds@(319,27)
+[21:05:06] ⚠️ health critical, no food available
+[21:05:09] ⚠️ health critical, no food available
+[21:05:12] ⚠️ health critical, no food available
+[21:05:15] ⚠️ health critical, no food available
+[21:05:18] ⚠️ health critical, no food available
+[21:05:21] ⚠️ health critical, no food available
+[21:05:24] ⚠️ health critical, no food available
+[21:05:27] ⚠️ health critical, no food available
+[21:05:30] ⚠️ health critical, no food available
+[21:05:33] ⚠️ health critical, no food available
+[21:05:36] ⚠️ health critical, no food available
+[21:05:39] ⚠️ health critical, no food available
+[21:05:42] ⚠️ health critical, no food available
+[21:05:45] ⚠️ health critical, no food available
+[21:05:48] ⚠️ health critical, no food available
+[21:05:51] ⚠️ health critical, no food available
+[21:05:54] ⚠️ health critical, no food available
+[21:05:57] ⚠️ health critical, no food available
+[21:06:00] ⚠️ health critical, no food available
+[21:06:03] ⚠️ health critical, no food available
+[21:06:06] ⚠️ health critical, no food available
+[21:06:09] ⚠️ health critical, no food available
+[21:06:12] ⚠️ health critical, no food available
+[21:06:15] ⚠️ health critical, no food available
+[21:06:23] 🍎 HUNGER 71: gathering food seeds@(322,41)
+[21:06:31] ⚠️ health critical, no food available
+[21:06:31] ❓ QUESTION ASKED: I'm critically low on health/hunger with no food nearby. Where is the nearest safe food source?
+[21:06:34] ⚠️ health critical, no food available
+[21:06:37] ⚠️ health critical, no food available
+[21:06:40] ⚠️ health critical, no food available
+[21:06:43] ⚠️ health critical, no food available
+[21:06:46] ⚠️ health critical, no food available
+[21:06:49] ⚠️ health critical, no food available
+[21:06:52] ⚠️ health critical, no food available
+[21:06:55] ⚠️ health critical, no food available
+[21:06:58] ⚠️ health critical, no food available
+[21:07:01] ⚠️ health critical, no food available
+[21:07:04] ⚠️ health critical, no food available
+[21:07:07] ⚠️ health critical, no food available
+[21:07:15] 🍎 HUNGER 63: gathering food seeds@(313,14)

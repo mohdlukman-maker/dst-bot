@@ -251,6 +251,18 @@ RESOURCE_VALUE = {
     "evergreen": 3, "deciduoustree": 3, "rock1": 3, "rock2": 3,
 }
 
+# Session (2026-08-10) marsh-death postmortem: Wilson died 6x in one run,
+# 4 of them to tentacles, because nothing in the agent knew threats existed
+# when picking WHERE to gather - pick_target routed him straight into a
+# tentacle nest chasing flint, and the flee distance (20) wasn't enough to
+# clear a dense cluster. Shared list (was duplicated 3x with slightly
+# different tuples in the threat-guard and retreat-invariant blocks below).
+AGGRESSIVE_PREFABS = ("merm", "spider", "spider_warrior", "frog", "hound", "houndfire",
+                      "tentacle", "snake", "mosquito", "bee", "killerbee",
+                      "pigman", "werepig", "walrus", "depthworm",
+                      "spiderqueen", "deerclops", "treeguard")
+THREAT_AVOID_RADIUS = 12   # don't route a gather target within this many units of a live threat
+
 # ---------------- the autonomous loop ----------------
 def current_plan(st):
     """Stage-driven plan: gather ONLY what the current stage needs.
@@ -295,6 +307,12 @@ def pick_target(st, want_prefabs, visited):
     px, pz = pos.get("x", 0), pos.get("z", 0)
     counts = st.get("item_counts") or {}
     has_axe = "axe" in (st.get("items") or []) or "axe" in (st.get("equipped") or [])
+    # threat-aware targeting (postmortem fix): a resource sitting inside a
+    # tentacle nest is not worth walking into. Only threats with known coords.
+    threats = [t for t in (st.get("threats") or [])
+               if t.get("hp", 0) > 0
+               and (t.get("targeting") or t.get("n") in AGGRESSIVE_PREFABS)
+               and t.get("x") is not None and t.get("z") is not None]
     best, best_score = None, -1
     for e in nb:
         n = e.get("n")
@@ -311,6 +329,10 @@ def pick_target(st, want_prefabs, visited):
         if (n, e.get("x"), e.get("z")) in visited: continue
         d = e.get("d", 99)
         if d > 40: continue
+        ex, ez = e.get("x"), e.get("z")
+        if threats and ex is not None and ez is not None and any(
+                math.hypot(ex - t["x"], ez - t["z"]) < THREAT_AVOID_RADIUS for t in threats):
+            continue
         # score = value + learned reliability - distance
         score = RESOURCE_VALUE.get(n, 1) + gather_reliability(n)*2 - d*0.1
         if score > best_score:
@@ -365,9 +387,15 @@ def try_craft(st):
                                  {f"owned.{name}": "+1"})
             send({"action": "craft", "recipe": name})
             time.sleep(2)
-            if name in ("torch", "axe", "pickaxe", "spear"):
+            if name in ("axe", "pickaxe", "spear"):
                 send({"action": "equip", "item": name})
                 time.sleep(1)
+            # torch is deliberately NOT auto-equipped here: equipping it
+            # immediately on craft burns its fuel in broad daylight, and
+            # doing so while a chop/mine job is mid-swing rips the axe out
+            # of Wilson's hand (mod tool-recheck kills the job as
+            # tool_broke). reflex.py's ensure_light() equips it at the
+            # right time (dusk-90s / dark-emergency) instead.
             log_after(d_craft, get_state())
             log(f"🔨 LOCAL CRAFT: {name} (materials present)")
             learn_gather(name, True)
@@ -538,7 +566,6 @@ def roam_once(st, settle=5, want_prefabs=None):
 def main():
     global RUN_ID
     log("🤖 LOCAL AGENT ONLINE (plan-driven + v8 invariants)")
-    stuck_streak = 0
     # seed the world map with current surroundings
     try:
         from lib import world_map as wm
@@ -574,7 +601,8 @@ def main():
 
 
 def _main_loop():
-    global RUN_ID, last_health
+    global RUN_ID, last_health, _damage_log_last
+    stuck_streak = 0
     while True:
         st = get_state()
         if not st.get("pos"):
@@ -615,12 +643,7 @@ def _main_loop():
         # aggressive prefabs. Passive _combat = neutral, ignore.
         close_threats = [t for t in (st.get("threats") or [])
                          if t.get("hp", 0) > 0 and t.get("d", 99) < 10
-                         and (t.get("targeting")
-                              or t.get("n") in ("merm", "spider", "spider_warrior",
-                                                "frog", "hound", "houndfire", "tentacle",
-                                                "snake", "mosquito", "bee", "killerbee",
-                                                "pigman", "werepig", "walrus", "depthworm",
-                                                "spiderqueen", "deerclops", "treeguard"))]
+                         and (t.get("targeting") or t.get("n") in AGGRESSIVE_PREFABS)]
         if close_threats:
             # FLEE FIRST, ask later (the spider-kill: waiting for an answer while
             # under attack is how Wilson died). The reflex also flees, but the
@@ -634,7 +657,10 @@ def _main_loop():
                 tx2, tz2 = px2 + 1, pz2 + 1
             dx2, dz2 = px2 - tx2, pz2 - tz2
             mag2 = math.sqrt(dx2*dx2 + dz2*dz2) or 1
-            nx2, nz2 = px2 + dx2/mag2*20, pz2 + dz2/mag2*20
+            # postmortem: 20 units wasn't enough to clear a dense tentacle
+            # cluster - Wilson fled one tentacle's range straight into the
+            # next one's. Widened to 35.
+            nx2, nz2 = px2 + dx2/mag2*35, pz2 + dz2/mag2*35
             # NOTE: _get_path only walks dicts (no list indices), so a per-threat
             # path like threats.0.d would always resolve None -> permanent
             # refuted. "threats": "changes" compares the list by value: a flee
@@ -732,22 +758,18 @@ def _main_loop():
             # move away from nearest AGGRESSIVE threat only (a robin peck or
             # darkness damage must not send Wilson fleeing into water - that's
             # how he got stuck at the shore)
-            _AGGR = ("merm", "spider", "spider_warrior", "frog", "hound", "houndfire",
-                     "tentacle", "snake", "mosquito", "bee", "killerbee",
-                     "pigman", "werepig", "walrus", "depthworm",
-                     "spiderqueen", "deerclops", "treeguard")
             threats = [t for t in (st.get("threats") or [])
                        if t.get("hp", 0) > 0
-                       and (t.get("targeting") or t.get("n") in _AGGR)]
+                       and (t.get("targeting") or t.get("n") in AGGRESSIVE_PREFABS)]
             if threats:
                 nearest = min(threats, key=lambda t: t.get("d", 99))
                 px, pz = st.get("pos", {}).get("x", 0), st.get("pos", {}).get("z", 0)
-                tx, tz = px + 30, pz + 30  # default: run NE
+                tx, tz = px + 40, pz + 40  # default: run NE (widened, see postmortem note above)
                 for e in (st.get("nearby") or []):
                     if e.get("n") == nearest.get("n"):
                         dx, dz = px - e.get("x", px), pz - e.get("z", pz)
                         mag = math.sqrt(dx*dx + dz*dz) or 1
-                        tx, tz = px + dx/mag*30, pz + dz/mag*30
+                        tx, tz = px + dx/mag*40, pz + dz/mag*40
                         break
                 send({"action": "move_to", "x": tx, "z": tz})
                 log(f"  fleeing from {nearest.get('n')} -> ({tx:.0f},{tz:.0f})")
