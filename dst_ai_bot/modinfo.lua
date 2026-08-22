@@ -1,7 +1,7 @@
 name = "DST AI Bot"
 description = "AI bot channel: writes player state to state.json, runs commands from command.json."
 author = "Hermes"
-version = "0.2.0"
+version = "0.3.0"
 forumthread = ""
 api_version = 10
 dont_starve_compatible = false

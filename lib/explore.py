@@ -67,27 +67,87 @@ class Explorer:
         except Exception:
             return True
 
-    def next_target(self, state, base_xz=None, max_leash=200):
-        """Nearest unvisited cell within leash. None = all explored in range."""
+    def next_target(self, state, base_xz=None, max_leash=200, target_prefab=None):
+        """Nearest unvisited cell within leash, biased outward from base.
+        v10.6: Uses land_dirs to avoid ocean cells. Expands radius when
+        inner cells exhausted. If target_prefab given, heads toward known
+        resource locations from the world map."""
         try:
             pos = state.get("pos") or {}
             x, z = pos.get("x", 0), pos.get("z", 0)
             here = cell_of(x, z)
 
-            # seed: a known resource spot from the world map (if we had one here)
-            # (world_map integration is done by the caller; we just do frontier)
-            best, best_score = None, 1e18
-            for dq in range(-8, 9):
-                for dr in range(-8, 9):
-                    c = (here[0] + dq, here[1] + dr)
-                    if c in self.visited:
-                        continue
-                    cx, cz = (c[0] + 0.5) * CELL, (c[1] + 0.5) * CELL
-                    if not self.within_leash((cx, cz), base_xz, max_leash):
-                        continue
-                    d = ((cx - x) ** 2 + (cz - z) ** 2) ** 0.5
-                    if d < best_score:
-                        best, best_score = (round(cx, 1), round(cz, 1)), d
-            return best
+            # v10.6: If looking for a specific resource, check the world map first
+            if target_prefab:
+                try:
+                    from lib import world_map as wm
+                    hits = wm.find("default", target_prefab, near_xz=(x, z), limit=5) or []
+                    for hit in hits:
+                        hx, hz = hit.get("x", 0), hit.get("z", 0)
+                        d = ((hx - x) ** 2 + (hz - z) ** 2) ** 0.5
+                        if d > 10:  # not right here — go to it
+                            return (round(hx, 1), round(hz, 1))
+                except Exception:
+                    pass
+
+            # v10.6: Read land_dirs to avoid ocean cells
+            land_dirs = state.get("land_dirs") or []
+            on_water = state.get("on_water") or False
+
+            # heading bias: push away from base (straight-line outward)
+            heading_dx, heading_dz = 0, 0
+            if base_xz:
+                bdx = x - base_xz[0]
+                bdz = z - base_xz[1]
+                bmag = (bdx * bdx + bdz * bdz) ** 0.5 or 1
+                heading_dx, heading_dz = bdx / bmag, bdz / bmag
+
+            # v10.6: Dynamic radius — expand when inner cells exhausted
+            for search_radius in (8, 12, 16, 20):
+                best, best_score = None, 1e18
+                found_any = False
+                for dq in range(-search_radius, search_radius + 1):
+                    for dr in range(-search_radius, search_radius + 1):
+                        c = (here[0] + dq, here[1] + dr)
+                        if c in self.visited:
+                            continue
+                        found_any = True
+                        cx, cz = (c[0] + 0.5) * CELL, (c[1] + 0.5) * CELL
+                        if not self.within_leash((cx, cz), base_xz, max_leash):
+                            continue
+                        dx = cx - x
+                        dz = cz - z
+                        dist = (dx * dx + dz * dz) ** 0.5
+                        # v10.6: Skip cells in directions that have no land (ocean)
+                        if land_dirs:
+                            cell_dir = ""
+                            if abs(dx) > abs(dz):
+                                cell_dir = "east" if dx > 0 else "west"
+                            else:
+                                cell_dir = "south" if dz > 0 else "north"
+                            # If we're at the shore and the cell direction has no land, skip
+                            if on_water or dist < 5:
+                                pass  # at shore, need to pick ANY direction
+                            elif cell_dir not in land_dirs and dist > 15:
+                                continue  # this direction is ocean — skip
+                        # alignment with heading (outward direction)
+                        align = (dx * heading_dx + dz * heading_dz) if (heading_dx or heading_dz) else 0
+                        score = dist - align * 0.6
+                        if score < best_score:
+                            best_score = score
+                            best = (round(cx, 1), round(cz, 1))
+                if best:
+                    return best
+                if not found_any:
+                    continue  # all visited in this radius — expand
+            # all radii exhausted — pick a random land direction
+            if land_dirs:
+                import random
+                dir_map = {"east": (1, 0), "west": (-1, 0), "south": (0, 1), "north": (0, -1)}
+                valid = [dir_map[d] for d in land_dirs if d in dir_map]
+                if valid:
+                    dx, dz = random.choice(valid)
+                    return (round(x + dx * 60, 1), round(z + dz * 60, 1))
+            return None
         except Exception:
             return None

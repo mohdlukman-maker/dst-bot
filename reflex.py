@@ -47,7 +47,10 @@ def send(cmd):
     with open(os.path.join(CS, "dst_ai_bot_command"), "wb") as f:
         f.write(b"KLEI     1 " + json.dumps(cmd).encode())
 
-FOOD = ("berries", "carrot", "cookedmeat", "smallmeat", "cookedsmallmeat", "meat", "blue_mushroom", "green_mushroom")
+FOOD = ("cookedmeat", "cookedsmallmeat", "cooked_smallmeat", "cooked_drumstick",
+         "carrot_cooked", "acorn_cooked", "berries", "carrot", "acorn",
+         "smallmeat", "meat", "drumstick", "seeds",
+         "blue_mushroom", "green_mushroom", "red_mushroom", "petals")
 
 # LIGHT REFLEX (Claude v4 Q4): at dusk-minus-90s, ensure a light source is equipped.
 # Wilson should never ARRIVE at night without a plan. This fires pre-emptively.
@@ -55,10 +58,10 @@ LIGHT_ITEMS = ("torch", "lantern", "minerhat", "firepit", "campfire", "coldfire"
 light_reflex_armed = False  # armed when dusk approaches; disarmed once equipped/night over
 
 def eat_best(items):
-    # PREEMPT any running gather job first (Claude: don't starve while chopping)
-    send({"action": "preempt_job"})
     for f in FOOD:
         if f in items:
+            # PREEMPT any running gather job first (Claude: don't starve while chopping)
+            send({"action": "preempt_job"})
             send({"action": "eat", "item": f})
             return f
     return None
@@ -69,38 +72,50 @@ HOSTILES = ("frog", "spider", "spider_warrior", "hound", "houndfire", "hound_wav
             "spider_dropper", "spider_hider", "spider_spitter", "treeguard", "bearger", "deerclops")
 
 def ensure_light(st):
-    """Dusk minus ~90s: if no light equipped, arm the reflex to prep a torch."""
+    """Night-light reflex (v10.3, user's insight): DO NOT equip a torch at
+    dusk just because it's approaching - a campfire replaces the torch. Only
+    equip a torch in a TRUE emergency: it's actually dark AND there's no fire
+    nearby AND a torch exists. This stops the reflex from ripping the axe out
+    of Wilson's hand at dusk to hold a torch all evening (chopping = hard)."""
     global light_reflex_armed
     equipped = st.get("equipped") or []
     items = st.get("items") or []
-    secs_night = st.get("seconds_until_night") or 0
+    isdusk = st.get("isdusk") or False
     isnight = st.get("isnight") or False
+    phase = st.get("phase") or ""
+    fires = st.get("fires") or []
+    have_fire = any(f.get("d", 99) <= 25 for f in fires)
 
-    # already have light equipped -> disarmed
+    # If a tool (axe/pickaxe/spear) is equipped, DO NOT yank it for a torch
+    # while a fire is present - the campfire is the light source.
+    has_tool = any(t in equipped for t in ("axe", "pickaxe", "spear", "shovel"))
+
+    # already have light -> disarmed
     if any(l in equipped for l in LIGHT_ITEMS):
         light_reflex_armed = False
         return None
-    # it's night and no light -> emergency: warn only (deliberative layer acts)
-    if isnight:
-        return None
-    # day time, no night coming soon -> disarmed
-    if secs_night > 90:
+
+    # not dark and we have a fire (or will) -> no torch needed, keep chopping
+    if have_fire and not isnight:
         light_reflex_armed = False
         return None
 
-    # dusk approaching (<90s) and no light equipped
-    if not light_reflex_armed:
-        light_reflex_armed = True
-        if "torch" in items:
-            # preempt first: a chop/mine job may be mid-swing with the axe
-            # equipped - swapping hands under it without preempting kills
-            # the job as tool_broke instead of a clean "preempted" report.
-            send({"action": "preempt_job"})
+    # ACTUAL darkness + no fire = real emergency: equip torch, but only if
+    # we aren't mid-work OR we have no fire at all.
+    if (isnight or (isdusk and phase == "dusk")):
+        if not have_fire and "torch" in items:
+            # dark, no fire, torch available -> equip it (TRUE emergency)
+            # At night with no fire, light = survival. Don't hold an axe
+            # in the dark — it provides no light and Wilson dies.
             send({"action": "equip", "item": "torch"})
-            return "equipped torch (dusk prep)"
-        # no torch yet: preempt jobs and signal the deliberative layer
-        send({"action": "preempt_job"})
-        return "DUSK-WARNING: no torch, materials needed (twigs+cutgrass)"
+            return "equipped torch (dark, no fire)"
+        return None
+
+    # in the last <90s of dusk before night with no fire = warn the agent to
+    # get the campfire, but do NOT equip a torch (campfire is the real answer)
+    raw_secs = st.get("seconds_until_night")
+    if isinstance(raw_secs, (int, float)) and raw_secs <= 90 and not have_fire:
+        return "DUSK-WARNING: no fire for night - get a campfire"
     return None
 
 _fire_emergency_last = 0.0  # cooldown for the dark+no-light emergency (30s)
@@ -128,12 +143,17 @@ def ensure_fire_fuel(st):
         if not has_light:
             # if we have a torch in inventory, equip it NOW
             if "torch" in items:
+                # same single-slot-channel gap as ensure_light() above
                 send({"action": "preempt_job"})
+                time.sleep(1.2)
                 send({"action": "equip", "item": "torch"})
                 return "EMERGENCY: dark + no fire - equipped torch"
             # no torch held: if we carry the materials, CRAFT one immediately
             # (this is the night-death gap: warn-only left Wilson in the dark
             # with 4 twigs + 14 cutgrass in his pocket)
+            # COOLDOWN: don't re-craft every loop tick (10s between attempts)
+            if time.time() - _fire_emergency_last < 10:
+                return None
             counts = st.get("item_counts") or {}
             if counts.get("twigs", 0) >= 2 and counts.get("cutgrass", 0) >= 2:
                 send({"action": "craft", "recipe": "torch"})
@@ -174,7 +194,7 @@ def flee_threats(st):
     # v8 discriminator: NOT every _combat entity is a threat (crows/robins/
     # rabbits are passive). Flee: targeting us, OR known aggressive prefabs.
     AGGRESSIVE = ("merm", "spider", "spider_warrior", "frog", "hound", "houndfire",
-                  "tentacle", "snake", "mosquito", "bee", "killerbee",
+                  "tentacle", "snake", "mosquito", "killerbee",
                   "pigman", "werepig", "walrus", "depthworm",
                   "spiderqueen", "deerclops", "treeguard")
     for t in threats:
@@ -237,9 +257,12 @@ def death_reflex(st):
     if not is_ghost:
         return None
     now = time.time()
-    if now - _revive_sent_at > 20:   # allow one revive per death, retry after 20s
+    # v9.6 (user strategy 2026-08-11): "repeat until he dies, then QUIT the
+    # game" - no auto-revive anymore. Log the death (for learning) and let the
+    # agent see the ghost state, send quit, and exit. Reviving would hide the
+    # death from the agent and the run would never end.
+    if now - _revive_sent_at > 20:   # rate-limit the death log
         _revive_sent_at = now
-        send({"action": "revive"})
         cause = guess_death_cause(st)
         # record the death in the run log (measurement layer)
         try:
@@ -258,8 +281,8 @@ def death_reflex(st):
             rl.end_run(rid, st, cause)
         except Exception:
             pass
-        print(f"[reflex] 💀 WILSON DIED ({cause}) - revive sent")
-        return f"💀 DEAD ({cause}) - revive sent"
+        print(f"[reflex] 💀 WILSON DIED ({cause}) - death logged (v9.6: no auto-revive)")
+        return f"💀 DEAD ({cause}) - death logged"
     return "ghost (revive cooldown)"
 
 def guess_death_cause(st):
@@ -267,7 +290,7 @@ def guess_death_cause(st):
     threats = [t for t in (st or {}).get("threats", []) if t.get("hp", 0) > 0
                and (t.get("targeting") or t.get("n") in (
                    "merm", "spider", "spider_warrior", "frog", "hound", "houndfire",
-                   "tentacle", "snake", "mosquito", "bee", "killerbee",
+                   "tentacle", "snake", "mosquito", "killerbee",
                    "pigman", "werepig", "walrus", "depthworm",
                    "spiderqueen", "deerclops", "treeguard"))]
     if threats:
@@ -280,67 +303,79 @@ def guess_death_cause(st):
         return "darkness"
     return "unknown"
 
-print("Reflex daemon running. Watching hunger/health...")
-while True:
-    try:
-        st = get_state()
-        if st:
-            # REFLEX -1: DEATH (user ask): ghost -> auto-revive + log (top priority)
-            dr = death_reflex(st)
-            if dr:
-                print(f"[reflex] {dr}")
-                time.sleep(1)
-                continue
-            hunger = (st.get("hunger") or [150, 150])[0]
-            health = (st.get("health") or [150, 150])[0]
-            items = st.get("items") or []
-            ground = [g.get("n") for g in (st.get("ground_items") or [])]
-            now = time.time()
-            # REFLEX 0: flee hostiles (highest priority - frogs killed Wilson)
-            if flee_threats(st):
-                last_eat = now
-                time.sleep(0.5)
-                continue
-            # REFLEX 0.4: fire fuel check (Claude P0.1 - campfire burns out!)
-            fr = ensure_fire_fuel(st)
-            if fr:
-                print(f"[reflex] {fr}")
-                time.sleep(0.5)
-                continue
-            # REFLEX 0.45: freezing -> fire (Claude P0.3)
-            tr = ensure_temperature(st)
-            if tr:
-                print(f"[reflex] {tr}")
-                time.sleep(0.5)
-                continue
-            # REFLEX 0.5: dusk-minus-90s light prep (Claude v4: never ARRIVE at night)
-            lr = ensure_light(st)
-            if lr:
-                print(f"[reflex] {lr}")
-                time.sleep(0.5)
-                continue
-            # REFLEX 1: starving + food -> eat (cooldown 5s)
-            if hunger < 30 and (items or ground) and now - last_eat > 5:
-                ate = eat_best(items + ground)
-                if ate:
-                    print(f"[reflex] hunger {hunger:.0f} -> eating {ate}")
+if __name__ == "__main__":
+    print("Reflex daemon running. Watching hunger/health...")
+    while True:
+        try:
+            st = get_state()
+            if st:
+                # REFLEX -1: DEATH (user ask): ghost -> auto-revive + log (top priority)
+                dr = death_reflex(st)
+                if dr:
+                    print(f"[reflex] {dr}")
+                    time.sleep(1)
+                    continue
+                hunger = (st.get("hunger") or [150, 150])[0]
+                health = (st.get("health") or [150, 150])[0]
+                items = st.get("items") or []
+                ground = [g.get("n") for g in (st.get("ground_items") or [])]
+                now = time.time()
+                # REFLEX 0: flee hostiles (highest priority - frogs killed Wilson)
+                if flee_threats(st):
                     last_eat = now
-                elif "seeds" in ground:
-                    # ground seeds are reliable food: gather one, then eat
-                    send({"action": "gather_job", "prefab": "seeds", "count": 1})
-                    time.sleep(6)
-                    send({"action": "eat", "item": "seeds"})
+                    time.sleep(0.5)
+                    continue
+                # REFLEX 0.4: fire fuel check (Claude P0.1 - campfire burns out!)
+                fr = ensure_fire_fuel(st)
+                if fr:
+                    print(f"[reflex] {fr}")
+                    time.sleep(0.5)
+                    continue
+                # REFLEX 0.45: freezing -> fire (Claude P0.3)
+                tr = ensure_temperature(st)
+                if tr:
+                    print(f"[reflex] {tr}")
+                    time.sleep(0.5)
+                    continue
+                # REFLEX 0.5: dusk-minus-90s light prep (Claude v4: never ARRIVE at night)
+                lr = ensure_light(st)
+                if lr:
+                    print(f"[reflex] {lr}")
+                    time.sleep(0.5)
+                    continue
+                # REFLEX 1: starving + food -> eat (cooldown 5s)
+                if hunger < 30 and (items or ground) and now - last_eat > 5:
+                    ate = eat_best(items + ground)
+                    if ate:
+                        print(f"[reflex] hunger {hunger:.0f} -> eating {ate}")
+                    elif "seeds" in ground:
+                        # ground seeds are reliable food: gather one, then eat
+                        send({"action": "gather_job", "prefab": "seeds", "count": 1})
+                        time.sleep(6)
+                        send({"action": "eat", "item": "seeds"})
+                        print(f"[reflex] hunger {hunger:.0f} -> gathered+eaten ground seed")
+                    # Session B #8: cooldown applies even when nothing was eaten -
+                    # otherwise this branch re-fires every 0.2s and the preempt in
+                    # eat_best cancels every move_to the agent makes (fought a
+                    # manual rescue for 2 minutes at hp 30).
                     last_eat = now
-                    print(f"[reflex] hunger {hunger:.0f} -> gathered+eaten ground seed")
-            # REFLEX 2: critical health + food -> eat (cooldown 8s)
-            elif health < 25 and (items or ground) and now - last_eat > 8:
-                ate = eat_best(items + ground)
-                if ate:
-                    print(f"[reflex] health {health:.0f} -> eating {ate}")
-                    last_eat = now
-        time.sleep(0.2)
-    except KeyboardInterrupt:
-        print("Reflex daemon stopped.")
-        break
-    except Exception as e:
-        time.sleep(1)
+                # REFLEX 2: low health + HEALING food -> eat (cooldown 15s)
+                # v10.1: only eat food that actually restores health (not seeds/petals
+                # which are hunger-only). Seeds at HP 49 just wastes the item.
+                elif health < 50 and now - last_eat > 15:
+                    HEALING_FOOD = ("berries", "carrot", "cookedmeat", "smallmeat",
+                                   "cookedsmallmeat", "cooked_smallmeat", "meat",
+                                   "drumstick", "cooked_drumstick", "blue_mushroom",
+                                   "green_mushroom", "red_mushroom")
+                    healing_items = [f for f in (items + ground) if f in HEALING_FOOD]
+                    if healing_items:
+                        ate = eat_best(healing_items)
+                        if ate:
+                            print(f"[reflex] health {health:.0f} -> eating {ate} (healing)")
+                            last_eat = now
+            time.sleep(0.2)
+        except KeyboardInterrupt:
+            print("Reflex daemon stopped.")
+            break
+        except Exception as e:
+            time.sleep(1)

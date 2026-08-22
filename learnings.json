@@ -1,13 +1,17 @@
 {
  "gather_success": {
-  "twigs": 123,
-  "cutgrass": 76,
-  "flint": 23,
-  "axe": 53,
-  "torch": 29,
-  "pinecone": 13,
-  "log": 12,
-  "campfire": 2
+  "twigs": 262,
+  "cutgrass": 155,
+  "flint": 66,
+  "axe": 105,
+  "torch": 73,
+  "pinecone": 20,
+  "log": 25,
+  "campfire": 10,
+  "seeds": 50,
+  "pickaxe": 10,
+  "trap": 2,
+  "rope": 3
  },
  "gather_fail": {},
  "lessons": [

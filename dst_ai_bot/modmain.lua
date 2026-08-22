@@ -34,6 +34,7 @@ local state_task = nil
 -- Pending command id we are currently handling (avoid re-handling).
 local last_cmd_seen = nil
 local last_cmd_id = nil
+local static_last_cmd_id = nil   -- pause/unpause dedup (static poll)
 
 -- GATHER JOB state (Claude's job-runner design: one command runs the whole arc)
 local job = nil          -- {target, action, swings, max_swings, last_workleft, stall_ticks, id, prefab, drops, snapshot, phase, result_cmdid}
@@ -192,6 +193,18 @@ local dialogue_lines = {
         "Version point five. I've seen them all.",
         "New build. Let's find out what broke.",
     },
+    -- META: Wilson comments on the mod's own development history (user
+    -- request). Occasional flavor, not event-driven - see wilson_idle_chatter.
+    meta = {
+        "They found the torch bug. I stopped losing to my own light source.",
+        "Someone gave me a stall timeout. I no longer freeze mid-reach.",
+        "They patched the thing that kept swapping my axe for a torch.",
+        "Every crash they fix is one less way I almost die for no reason.",
+        "I am, apparently, several sessions in. I try not to think about it.",
+        "The code that runs me has bugs. So do I. We're a good match.",
+        "I've survived my own patch notes. That's not nothing.",
+        "Someone's watching a log file, judging my every decision.",
+    },
 }
 
 local dialogue_agent = {}   -- agent-injected lines (set_dialogue)
@@ -310,6 +323,9 @@ local function wilson_idle_chatter()
     elseif #dialogue_agent > 0 then
         -- agent-injected idle lines get priority after state lines
         line = table.remove(dialogue_agent, 1)
+    elseif math.random() < 0.3 then
+        -- occasional dev-history flavor (user request), otherwise plain idle
+        line = pick_line("meta")
     else
         line = pick_line("idle")
     end
@@ -586,6 +602,12 @@ local function write_state()
                     if okd and not is_ocean_tile(dt) then table.insert(land, d[3]) end
                 end
                 st.land_dirs = land   -- which directions have land within ~8 units
+                -- Swamp detection: tile 8 = MARSH, 17 = MUD (tentacle death zone)
+                -- 49% of all bot deaths were to tentacles in swamp biomes
+                local is_swamp_tile = function(t)
+                    return t ~= nil and (t == 8 or t == 17)
+                end
+                st.on_swamp = is_swamp_tile(t)
             end
         end
     end
@@ -1178,6 +1200,29 @@ local function execute_command(cmd)
     local action = cmd and cmd.action
     if action == "ping" then
         return { ok = true, reply = "pong" }
+    elseif action == "pause" then
+        -- v9.2: analysis-time freeze (user request 2026-08-11). We ARE the
+        -- server (offline host, TheWorld.ismastersim=true), so
+        -- TheNet:SetServerPaused freezes the sim. The static poll (below)
+        -- keeps reading commands while paused, so "unpause" always arrives.
+        local okpp, rpp = PCALL(function() return GLOBAL.TheNet:SetServerPaused(true) end)
+        if not okpp then return { ok = false, error = "pause failed: " .. tostring(rpp) } end
+        return { ok = true, reply = "paused" }
+    elseif action == "unpause" then
+        local okpp2, rpp2 = PCALL(function() return GLOBAL.TheNet:SetServerPaused(false) end)
+        if not okpp2 then return { ok = false, error = "unpause failed: " .. tostring(rpp2) } end
+        return { ok = true, reply = "unpaused" }
+    elseif action == "quit" then
+        -- v9.6 (user strategy): "repeat until he dies and quit the game".
+        -- RequestShutdown() is the game's own clean exit (saves + closes).
+        -- Defer: it pushes a popup screen; give the result a beat to land.
+        local okq, rq = PCALL(function()
+            local fn = GLOBAL.RequestShutdown or GLOBAL.TheSim.RequestShutdown
+            if fn then fn() return true end
+            return false
+        end)
+        if not okq or not rq then return { ok = false, error = "quit failed" } end
+        return { ok = true, reply = "quitting" }
     elseif action == "debug_inventory" then
         -- dump RAW inventory internals to the game log
         if not myplayer then return { ok = false, error = "no player" } end
@@ -1232,7 +1277,17 @@ local function execute_command(cmd)
         if type(ents) == "table" then
             for _, e in ipairs(ents) do
                 if e and e.prefab and e ~= myplayer then
-                    if want == nil or e.prefab == want then
+                    -- Session B #7: an entity already claimed / mid-pickup
+                    -- carries INLIMBO and PICKUP on it fails with the game's
+                    -- "I can't do that" - the ground scan already filters it,
+                    -- job_start must too, or Wilson keeps failing on flints.
+                    local skip_ent = false
+                    -- PCALL returns (ok, result): only skip when the call
+                    -- succeeded AND the tag is really there. An errored call
+                    -- (destroyed entity) must not skip every remaining entity.
+                    local ok_limbo, limbo_val = PCALL(function() return e:HasTag("INLIMBO") end)
+                    if ok_limbo and limbo_val then skip_ent = true end
+                    if not skip_ent and (want == nil or e.prefab == want) then
                         local ex, _, ez = e.Transform:GetWorldPosition()
                         -- Session B #6: skip anything within IGNORE_RADIUS of a
                         -- prior no-path failure for this prefab (see #5) - one
@@ -1459,7 +1514,17 @@ local function execute_command(cmd)
         if type(ents) == "table" then
             for _, e in ipairs(ents) do
                 if e and e.prefab and e ~= myplayer then
-                    if want == nil or e.prefab == want then
+                    -- Session B #7: an entity already claimed / mid-pickup
+                    -- carries INLIMBO and PICKUP on it fails with the game's
+                    -- "I can't do that" - the ground scan already filters it,
+                    -- job_start must too, or Wilson keeps failing on flints.
+                    local skip_ent = false
+                    -- PCALL returns (ok, result): only skip when the call
+                    -- succeeded AND the tag is really there. An errored call
+                    -- (destroyed entity) must not skip every remaining entity.
+                    local ok_limbo, limbo_val = PCALL(function() return e:HasTag("INLIMBO") end)
+                    if ok_limbo and limbo_val then skip_ent = true end
+                    if not skip_ent and (want == nil or e.prefab == want) then
                         local ex, _, ez = e.Transform:GetWorldPosition()
                         local d = (ex-px)^2 + (ez-pz)^2
                         if d < best then best = d; target = e end
@@ -1618,6 +1683,47 @@ local function heartbeat_tick()
     if oke and enc then
         PCALL(function() TheSimRef:SetPersistentString(HEARTBEAT_NAME, enc, false, nil) end)
     end
+    -- v9.2: STATIC command poll (real-time, survives pause). While paused the
+    -- sim poll_task is frozen, so only pause/unpause commands are handled here
+    -- (deduped by static_last_cmd_id). Everything else is ignored while paused.
+    PCALL(function()
+        TheSimRef:GetPersistentString(CMD_NAME, function(ok, data)
+            if not (ok and data and #data > 0) then return end
+            local stripped = data
+            if string.sub(stripped, 1, 5) == "KLEI " then
+                stripped = string.match(stripped, "KLEI%s+%d%s+(.*)") or data
+            end
+            local p, cmd = PCALL(json.decode, stripped)
+            if not (p and type(cmd) == "table") then return end
+            if cmd.id == static_last_cmd_id then return end
+            local act = cmd.action
+            if act ~= "pause" and act ~= "unpause" then
+                static_last_cmd_id = cmd.id   -- swallow non-pause cmds seen here
+                return
+            end
+            -- CRASH FIX (2026-08-11, client_log 01:18:58): the static poll runs
+            -- in the engine's static phase BEFORE Update(). Executing "pause"
+            -- here flips the server flag mid-frame; the very same frame's
+            -- Update() then hits scripts/update.lua:229
+            -- assert(not TheNet:IsServerPaused(), "Update() called on paused
+            -- server!") -> force abort. So: the static poll may ONLY unpause
+            -- (SetServerPaused(false) can never trip that assert). "pause"
+            -- must be left for the sim poll (executes mid-Update, safe - the
+            -- assert already passed at frame start and the engine skips the
+            -- next frame). Do NOT dedup-mark pause here or the sim poll's
+            -- separate last_cmd_id logic would still fire it anyway.
+            if act == "pause" then return end
+            static_last_cmd_id = cmd.id
+            local ok3, ret = PCALL(execute_command, cmd)
+            local resp = { id = cmd.id }
+            if ok3 then resp.result = ret else resp.result = { ok = false, err = tostring(ret) } end
+            push_result(cmd.id, resp.result)
+            local ok2, enc2 = PCALL(json.encode, resp)
+            if ok2 and enc2 then
+                PCALL(function() TheSimRef:SetPersistentString("dst_ai_bot_result", enc2, false, nil) end)
+            end
+        end)
+    end)
 end
 
 -- Session B #1: was one 1.0s DoPeriodicTask doing state-write + command-read

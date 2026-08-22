@@ -1,3 +1,25 @@
+# === Python ===
 __pycache__/
 *.pyc
+*.pyo
+
+# === Runtime logs / run output (regenerated every session) ===
+*.log
+survival_log.txt
+agent_out.log
+reflex_out.log
+observe_log.txt
+screen_test.png
+vision_shot.png
+*.png
+
+# === Local convenience symlink to base mod (DST-ArtificialWilson) ===
+ref
+
+# === Local patches / diffs (working artifacts) ===
 session_a.diff
+*.diff
+
+# === Secrets (never commit; loaded from Hermes .env at runtime) ===
+.env
+*.env
