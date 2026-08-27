@@ -1,16 +1,15 @@
 #!/usr/bin/env python3
 """
-REFLEX DAEMON - Claude's reflex layer for Wilson.
+REFLEX DAEMON - Fast Reflex Layer for Wilson.
 Runs every 200ms, deterministic, NO LLM. Keeps Wilson alive:
 - hunger < 30 + food in inventory -> eat best food
-- health < 30 -> eat healing food
-- night/dusk + no light -> (future: warn / move to campfire)
-- owns command.json writes (single-writer guarantee via lock file)
-
-The deliberative layer (Hermes LLM) makes goals; this daemon keeps
-Wilson from dying while the LLM thinks. Run with: python reflex.py
+- health < 50 -> eat healing food (Pierogi, Cooked Meat, Berries)
+- night/dusk + no light -> light emergency torch or fuel campfire
+- freezing / overheating -> temperature control reflexes
+- rain / moisture -> auto-equip waterproofing
+- threats / boss evasion -> rapid dodge and escape
 """
-import os, time, re, json, sys, atexit
+import os, time, re, json, sys, atexit, math
 
 DOC = os.path.join(os.path.expanduser("~"), "Documents", "Klei", "DoNotStarveTogether")
 CS = os.path.join(DOC, "40630831", "client_save")
@@ -47,36 +46,30 @@ def send(cmd):
     with open(os.path.join(CS, "dst_ai_bot_command"), "wb") as f:
         f.write(b"KLEI     1 " + json.dumps(cmd).encode())
 
-FOOD = ("cookedmeat", "cookedsmallmeat", "cooked_smallmeat", "cooked_drumstick",
-         "carrot_cooked", "acorn_cooked", "berries", "carrot", "acorn",
-         "smallmeat", "meat", "drumstick", "seeds",
-         "blue_mushroom", "green_mushroom", "red_mushroom", "petals")
+FOOD = ("pierogi", "meatballs", "baconeggs", "dragonpie",
+        "cookedmeat", "cookedsmallmeat", "cooked_smallmeat", "cooked_drumstick",
+        "carrot_cooked", "acorn_cooked", "berries", "carrot", "acorn",
+        "smallmeat", "meat", "drumstick", "seeds",
+        "blue_mushroom", "green_mushroom", "red_mushroom", "petals")
 
-# LIGHT REFLEX (Claude v4 Q4): at dusk-minus-90s, ensure a light source is equipped.
-# Wilson should never ARRIVE at night without a plan. This fires pre-emptively.
 LIGHT_ITEMS = ("torch", "lantern", "minerhat", "firepit", "campfire", "coldfire", "moggles")
-light_reflex_armed = False  # armed when dusk approaches; disarmed once equipped/night over
+WATERPROOF_ITEMS = ("eyebrella", "umbrella", "strawhat", "footballhat", "raincoat")
+light_reflex_armed = False
 
 def eat_best(items):
     for f in FOOD:
         if f in items:
-            # PREEMPT any running gather job first (Claude: don't starve while chopping)
             send({"action": "preempt_job"})
             send({"action": "eat", "item": f})
             return f
     return None
 
-# Hostiles to flee from (frogs killed Wilson - session 2 lesson)
 HOSTILES = ("frog", "spider", "spider_warrior", "hound", "houndfire", "hound_wave",
             "tentacle", "snake", "mosquito", "killerbee", "walrus", "merm",
-            "spider_dropper", "spider_hider", "spider_spitter", "treeguard", "bearger", "deerclops")
+            "spider_dropper", "spider_hider", "spider_spitter", "treeguard", "bearger", "deerclops", "moose", "antlion")
 
 def ensure_light(st):
-    """Night-light reflex (v10.3, user's insight): DO NOT equip a torch at
-    dusk just because it's approaching - a campfire replaces the torch. Only
-    equip a torch in a TRUE emergency: it's actually dark AND there's no fire
-    nearby AND a torch exists. This stops the reflex from ripping the axe out
-    of Wilson's hand at dusk to hold a torch all evening (chopping = hard)."""
+    """Night-light reflex: Ensures Wilson never stands in the dark."""
     global light_reflex_armed
     equipped = st.get("equipped") or []
     items = st.get("items") or []
@@ -86,72 +79,50 @@ def ensure_light(st):
     fires = st.get("fires") or []
     have_fire = any(f.get("d", 99) <= 25 for f in fires)
 
-    # If a tool (axe/pickaxe/spear) is equipped, DO NOT yank it for a torch
-    # while a fire is present - the campfire is the light source.
-    has_tool = any(t in equipped for t in ("axe", "pickaxe", "spear", "shovel"))
-
-    # already have light -> disarmed
     if any(l in equipped for l in LIGHT_ITEMS):
         light_reflex_armed = False
         return None
 
-    # not dark and we have a fire (or will) -> no torch needed, keep chopping
     if have_fire and not isnight:
         light_reflex_armed = False
         return None
 
-    # ACTUAL darkness + no fire = real emergency: equip torch, but only if
-    # we aren't mid-work OR we have no fire at all.
-    if (isnight or (isdusk and phase == "dusk")):
+    if isnight or (isdusk and phase == "dusk"):
         if not have_fire and "torch" in items:
-            # dark, no fire, torch available -> equip it (TRUE emergency)
-            # At night with no fire, light = survival. Don't hold an axe
-            # in the dark — it provides no light and Wilson dies.
             send({"action": "equip", "item": "torch"})
             return "equipped torch (dark, no fire)"
         return None
 
-    # in the last <90s of dusk before night with no fire = warn the agent to
-    # get the campfire, but do NOT equip a torch (campfire is the real answer)
     raw_secs = st.get("seconds_until_night")
     if isinstance(raw_secs, (int, float)) and raw_secs <= 90 and not have_fire:
         return "DUSK-WARNING: no fire for night - get a campfire"
     return None
 
-_fire_emergency_last = 0.0  # cooldown for the dark+no-light emergency (30s)
+_fire_emergency_last = 0.0
 
 def ensure_fire_fuel(st):
-    """Claude P0.1 + v6: fuel a low fire (threshold), AND detect fire ABSENCE.
-    A burned-out campfire becomes ash (no fueled entity) - so also invert:
-    (dusk or night) with no fire within 20 and no light equipped = EMERGENCY."""
+    """Fuels low fire or crafts emergency torch if darkness falls without light."""
+    global _fire_emergency_last
     fires = st.get("fires") or []
     items = st.get("items") or []
     equipped = st.get("equipped") or []
     isdusk = st.get("isdusk") or False
     isnight = st.get("isnight") or False
 
-    # 1) threshold: fuel a low fire if we have fuel
     if "log" in items or "twigs" in items:
         for f in fires:
             if f.get("d", 99) <= 15 and f.get("fuel_pct", 100) < 35:
                 send({"action": "fuel", "item": "log" if "log" in items else "twigs"})
                 return f"fuelled {f.get('n')} ({f.get('fuel_pct')}%)"
 
-    # 2) ABSENCE check (Claude v6): dark + no fire nearby + no light = emergency
     if (isdusk or isnight) and not fires:
         has_light = any(l in equipped for l in LIGHT_ITEMS)
         if not has_light:
-            # if we have a torch in inventory, equip it NOW
             if "torch" in items:
-                # same single-slot-channel gap as ensure_light() above
                 send({"action": "preempt_job"})
                 time.sleep(1.2)
                 send({"action": "equip", "item": "torch"})
                 return "EMERGENCY: dark + no fire - equipped torch"
-            # no torch held: if we carry the materials, CRAFT one immediately
-            # (this is the night-death gap: warn-only left Wilson in the dark
-            # with 4 twigs + 14 cutgrass in his pocket)
-            # COOLDOWN: don't re-craft every loop tick (10s between attempts)
             if time.time() - _fire_emergency_last < 10:
                 return None
             counts = st.get("item_counts") or {}
@@ -161,8 +132,6 @@ def ensure_fire_fuel(st):
                 send({"action": "equip", "item": "torch"})
                 _fire_emergency_last = time.time()
                 return "EMERGENCY: dark - CRAFTED+equipped torch from materials"
-            # COOLDOWN: don't spam preempt_job every 0.2s (that froze Wilson -
-            # the agent's commands were preempted before they could move him).
             if time.time() - _fire_emergency_last < 30:
                 return None
             _fire_emergency_last = time.time()
@@ -171,65 +140,98 @@ def ensure_fire_fuel(st):
     return None
 
 def ensure_temperature(st):
-    """Claude P0.3: if freezing and a fire is within 20m, move toward it."""
-    if st.get("is_freezing"):
+    """Manages freezing (winter) and overheating (summer)."""
+    # 1. Freezing check
+    is_freezing = st.get("is_freezing") or (st.get("temperature", 30) < 10)
+    if is_freezing:
         fires = st.get("fires") or []
         if fires:
             f = min(fires, key=lambda x: x.get("d", 99))
-            if f.get("d", 99) <= 20:
+            if f.get("d", 99) <= 25:
                 send({"action": "move_to", "x": f.get("x"), "z": f.get("z")})
-                return f"freezing -> moving to fire ({f.get('d')}m)"
+                return f"freezing -> moving to warm fire ({f.get('d'):.1f}m)"
+        # Emergency heat: equip thermal stone if in inventory
+        items = st.get("items") or []
+        if "heatrock" in items and "heatrock" not in (st.get("equipped") or []):
+            send({"action": "equip", "item": "heatrock"})
+            return "freezing -> equipped thermal stone"
+
+    # 2. Overheating check (Summer)
+    is_overheating = st.get("is_overheating") or (st.get("temperature", 30) > 65)
+    if is_overheating:
+        cold_fires = [f for f in (st.get("fires") or []) if "cold" in (f.get("n") or "")]
+        if cold_fires:
+            cf = min(cold_fires, key=lambda x: x.get("d", 99))
+            if cf.get("d", 99) <= 25:
+                send({"action": "move_to", "x": cf.get("x"), "z": cf.get("z")})
+                return f"overheating -> moving to endothermic fire ({cf.get('d'):.1f}m)"
+        items = st.get("items") or []
+        for gear in ("eyebrella", "umbrella", "strawhat"):
+            if gear in items and gear not in (st.get("equipped") or []):
+                send({"action": "equip", "item": gear})
+                return f"overheating -> equipped {gear}"
+
+    return None
+
+def ensure_weather(st):
+    """Manages rain / moisture in Spring."""
+    moisture = st.get("moisture", 0)
+    is_raining = st.get("is_raining", False)
+    if is_raining or moisture > 30:
+        items = st.get("items") or []
+        equipped = st.get("equipped") or []
+        for wp in WATERPROOF_ITEMS:
+            if wp in items and wp not in equipped:
+                send({"action": "equip", "item": wp})
+                return f"rain/wetness ({moisture:.0f}%) -> equipped {wp}"
     return None
 
 def flee_threats(st):
-    """If a hostile is within ~10m, move away. Uses state's threats[] (the mod
-    tags ALL _combat entities - merm, pigman, spider, frog...) instead of a
-    hardcoded prefab list that missed merm and let Wilson die."""
+    """If a hostile is within ~10m (or boss within ~25m), move away."""
     nb = st.get("nearby") or []
     threats = st.get("threats") or []
     pos = st.get("pos") or {}
     px, pz = pos.get("x", 0), pos.get("z", 0)
     nearest = None
     nd = 99
-    # v8 discriminator: NOT every _combat entity is a threat (crows/robins/
-    # rabbits are passive). Flee: targeting us, OR known aggressive prefabs.
+    
     AGGRESSIVE = ("merm", "spider", "spider_warrior", "frog", "hound", "houndfire",
                   "tentacle", "snake", "mosquito", "killerbee",
                   "pigman", "werepig", "walrus", "depthworm",
-                  "spiderqueen", "deerclops", "treeguard")
+                  "spiderqueen", "deerclops", "treeguard", "bearger", "moose")
+    
     for t in threats:
-        if t.get("hp", 0) <= 0: continue       # dead/ghost
+        if t.get("hp", 0) <= 0: continue
         if not (t.get("targeting") or t.get("n") in AGGRESSIVE):
-            continue                            # passive _combat: not a threat
+            continue
         d = t.get("d", 99)
         if d < nd:
             nd = d
             nearest = t
-    # fall back to nearby if threats[] is missing the mob (belt and braces)
+            
     if nearest is None or nd > 12:
         for e in nb:
             if e.get("n") in HOSTILES and e.get("d", 99) < nd:
                 nd = e.get("d")
                 nearest = e
-    if nearest and nd < 10:
-        import math
-        # escape direction: away from the threat's x/z (mod now provides them)
+
+    # Bosses have larger danger radius
+    is_boss = nearest and nearest.get("n") in ("deerclops", "bearger", "moose", "spiderqueen")
+    threat_radius = 25 if is_boss else 10
+
+    if nearest and nd < threat_radius:
         tx = nearest.get("x")
         tz = nearest.get("z")
         if tx is None or tz is None:
-            # fallback: nearest nearby entity that HAS coords
             for e in nb:
                 if e.get("x") is not None and e.get("z") is not None:
                     tx, tz = e.get("x"), e.get("z")
                     break
         if tx is None or tz is None:
-            tx, tz = px + 1, pz + 1   # unknown direction: nudge NE
-        dx, dz = px - tx, pz - tz     # opposite of threat direction
+            tx, tz = px + 1, pz + 1
+        dx, dz = px - tx, pz - tz
         mag = math.sqrt(dx*dx + dz*dz) or 1
-        # postmortem (2026-08-10): 15 units wasn't enough to clear a dense
-        # tentacle cluster - Wilson fled one tentacle's range straight into
-        # the next one's. Widened to 30, matching local_agent.py's flee.
-        step = 30
+        step = 45 if is_boss else 30
         nx, nz = px + dx/mag*step, pz + dz/mag*step
         send({"action": "preempt_job"})
         send({"action": "move_to", "x": nx, "z": nz})
@@ -238,17 +240,13 @@ def flee_threats(st):
     return False
 
 last_eat = 0
-_revive_sent_at = 0.0  # only revive once per death (avoid spam)
+_revive_sent_at = 0.0
 
 def death_reflex(st):
-    """USER ASK: detect Wilson dead (ghost) -> auto-revive + log the death.
-    A ghost reads health 50 and carries the playerghost TAG (st.is_ghost from
-    the mod). Log the death with cause so we LEARN from every run."""
+    """Detects Wilson dead (ghost) -> logs death."""
     global _revive_sent_at
     is_ghost = (st or {}).get("is_ghost")
     if is_ghost is None:
-        # fallback for old mod: ghost health reads exactly ~50 (half of max)
-        # AND a skeleton_player marks the death spot nearby
         h = (st or {}).get("health") or [150]
         hcur = h[0] if isinstance(h, (list, tuple)) else h
         skel = [g for g in ((st or {}).get("nearby") or [])
@@ -257,18 +255,11 @@ def death_reflex(st):
     if not is_ghost:
         return None
     now = time.time()
-    # v9.6 (user strategy 2026-08-11): "repeat until he dies, then QUIT the
-    # game" - no auto-revive anymore. Log the death (for learning) and let the
-    # agent see the ghost state, send quit, and exit. Reviving would hide the
-    # death from the agent and the run would never end.
-    if now - _revive_sent_at > 20:   # rate-limit the death log
+    if now - _revive_sent_at > 20:
         _revive_sent_at = now
         cause = guess_death_cause(st)
-        # record the death in the run log (measurement layer)
         try:
             from lib import run_log as rl
-            # Session A2 T4: the agent owns run lifecycle; read its run_id
-            # from the file it publishes. Fallback: distinct reflex id.
             rid = ""
             try:
                 with open(os.path.join(os.path.dirname(os.path.abspath(__file__)),
@@ -281,35 +272,33 @@ def death_reflex(st):
             rl.end_run(rid, st, cause)
         except Exception:
             pass
-        print(f"[reflex] 💀 WILSON DIED ({cause}) - death logged (v9.6: no auto-revive)")
+        print(f"[reflex] 💀 WILSON DIED ({cause}) - death logged")
         return f"💀 DEAD ({cause}) - death logged"
-    return "ghost (revive cooldown)"
+    return "ghost"
 
 def guess_death_cause(st):
-    """Best-effort cause from the state at death: threats, darkness, hunger."""
     threats = [t for t in (st or {}).get("threats", []) if t.get("hp", 0) > 0
-               and (t.get("targeting") or t.get("n") in (
-                   "merm", "spider", "spider_warrior", "frog", "hound", "houndfire",
-                   "tentacle", "snake", "mosquito", "killerbee",
-                   "pigman", "werepig", "walrus", "depthworm",
-                   "spiderqueen", "deerclops", "treeguard"))]
+               and (t.get("targeting") or t.get("n") in HOSTILES)]
     if threats:
         return f"mob:{threats[0].get('n')}"
     h = (st or {}).get("hunger") or [150]
     if h[0] < 10:
         return "starvation"
+    if (st or {}).get("is_freezing"):
+        return "freezing"
+    if (st or {}).get("is_overheating"):
+        return "overheating"
     ph = (st or {}).get("phase")
     if ph in ("dusk", "night"):
         return "darkness"
     return "unknown"
 
 if __name__ == "__main__":
-    print("Reflex daemon running. Watching hunger/health...")
+    print("Reflex daemon running (100-Day survival mode). Watching hunger/health/weather/threats...")
     while True:
         try:
             st = get_state()
             if st:
-                # REFLEX -1: DEATH (user ask): ghost -> auto-revive + log (top priority)
                 dr = death_reflex(st)
                 if dr:
                     print(f"[reflex] {dr}")
@@ -320,50 +309,50 @@ if __name__ == "__main__":
                 items = st.get("items") or []
                 ground = [g.get("n") for g in (st.get("ground_items") or [])]
                 now = time.time()
-                # REFLEX 0: flee hostiles (highest priority - frogs killed Wilson)
+
                 if flee_threats(st):
                     last_eat = now
                     time.sleep(0.5)
                     continue
-                # REFLEX 0.4: fire fuel check (Claude P0.1 - campfire burns out!)
+
                 fr = ensure_fire_fuel(st)
                 if fr:
                     print(f"[reflex] {fr}")
                     time.sleep(0.5)
                     continue
-                # REFLEX 0.45: freezing -> fire (Claude P0.3)
+
                 tr = ensure_temperature(st)
                 if tr:
                     print(f"[reflex] {tr}")
                     time.sleep(0.5)
                     continue
-                # REFLEX 0.5: dusk-minus-90s light prep (Claude v4: never ARRIVE at night)
+
+                wr = ensure_weather(st)
+                if wr:
+                    print(f"[reflex] {wr}")
+                    time.sleep(0.5)
+                    continue
+
                 lr = ensure_light(st)
                 if lr:
                     print(f"[reflex] {lr}")
                     time.sleep(0.5)
                     continue
-                # REFLEX 1: starving + food -> eat (cooldown 5s)
+
                 if hunger < 30 and (items or ground) and now - last_eat > 5:
                     ate = eat_best(items + ground)
                     if ate:
                         print(f"[reflex] hunger {hunger:.0f} -> eating {ate}")
                     elif "seeds" in ground:
-                        # ground seeds are reliable food: gather one, then eat
                         send({"action": "gather_job", "prefab": "seeds", "count": 1})
                         time.sleep(6)
                         send({"action": "eat", "item": "seeds"})
                         print(f"[reflex] hunger {hunger:.0f} -> gathered+eaten ground seed")
-                    # Session B #8: cooldown applies even when nothing was eaten -
-                    # otherwise this branch re-fires every 0.2s and the preempt in
-                    # eat_best cancels every move_to the agent makes (fought a
-                    # manual rescue for 2 minutes at hp 30).
                     last_eat = now
-                # REFLEX 2: low health + HEALING food -> eat (cooldown 15s)
-                # v10.1: only eat food that actually restores health (not seeds/petals
-                # which are hunger-only). Seeds at HP 49 just wastes the item.
+
                 elif health < 50 and now - last_eat > 15:
-                    HEALING_FOOD = ("berries", "carrot", "cookedmeat", "smallmeat",
+                    HEALING_FOOD = ("pierogi", "meatballs", "baconeggs", "dragonpie",
+                                   "berries", "carrot", "cookedmeat", "smallmeat",
                                    "cookedsmallmeat", "cooked_smallmeat", "meat",
                                    "drumstick", "cooked_drumstick", "blue_mushroom",
                                    "green_mushroom", "red_mushroom")

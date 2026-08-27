@@ -173,70 +173,106 @@ def gather_reliability(prefab):
 PLAN_STAGES = [
     {
         "id": "tools",
-        "desc": "Day 1: craft axe (survival basics)",
-        "complete": lambda st: "axe" in (st.get("equipped") or []) or
-                               "axe" in (st.get("item_counts") or {}),
-        "asks_when_stuck": "I'm stuck in the tools stage (need axe=1twigs+1flint). I can't find the materials nearby. Where should I look?",
+        "desc": "Day 1: craft axe and pickaxe (survival basics)",
+        "complete": lambda st: ("axe" in (st.get("equipped") or []) or "axe" in (st.get("item_counts") or {})) and
+                               ("pickaxe" in (st.get("equipped") or []) or "pickaxe" in (st.get("item_counts") or {})),
+        "asks_when_stuck": "I'm stuck in the tools stage (need axe/pickaxe). I can't find materials nearby. Where should I look?",
     },
     {
         "id": "campfire",
         "desc": "Build a campfire before night (3 cutgrass + 2 logs)",
-        "complete": lambda st: len(st.get("fires") or []) > 0,
-        "asks_when_stuck": "It's getting dark and I have no campfire. I need logs (chop trees) + cutgrass. What should I prioritize?",
+        "complete": lambda st: len(st.get("fires") or []) > 0 or "torch" in (st.get("equipped") or []),
+        "asks_when_stuck": "It's getting dark and I have no light. I need logs + cutgrass. What should I prioritize?",
     },
     {
         "id": "explore_base",
         "desc": "Explore to find a base-worthy spot (rocks/beefalo/grass, AWAY from swamp)",
-        "complete": lambda st: (st.get("day") or 0) >= 3,
+        "complete": lambda st: (st.get("day") or 0) >= 3 and get_base() is not None,
         "asks_when_stuck": "I've explored several areas. Where should I set up base? (looking for: rocky biome, beefalo, grass, pig village, NOT near swamp)",
     },
     {
         "id": "science",
-        "desc": "Day 3-4: build science machine (4 logs + 4 rocks + 1 gold) to unlock T1 recipes",
-        "complete": lambda st: "researchlab" in (st.get("can_build") or []) or
-                               "spear" in (st.get("can_build") or []),
+        "desc": "Day 3-5: build science machine (4 logs + 4 rocks + 1 gold) to unlock T1 recipes",
+        "complete": lambda st: any(e.get("n") == "researchlab" and e.get("d", 99) <= 15 for e in (st.get("nearby") or [])) or
+                               "researchlab" in (st.get("can_build") or []) or "spear" in (st.get("can_build") or []),
         "asks_when_stuck": "I need a science machine (4 logs + 4 rocks + 1 gold). I can't craft a spear or armor without it. Where can I find gold?",
     },
     {
         "id": "armor",
-        "desc": "Day 4-5: spear + armorwood BEFORE hounds (day 6 attack)",
-        "complete": lambda st: ("spear" in (st.get("item_counts") or {}) or
-                                "spear" in (st.get("equipped") or [])) and
-                               ("armorwood" in (st.get("item_counts") or {}) or
-                                any("armor" in e for e in (st.get("equipped") or []))),
+        "desc": "Day 5-6: spear + armorwood BEFORE hounds (day 6 attack)",
+        "complete": lambda st: ("spear" in (st.get("item_counts") or {}) or "spear" in (st.get("equipped") or [])) and
+                               ("armorwood" in (st.get("item_counts") or {}) or any("armor" in e for e in (st.get("equipped") or []))),
         "asks_when_stuck": "Hounds attack on day 6! I need a spear + armorwood NOW. I have the science machine but need materials. What should I gather?",
     },
     {
-        "id": "food_farm",
-        "desc": "Day 5+: build 2 traps + stockpile food (rabbits/birds)",
-        "complete": lambda st: (st.get("item_counts") or {}).get("trap", 0) >= 2,
-        "asks_when_stuck": "I need sustainable food. I should place traps near rabbit holes. Where are rabbits nearby?",
+        "id": "alchemy_crockpot",
+        "desc": "Day 7-14: Alchemy Engine + Crock Pot + Base Chests + Lightning Rod",
+        "complete": lambda st: any(e.get("n") == "cookpot" and e.get("d", 99) <= 20 for e in (st.get("nearby") or [])) and
+                               any(e.get("n") == "researchlab2" and e.get("d", 99) <= 20 for e in (st.get("nearby") or [])),
+        "asks_when_stuck": "I need an Alchemy Engine and Crock Pot to cook Meatballs/Pierogi. Where can I get charcoal (burnt trees) and gold?",
     },
     {
         "id": "winter_prep",
-        "desc": "Day 15-20: thermal stone + insulation + 40 logs before winter (day 21)",
-        "complete": lambda st: False,
-        "asks_when_stuck": "Winter is coming (day 21). I need thermal stone + warm clothes + log stockpile. What's the priority?",
+        "desc": "Day 15-20: Thermal stone + Warm clothing + 30+ logs before winter (day 21)",
+        "complete": lambda st: "heatrock" in (st.get("item_counts") or {}) or "heatrock" in (st.get("equipped") or []),
+        "asks_when_stuck": "Winter is coming (day 21). I need a Thermal Stone (10 rocks + 1 pickaxe + 3 flint) and warm clothes. What's the priority?",
+    },
+    {
+        "id": "winter_survival",
+        "desc": "Day 21-35: Winter survival (Crock Pot cooking + Deerclops evasion on Day 30)",
+        "complete": lambda st: (st.get("day") or 0) >= 36 or (st.get("season") == "spring"),
+        "asks_when_stuck": "It is Winter! Maintain heated Thermal Stone near fire, cook Meatballs, and avoid Deerclops on Day 30.",
+    },
+    {
+        "id": "spring_survival",
+        "desc": "Day 36-55: Spring survival (Waterproofing with Umbrella/Eyebrella + Lightning Rod + Frog Rain Avoidance)",
+        "complete": lambda st: (st.get("day") or 0) >= 56 or (st.get("season") == "summer"),
+        "asks_when_stuck": "Spring rain causes wetness and sanity drain. Equip Umbrella and stay near base Lightning Rod.",
+    },
+    {
+        "id": "summer_survival",
+        "desc": "Day 56-70: Summer survival (Endothermic Fire Pit + Chilled Thermal Stone + Ice Flingomatic)",
+        "complete": lambda st: (st.get("day") or 0) >= 71 or (st.get("season") == "autumn"),
+        "asks_when_stuck": "Summer heat causes wildfires and overheating. Stay near Endothermic Fire Pit with chilled Thermal Stone.",
+    },
+    {
+        "id": "sustain_100",
+        "desc": "Day 71-100: Long-term sustain (Tooth Trap defense + Autonomous farming loop)",
+        "complete": lambda st: (st.get("day") or 0) >= 100,
+        "asks_when_stuck": "Scale Tooth Trap defenses and food preserves to reach the 100-day milestone!",
     },
 ]
 
 CRAFT_PRIORITIES = [
-    # Phase 1: Day 1 survival (learned from human play)
+    # Phase 1: Day 1 survival
     ("axe", {"twigs": 1, "flint": 1}),
-    ("pickaxe", {"twigs": 2, "flint": 2}),       # pickaxe BEFORE torch
+    ("pickaxe", {"twigs": 2, "flint": 2}),
     ("torch", {"cutgrass": 2, "twigs": 2}),
     ("campfire", {"cutgrass": 3, "log": 2}),
-    ("rope", {"cutgrass": 3}),                     # prerequisite for spear/shovel/armorwood
-    # Phase 2: Science machine (unlocks T1 recipes)
+    ("rope", {"cutgrass": 3}),
+    ("boards", {"log": 4}),
+    ("cutstone", {"rocks": 3}),
+    ("transistor", {"goldnugget": 2, "cutstone": 1}),
+    # Phase 2: Science Machine & Armor
     ("researchlab", {"log": 4, "rocks": 4, "goldnugget": 1}),
-    # Phase 3: Tech-gated (need science machine via can_build check)
     ("spear", {"twigs": 2, "flint": 1, "rope": 1}),
     ("shovel", {"twigs": 2, "flint": 1, "rope": 1}),
     ("armorwood", {"log": 8, "rope": 2}),
     ("backpack", {"cutgrass": 4, "twigs": 4}),
-    # Phase 4: Base building (after tools+science)
     ("firepit", {"log": 2, "rocks": 12}),
     ("trap", {"twigs": 2, "cutgrass": 6}),
+    # Phase 3: Alchemy Engine & Crock Pot
+    ("researchlab2", {"boards": 4, "cutstone": 2, "transistor": 2}),
+    ("cookpot", {"cutstone": 3, "charcoal": 6, "twigs": 6}),
+    ("treasurechest", {"boards": 3}),
+    ("lightning_rod", {"goldnugget": 3, "cutstone": 1}),
+    # Phase 4: Winter & Seasonal Gear
+    ("heatrock", {"rocks": 10, "pickaxe": 1, "flint": 3}),
+    ("winterhat", {"beefalowool": 4, "silk": 4}),
+    ("umbrella", {"twigs": 6, "pigskin": 1, "silk": 2}),
+    ("footballhat", {"pigskin": 1, "rope": 1}),
+    ("coldfirepit", {"nitre": 2, "cutstone": 4, "transistor": 2}),
+    ("trap_teeth", {"log": 1, "rope": 1, "houndstooth": 1}),
 ]
 
 # ---------------- QUESTION ESCALATION (ask, don't wander) ----------------
