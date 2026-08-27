@@ -1,0 +1,14 @@
+{
+  "hunger_eat_threshold": 35,
+  "health_heal_threshold": 50,
+  "flee_threat_radius": 12,
+  "flee_boss_radius": 35,
+  "light_emergency_seconds": 90,
+  "dusk_warning_seconds": 90,
+  "target_timeout_s": 15,
+  "explore_step_size": 25,
+  "kiting_strike_count": 2,
+  "active_stage_override": null,
+  "last_updated": "initial_defaults",
+  "notes": "Hot-reloaded every 2 minutes by auto_tuner.py based on live gameplay telemetry."
+}

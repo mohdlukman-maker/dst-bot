@@ -1,20 +1,17 @@
 #!/usr/bin/env python3
 """
-REFLEX DAEMON - Fast Reflex Layer for Wilson.
-Runs every 200ms, deterministic, NO LLM. Keeps Wilson alive:
-- hunger < 30 + food in inventory -> eat best food
-- health < 50 -> eat healing food (Pierogi, Cooked Meat, Berries)
-- night/dusk + no light -> light emergency torch or fuel campfire
-- freezing / overheating -> temperature control reflexes
-- rain / moisture -> auto-equip waterproofing
-- threats / boss evasion -> rapid dodge and escape
+REFLEX DAEMON - Fast Reflex Layer for Wilson with Dynamic AI Auto-Tuning.
+Runs every 200ms, deterministic, NO LLM latency.
+Hot-reloads tuning parameters from tuning_config.json (adjusted by AI auto_tuner.py every 2 mins).
 """
 import os, time, re, json, sys, atexit, math
+from pathlib import Path
 
 DOC = os.path.join(os.path.expanduser("~"), "Documents", "Klei", "DoNotStarveTogether")
 CS = os.path.join(DOC, "40630831", "client_save")
 FP = os.path.join(CS, "dst_ai_bot_state")
 LOCK = os.path.join(CS, "dst_ai_bot_DAEMON.lock")
+CONFIG_FILE = Path(__file__).parent / "tuning_config.json"
 
 # Single-instance guard
 if os.path.exists(LOCK):
@@ -31,6 +28,29 @@ if os.path.exists(LOCK):
 with open(LOCK, "w") as f:
     f.write(str(os.getpid()))
 atexit.register(lambda: os.path.exists(LOCK) and os.remove(LOCK))
+
+# Dynamic tuning cache
+_cached_config = {
+    "hunger_eat_threshold": 35,
+    "health_heal_threshold": 50,
+    "flee_threat_radius": 12,
+    "flee_boss_radius": 35,
+    "light_emergency_seconds": 90,
+}
+_config_last_read = 0.0
+
+def get_tuning_param(key: str, default):
+    global _cached_config, _config_last_read
+    now = time.time()
+    if now - _config_last_read > 3.0:
+        _config_last_read = now
+        if CONFIG_FILE.exists():
+            try:
+                with open(CONFIG_FILE, "r", encoding="utf-8") as f:
+                    _cached_config = json.load(f)
+            except Exception:
+                pass
+    return _cached_config.get(key, default)
 
 def get_state():
     try:
@@ -69,7 +89,6 @@ HOSTILES = ("frog", "spider", "spider_warrior", "hound", "houndfire", "hound_wav
             "spider_dropper", "spider_hider", "spider_spitter", "treeguard", "bearger", "deerclops", "moose", "antlion")
 
 def ensure_light(st):
-    """Night-light reflex: Ensures Wilson never stands in the dark."""
     global light_reflex_armed
     equipped = st.get("equipped") or []
     items = st.get("items") or []
@@ -94,14 +113,14 @@ def ensure_light(st):
         return None
 
     raw_secs = st.get("seconds_until_night")
-    if isinstance(raw_secs, (int, float)) and raw_secs <= 90 and not have_fire:
+    warn_secs = get_tuning_param("light_emergency_seconds", 90)
+    if isinstance(raw_secs, (int, float)) and raw_secs <= warn_secs and not have_fire:
         return "DUSK-WARNING: no fire for night - get a campfire"
     return None
 
 _fire_emergency_last = 0.0
 
 def ensure_fire_fuel(st):
-    """Fuels low fire or crafts emergency torch if darkness falls without light."""
     global _fire_emergency_last
     fires = st.get("fires") or []
     items = st.get("items") or []
@@ -140,8 +159,6 @@ def ensure_fire_fuel(st):
     return None
 
 def ensure_temperature(st):
-    """Manages freezing (winter) and overheating (summer)."""
-    # 1. Freezing check
     is_freezing = st.get("is_freezing") or (st.get("temperature", 30) < 10)
     if is_freezing:
         fires = st.get("fires") or []
@@ -150,13 +167,11 @@ def ensure_temperature(st):
             if f.get("d", 99) <= 25:
                 send({"action": "move_to", "x": f.get("x"), "z": f.get("z")})
                 return f"freezing -> moving to warm fire ({f.get('d'):.1f}m)"
-        # Emergency heat: equip thermal stone if in inventory
         items = st.get("items") or []
         if "heatrock" in items and "heatrock" not in (st.get("equipped") or []):
             send({"action": "equip", "item": "heatrock"})
             return "freezing -> equipped thermal stone"
 
-    # 2. Overheating check (Summer)
     is_overheating = st.get("is_overheating") or (st.get("temperature", 30) > 65)
     if is_overheating:
         cold_fires = [f for f in (st.get("fires") or []) if "cold" in (f.get("n") or "")]
@@ -174,7 +189,6 @@ def ensure_temperature(st):
     return None
 
 def ensure_weather(st):
-    """Manages rain / moisture in Spring."""
     moisture = st.get("moisture", 0)
     is_raining = st.get("is_raining", False)
     if is_raining or moisture > 30:
@@ -187,7 +201,6 @@ def ensure_weather(st):
     return None
 
 def flee_threats(st):
-    """If a hostile is within ~10m (or boss within ~25m), move away."""
     nb = st.get("nearby") or []
     threats = st.get("threats") or []
     pos = st.get("pos") or {}
@@ -215,9 +228,8 @@ def flee_threats(st):
                 nd = e.get("d")
                 nearest = e
 
-    # Bosses have larger danger radius
     is_boss = nearest and nearest.get("n") in ("deerclops", "bearger", "moose", "spiderqueen")
-    threat_radius = 25 if is_boss else 10
+    threat_radius = get_tuning_param("flee_boss_radius", 35) if is_boss else get_tuning_param("flee_threat_radius", 12)
 
     if nearest and nd < threat_radius:
         tx = nearest.get("x")
@@ -243,7 +255,6 @@ last_eat = 0
 _revive_sent_at = 0.0
 
 def death_reflex(st):
-    """Detects Wilson dead (ghost) -> logs death."""
     global _revive_sent_at
     is_ghost = (st or {}).get("is_ghost")
     if is_ghost is None:
@@ -294,7 +305,7 @@ def guess_death_cause(st):
     return "unknown"
 
 if __name__ == "__main__":
-    print("Reflex daemon running (100-Day survival mode). Watching hunger/health/weather/threats...")
+    print("Reflex daemon running (Dynamic AI Auto-Tuning active).")
     while True:
         try:
             st = get_state()
@@ -339,10 +350,12 @@ if __name__ == "__main__":
                     time.sleep(0.5)
                     continue
 
-                if hunger < 30 and (items or ground) and now - last_eat > 5:
+                # Auto-tuned hunger eating threshold
+                hunger_threshold = get_tuning_param("hunger_eat_threshold", 35)
+                if hunger < hunger_threshold and (items or ground) and now - last_eat > 5:
                     ate = eat_best(items + ground)
                     if ate:
-                        print(f"[reflex] hunger {hunger:.0f} -> eating {ate}")
+                        print(f"[reflex] hunger {hunger:.0f} (threshold {hunger_threshold}) -> eating {ate}")
                     elif "seeds" in ground:
                         send({"action": "gather_job", "prefab": "seeds", "count": 1})
                         time.sleep(6)
@@ -350,7 +363,9 @@ if __name__ == "__main__":
                         print(f"[reflex] hunger {hunger:.0f} -> gathered+eaten ground seed")
                     last_eat = now
 
-                elif health < 50 and now - last_eat > 15:
+                # Auto-tuned health healing threshold
+                health_threshold = get_tuning_param("health_heal_threshold", 50)
+                elif health < health_threshold and now - last_eat > 15:
                     HEALING_FOOD = ("pierogi", "meatballs", "baconeggs", "dragonpie",
                                    "berries", "carrot", "cookedmeat", "smallmeat",
                                    "cookedsmallmeat", "cooked_smallmeat", "meat",
@@ -360,7 +375,7 @@ if __name__ == "__main__":
                     if healing_items:
                         ate = eat_best(healing_items)
                         if ate:
-                            print(f"[reflex] health {health:.0f} -> eating {ate} (healing)")
+                            print(f"[reflex] health {health:.0f} (threshold {health_threshold}) -> eating {ate} (healing)")
                             last_eat = now
             time.sleep(0.2)
         except KeyboardInterrupt:
